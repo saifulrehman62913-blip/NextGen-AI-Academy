@@ -77,4 +77,16 @@ void main() {
     expect(find.text('0'),findsWidgets);
     await tester.pumpWidget(const SizedBox());
   }, timeout: const Timeout(Duration(seconds:60)));
+  testWidgets('custom synced goal opens and stays current after profile changes', (tester) async {
+    final s=LearningStore();await tester.runAsync(() => s.load());s.onboarded=true;
+    s.learner.goal='Medical interview preparation';
+    await tester.pumpWidget(IlmigoApp(store:s));await tester.pump();
+    await tester.tap(find.text('My space'));await tester.pumpAndSettle();
+    expect(tester.takeException(),isNull);
+    expect(find.text('Medical interview preparation'),findsOneWidget);
+    s.learner.goal='Academic research';s.notifyListeners();await tester.pumpAndSettle();
+    expect(tester.takeException(),isNull);expect(find.text('Academic research'),findsOneWidget);
+    await tester.pumpWidget(const SizedBox());
+  }, timeout: const Timeout(Duration(seconds:60)));
+
 }

@@ -17,3 +17,11 @@ test('production config rejects insecure URLs, mismatched origins and invalid po
   assert.ok(checkProductionConfig({ ...configured, PORT: '65536' }).length);
   assert.ok(checkProductionConfig({ ...configured, SUPABASE_SERVICE_ROLE_KEY: configured.SUPABASE_ANON_KEY }).length);
 });
+test('paid launch preflight blocks disabled payments and placeholder merchant setup',()=>{
+ assert.ok(checkProductionConfig(configured,{paid:true}).length>=3);
+ const paid={...configured,SUBSCRIPTIONS_ENABLED:'true',REVENUECAT_SECRET_KEY:'server-test-key',REVENUECAT_ANNUAL_PRODUCT_IDS:'ilmigo_plus_annual'};
+ assert.deepEqual(checkProductionConfig(paid,{paid:true}),[]);
+ assert.ok(checkProductionConfig({...paid,REVENUECAT_SECRET_KEY:'replace-sensitive-merchant-value'},{paid:true}).length);
+ assert.ok(!checkProductionConfig({...paid,REVENUECAT_SECRET_KEY:'replace-sensitive-merchant-value'},{paid:true}).join().includes('sensitive-merchant-value'));
+ assert.ok(checkProductionConfig({...paid,REVENUECAT_ANNUAL_PRODUCT_IDS:'annual,annual'},{paid:true}).length);
+});

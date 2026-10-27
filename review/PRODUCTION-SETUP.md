@@ -39,3 +39,15 @@ This checks field presence and URL shape only. It does not prove that keys are v
 All four SQL migrations and 36 integration assertions now pass on a disposable PostgreSQL 16 database, including concurrent trial/quota/family-limit calls and row isolation. The test database uses stand-in auth roles/functions, not a live Supabase project. Live deployment, actual JWT/OTP integration and existing-project rollout still require staging verification.
 
 Account setup alone does not finish these product tasks. Do not label the app production complete until the resulting implementation and acceptance checks have evidence.
+
+## Paid Android release command
+
+After bootstrap and native acceptance checks, run `node --env-file=.env scripts/check-production-config.mjs --paid` for the backend's paid configuration. This rejects disabled subscriptions and missing/placeholder RevenueCat server configuration, without printing credential values or contacting providers.
+
+On the trusted Android build host, provide `API_BASE_URL` (HTTPS origin), `REVENUECAT_ANDROID_KEY` (public Android SDK key), the four `ILMIGO_ANDROID_*` signing variables listed above, and `ILMIGO_RELEASE_ACCEPTANCE=verified` only after staging/content/privacy/device acceptance. Then run:
+
+```sh
+python3 scripts/build-paid-android.py
+```
+
+The command enables `ENABLE_PURCHASES` and `SUBSCRIPTIONS_REQUIRED`, strips mobile lesson bodies during compilation, invokes owner-signed `flutter build appbundle --release`, and restores the original asset even after compiler failure. Public Dart defines use a temporary file that is deleted afterward; server secrets are never included in it. A previous generated AAB is removed before building so it cannot be mistaken for a successful fresh artifact. The expected output is `mobile/build/app/outputs/bundle/release/app-release.aab`. This helper does not bootstrap native projects, upload an app, prove provider readiness, or certify content review. No real owner-signed AAB has been built without the owner's credentials.
