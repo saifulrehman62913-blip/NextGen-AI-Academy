@@ -1,0 +1,101 @@
+{
+  "version": "0.5.1",
+  "applicationCommit": "8555b78ceea1058905151e120690da2e21ec0c93",
+  "runId": 40498273610,
+  "result": "success",
+  "nodeTests": 87,
+  "flutterDistinctTests": 25,
+  "flutterHosts": [
+    "Linux",
+    "macOS"
+  ],
+  "postgresqlMigrations": 4,
+  "postgresqlAssertions": 36,
+  "browserScenarios": 4,
+  "dockerBuildAndSmoke": "passed",
+  "nativeAnalysis": {
+    "errors": 0,
+    "informationalFindingsPerHost": 4
+  },
+  "missingOwnerReleaseSigning": "blocked as expected",
+  "paidBuildHelperRealOwnerSignedAAB": "not built; simulated compiler regression only",
+  "liveProvidersConfigured": false,
+  "artifacts": [
+    {
+      "id": 12732306138,
+      "name": "ilmigo-web-preview",
+      "size_in_bytes": 93494,
+      "url": "https://api.github.com/repos/saifulrehman62913-blip/NextGen-AI-Academy/actions/artifacts/12732306138",
+      "archive_download_url": "https://api.github.com/repos/saifulrehman62913-blip/NextGen-AI-Academy/actions/artifacts/12732306138/zip",
+      "expired": false,
+      "created_at": "2026-10-27T11:44:51Z",
+      "expires_at": "2027-01-25T11:43:27Z",
+      "updated_at": "2026-10-27T11:44:51Z",
+      "digest": "sha256:be0144075b11d8501b774c8e377e939ee5089d36694224ce9a7cda535ac5e3af",
+      "workflow_run": {
+        "id": 40498273610,
+        "repository_id": 1185151325,
+        "head_repository_id": 1185151325,
+        "head_branch": "main",
+        "head_sha": "8555b78ceea1058905151e120690da2e21ec0c93"
+      }
+    },
+    {
+      "id": 12732207001,
+      "name": "ilmigo-android-debug",
+      "size_in_bytes": 79662375,
+      "url": "https://api.github.com/repos/saifulrehman62913-blip/NextGen-AI-Academy/actions/artifacts/12732207001",
+      "archive_download_url": "https://api.github.com/repos/saifulrehman62913-blip/NextGen-AI-Academy/actions/artifacts/12732207001/zip",
+      "expired": false,
+      "created_at": "2026-10-27T11:48:39Z",
+      "expires_at": "2027-01-25T11:43:27Z",
+      "updated_at": "2026-10-27T11:48:39Z",
+      "digest": "sha256:3fe9caede9380be4f157857f54f9cbeb83254c0f51ad305f4f0d8345e5cfe97a",
+      "workflow_run": {
+        "id": 40498273610,
+        "repository_id": 1185151325,
+        "head_repository_id": 1185151325,
+        "head_branch": "main",
+        "head_sha": "8555b78ceea1058905151e120690da2e21ec0c93"
+      }
+    },
+    {
+      "id": 12731906806,
+      "name": "ilmigo-browser-smoke",
+      "size_in_bytes": 341581,
+      "url": "https://api.github.com/repos/saifulrehman62913-blip/NextGen-AI-Academy/actions/artifacts/12731906806",
+      "archive_download_url": "https://api.github.com/repos/saifulrehman62913-blip/NextGen-AI-Academy/actions/artifacts/12731906806/zip",
+      "expired": false,
+      "created_at": "2026-10-27T11:44:49Z",
+      "expires_at": "2027-01-25T11:43:27Z",
+      "updated_at": "2026-10-27T11:44:49Z",
+      "digest": "sha256:b141585ff77643c76199e4da71723a48fac23e059b44cc52978819abec9753e8",
+      "workflow_run": {
+        "id": 40498273610,
+        "repository_id": 1185151325,
+        "head_repository_id": 1185151325,
+        "head_branch": "main",
+        "head_sha": "8555b78ceea1058905151e120690da2e21ec0c93"
+      }
+    },
+    {
+      "id": 12731817720,
+      "name": "ilmigo-ios-simulator",
+      "size_in_bytes": 59175321,
+      "url": "https://api.github.com/repos/saifulrehman62913-blip/NextGen-AI-Academy/actions/artifacts/12731817720",
+      "archive_download_url": "https://api.github.com/repos/saifulrehman62913-blip/NextGen-AI-Academy/actions/artifacts/12731817720/zip",
+      "expired": false,
+      "created_at": "2026-10-27T11:50:14Z",
+      "expires_at": "2027-01-25T11:43:27Z",
+      "updated_at": "2026-10-27T11:50:14Z",
+      "digest": "sha256:f6f435a6dfd3ce80101255ab325a2455c6414ba75792cca70eb323e03412e6f8",
+      "workflow_run": {
+        "id": 40498273610,
+        "repository_id": 1185151325,
+        "head_repository_id": 1185151325,
+        "head_branch": "main",
+        "head_sha": "8555b78ceea1058905151e120690da2e21ec0c93"
+      }
+    }
+  ]
+}
