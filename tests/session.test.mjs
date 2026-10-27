@@ -2,8 +2,18 @@ import test from 'node:test';
 import assert from 'node:assert/strict';
 import {ApiSession} from '../shared/session.mjs';
 import {run} from './helpers.mjs';
+import {readFile} from 'node:fs/promises';
+import vm from 'node:vm';
 const json=(data,status=200)=>new Response(JSON.stringify(data),{status,headers:{'Content-Type':'application/json'}});
 function browser(fetcher){let auth={userId:'A',access_token:'old-access',refresh_token:'old-refresh'};const client=new ApiSession({getSession:()=>auth,setSession:(value,expected)=>{if(auth!==expected)return false;Object.assign(auth,value);return true;},fetcher});return {client,get auth(){return auth;},set auth(value){auth=value;}};}
+test('failed session storage update removes the previous account rather than restoring it on reload',async()=>{
+ const source=await readFile(new URL('../web/app.js',import.meta.url),'utf8');
+ const saved=new Map([['ilmigo-auth',JSON.stringify({userId:'A',access_token:'old-A'})]]);
+ const context=vm.createContext({auth:{userId:'B',access_token:'new-B'},sessionStorage:{setItem(){throw Error('Quota exceeded');},removeItem:key=>saved.delete(key)}});
+ const start=source.indexOf('function persistAuth()'),end=source.indexOf('\nfunction loginModal(',start);
+ vm.runInContext(source.slice(start,end),context);vm.runInContext('persistAuth()',context);
+ assert.equal(saved.has('ilmigo-auth'),false);assert.equal(context.auth.userId,'B');
+});
 test('concurrent expired browser requests share one refresh and replay the original body',async()=>{
  let release,started,refreshes=0;const ready=new Promise(r=>started=r),gate=new Promise(r=>release=r),sent=[];
  const app=browser(async(path,options)=>{

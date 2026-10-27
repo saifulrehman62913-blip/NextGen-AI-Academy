@@ -10,6 +10,7 @@ mobile/pubspec.lock
 *.zip
 
 release/
+review/browser/
 
 # Private release signing material
 *.jks

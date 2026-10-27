@@ -57,7 +57,7 @@ npm test
 npm run verify
 ```
 
-`npm run verify` also attempts native checks: it exits 2 when prerequisites are blocked, 1 on failure, and 0 only when all required checks pass. Older local-host reports under `review/build/` record the missing SDK before cloud verification became available. Current cloud evidence is under `review/cloud/`.
+`npm run verify` also attempts native checks: it exits 2 when prerequisites are blocked, 1 on failure, and 0 only when all required checks pass. Older local-host reports under `review/build/` record the missing SDK before cloud verification became available. Current cloud evidence is under `review/cloud/`. CI now also applies all three migrations to a disposable PostgreSQL 16 database, checks RLS/concurrency and builds/runs the backend Docker image.
 
 ## Native Android / iOS source
 
@@ -100,7 +100,8 @@ Migration 002 stores daily history, merges completion dates monotonically, limit
 Main routes:
 
 - `GET /api/config`, `GET /api/catalog`: capability flags and available free curriculum.
-- `POST /api/auth/otp`, `POST /api/auth/verify`: email OTP; no automatic token refresh yet.
+- `POST /api/auth/otp`, `POST /api/auth/verify`: email OTP; verification returns an access/refresh session.
+- `POST /api/auth/refresh`: rotates the refresh token only for the expected verified account. Browser/native clients share concurrent refreshes, retry once on genuine session expiry and reject late responses after an account change. Tokens remain separate from learning exports; browser tab storage is optional, native sessions stay in memory.
 - `POST /api/sync`: owner-checked profiles, latest completions and full stored practice-day history.
 - `POST /api/speaking`: adult/owner-checked **text** feedback, not audio pronunciation grading. Quota: 3 trial / 20 Plus turns per UTC day; a failed upstream request can consume a reservation.
 - `POST /api/conversation`: bounded adult lesson conversation; text history only, owner and language checked, shared AI quota. Returns a target-language reply and English/Urdu explanation; clients use device recognition/TTS, not continuous streamed audio.
