@@ -1,5 +1,5 @@
-const CACHE='ilmigo-v2';
-const ASSETS=['/','/index.html','/style.css','/app.js','/icon.svg','/shared/catalog.json','/shared/learning.mjs','/shared/accounts.mjs','/shared/schema.mjs','/shared/parent.mjs','/manifest.webmanifest'];
+const CACHE='ilmigo-v4.1';
+const ASSETS=['/','/index.html','/style.css','/app.js','/icon.svg','/shared/catalog.json','/shared/learning.mjs','/shared/accounts.mjs','/shared/schema.mjs','/shared/parent.mjs','/shared/session.mjs','/manifest.webmanifest'];
 self.addEventListener('install',e=>e.waitUntil(caches.open(CACHE).then(c=>c.addAll(ASSETS))));
 self.addEventListener('activate',e=>e.waitUntil(caches.keys().then(keys=>Promise.all(keys.filter(k=>k!==CACHE).map(k=>caches.delete(k))))));
 self.addEventListener('fetch',e=>{

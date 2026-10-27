@@ -13,6 +13,17 @@ jobs:
     name: Web and curriculum checks
     runs-on: ubuntu-latest
     timeout-minutes: 10
+    services:
+      postgres:
+        image: postgres:16
+        env:
+          POSTGRES_PASSWORD: ilmigo-ci-fixture-only
+          POSTGRES_DB: ilmigo_ci
+        ports:
+          - 5432:5432
+        options: >-
+          --health-cmd "pg_isready -U postgres -d ilmigo_ci"
+          --health-interval 5s --health-timeout 5s --health-retries 10
     steps:
       - uses: actions/checkout@v4
       - uses: actions/setup-node@v4
@@ -22,6 +33,24 @@ jobs:
         run: npm run build
       - name: Run regression tests
         run: node --test --test-isolation=none tests/*.test.mjs
+      - name: Apply migrations and test PostgreSQL isolation and concurrency
+        run: node scripts/check-database.mjs
+        env:
+          ILMIGO_TEST_DATABASE: 'true'
+          PGHOST: 127.0.0.1
+          PGPORT: '5432'
+          PGUSER: postgres
+          PGPASSWORD: ilmigo-ci-fixture-only
+          PGDATABASE: ilmigo_ci
+      - name: Build backend Docker image
+        run: docker build -t ilmigo-backend .
+      - name: Start disposable backend container
+        run: docker run -d --name ilmigo-backend -p 127.0.0.1:3000:3000 ilmigo-backend
+      - name: Verify container HTTP and disabled payments
+        run: node scripts/check-container.mjs
+      - name: Remove disposable backend container
+        if: always()
+        run: docker rm -f ilmigo-backend || true
       - uses: actions/upload-artifact@v4
         with:
           name: ilmigo-web-preview
@@ -36,6 +65,7 @@ jobs:
       - uses: subosito/flutter-action@v2
         with:
           channel: stable
+          flutter-version: '3.47.8'
           cache: true
       - name: Generate lesson assets
         run: python3 scripts/build_curriculum.py
@@ -64,6 +94,7 @@ jobs:
       - uses: subosito/flutter-action@v2
         with:
           channel: stable
+          flutter-version: '3.47.8'
           cache: true
       - name: Generate lesson assets
         run: python3 scripts/build_curriculum.py

@@ -10,38 +10,97 @@ class CloudService {
   CloudService({http.Client? client,String? baseUrl}):_client=client??http.Client(),baseUrl=baseUrl??origin;
   final http.Client _client;
   final String baseUrl;
-  void close()=>_client.close();
+  void close(){_sessionVersion++;token=null;userId=null;_refreshToken=null;_refreshing=null;_client.close();}
   String? token, userId;
-  bool get configured {final uri=Uri.tryParse(baseUrl);return uri!=null&&uri.host.isNotEmpty&&uri.userInfo.isEmpty&&(uri.scheme=='https'||uri.scheme=='http'&&['localhost','127.0.0.1','10.0.2.2'].contains(uri.host));}
+  String? _refreshToken;
+  int _sessionVersion=0;
+  bool _signingOut=false;
+  Future<void>? _refreshing;
+  bool get configured {final uri=Uri.tryParse(baseUrl);return uri!=null&&uri.host.isNotEmpty&&uri.userInfo.isEmpty&&uri.query.isEmpty&&uri.fragment.isEmpty&&(uri.scheme=='https'||uri.scheme=='http'&&['localhost','127.0.0.1','10.0.2.2'].contains(uri.host));}
   bool get signedIn => token != null;
-  Future<Map<String, dynamic>> request(String path, [Map<String, dynamic>? data]) async {
-    if (!configured) throw Exception('Cloud is not connected. Set API_BASE_URL to your HTTPS server. Local learning still works.');
-    final uri = Uri.parse('${baseUrl.replaceAll(RegExp(r'/$'), '')}$path');
-    final headers = {'Content-Type': 'application/json', if (token != null) 'Authorization': 'Bearer $token'};
-    final response = await (data == null ? _client.get(uri, headers: headers) : _client.post(uri, headers: headers, body: jsonEncode(data))).timeout(const Duration(seconds: 30));
-    final result = jsonDecode(response.body) as Map<String, dynamic>;
-    if (response.statusCode >= 400) throw Exception(result['error'] ?? 'Service unavailable.');
-    return result;
+  bool _sameSession(String? owner,int version)=>!_signingOut&&userId==owner&&_sessionVersion==version;
+  Future<http.Response> _send(String path,String? body,String? accessToken) {
+    if(!configured)throw Exception('Cloud is unavailable in this build. Local preview learning still works.');
+    final uri=Uri.parse('${baseUrl.replaceAll(RegExp(r'/$'), '')}$path');
+    final headers={'Content-Type':'application/json',if(accessToken!=null)'Authorization':'Bearer $accessToken'};
+    return (body==null?_client.get(uri,headers:headers):_client.post(uri,headers:headers,body:body)).timeout(const Duration(seconds:30));
   }
-  Future<void> sendCode(String email) async { await request('/api/auth/otp', {'email': email}); }
-  Future<void> verify(String email,String code,{String? expectedUserId}) async {final result=await request('/api/auth/verify',{'email':email,'token':code});if(result['access_token'] is! String || result['userId'] is! String)throw Exception('Invalid sign-in response.');if(expectedUserId!=null && result['userId']!=expectedUserId)throw Exception('Verify the email for this family account. A different account cannot reset its PIN.');token=result['access_token'] as String;userId=result['userId'] as String;}
+  Map<String,dynamic> _decode(http.Response response){
+    dynamic parsed;try{parsed=jsonDecode(response.body);}catch(_){throw Exception('Service unavailable. Please try again.');}
+    if(parsed is! Map<String,dynamic>)throw Exception('Service unavailable. Please try again.');
+    if(response.statusCode>=400)throw Exception(parsed['error'] is String?parsed['error']:'Service unavailable. Please try again.');
+    return parsed;
+  }
+  Future<void> _rotate(String owner,String originalToken,int version) async {
+    if(!_sameSession(owner,version))throw Exception('Account changed. Please try again.');
+    if(token!=originalToken)return;
+    if(_refreshing!=null){await _refreshing;return;}
+    final refresh=_refreshToken;
+    if(refresh==null)throw Exception('Your session has expired. Please sign in again.');
+    final job=(() async {
+      final response=await _send('/api/auth/refresh',jsonEncode({'refresh_token':refresh,'expectedUserId':owner}),null);
+      final result=_decode(response);
+      if(!_sameSession(owner,version))throw Exception('Account changed. Please try again.');
+      if(result['userId']!=owner||result['access_token'] is! String||(result['access_token'] as String).isEmpty||result['refresh_token'] is! String||(result['refresh_token'] as String).isEmpty)throw Exception('The refreshed session could not be verified. Please sign in again.');
+      token=result['access_token'] as String;_refreshToken=result['refresh_token'] as String;
+    })();
+    _refreshing=job;
+    try{await job;}finally{if(identical(_refreshing,job))_refreshing=null;}
+  }
+  Future<Map<String, dynamic>> request(String path, [Map<String, dynamic>? data]) async {
+    final publicAuth=path.startsWith('/api/auth/'),owner=userId,version=_sessionVersion,originalToken=token;
+    if(_signingOut&&!publicAuth)throw Exception('Account is signing out. Please try again.');
+    final body=data==null?null:jsonEncode(data);
+    var response=await _send(path,body,publicAuth?null:originalToken);
+    if(!publicAuth&&!_sameSession(owner,version))throw Exception('Account changed. Please try again.');
+    if(!publicAuth&&response.statusCode==401&&owner!=null&&originalToken!=null&&_refreshToken!=null){
+      await _rotate(owner,originalToken,version);
+      if(!_sameSession(owner,version))throw Exception('Account changed. Please try again.');
+      response=await _send(path,body,token);
+    }
+    if(!publicAuth&&!_sameSession(owner,version))throw Exception('Account changed. Please try again.');
+    return _decode(response);
+  }
+  Future<void> sendCode(String email) async {await request('/api/auth/otp',{'email':email});}
+  Future<void> verify(String email,String code,{String? expectedUserId}) async {
+    final owner=userId,version=_sessionVersion;
+    if(_signingOut)throw Exception('Wait for sign-out to finish before signing in.');
+    final result=await request('/api/auth/verify',{'email':email,'token':code});
+    if(!_sameSession(owner,version))throw Exception('Account changed. Please try again.');
+    if(result['access_token'] is! String||(result['access_token'] as String).isEmpty||result['userId'] is! String||(result['userId'] as String).isEmpty)throw Exception('Invalid sign-in response.');
+    if(expectedUserId!=null&&result['userId']!=expectedUserId)throw Exception('Verify the email for this family account. A different account cannot reset its PIN.');
+    _sessionVersion++;_refreshing=null;token=result['access_token'] as String;userId=result['userId'] as String;
+    _refreshToken=result['refresh_token'] is String?result['refresh_token'] as String:null;
+  }
   Future<void> sync(LearningStore store,{bool restore=false}) async {
     final owner=userId;if(owner==null || store.ownerId!=owner)throw Exception('Open your own account space before syncing.');
     final data = await request('/api/sync', {'profiles': restore?<Map<String,dynamic>>[]:store.profiles.map((p) => {'id': p.cloudId, 'localId': p.id, 'name': p.name, 'kind': p.kind, 'language': p.language, 'goal': p.goal, 'completed': p.completed, 'days':p.days}).toList()});
     if(userId!=owner || store.ownerId!=owner)return;store.mergeCloud(data['profiles'] as List,restore:restore);if(restore)store.onboarded=true;await store.save();
   }
-  Future<void> signOut(LearningStore store,{bool eraseLocal=false}) async {if(eraseLocal){await store.deleteAccountStore();}else{await store.switchAccount(null);}token=null;userId=null;}
+  Future<void> signOut(LearningStore store,{bool eraseLocal=false}) async {
+    if(_signingOut)return;_signingOut=true;
+    try{
+      if(eraseLocal){await store.deleteAccountStore();}else{await store.switchAccount(null);}
+      _sessionVersion++;token=null;userId=null;_refreshToken=null;_refreshing=null;
+    }finally{_signingOut=false;}
+  }
 }
 
 class VoiceService {
-  final FlutterTts tts = FlutterTts();
+  VoiceService({FlutterTts? engine}):tts=engine??FlutterTts();
+  final FlutterTts tts;
+  int _generation=0;
   Future<void> speak(String text, String language) async {
+    final generation=++_generation;
     final locale = speechLocale(language);
     final available = await tts.isLanguageAvailable(locale);
+    if(generation!=_generation)return;
     if (available != true && available != 1) throw Exception('A $locale device voice is not installed. Use the written transliteration for now.');
-    await tts.setLanguage(locale); await tts.setSpeechRate(0.42); await tts.speak(text);
+    await tts.setLanguage(locale);if(generation!=_generation)return;
+    await tts.setSpeechRate(0.42);if(generation!=_generation)return;
+    await tts.speak(text);
   }
-  Future<void> stop() async { try{await tts.stop();}catch(_){/* Best-effort cleanup when the platform voice service is unavailable. */} }
+  Future<void> stop() async { _generation++;try{await tts.stop();}catch(_){/* Best-effort cleanup when the platform voice service is unavailable. */} }
 }
 
 // Production store bridge. No simulated purchases or client-only entitlements.

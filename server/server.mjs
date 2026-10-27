@@ -18,7 +18,7 @@ export function createApp(env=process.env,fetcher=fetch){
   const rate=new Map();
   let contentCache=null, contentLoaded=0;
   function throttle(key,max=10,windowMs=600000){const now=Date.now();for(const [k,v]of rate)if(v.until<now)rate.delete(k);const item=rate.get(key)||{count:0,until:now+windowMs};if(++item.count>max)fail(429,'Too many requests. Please wait before trying again.');rate.set(key,item);}
-  async function request(url,opts={}){const response=await fetcher(url,{...opts,signal:AbortSignal.timeout(20000)});if(!response.ok)fail(response.status===401?401:502,'The connected service could not complete this request.');if(response.status===204||response.headers?.get('content-length')==='0')return null;let result;try{const raw=await response.text();result=raw?JSON.parse(raw):null;}catch{fail(502,'The connected service returned an unreadable response.');}return result;}
+  async function request(url,opts={},authentication=false){const response=await fetcher(url,{...opts,signal:AbortSignal.timeout(20000)});if(!response.ok)fail(authentication&&[400,401,403].includes(response.status)?401:502,authentication?'Your session has expired. Please sign in again.':'The connected service could not complete this request.');if(response.status===204||response.headers?.get('content-length')==='0')return null;let result;try{const raw=await response.text();result=raw?JSON.parse(raw):null;}catch{fail(502,'The connected service returned an unreadable response.');}return result;}
   const supa=(path,options={})=>request(`${env.SUPABASE_URL}/rest/v1/${path}`,{...options,headers:{apikey:env.SUPABASE_SERVICE_ROLE_KEY,Authorization:`Bearer ${env.SUPABASE_SERVICE_ROLE_KEY}`,'Content-Type':'application/json',Prefer:'return=representation',...options.headers}});
   async function activeCatalog(){
     if(!cloud)return catalog;
@@ -28,7 +28,7 @@ export function createApp(env=process.env,fetcher=fetch){
     for(const row of rows){result.lessons=result.lessons.filter(l=>l.language!==row.language).concat(row.lessons);const language=result.languages.find(l=>l.id===row.language);if(language)language.status='sample';}
     validateCatalog(result);contentCache=result;contentLoaded=Date.now();return result;
   }
-  async function user(req){if(!cloud)fail(503,'Cloud services have not been configured by the app owner.');const token=req.headers.authorization;if(!token||!/^Bearer [\w.\-]+$/.test(token))fail(401,'Please sign in to continue.');const u=await request(`${env.SUPABASE_URL}/auth/v1/user`,{headers:{apikey:env.SUPABASE_ANON_KEY,Authorization:token}});if(!u.id)fail(401,'Your session has expired. Please sign in again.');return u;}
+  async function user(req){if(!cloud)fail(503,'Cloud services have not been configured by the app owner.');const token=req.headers.authorization;if(!token||!/^Bearer [\w.\-]+$/.test(token))fail(401,'Please sign in to continue.');const u=await request(`${env.SUPABASE_URL}/auth/v1/user`,{headers:{apikey:env.SUPABASE_ANON_KEY,Authorization:token}},true);if(!u?.id)fail(401,'Your session has expired. Please sign in again.');return u;}
   async function body(req,maxSize=262144){const parts=[];let size=0;for await(const part of req){size+=part.length;if(size>maxSize)fail(413,'Request is too large.');parts.push(part);}let parsed;try{parsed=JSON.parse(Buffer.concat(parts).toString()||'{}');}catch{fail(400,'A valid JSON request is required.');}return assertObject(parsed);}
   async function ownedProfile(uid,id){if(!/^[0-9a-f]{8}-[0-9a-f]{4}-[0-9a-f]{4}-[0-9a-f]{4}-[0-9a-f]{12}$/i.test(id||''))fail(400,'Sync your profile before using this feature.');const rows=await supa(`profiles?id=eq.${id}&owner_id=eq.${uid}&select=*`);if(!rows[0])fail(404,'Learning profile not found.');return rows[0];}
   async function premium(uid){if(!env.REVENUECAT_SECRET_KEY)return false;const result=await request(`https://api.revenuecat.com/v1/subscribers/${encodeURIComponent(uid)}`,{headers:{Authorization:`Bearer ${env.REVENUECAT_SECRET_KEY}`}});return paidEntitlement(result.subscriber?.entitlements?.plus,subscriptions.enabled?subscriptions.productIds:[]);}
@@ -44,7 +44,15 @@ export function createApp(env=process.env,fetcher=fetch){
     }
     if(path==='/api/auth/verify'){
       if(!cloud)fail(503,'Email sign-in is not configured.');throttle(`verify:${req.socket.remoteAddress}`,10);const data=await body(req),email=clean(data.email,254),token=clean(data.token,10);
-      if(!email||!/^\d{6,10}$/.test(token))fail(400,'Enter the code from your email.');const result=await request(`${env.SUPABASE_URL}/auth/v1/verify`,{method:'POST',headers:{apikey:env.SUPABASE_ANON_KEY,'Content-Type':'application/json'},body:JSON.stringify({email,token,type:'email'})});return {access_token:result.access_token,expires_at:result.expires_at,userId:result.user?.id};
+      if(!email||!/^\d{6,10}$/.test(token))fail(400,'Enter the code from your email.');const result=await request(`${env.SUPABASE_URL}/auth/v1/verify`,{method:'POST',headers:{apikey:env.SUPABASE_ANON_KEY,'Content-Type':'application/json'},body:JSON.stringify({email,token,type:'email'})});if(!result?.access_token||!result.user?.id)fail(502,'The sign-in service returned an incomplete session.');return {access_token:result.access_token,refresh_token:result.refresh_token,expires_at:result.expires_at,userId:result.user.id};
+    }
+    if(path==='/api/auth/refresh'){
+      if(!cloud)fail(503,'Email sign-in is not configured.');throttle(`refresh:${req.socket.remoteAddress}`,60,60000);
+      const data=await body(req);if(typeof data.refresh_token!=='string'||!data.refresh_token.trim()||data.refresh_token.length>4096||typeof data.expectedUserId!=='string'||!data.expectedUserId||data.expectedUserId.length>128)fail(400,'A refresh token and expected account are required.');
+      const result=await request(`${env.SUPABASE_URL}/auth/v1/token?grant_type=refresh_token`,{method:'POST',headers:{apikey:env.SUPABASE_ANON_KEY,'Content-Type':'application/json'},body:JSON.stringify({refresh_token:data.refresh_token})},true);
+      if(!result?.user?.id||result.user.id!==data.expectedUserId)fail(401,'The refreshed session does not match this account. Please sign in again.');
+      if(typeof result.access_token!=='string'||!result.access_token||typeof result.refresh_token!=='string'||!result.refresh_token)fail(502,'The sign-in service returned an incomplete session.');
+      return {access_token:result.access_token,refresh_token:result.refresh_token,expires_at:result.expires_at,userId:result.user.id};
     }
     const u=await user(req);throttle(`user:${u.id}`,120,60000);
     if(path==='/api/sync'){

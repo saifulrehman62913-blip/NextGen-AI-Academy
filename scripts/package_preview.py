@@ -7,7 +7,7 @@ import re
 root=Path(__file__).resolve().parents[1]
 css=(root/'web/style.css').read_text()
 css=re.sub(r"@import url\([^;]+;",'',css)
-logic='\n'.join(re.sub(r"^import[^\n]+\n",'',(root/f'shared/{name}.mjs').read_text(),flags=re.M).replace('export ','') for name in ['learning','schema','accounts','parent'])
+logic='\n'.join(re.sub(r"^import[^\n]+\n",'',(root/f'shared/{name}.mjs').read_text(),flags=re.M).replace('export ','') for name in ['learning','schema','accounts','parent','session'])
 app=(root/'web/app.js').read_text()
 app=re.sub(r"^import[^\n]+\n",'',app,flags=re.M)
 app=app.replace("if('serviceWorker'in navigator)navigator.serviceWorker.register('/sw.js').catch(()=>{});",'')

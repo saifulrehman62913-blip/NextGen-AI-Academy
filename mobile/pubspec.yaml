@@ -1,7 +1,7 @@
 name: ilmigo
 description: A friendly bilingual language learning companion.
 publish_to: none
-version: 0.4.0+6
+version: 0.4.1+7
 environment:
   sdk: '>=3.4.0 <4.0.0'
 dependencies:
