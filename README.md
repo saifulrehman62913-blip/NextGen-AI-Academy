@@ -10,7 +10,7 @@ See the [current course/build report](review/ILMIGO-COURSE-BUILD-REPORT.md) and 
 
 Open `ILMIGO-preview.html` in a modern browser. This single file runs without a server and disables cloud/AI/purchases. Browser storage saves progress when available; otherwise a temporary-session warning appears. Some phone file viewers do not execute HTML; open it in a browser or run the server below.
 
-Node 22.9+; no package installation required:
+Node 24+; no package installation required:
 
 ```sh
 npm start
@@ -144,3 +144,7 @@ The academy/app display name is **ILMIGO DIGITAL ACADEMY**. The robot teacher re
 ## Selected repository
 
 The owner selected the existing public repository `saifulrehman62913-blip/NextGen-AI-Academy` for this project. The academy display name is ILMIGO DIGITAL ACADEMY; the repository slug remains unchanged. Source and prepared verification workflows are now being uploaded. Actual cloud-build results will be recorded after the jobs run. Prior local reports describe the pre-cloud environment and must not be read as native-build success.
+
+## Cloud verification in progress
+
+Source was pushed to the owner-selected repository. The first real CI run exposed a Node 22 test-flag incompatibility; the supported project runtime is now Node 24, matching local verification. Native cloud checks are being evaluated; success will be documented only after completed jobs.

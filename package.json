@@ -12,6 +12,6 @@
     "verify": "node scripts/verify-release.mjs"
   },
   "engines": {
-    "node": ">=22.9"
+    "node": ">=24"
   }
 }

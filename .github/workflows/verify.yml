@@ -17,7 +17,7 @@ jobs:
       - uses: actions/checkout@v4
       - uses: actions/setup-node@v4
         with:
-          node-version: '22'
+          node-version: '24'
       - name: Generate curriculum and web preview
         run: npm run build
       - name: Run regression tests
@@ -45,7 +45,7 @@ jobs:
         run: flutter analyze --no-fatal-infos --no-fatal-warnings
         working-directory: mobile
       - name: Run Flutter tests
-        run: flutter test --reporter expanded
+        run: flutter test --reporter expanded --concurrency 1 --timeout 120s --fail-fast
         working-directory: mobile
       - name: Build Android debug APK
         run: flutter build apk --debug
@@ -73,7 +73,7 @@ jobs:
         run: flutter analyze --no-fatal-infos --no-fatal-warnings
         working-directory: mobile
       - name: Run Flutter tests
-        run: flutter test --reporter expanded
+        run: flutter test --reporter expanded --concurrency 1 --timeout 120s --fail-fast
         working-directory: mobile
       - name: Build iOS simulator app
         run: flutter build ios --simulator --no-codesign
