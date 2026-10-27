@@ -114,6 +114,8 @@ jobs:
         run: python3 scripts/build_curriculum.py
       - name: Generate native projects and install dependencies
         run: python3 scripts/bootstrap_mobile.py
+      - name: Check owner signing settings against the actual Xcode template
+        run: python3 scripts/check-ios-release-template.py
       - name: Analyze native source
         run: flutter analyze
         working-directory: mobile
