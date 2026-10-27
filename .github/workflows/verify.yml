@@ -1,0 +1,88 @@
+name: Build and verify ILMIGO
+on:
+  push:
+  pull_request:
+  workflow_dispatch:
+permissions:
+  contents: read
+concurrency:
+  group: ilmigo-${{ github.workflow }}-${{ github.ref }}
+  cancel-in-progress: true
+jobs:
+  server:
+    name: Web and curriculum checks
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '22'
+      - name: Generate curriculum and web preview
+        run: npm run build
+      - name: Run regression tests
+        run: node --test --test-isolation=none tests/*.test.mjs
+      - uses: actions/upload-artifact@v4
+        with:
+          name: ilmigo-web-preview
+          path: ILMIGO-preview.html
+          if-no-files-found: error
+  mobile:
+    name: Android debug APK
+    runs-on: ubuntu-latest
+    timeout-minutes: 30
+    steps:
+      - uses: actions/checkout@v4
+      - uses: subosito/flutter-action@v2
+        with:
+          channel: stable
+          cache: true
+      - name: Generate lesson assets
+        run: python3 scripts/build_curriculum.py
+      - name: Generate native projects and install dependencies
+        run: python3 scripts/bootstrap_mobile.py
+      - name: Analyze native source
+        run: flutter analyze --no-fatal-infos --no-fatal-warnings
+        working-directory: mobile
+      - name: Run Flutter tests
+        run: flutter test --reporter expanded
+        working-directory: mobile
+      - name: Build Android debug APK
+        run: flutter build apk --debug
+        working-directory: mobile
+      - uses: actions/upload-artifact@v4
+        with:
+          name: ilmigo-android-debug
+          path: mobile/build/app/outputs/flutter-apk/app-debug.apk
+          if-no-files-found: error
+  ios:
+    name: iOS simulator verification
+    runs-on: macos-latest
+    timeout-minutes: 30
+    steps:
+      - uses: actions/checkout@v4
+      - uses: subosito/flutter-action@v2
+        with:
+          channel: stable
+          cache: true
+      - name: Generate lesson assets
+        run: python3 scripts/build_curriculum.py
+      - name: Generate native projects and install dependencies
+        run: python3 scripts/bootstrap_mobile.py
+      - name: Analyze native source
+        run: flutter analyze --no-fatal-infos --no-fatal-warnings
+        working-directory: mobile
+      - name: Run Flutter tests
+        run: flutter test --reporter expanded
+        working-directory: mobile
+      - name: Build iOS simulator app
+        run: flutter build ios --simulator --no-codesign
+        working-directory: mobile
+      - name: Package simulator artifact
+        run: ditto -c -k --keepParent build/ios/iphonesimulator/Runner.app build/ilmigo-ios-simulator.zip
+        working-directory: mobile
+      - uses: actions/upload-artifact@v4
+        with:
+          name: ilmigo-ios-simulator
+          path: mobile/build/ilmigo-ios-simulator.zip
+          if-no-files-found: error

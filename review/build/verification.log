@@ -1,0 +1,69 @@
+ILMIGO release verification
+
+[curriculum-generation: passed]
+
+[preview-package: passed]
+
+[javascript-syntax: passed]
+
+[python-syntax: passed]
+
+[node-tests: passed]
+✔ two staged curricula contain 20 distinct ordered lessons each and every level has four (3.597896ms)
+✔ every new scenario has original reading, bilingual grammar/task/rubric, dialogue and three checks (1.362861ms)
+✔ multi-question assessment cannot be bypassed with only the legacy first answer (1.028329ms)
+✔ recommended progression crosses stages in order and preserves legacy IDs (0.581541ms)
+✔ malformed additional checks and task structures are rejected (2.312993ms)
+✔ admin accepts a validated free professional module with human-review attestation (7.652196ms)
+✔ catalog: 34 distinct languages, structured bilingual samples, 30-minute plan (1.621737ms)
+✔ quiz errors never award completion, repetitions never inflate XP (0.279489ms)
+✔ new learner has zero progress and does not inherit family history (0.331236ms)
+✔ streak handles months, leap days, today and yesterday (3.612097ms)
+✔ corrupt storage recovers and invalid active profile cannot crash app (0.504936ms)
+✔ transcript comparison handles punctuation and Urdu without claiming pronunciation (0.865265ms)
+✔ standalone preview starts without external imports, server or account (31.04238ms)
+✔ standalone lesson next/back wiring survives generated inline packaging (11.659194ms)
+✔ professional lesson shows dialogue, saved writing task and all assessment questions (12.258961ms)
+✔ writing draft survives lesson completion, even though the resume session is removed (13.465999ms)
+✔ bundled curriculum replaces an older valid eight-lesson cached catalog (32.356657ms)
+✔ R01: A logout then B login never sends A family data; actual web action (1.921166ms)
+✔ R01: legacy guest data is never auto-imported into a signed-in account (0.142704ms)
+✔ R01: stale sync cannot merge an earlier account response after logout (0.676252ms)
+✔ R02: remote old dates cannot overwrite newer local completions; all days merge (0.235282ms)
+✔ R02/R07: actual sync calls atomic completion RPC, stores days, reconciles profile metadata (5.945821ms)
+✔ R03: published quizzes reject wrong shapes/types before any write (5.910067ms)
+✔ R04: null, arrays, primitives and malformed profiles are 400, never 500 (4.711523ms)
+✔ R05: migration detaches auth identity but preserves nonidentifying review audit (4.284814ms)
+✔ R06: cache validator accepts bilingual samples and rejects corrupt offline content (4.59596ms)
+✔ parent gate: PIN verification, retry lock, account separation, no plaintext PIN (111.41649ms)
+✔ native offline/account fixes are present; runtime verification remains a separate gate (0.900017ms)
+✔ guest import is explicit, creates fresh identities and excludes signed-in stores (0.372277ms)
+✔ reauthentication preserves unsynced progress in the existing account space (0.228643ms)
+✔ blocked browser storage falls back to an explicitly temporary session store (0.210495ms)
+✔ published language voice locale never silently defaults to English (0.13982ms)
+✔ corrupt nested backup progress and resume timers recover without crashing (4.363553ms)
+✔ parent email recovery changes the gate only for the same verified account (15.29757ms)
+✔ guest data cannot claim verified email PIN recovery (0.251837ms)
+✔ account without an adult profile does not erase its PIN during recovery (0.143454ms)
+✔ offline guest app and catalog work without cloud credentials (6.966785ms)
+✔ invalid bodies and hostile origins fail before provider access (3.113742ms)
+✔ child AI and cross-owner profile access are refused server-side (1.788818ms)
+✔ AI quota failure prevents an AI-provider request (3.935021ms)
+✔ AI is text-only, server-keyed and reserves trial quota before provider call (2.71221ms)
+✔ admin publishing requires server role, valid content and review (1.933554ms)
+✔ reviewed free beginner collection becomes visible in catalog (4.657722ms)
+✔ cloud sync rejects guessed foreign IDs before mutation (3.028684ms)
+✔ cloud deletion handles Supabase 204 and scopes by owner (0.958254ms)
+✔ account deletion needs explicit confirmation and only deletes authenticated identity (1.104103ms)
+ℹ tests 46
+ℹ suites 0
+ℹ pass 46
+ℹ fail 0
+ℹ cancelled 0
+ℹ skipped 0
+ℹ todo 0
+ℹ duration_ms 381.764644
+
+[flutter-sdk: blocked]
+Error: spawn flutter ENOENT
+[mobile-bootstrap]

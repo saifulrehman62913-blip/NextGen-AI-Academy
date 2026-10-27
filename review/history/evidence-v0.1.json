@@ -1,0 +1,69 @@
+{
+  "date": "2026-10-26",
+  "note": "Passing audit reproductions confirm defects; they do not repair them. No live services were called.",
+  "findings": [
+    {
+      "id": "R01",
+      "title": "Account A local profile is uploaded after signing in as account B",
+      "evidence": {
+        "uploadedName": "Account A private nickname",
+        "cloudId": null
+      },
+      "status": "reproduced-current-bug"
+    },
+    {
+      "id": "R02",
+      "title": "A repeated lesson loses today’s completion date after sync",
+      "evidence": {
+        "before": "2026-10-26",
+        "after": "2026-10-25",
+        "plannedMinutesAfterSync": 0
+      },
+      "status": "reproduced-current-bug"
+    },
+    {
+      "id": "R03",
+      "title": "Published quiz can have string options and break the lesson player",
+      "evidence": {
+        "publishStatus": 200,
+        "optionsType": "string"
+      },
+      "status": "reproduced-current-bug"
+    },
+    {
+      "id": "R04",
+      "title": "JSON null produces server error instead of validation error",
+      "evidence": {
+        "status": 500
+      },
+      "status": "reproduced-current-bug"
+    },
+    {
+      "id": "R05",
+      "title": "Published course reviewer foreign key has no account deletion strategy",
+      "evidence": {
+        "verification": "Static schema inspection; no live Postgres execution",
+        "defaultAction": "NO ACTION"
+      },
+      "status": "static-schema-finding"
+    },
+    {
+      "id": "R06",
+      "title": "Published remote samples are not retained in native offline storage",
+      "evidence": {
+        "verification": "Static persistence inspection; native runtime unverified"
+      },
+      "status": "known-offline-gap"
+    },
+    {
+      "id": "R07",
+      "title": "A fresh device can attach an Urdu local profile to an English cloud profile",
+      "evidence": {
+        "localLanguage": "ur",
+        "cloudLanguage": "en",
+        "metadataUpdates": 0
+      },
+      "status": "reproduced-current-bug"
+    }
+  ]
+}

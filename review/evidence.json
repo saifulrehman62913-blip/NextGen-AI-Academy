@@ -1,0 +1,23 @@
+{
+  "version": "0.3.1",
+  "date": "2026-10-27",
+  "node_tests": {
+    "total": 46,
+    "passed": 46,
+    "failed": 0
+  },
+  "buildOverall": "partial_native_blocked",
+  "nativeBuildVerified": false,
+  "liveProvidersVerified": false,
+  "courses": {
+    "languages": [
+      "en",
+      "ur"
+    ],
+    "lessons": 40,
+    "reviewStatus": "pending",
+    "otherLanguages": "coming_soon"
+  },
+  "requiredInput": "Connected GitHub repository URL or supported Flutter/Xcode build host",
+  "report": "ILMIGO-COURSE-BUILD-REPORT.md"
+}

@@ -1,0 +1,17 @@
+{
+  "name": "ilmigo",
+  "version": "0.3.1",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "start": "node --env-file-if-exists=.env server/server.mjs",
+    "test": "node --test tests/*.test.mjs",
+    "check": "node scripts/check-js.mjs",
+    "curriculum": "python3 scripts/build_curriculum.py",
+    "build": "python3 scripts/build_curriculum.py && python3 scripts/package_preview.py && node scripts/check-js.mjs",
+    "verify": "node scripts/verify-release.mjs"
+  },
+  "engines": {
+    "node": ">=22.9"
+  }
+}

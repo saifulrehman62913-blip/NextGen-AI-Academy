@@ -1,0 +1,12 @@
+.env
+node_modules/
+.dart_tool/
+build/
+mobile/android/
+mobile/ios/
+mobile/.flutter-plugins*
+mobile/.metadata
+mobile/pubspec.lock
+*.zip
+
+release/

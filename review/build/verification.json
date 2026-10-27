@@ -1,0 +1,112 @@
+{
+  "version": "0.3.1",
+  "checkedAt": "2026-10-27T02:45:29.417Z",
+  "host": "linux",
+  "steps": [
+    {
+      "name": "curriculum-generation",
+      "status": "passed",
+      "exitCode": 0,
+      "command": [
+        "python3",
+        "scripts/build_curriculum.py"
+      ]
+    },
+    {
+      "name": "preview-package",
+      "status": "passed",
+      "exitCode": 0,
+      "command": [
+        "python3",
+        "scripts/package_preview.py"
+      ]
+    },
+    {
+      "name": "javascript-syntax",
+      "status": "passed",
+      "exitCode": 0,
+      "command": [
+        "/opt/codex/runtimes/codex-primary-runtime/dependencies/node/bin/node",
+        "scripts/check-js.mjs"
+      ]
+    },
+    {
+      "name": "python-syntax",
+      "status": "passed",
+      "exitCode": 0,
+      "command": [
+        "python3",
+        "-m",
+        "py_compile",
+        "scripts/course_units.py",
+        "scripts/build_curriculum.py",
+        "scripts/create_content.py",
+        "scripts/bootstrap_mobile.py",
+        "scripts/package_preview.py"
+      ]
+    },
+    {
+      "name": "node-tests",
+      "status": "passed",
+      "exitCode": 0,
+      "command": [
+        "/opt/codex/runtimes/codex-primary-runtime/dependencies/node/bin/node",
+        "--test",
+        "--test-isolation=none",
+        "--test-reporter=spec",
+        "--test-reporter-destination=review/build/node-tests.log",
+        "tests/curriculum.test.mjs",
+        "tests/learning.test.mjs",
+        "tests/preview.test.mjs",
+        "tests/review-regression.test.mjs",
+        "tests/server.test.mjs"
+      ]
+    },
+    {
+      "name": "flutter-sdk",
+      "status": "blocked",
+      "exitCode": -2,
+      "command": [
+        "flutter",
+        "--version"
+      ],
+      "reason": "ENOENT"
+    },
+    {
+      "name": "mobile-bootstrap",
+      "status": "blocked",
+      "exitCode": 1,
+      "command": [
+        "python3",
+        "scripts/bootstrap_mobile.py"
+      ]
+    },
+    {
+      "name": "flutter-analysis",
+      "status": "blocked",
+      "reason": "Flutter SDK/dependencies are unavailable; native compilation was not performed."
+    },
+    {
+      "name": "flutter-tests",
+      "status": "blocked",
+      "reason": "Flutter SDK/dependencies are unavailable; native compilation was not performed."
+    },
+    {
+      "name": "android-debug-build",
+      "status": "blocked",
+      "reason": "Flutter SDK/dependencies are unavailable; native compilation was not performed."
+    },
+    {
+      "name": "ios-simulator-build",
+      "status": "blocked",
+      "reason": "Requires Flutter and macOS/Xcode; current host cannot build iOS."
+    }
+  ],
+  "overall": "partial_native_blocked",
+  "note": "Node tests include mocked providers and synthetic DOM, not live services or real-device/browser QA.",
+  "nodeTests": {
+    "total": 46,
+    "passed": 46,
+    "failed": 0
+  }
+}

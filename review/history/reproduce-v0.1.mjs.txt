@@ -1,0 +1,90 @@
+// Audit reproductions: these assert the CURRENT defective behavior so that the
+// evidence is reproducible. Passing here means a finding was confirmed, not fixed.
+import assert from 'node:assert/strict';
+import {readFile,writeFile} from 'node:fs/promises';
+import {Readable,Writable} from 'node:stream';
+import vm from 'node:vm';
+import {createApp} from '../server/server.mjs';
+import {emptyState,profile,completeLesson,dailyMinutes} from '../shared/learning.mjs';
+const catalog=JSON.parse(await readFile(new URL('../shared/catalog.json',import.meta.url)));
+const source=await readFile(new URL('../web/app.js',import.meta.url),'utf8');
+const owner='11111111-1111-4111-a111-111111111111',pid='22222222-2222-4222-a222-222222222222';
+const env={SUPABASE_URL:'https://audit.invalid',SUPABASE_ANON_KEY:'fake',SUPABASE_SERVICE_ROLE_KEY:'fake',APP_ORIGIN:'http://localhost:3000'};
+const json=x=>new Response(JSON.stringify(x),{status:200,headers:{'Content-Type':'application/json'}});
+async function call(server,path,data){
+ const req=Readable.from([Buffer.from(JSON.stringify(data))]);Object.assign(req,{method:'POST',url:path,headers:{authorization:'Bearer audit.test.token'},socket:{remoteAddress:'127.0.0.1'}});
+ const chunks=[];const res=new Writable({write(c,encoding,cb){chunks.push(Buffer.from(c));cb();}});res.setHeader=()=>{};res.writeHead=status=>{res.statusCode=status;};const done=new Promise(resolve=>res.on('finish',resolve));server.emit('request',req,res);await done;return {status:res.statusCode,body:JSON.parse(Buffer.concat(chunks))};
+}
+const findings=[];
+function confirmed(id,title,evidence){findings.push({id,title,evidence,status:id==='R05'?'static-schema-finding':id==='R06'?'known-offline-gap':'reproduced-current-bug'});console.log(`CONFIRMED ${id}: ${title}`);}
+// 1. Execute the actual web logout action and actual syncCloud function using
+// tiny host stubs. No application DOM or live provider is needed.
+const actionStart=source.indexOf('const actions=');
+const actionEnd=source.indexOf('\nrender();',actionStart);
+const syncStart=source.indexOf('async function syncCloud()');
+const syncEnd=source.indexOf('\nfunction download(',syncStart);
+const state=emptyState();state.profiles[0].name='Account A private nickname';state.profiles[0].cloudId=pid;
+let uploaded;
+const context=vm.createContext({state,auth:{access_token:'A'},sessionStorage:{removeItem(){}},save(){},render(){},closeModal(){},reminderModal(){},profileModal(){},loginModal(){},
+ api:async(path,data)=>{uploaded=data;return {profiles:[]};}});
+vm.runInContext(source.slice(syncStart,syncEnd)+'\n'+source.slice(actionStart,actionEnd),context);
+vm.runInContext("actions.logout(); auth={access_token:'B'};",context);
+await vm.runInContext('syncCloud()',context);
+assert.equal(uploaded.profiles[0].name,'Account A private nickname');assert.equal(uploaded.profiles[0].id,null);
+confirmed('R01','Account A local profile is uploaded after signing in as account B',{uploadedName:uploaded.profiles[0].name,cloudId:uploaded.profiles[0].id});
+// 2. Real backend handler with an existing earlier completion in the fake DB.
+let attemptPrefer='';const oldDate='2026-10-25',newDate='2026-10-26';
+const replayServer=createApp(env,async(url,opts)=>{
+ if(url.endsWith('/auth/v1/user'))return json({id:owner});
+ if(url.includes('/course_drafts?'))return json([]);
+ if(url.includes('/profiles?'))return json([{id:pid,owner_id:owner,local_key:'local',name:'Learner',kind:'adult',language:'en',goal:'Everyday conversation'}]);
+ if(url.includes('/attempts?on_conflict=')){attemptPrefer=opts.headers.Prefer;return new Response(null,{status:204});}
+ if(url.includes('/attempts?profile_id='))return json([{lesson_id:'en-hello',completed_on:oldDate,score:1}]);
+ throw Error('Unexpected audit call');
+});
+const local=profile(emptyState()),l=catalog.lessons.find(l=>l.id==='en-hello');
+completeLesson(local,l,l.quiz.answer,new Date(2026,9,26));assert.equal(dailyMinutes(local,catalog,new Date(2026,9,26)),30);
+const replay=await call(replayServer,'/api/sync',{profiles:[{id:pid,localId:'local',name:'Learner',kind:'adult',language:'en',completed:local.completed}]});
+assert.equal(replay.status,200);assert.match(attemptPrefer,/ignore-duplicates/);
+const replayContext=vm.createContext({state:{profiles:[{...local,id:'local',cloudId:pid}]},auth:{access_token:'A'},save(){},api:async()=>replay.body});
+vm.runInContext(source.slice(syncStart,syncEnd),replayContext);await vm.runInContext('syncCloud()',replayContext);
+const merged=replayContext.state.profiles[0];assert.equal(merged.completed['en-hello'].date,oldDate);assert.equal(dailyMinutes(merged,catalog,new Date(2026,9,26)),0);
+confirmed('R02','A repeated lesson loses today’s completion date after sync',{before:newDate,after:merged.completed['en-hello'].date,plannedMinutesAfterSync:0});
+// 3. Exercise real admin validator with a string where a quiz option array belongs.
+let saved;
+const adminServer=createApp(env,async(url,opts)=>{if(url.endsWith('/auth/v1/user'))return json({id:owner,app_metadata:{role:'admin'}});if(url.includes('/course_drafts?on_conflict=')){saved=JSON.parse(opts.body);return json([saved]);}throw Error('Unexpected audit call');});
+const invalid=structuredClone(l);invalid.quiz.options=invalid.quiz.answer;
+const admin=await call(adminServer,'/api/admin/courses',{language:'en',status:'published',reviewed:true,reviewNote:'Audit fixture only; no live DB',lessons:[invalid]});
+assert.equal(admin.status,200);assert.equal(typeof saved.lessons[0].quiz.options,'string');assert.throws(()=>saved.lessons[0].quiz.options.map(x=>x),TypeError);
+confirmed('R03','Published quiz can have string options and break the lesson player',{publishStatus:admin.status,optionsType:typeof saved.lessons[0].quiz.options});
+// 4. Valid JSON but invalid top-level shape should be a 400, currently becomes 500.
+const nullServer=createApp(env,async()=>json({}));const nul=await call(nullServer,'/api/auth/otp',null);assert.equal(nul.status,500);
+confirmed('R04','JSON null produces server error instead of validation error',{status:nul.status});
+// 5. Boundary: account deletion reviewer FK is a schema finding, not a live DB test.
+const sql=await readFile(new URL('../supabase/migrations/001_ilmigo.sql',import.meta.url),'utf8');
+assert.match(sql,/reviewer_id uuid references auth\.users\(id\),/);assert.match(sql,/reviewer_id is not null/);
+confirmed('R05','Published course reviewer foreign key has no account deletion strategy',{verification:'Static schema inspection; no live Postgres execution',defaultAction:'NO ACTION'});
+// 6. Remote collections are never persisted by the current native save path.
+const nativeStore=await readFile(new URL('../mobile/lib/learning.dart',import.meta.url),'utf8');
+assert.ok(nativeStore.includes("rootBundle.loadString('assets/catalog.json')"));
+const savePart=nativeStore.slice(nativeStore.indexOf('Future<void> save()'),nativeStore.indexOf('bool complete('));assert.ok(!savePart.includes("'catalog'"));
+confirmed('R06','Published remote samples are not retained in native offline storage',{verification:'Static persistence inspection; native runtime unverified'});
+// 7. On a fresh device, the fixed local key "local" can resolve to an existing
+// account profile, but the existing row does not receive the new metadata.
+let patches=0;
+const collisionServer=createApp(env,async(url,opts)=>{
+ if(url.endsWith('/auth/v1/user'))return json({id:owner});
+ if(url.includes('/course_drafts?'))return json([]);
+ if(url.includes('/profiles?')){if(opts.method==='PATCH')patches++;return json([{id:pid,owner_id:owner,local_key:'local',name:'Old device',kind:'adult',language:'en',goal:'Everyday conversation'}]);}
+ if(url.includes('/attempts?profile_id='))return json([]);
+ throw Error('Unexpected audit call');
+});
+const collision=await call(collisionServer,'/api/sync',{profiles:[{id:null,localId:'local',name:'New device',kind:'adult',language:'ur',goal:'School & study',completed:{}}]});
+assert.equal(collision.status,200);assert.equal(collision.body.profiles[0].language,'en');assert.equal(patches,0);
+const newDevice=emptyState();newDevice.profiles[0].language='ur';newDevice.profiles[0].name='New device';
+const collisionContext=vm.createContext({state:newDevice,auth:{access_token:'A'},save(){},api:async()=>collision.body});
+vm.runInContext(source.slice(syncStart,syncEnd),collisionContext);await vm.runInContext('syncCloud()',collisionContext);
+assert.equal(collisionContext.state.profiles[0].language,'ur');assert.equal(collisionContext.state.profiles[0].cloudId,pid);
+confirmed('R07','A fresh device can attach an Urdu local profile to an English cloud profile',{localLanguage:'ur',cloudLanguage:'en',metadataUpdates:patches});
+await writeFile(new URL('./evidence.json',import.meta.url),JSON.stringify({date:'2026-10-26',note:'Passing audit reproductions confirm defects; they do not repair them. No live services were called.',findings},null,2)+'\n');
+console.log(`${findings.length} audit findings confirmed. Evidence: review/evidence.json`);
