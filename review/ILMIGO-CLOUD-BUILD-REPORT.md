@@ -1,3 +1,5 @@
+> Historical 0.3.1 build. The [0.3.2 conversation release report](ILMIGO-CONVERSATION-RELEASE.md) records the newer successful build and 54 Node tests.
+
 # ILMIGO DIGITAL ACADEMY — Successful cloud build
 
 Date: 27 October 2026. App version: 0.3.1+4. Delivery: **test/beta**, not store release.

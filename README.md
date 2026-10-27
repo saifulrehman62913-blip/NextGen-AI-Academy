@@ -1,22 +1,24 @@
 # ILMIGO DIGITAL ACADEMY
 
-A bilingual language-learning beta with **ILMIGO**, the robot teacher. Android debug APK and iOS simulator builds have now completed successfully on GitHub Actions.
+Version 0.3.2. A bilingual language-learning beta with **ILMIGO**, the robot teacher. Android debug APK and iOS simulator builds have now completed successfully on GitHub Actions.
+
+Current conversation release evidence: [0.3.2 report](review/ILMIGO-CONVERSATION-RELEASE.md). The older cloud report below records the preceding build.
 
 ## Download the test app
 
-- [Android APK ZIP](https://github.com/saifulrehman62913-blip/NextGen-AI-Academy/actions/runs/40458293712/artifacts/12712984740) — extract and install `app-debug.apk` on Android.
-- [iOS simulator ZIP](https://github.com/saifulrehman62913-blip/NextGen-AI-Academy/actions/runs/40458293712/artifacts/12712864828) — for macOS ARM64 iOS Simulator; not a signed iPhone IPA.
-- [Browser preview ZIP](https://github.com/saifulrehman62913-blip/NextGen-AI-Academy/actions/runs/40458293712/artifacts/12712839543) — open `ILMIGO-preview.html` in a modern browser.
+- [Android APK ZIP](https://github.com/saifulrehman62913-blip/NextGen-AI-Academy/actions/runs/40461426439/artifacts/12715201015) — extract and install `app-debug.apk` on Android.
+- [iOS simulator ZIP](https://github.com/saifulrehman62913-blip/NextGen-AI-Academy/actions/runs/40461426439/artifacts/12715205829) — for macOS ARM64 iOS Simulator; not a signed iPhone IPA.
+- [Browser preview ZIP](https://github.com/saifulrehman62913-blip/NextGen-AI-Academy/actions/runs/40461426439/artifacts/12714213326) — open `ILMIGO-preview.html` in a modern browser.
 
 GitHub sign-in may be required for downloads. Artifacts expire on 25 January 2027. These are test/beta artifacts, not store releases.
 
-[Successful workflow run](https://github.com/saifulrehman62913-blip/NextGen-AI-Academy/actions/runs/40458293712) · [Detailed verification report](review/ILMIGO-CLOUD-BUILD-REPORT.md) · [Machine-readable evidence](review/cloud/verification.json)
+[Successful workflow run](https://github.com/saifulrehman62913-blip/NextGen-AI-Academy/actions/runs/40461426439) · [Detailed verification report](review/ILMIGO-CONVERSATION-RELEASE.md) · [Machine-readable evidence](review/cloud/verification.json)
 
-Verified code commit: `78063c16ee4bed2080b4ef88b1199e1096959120`. Flutter 3.47.8 stable; Node 24.21.0.
+Verified code commit: `71dfb6392fef0f17f908badd4e33aecdc83fdfd6`. Flutter 3.47.8 stable; Node 24.21.0.
 
 | Verification | Result |
 |---|---|
-| Web/backend/content checks | 46 passed |
+| Web/backend/content checks | 54 passed |
 | Flutter tests, Linux | 13 passed |
 | Flutter tests, macOS | 13 passed |
 | Native analysis | 0 errors; 8 informational notes |

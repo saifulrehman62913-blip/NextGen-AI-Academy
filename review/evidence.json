@@ -1,37 +1,6 @@
 {
-  "version": "0.3.1+4",
-  "date": "2026-10-27",
-  "result": "cloud-build-success",
-  "repository": "saifulrehman62913-blip/NextGen-AI-Academy",
-  "verifiedCodeCommit": "78063c16ee4bed2080b4ef88b1199e1096959120",
-  "workflowRunId": 40458293712,
-  "nodeTests": {
-    "passed": 46,
-    "failed": 0
-  },
-  "flutterTests": {
-    "linux": {
-      "passed": 13,
-      "failed": 0
-    },
-    "macOS": {
-      "passed": 13,
-      "failed": 0
-    }
-  },
-  "androidDebugBuilt": true,
-  "iosSimulatorBuilt": true,
-  "signedIPhoneIPA": false,
-  "liveProvidersVerified": false,
-  "physicalDeviceQA": false,
-  "curriculum": {
-    "languages": [
-      "en",
-      "ur"
-    ],
-    "lessons": 40,
-    "reviewStatus": "pending",
-    "otherLanguages": "coming soon"
-  },
-  "report": "ILMIGO-CLOUD-BUILD-REPORT.md"
+  "currentReport": "review/ILMIGO-CONVERSATION-RELEASE.md",
+  "cloudEvidence": "review/cloud/verification.json",
+  "result": "beta-build-success",
+  "productionReady": false
 }

@@ -1,91 +1,82 @@
 {
-  "academy": "ILMIGO DIGITAL ACADEMY",
-  "version": "0.3.1+4",
+  "version": "0.3.2",
   "repository": "saifulrehman62913-blip/NextGen-AI-Academy",
-  "branch": "main",
-  "codeCommit": "78063c16ee4bed2080b4ef88b1199e1096959120",
-  "workflowRunId": 40458293712,
-  "workflowUrl": "https://github.com/saifulrehman62913-blip/NextGen-AI-Academy/actions/runs/40458293712",
+  "verifiedCodeCommit": "71dfb6392fef0f17f908badd4e33aecdc83fdfd6",
+  "runId": 40461426439,
   "result": "success",
-  "nodeVersion": "24.21.0",
-  "flutterVersion": "3.47.8",
-  "checks": {
-    "webAndBackend": {
-      "passed": 46,
-      "failed": 0
-    },
-    "flutterLinux": {
-      "passed": 13,
-      "failed": 0
-    },
-    "flutterMacOS": {
-      "passed": 13,
-      "failed": 0
-    },
-    "nativeAnalysis": {
-      "errors": 0,
-      "nonFatalInfos": 8
-    },
-    "androidDebugApk": "built",
-    "iosSimulatorApp": "built"
+  "nodeTests": {
+    "passed": 54,
+    "failed": 0
   },
-  "jobs": [
-    {
-      "id": 122036915072,
-      "name": "Web and curriculum checks",
-      "status": "completed",
-      "conclusion": "success"
-    },
-    {
-      "id": 122036915234,
-      "name": "iOS simulator verification",
-      "status": "completed",
-      "conclusion": "success"
-    },
-    {
-      "id": 122036915286,
-      "name": "Android debug APK",
-      "status": "completed",
-      "conclusion": "success"
-    }
-  ],
+  "flutterTests": {
+    "distinctTests": 13,
+    "hosts": 2,
+    "passedPerHost": 13
+  },
+  "nativeAnalysis": {
+    "errors": 0,
+    "informational": 8
+  },
   "artifacts": [
     {
-      "id": 12712984740,
-      "name": "ilmigo-android-debug",
-      "bytes": 79641205,
-      "digest": "sha256:0c0d8151f66655a9fb505262eca5c97891b85d655bb8e9153e8d96a1ac9dc1a1",
-      "expires": "2027-01-25T05:57:49Z",
-      "downloadPage": "https://github.com/saifulrehman62913-blip/NextGen-AI-Academy/actions/runs/40458293712/artifacts/12712984740"
-    },
-    {
-      "id": 12712864828,
+      "id": 12715205829,
       "name": "ilmigo-ios-simulator",
-      "bytes": 59156278,
-      "digest": "sha256:be2ba94816cae94c85d11335bacd74e740c80e80c2c618f6d78308cb9861e6eb",
-      "expires": "2027-01-25T05:57:49Z",
-      "downloadPage": "https://github.com/saifulrehman62913-blip/NextGen-AI-Academy/actions/runs/40458293712/artifacts/12712864828"
+      "size_in_bytes": 59158668,
+      "url": "https://api.github.com/repos/saifulrehman62913-blip/NextGen-AI-Academy/actions/artifacts/12715205829",
+      "archive_download_url": "https://api.github.com/repos/saifulrehman62913-blip/NextGen-AI-Academy/actions/artifacts/12715205829/zip",
+      "expired": false,
+      "created_at": "2026-10-27T06:33:58Z",
+      "expires_at": "2027-01-25T06:29:41Z",
+      "updated_at": "2026-10-27T06:33:58Z",
+      "digest": "sha256:1b37c162193076170dd4686e96c72fa721df097d66fc8cb9e868eed689749a6d",
+      "workflow_run": {
+        "id": 40461426439,
+        "repository_id": 1185151325,
+        "head_repository_id": 1185151325,
+        "head_branch": "main",
+        "head_sha": "71dfb6392fef0f17f908badd4e33aecdc83fdfd6"
+      }
     },
     {
-      "id": 12712839543,
+      "id": 12715201015,
+      "name": "ilmigo-android-debug",
+      "size_in_bytes": 79647131,
+      "url": "https://api.github.com/repos/saifulrehman62913-blip/NextGen-AI-Academy/actions/artifacts/12715201015",
+      "archive_download_url": "https://api.github.com/repos/saifulrehman62913-blip/NextGen-AI-Academy/actions/artifacts/12715201015/zip",
+      "expired": false,
+      "created_at": "2026-10-27T06:34:35Z",
+      "expires_at": "2027-01-25T06:29:41Z",
+      "updated_at": "2026-10-27T06:34:35Z",
+      "digest": "sha256:4a56c02f9864a97c5f7b24f0e765116212e2af93927ab9aa34b57a8c621dadda",
+      "workflow_run": {
+        "id": 40461426439,
+        "repository_id": 1185151325,
+        "head_repository_id": 1185151325,
+        "head_branch": "main",
+        "head_sha": "71dfb6392fef0f17f908badd4e33aecdc83fdfd6"
+      }
+    },
+    {
+      "id": 12714213326,
       "name": "ilmigo-web-preview",
-      "bytes": 89360,
-      "digest": "sha256:2af8b5d4f02c2d13eeae0bc85240a020621339cfa1aaf63845d13fa05b3dd55f",
-      "expires": "2027-01-25T05:57:49Z",
-      "downloadPage": "https://github.com/saifulrehman62913-blip/NextGen-AI-Academy/actions/runs/40458293712/artifacts/12712839543"
+      "size_in_bytes": 90361,
+      "url": "https://api.github.com/repos/saifulrehman62913-blip/NextGen-AI-Academy/actions/artifacts/12714213326",
+      "archive_download_url": "https://api.github.com/repos/saifulrehman62913-blip/NextGen-AI-Academy/actions/artifacts/12714213326/zip",
+      "expired": false,
+      "created_at": "2026-10-27T06:29:51Z",
+      "expires_at": "2027-01-25T06:29:41Z",
+      "updated_at": "2026-10-27T06:29:51Z",
+      "digest": "sha256:2d8233989b014b3d84d631aae2c31134b9a23e0a0e50830021efdf67b94ae3aa",
+      "workflow_run": {
+        "id": 40461426439,
+        "repository_id": 1185151325,
+        "head_repository_id": 1185151325,
+        "head_branch": "main",
+        "head_sha": "71dfb6392fef0f17f908badd4e33aecdc83fdfd6"
+      }
     }
   ],
-  "limits": {
-    "releaseType": "debug/test beta",
-    "physicalDeviceQA": false,
-    "signedIPhoneIPA": false,
-    "appStorePublication": false,
-    "liveCloudAIAndBillingConfigured": false,
-    "curriculum": {
-      "en": 20,
-      "ur": 20,
-      "otherLanguages": "coming soon",
-      "qualifiedLanguageReview": "pending"
-    }
-  }
+  "additionalWebFix": "Stop recognition/playback when rendering a different page or profile; local web build and 54 Node tests passed after cloud build. Native code unchanged.",
+  "liveServicesConfigured": false,
+  "productionReady": false
 }
