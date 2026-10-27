@@ -1,150 +1,127 @@
-# ILMIGO DIGITAL ACADEMY — 0.3.1
+# ILMIGO DIGITAL ACADEMY
 
-English/Urdu language-learning development build: Flutter Android/iOS source, a self-contained browser preview, a Node/Supabase backend, and an original ILMIGO logo-shirt robot.
+A bilingual language-learning beta with **ILMIGO**, the robot teacher. Android debug APK and iOS simulator builds have now completed successfully on GitHub Actions.
 
-**This is still a development build, not a complete production platform.** There are 34 catalog languages and 40 original guided lessons: 20 English and 20 Urdu, with four units in each of five stages (beginner, elementary, intermediate, advanced, professional/workplace topics). These are curriculum drafts, not a guarantee of professional fluency. The other 32 courses and qualified linguistic/audio review remain pending. Android/iOS builds and live providers have not been verified in this environment.
+## Download the test app
 
-See the [current course/build report](review/ILMIGO-COURSE-BUILD-REPORT.md) and machine-readable [build verification](review/build/verification.json). The [0.2.0 fix report](review/ILMIGO-FIX-REPORT.md) records the preceding bug-fix release. The earlier [0.1.0 review](review/ILMIGO-REVIEW.md) is historical; it records the defects which prompted this release.
+- [Android APK ZIP](https://github.com/saifulrehman62913-blip/NextGen-AI-Academy/actions/runs/40458293712/artifacts/12712984740) — extract and install `app-debug.apk` on Android.
+- [iOS simulator ZIP](https://github.com/saifulrehman62913-blip/NextGen-AI-Academy/actions/runs/40458293712/artifacts/12712864828) — for macOS ARM64 iOS Simulator; not a signed iPhone IPA.
+- [Browser preview ZIP](https://github.com/saifulrehman62913-blip/NextGen-AI-Academy/actions/runs/40458293712/artifacts/12712839543) — open `ILMIGO-preview.html` in a modern browser.
 
-## Run the preview or full browser app
+GitHub sign-in may be required for downloads. Artifacts expire on 25 January 2027. These are test/beta artifacts, not store releases.
 
-Open `ILMIGO-preview.html` in a modern browser. This single file runs without a server and disables cloud/AI/purchases. Browser storage saves progress when available; otherwise a temporary-session warning appears. Some phone file viewers do not execute HTML; open it in a browser or run the server below.
+[Successful workflow run](https://github.com/saifulrehman62913-blip/NextGen-AI-Academy/actions/runs/40458293712) · [Detailed verification report](review/ILMIGO-CLOUD-BUILD-REPORT.md) · [Machine-readable evidence](review/cloud/verification.json)
 
-Node 24+; no package installation required:
+Verified code commit: `78063c16ee4bed2080b4ef88b1199e1096959120`. Flutter 3.47.8 stable; Node 24.21.0.
+
+| Verification | Result |
+|---|---|
+| Web/backend/content checks | 46 passed |
+| Flutter tests, Linux | 13 passed |
+| Flutter tests, macOS | 13 passed |
+| Native analysis | 0 errors; 8 informational notes |
+| Android debug APK | Built |
+| iOS simulator app | Built |
+
+## What is included
+
+- Original ILMIGO robot, academy branding and English/Urdu explanations with RTL support.
+- 20 English and 20 Urdu guided lessons: four units in each of five stages, from first words to workplace communication.
+- Grammar/usage notes, reading, dialogue, device listening, optional supported speech recognition, writing drafts, self-review rubrics and assessments.
+- Suggested daily plan: review 5m, words/patterns 8m, reading/listening 7m, speaking/writing 7m, assessment 3m.
+- Real local progress, streaks/XP, saved lesson resumption and writing drafts.
+- Separate family/account stores, explicit guest import, parent PIN and same-account email PIN recovery when cloud service is configured.
+- Source integrations for Supabase, text AI feedback and disabled-by-default RevenueCat billing.
+
+The 40 lessons are original curriculum drafts awaiting qualified language/audio review. Ten planned hours per language do not guarantee professional fluency or CEFR/occupational certification. The other 32 languages in the catalog remain **coming soon**.
+
+The current APK is an offline-capable preview built without a backend URL. Live accounts/cloud AI/payment services are not active. Real-device/voice/visual QA, production parent consent/session controls, release signing and store publication remain pending. See the detailed report for limits.
+
+## Run or regenerate the web app
+
+Node **24+**, Python 3; no npm dependency installation is needed:
 
 ```sh
+npm run build
 npm start
 ```
 
-Open `http://localhost:3000`. The full browser companion includes a dashboard, searchable 34-language catalog, 5-block lesson player/resume, local quizzes/streaks/XP, English/Urdu explanations and RTL, optional device audio/speech, separate family profiles, parent PIN gate, JSON backups, calendar reminders and offline caching.
-
-Daily blocks: 5 minutes review + 8 words/grammar + 7 reading/listening + 7 speaking + 3 quiz. Durations are suggestions. Planned completed minutes and active time are labelled separately. Replaying a lesson does not multiply XP.
-
-## Native Android / iPhone
-
-Install Flutter stable (Dart >=3.4), Android SDK for Android, and Xcode on macOS for iOS:
-
-```sh
-python3 scripts/bootstrap_mobile.py
-cd mobile
-flutter analyze --no-fatal-infos --no-fatal-warnings
-flutter test
-flutter run
-```
-
-The script generates Android/iOS platform shells, copies the shared catalog and adds microphone/speech/TTS permissions and iOS usage explanations. It does not create signing credentials or a store listing. Platform folders are generated, not included as an already built app.
-
-Configure an owner-operated HTTPS backend:
-
-```sh
-flutter run --dart-define=API_BASE_URL=https://your-server.example
-flutter build appbundle --dart-define=API_BASE_URL=https://your-server.example
-# macOS + signing required:
-flutter build ipa --dart-define=API_BASE_URL=https://your-server.example
-```
-
-Native source includes the five-stage curriculum, grammar/dialogues/writing tasks, multi-question checks and progress, family profiles, PIN gate, TTS, optional adult speech-to-text, word comparison, OTP, cloud sync, text AI feedback and a Google Calendar reminder link. Downloaded catalog data is validated and saved before use so it can survive offline restarts. Device voices/recognition availability varies. Native access tokens stay in memory; sign in again after restarting.
-
-**Native analysis, Flutter tests and APK/IPA compilation have not run here.** The SDK is absent and download failed; the source needs the checks above before it can be considered build-verified.
-
-## Supabase and optional services
-
-1. Create your Supabase project and apply, in order:
-   - `supabase/migrations/001_ilmigo.sql`
-   - `supabase/migrations/002_review_fixes.sql`
-2. Existing 0.1.0 installations apply **only migration 002**. Back up your database first. Do not run 001 again.
-3. Enable email OTP; make the email template show `{{ .Token }}`. Configure production SMTP before public launch.
-4. Copy `.env.example` to `.env`; set URL, anon key, server-only service-role key and exact `APP_ORIGIN`.
-5. Optionally set `OPENAI_API_KEY`/`OPENAI_MODEL` for text tutoring and `REVENUECAT_SECRET_KEY` for server entitlement verification.
-6. Run behind HTTPS with browser and backend on the same origin.
-
-Migration 002 adds daily practice history, atomic monotonic completion merging, a transactional family-size limit and a reviewer audit identity which survives deletion of the reviewer's auth account. It preserves existing completions and seeds known practice days. Older practice dates that were never stored in 0.1.0 cannot be reconstructed automatically; device backups/days can import them.
-
-**Migration files were prepared and statically inspected, not applied to a live database here.** Live RLS, concurrent RPC behavior and reviewer deletion must be tested in staging.
-
-Do not expose service-role, OpenAI or RevenueCat secret keys in client code/Flutter defines, backups or Git. No production account, provider or deployment was activated in this delivery.
-
-## Accounts, progress and children
-
-Guest and each authenticated account now use separate local stores. Signing out opens the guest store. A new sign-in fetches its own cloud profiles; it never silently imports another account's local data. Returning to the same account preserves unsynced local progress. Late sync responses after account switching are ignored.
-
-Guest progress remains in guest space. An adult can explicitly choose **Import guest progress** after signing in. Only import guest data you own on a shared device. Other authenticated-account stores are excluded. Imports get fresh profile IDs. Existing 0.1.0 device data is retained as guest data; because that version did not bind it to a verified owner, it is not automatically assigned to an account.
-
-For new child profiles, an adult creates a 6–12 digit parent PIN. Child-to-adult profile switching requires it. PINs are salted/hashed with PBKDF2 and stored separately from progress exports/cloud data; five incorrect attempts trigger a cooldown. The PIN is local UI protection, not encryption, verified parent identity or protection from someone controlling device storage. A signed-in family account can recover adult access by verifying that same account’s email code. A different account cannot reset its PIN. This verifies account ownership, not age or legal parenthood. Guest PINs have no verified email identity; keep those PINs securely. A device reset clears the local gate and unsynced guest data, while signed-in cloud data can be restored after sign-in.
-
-Child live AI/voice recognition remain disabled. The backend independently rejects AI for child profiles. Verified adult/parent consent and independently scoped child sessions remain requirements before public child onboarding. Use device locking and supervision meanwhile.
-
-Cloud sync stores all known completed practice days and never moves a lesson's latest completion date backwards. Imported progress is practice data, not certification or a purchase entitlement.
-
-## API
-
-- `GET /api/config`, `GET /api/catalog`: capability flags/free sample collections.
-- `POST /api/auth/otp`, `POST /api/auth/verify`: email OTP. No automatic session refresh yet.
-- `POST /api/sync`: authenticated `{profiles:[{id,localId,name,kind,language,goal,completed,days}]}`; response has canonical metadata, latest completions and complete stored day history. Profile IDs are owner-checked.
-- `POST /api/speaking`: `{profileId,lessonId,transcript,ui}`; adult/owner-checked text feedback. Atomic quota: 3 trial / 20 Plus turns per UTC day. Upstream failures can consume reserved turns. No audio grading or phonetic score.
-- `GET /api/entitlements`: server-side RevenueCat check.
-- `POST /api/delete-data`: delete profiles/progress, retain login/quota. Local data remains and a later explicit sync can upload it again.
-- `POST /api/delete-account`: `{confirm:"DELETE"}` deletes authenticated account/cloud records; clients remove its local learning store. Store subscriptions must be cancelled separately.
-- `GET/POST /api/admin/courses`: trusted administrator studio; strict bilingual lesson validation.
-
-## Course studio and billing
-
-Sign in through the app, then open `/admin.html`. Assign `app_metadata.role="admin"` using a trusted admin console only. Never trust user-editable metadata for roles.
-
-Use `shared/catalog.json` as the lesson schema. Every lesson needs bilingual titles/objectives/readings/quiz question, typed word entries and 2–6 distinct string quiz options containing the answer. Free 30-minute units across all five allowed stages are accepted. Optional assessment arrays, grammar notes, dialogues, writing tasks and bilingual rubrics are strictly validated. Paid gating remains disabled. Admin uploads are capped at 2 MiB; ordinary API bodies at 256 KiB. Draft/review collections stay private; published collections require a human review confirmation/note. Do not put personal information in review notes. The public catalog updates within 30 seconds.
-
-RevenueCat native purchase/restore bridge is **off by default**. Do not set `ENABLE_PURCHASES=true` before completing reviewed paid content, course gating, store products, subscription terms and sandbox lifecycle tests. `REVENUECAT_ANDROID_KEY`/`REVENUECAT_IOS_KEY` are public client SDK keys; the secret key stays on the backend. There is no web checkout or released paid curriculum.
-
-## Checks and release limits
+Open `http://localhost:3000`. To open the standalone version, use generated `ILMIGO-preview.html`. Some mobile file viewers do not execute HTML; open it in a browser.
 
 ```sh
 npm run check
 npm test
-node --test --test-isolation=none tests/*.test.mjs
-node review/reproduce.mjs
-npm run build
 npm run verify
 ```
 
-There are **46 passing Node tests** in this revision, including all five curriculum stages, assessment bypass rejection, writing-draft persistence and stale-cache upgrade checks. They cover content/scoring, account isolation, stale responses, replay/history, metadata conflicts, strict input/content shapes, parent hashing/cooldown, local fallback and bundled-preview startup/navigation with a synthetic DOM. HTTP tests run the actual handler in-process with mocked providers; they do not open sockets or call live services.
+`npm run verify` also attempts native checks: it exits 2 when prerequisites are blocked, 1 on failure, and 0 only when all required checks pass. Older local-host reports under `review/build/` record the missing SDK before cloud verification became available. Current cloud evidence is under `review/cloud/`.
 
-The synthetic DOM is **not real browser QA**. Native tests are included but unrun. This environment previously blocked TCP listeners and Chromium startup. No visual/device/audio/microphone checks, live Supabase/OpenAI/RevenueCat integration, production deployment, APK/IPA or store submission has been completed.
+## Native Android / iOS source
 
-Before release: apply/test migrations in staging; run native analysis/tests/builds; verify real Android/iOS/Urdu/text-scaling/permissions/offline flows; implement verified parent sessions/consent; professionally review agreed launch courses; test real OTP/AI/billing/deletion; configure privacy/support/retention/crash monitoring and signing. The included GitHub Actions workflow can run native analysis/tests/Android debug build and an iOS simulator build once the source is in a repository.
+Use Flutter stable (verified on 3.47.8), Android SDK for Android, and macOS/Xcode for iOS:
 
-## Course content and build status
+```sh
+python3 scripts/build_curriculum.py
+python3 scripts/bootstrap_mobile.py
+cd mobile
+flutter analyze --no-fatal-infos --no-fatal-warnings
+flutter test --reporter expanded --concurrency 1 --timeout 120s --fail-fast
+flutter build apk --debug
+# macOS/Xcode:
+flutter build ios --simulator --no-codesign
+```
 
-The agreed staged launch prioritises English and Urdu. Each course contains 20 guided lessons / 600 planned minutes; repeating and practising with other people is additional. Four workplace units cover interviews, meetings, negotiation and recommendations/presentations. Readings and dialogues use fictional scenarios. The complete authored v1 unit set is present, but it is not an accredited comprehensive professional-fluency qualification. Qualified review, recorded audio and broader skill assessment are still needed.
+The bootstrap script generates platform projects and microphone/TTS/speech permission declarations. It preserves authored source. Native display name: ILMIGO DIGITAL ACADEMY; robot name: ILMIGO.
 
-- [English curriculum and instructor answer key](courses/en-curriculum.md)
-- [Urdu curriculum and instructor answer key](courses/ur-curriculum.md)
-- `scripts/course_units.py`: authored bilingual scenario source.
-- `npm run curriculum`: reproducibly generates catalog/mobile assets and Markdown course exports.
-- `npm run build`: generates course assets, standalone preview and checks JavaScript syntax.
-- `npm run verify`: also runs tests and attempts native bootstrap/analyse/tests/builds. It **exits 2** when required native checks are blocked, **1** on a failure, and **0 only when all requested checks pass**.
+To connect an owner-configured HTTPS backend:
 
-In this workspace, web/content/source checks pass; `review/build/verification.json` records `partial_native_blocked` because Flutter is missing and iOS needs macOS/Xcode. No APK/IPA is included. The SDK network-access attempt was not approved, so the download was not completed. Writing drafts stay local and are included in device backups; cloud sync uploads completion/day history, not the drafts.
+```sh
+flutter run --dart-define=API_BASE_URL=https://your-server.example
+```
 
-## Completing the native build
+Do not place server secrets in Flutter defines. Apple signing/provisioning is required for a physical-iPhone IPA/TestFlight release; the simulator artifact cannot be installed on an iPhone.
 
-This workspace has no Flutter/Dart, Android SDK or Xcode; Docker access is denied. A search found no connected ILMIGO GitHub repository. A supported build host is required. Supply an existing connected GitHub repository URL to place the prepared source/workflows there, or run the included bootstrap and verification commands on a Flutter/Android SDK host (and macOS/Xcode for iOS). No native build is claimed until those jobs actually finish successfully.
+## Cloud setup and API
 
-Version 0.3.1 also adds same-account email parent-PIN recovery, preserves the native auth session if local sign-out persistence fails, and rejects non-HTTPS lookalike hosts such as `http://localhost.example` in native backend configuration. Native service tests cover those cases but remain unrun without Flutter.
+1. Create a Supabase project; apply migrations `001_ilmigo.sql`, then `002_review_fixes.sql` under `supabase/migrations/`. Existing 0.1 installations apply only 002 after a backup.
+2. Enable email OTP and put `{{ .Token }}` in the email template. Set up production SMTP before public launch.
+3. Copy `.env.example` to `.env`; configure the Supabase URL, anon key, **server-only** service role key and exact `APP_ORIGIN`.
+4. Optionally configure `OPENAI_API_KEY`/`OPENAI_MODEL` and server-only `REVENUECAT_SECRET_KEY`.
+5. Run behind HTTPS with web/backend on the same origin, then test actual providers and database policies in staging.
 
-## Prepared cloud build handoff
+Migration 002 stores daily history, merges completion dates monotonically, limits family size transactionally and preserves anonymised review audit identity when the reviewer's auth account is deleted. It has not been executed against a live project here. Older dates never saved by 0.1 cannot be reconstructed without surviving device history/backups.
 
-`scripts/prepare-github-source.py` creates a source-only ZIP and SHA256 manifest under `release/`, excluding keys, caches and generated catalog/preview assets. All three CI jobs now generate their required assets from the authored curriculum before testing/building. A fresh local checkout from that prepared source successfully generated the curriculum/web preview and passed 46 Node tests. This proves clean-checkout reproducibility for those local checks, not native compilation.
+Main routes:
 
-Connected GitHub discovery found an empty **public** `NextGen-AI-Academy` repository owned by the user. No code was uploaded: the repository choice/public visibility needs a response before publishing. There is no tool here for creating a new GitHub repository. An existing repository can host the prepared Android/iOS workflows once selected. The Android artifact is a debug APK; the iOS artifact is a simulator app, not a signed installable iPhone IPA.
+- `GET /api/config`, `GET /api/catalog`: capability flags and available free curriculum.
+- `POST /api/auth/otp`, `POST /api/auth/verify`: email OTP; no automatic token refresh yet.
+- `POST /api/sync`: owner-checked profiles, latest completions and full stored practice-day history.
+- `POST /api/speaking`: adult/owner-checked **text** feedback, not audio pronunciation grading. Quota: 3 trial / 20 Plus turns per UTC day; a failed upstream request can consume a reservation.
+- `GET /api/entitlements`: server-side RevenueCat entitlement lookup.
+- `POST /api/delete-data`: deletes owned cloud learning profiles/progress; login/quota and local data remain. A subsequent explicit sync can upload local data again.
+- `POST /api/delete-account` with `{confirm:"DELETE"}`: deletes the authenticated account/cloud data; clients remove its local store. Store subscriptions must be cancelled separately.
+- `GET/POST /api/admin/courses`: trusted admin-only studio. Assign roles via server-managed `app_metadata`, never user-editable metadata.
 
-## Academy name
+No live project or secret was provisioned in this task. Never commit service-role, OpenAI or RevenueCat secrets. Only `.env.example` is included.
 
-The academy/app display name is **ILMIGO DIGITAL ACADEMY**. The robot teacher remains **ILMIGO**. Browser titles, install manifest, app wordmarks, native display-name generation and course exports use the academy branding. GitHub still reports the existing `NextGen-AI-Academy` repository slug; no repository rename or remote upload has been performed by this agent. The updated repository URL or explicit choice of the existing public repository is pending.
+## Family, privacy and billing
 
-## Selected repository
+Guest and signed-in users have separate device stores; signing out opens guest space. A new account never silently inherits another account's profiles. Adults can explicitly import guest data they own. Late sync responses after an account switch are ignored. Legacy 0.1 device data is retained as guest data because that version did not bind it to a verified owner.
 
-The owner selected the existing public repository `saifulrehman62913-blip/NextGen-AI-Academy` for this project. The academy display name is ILMIGO DIGITAL ACADEMY; the repository slug remains unchanged. Source and prepared verification workflows are now being uploaded. Actual cloud-build results will be recorded after the jobs run. Prior local reports describe the pre-cloud environment and must not be read as native-build success.
+Parent PINs use salted PBKDF2 hashes, are separate from progress exports and have a retry cooldown. Signed-in owners can recover adult access by verifying the same account's email; another account cannot reset the gate. Guest PINs have no verified email recovery. A local PIN is not encryption, verified age/parenthood or protection from someone controlling device storage. Use device locking/supervision; production needs verified parent consent and independently scoped child sessions.
 
-## Cloud verification in progress
+Child live AI and voice recognition are disabled. Device/browser recognition may use its provider. ILMIGO does not store audio. Writing drafts are local and included in backups, not cloud progress sync. AI receives submitted text only on request. Web fonts may contact Google Fonts; the standalone preview uses system fonts.
 
-Source was pushed to the owner-selected repository. The first real CI run exposed a Node 22 test-flag incompatibility; the supported project runtime is now Node 24, matching local verification. Native cloud checks are being evaluated; success will be documented only after completed jobs.
+RevenueCat purchase/restore code remains **off by default**. Do not enable purchases before reviewed paid content, gating, store products, subscription terms and sandbox lifecycle checks are complete. Public native SDK defines are `REVENUECAT_ANDROID_KEY`/`REVENUECAT_IOS_KEY`; `REVENUECAT_SECRET_KEY` stays on the server. No web checkout is released.
+
+## Content and reproducibility
+
+- [English curriculum + instructor answer key](courses/en-curriculum.md)
+- [Urdu curriculum + instructor answer key](courses/ur-curriculum.md)
+- `scripts/course_units.py`: original authored bilingual scenario source.
+- `npm run curriculum`: generates the shared/mobile catalogs and course exports.
+- `/admin.html`: signed-in trusted administrator studio; strict schema/review attestation before publication. All five free levels are supported; paid gating is not released. Admin body limit: 2 MiB; ordinary requests: 256 KiB.
+- `.github/workflows/verify.yml`: web checks, Android debug APK and iOS simulator build. Jobs generate lesson assets from source before building.
+- `scripts/prepare-github-source.py`: packages source without secret files/caches/derived catalog/preview assets.
+
+Historical reviews record pre-fix/pre-cloud states. The current successful cloud run/report above supersedes their native-build-blocked status, while their remaining production/content limitations still apply.
