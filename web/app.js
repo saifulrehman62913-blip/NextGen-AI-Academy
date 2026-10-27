@@ -4,12 +4,13 @@ import {AccountStore,mergeProgress,safeStorage} from '/shared/accounts.mjs';
 import {validateCatalog} from '/shared/schema.mjs';
 import {ParentGate,recoverParentAccess} from '/shared/parent.mjs';
 const deviceStorage=safeStorage();
+const bootstrapClient=new ApiSession({getSession:()=>null,setSession:()=>false});
 let catalog, config={};
 try{catalog=validateCatalog(JSON.parse(deviceStorage.getItem('ilmigo-catalog-v2')));}catch{}
-try{const r=await fetch('/shared/catalog.json');if(r.ok){const bundled=validateCatalog(await r.json());if(!catalog||(bundled.revision||1)>(catalog.revision||1))catalog=bundled;}}catch{}
+try{const bundled=validateCatalog(await bootstrapClient.request('/shared/catalog.json'));if(!catalog||(bundled.revision||1)>(catalog.revision||1))catalog=bundled;}catch{}
 if(!catalog){document.querySelector('#app').textContent='ILMIGO could not load. Reconnect to download your lesson library.';throw Error('Catalog unavailable');}
-try{config=await (await fetch('/api/config')).json();}catch{}
-try{const r=await fetch('/api/catalog');if(r.ok){const remote=validateCatalog(await r.json());if((remote.revision||1)>=(catalog.revision||1)){catalog=remote;deviceStorage.setItem('ilmigo-catalog-v2',JSON.stringify(catalog));}}}catch{}
+try{config=await bootstrapClient.request('/api/config');}catch{}
+try{const remote=validateCatalog(await bootstrapClient.request('/api/catalog'));if((remote.revision||1)>=(catalog.revision||1)){catalog=remote;deviceStorage.setItem('ilmigo-catalog-v2',JSON.stringify(catalog));}}catch{}
 let page='home',filter='',languageFilter='all',lessonRun=null,ticker=null,recognition=null,auth=null;
 try{const saved=JSON.parse(sessionStorage.getItem('ilmigo-auth'));if(saved?.userId&&saved?.access_token)auth=saved;}catch{}
 const sessionClient=new ApiSession({getSession:()=>auth,setSession:(next,expected)=>{if(auth!==expected)return false;Object.assign(auth,next);persistAuth();return true;}});

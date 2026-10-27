@@ -117,6 +117,18 @@ try{
  assert.deepEqual(await cloudPage.evaluate(id=>JSON.parse(localStorage.getItem('ilmigo-v2:'+id+':parent')).hash,owner),pinBefore);
  await cloudPage.locator('[data-action="revoke-child-sessions"]').click();await cloudPage.getByText('Child sessions ended. Progress was kept.',{exact:true}).waitFor();assert.equal(revoked,true);
  scenarios.push('Mocked cloud UI: explicit child consent, parent-token removal, same-owner email return and revocation');
+ let stalledRoute,stalledCalls=0;
+ await cloudPage.route('**/api/qa-stalled',route=>{stalledRoute=route;stalledCalls++;});
+ const beforeTimeoutAuth=await cloudPage.evaluate(()=>sessionStorage.getItem('ilmigo-auth'));
+ const timeoutMessage=await cloudPage.evaluate(async()=>{
+  const {ApiSession}=await import('/shared/session.mjs');
+  const client=new ApiSession({getSession:()=>null,setSession:()=>false,timeoutMs:1000});
+  try{await client.request('/api/qa-stalled',{confirm:true});return 'unexpected success';}catch(error){return error.message;}
+ });
+ assert.match(timeoutMessage,/took too long/);assert.equal(stalledCalls,1,'A timeout must not replay the request');
+ await stalledRoute?.abort().catch(()=>{});
+ assert.equal(await cloudPage.evaluate(()=>sessionStorage.getItem('ilmigo-auth')),beforeTimeoutAuth);
+ scenarios.push('Actual browser HTTP: stalled request aborts once without replay or credential loss');
  assert.deepEqual(failures,[],'Browser application errors');
  await writeFile(new URL('checks.json',out),JSON.stringify({browser:browser.version(),scenarios,result:'passed',liveProviders:false,physicalDevice:false},null,2)+'\n');
  console.log(`Browser smoke passed: ${scenarios.length} scenarios; Chromium ${browser.version()}.`);

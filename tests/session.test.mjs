@@ -79,3 +79,24 @@ test('an upstream OpenAI 401 is a service error, not a request to rotate the lea
  });
  const response=await s.post('/api/speaking',{profileId:pid,lessonId:'en-hello',transcript:'Hello'},{Authorization:'Bearer valid.token'});assert.equal(response.status,502);assert.ok(!(await response.text()).includes('provider-key'));
 });
+test('browser deadline aborts a stalled request without replay or credential changes',async()=>{
+ let calls=0,signal;const auth={userId:'A',access_token:'access-A',refresh_token:'refresh-A'};
+ const client=new ApiSession({getSession:()=>auth,setSession:()=>{throw Error('Must not refresh');},timeoutMs:15,fetcher:async(path,options)=>{calls++;signal=options.signal;return new Promise(()=>{});}});
+ await assert.rejects(client.request('/api/speaking',{transcript:'Hello'}),/took too long/);
+ assert.equal(signal.aborted,true);assert.equal(calls,1);assert.equal(auth.access_token,'access-A');
+});
+test('browser deadline includes a stalled response body and does not expose network details',async()=>{
+ const auth={userId:'A',access_token:'A'};
+ const client=new ApiSession({getSession:()=>auth,setSession:()=>{},timeoutMs:15,fetcher:async()=>({status:200,ok:true,text:()=>new Promise(()=>{})})});
+ await assert.rejects(client.request('/api/entitlements'),/took too long/);
+ const failed=new ApiSession({getSession:()=>auth,setSession:()=>{},fetcher:async()=>{throw Error('private endpoint diagnostics');}});
+ await assert.rejects(failed.request('/api/entitlements'),error=>/Check your connection/.test(error.message)&&!error.message.includes('private'));
+});
+test('successful browser transfers clear their deadline and timeout during refresh never replays a write',async()=>{
+ let signal;const auth={userId:'A',access_token:'old',refresh_token:'refresh'},paths=[];
+ const success=new ApiSession({getSession:()=>auth,setSession:()=>{},timeoutMs:15,fetcher:async(path,options)=>{signal=options.signal;return json({ok:true});}});
+ assert.equal((await success.request('/api/config')).ok,true);await new Promise(r=>setTimeout(r,25));assert.equal(signal.aborted,false);
+ const client=new ApiSession({getSession:()=>auth,setSession:()=>{},timeoutMs:15,fetcher:async path=>{paths.push(path);if(path==='/api/auth/refresh')return new Promise(()=>{});return json({error:'Expired'},401);}});
+ await assert.rejects(client.request('/api/sync',{profiles:[]}),/took too long/);
+ assert.deepEqual(paths,['/api/sync','/api/auth/refresh']);assert.equal(auth.access_token,'old');
+});

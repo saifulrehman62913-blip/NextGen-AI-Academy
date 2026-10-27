@@ -1,8 +1,18 @@
 // Browser session rotation is account-bound; tokens never enter progress exports.
 export class ApiSession {
-  constructor({getSession,setSession,fetcher=(...args)=>fetch(...args)}){this.getSession=getSession;this.setSession=setSession;this.fetcher=fetcher;this.refreshes=new WeakMap();}
+  constructor({getSession,setSession,fetcher=(...args)=>fetch(...args),timeoutMs=30000}){if(!Number.isFinite(timeoutMs)||timeoutMs<=0)throw TypeError('A positive request timeout is required.');this.getSession=getSession;this.setSession=setSession;this.fetcher=fetcher;this.timeoutMs=timeoutMs;this.refreshes=new WeakMap();}
   async send(path,body,token){
-    return this.fetcher(path,{method:body===undefined?'GET':'POST',headers:{'Content-Type':'application/json',...(token?{Authorization:`Bearer ${token}`}:{})},...(body===undefined?{}:{body})});
+    const controller=new AbortController();let timer;
+    const timeout=new Promise((_,reject)=>{timer=setTimeout(()=>{reject(Error('The service took too long. Please try again.'));controller.abort();},this.timeoutMs);});
+    const transfer=(async()=>{
+      const response=await this.fetcher(path,{method:body===undefined?'GET':'POST',headers:{'Content-Type':'application/json',...(token?{Authorization:`Bearer ${token}`}:{})},...(body===undefined?{}:{body}),signal:controller.signal});
+      // Keep the deadline active through body download, not just HTTP headers.
+      const raw=await response.text();
+      return {status:response.status,ok:response.ok,json:async()=>JSON.parse(raw)};
+    })();
+    try{return await Promise.race([transfer,timeout]);}
+    catch(error){if(controller.signal.aborted)throw Error('The service took too long. Please try again.');throw Error('Could not connect to the service. Check your connection and try again.');}
+    finally{clearTimeout(timer);}
   }
   async decode(response){
     let result;try{result=await response.json();}catch{throw Error('Service unavailable. Please try again.');}
