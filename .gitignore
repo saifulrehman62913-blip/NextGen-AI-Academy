@@ -10,3 +10,10 @@ mobile/pubspec.lock
 *.zip
 
 release/
+
+# Private release signing material
+*.jks
+*.keystore
+**/key.properties
+*.p12
+*.mobileprovision

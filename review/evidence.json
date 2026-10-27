@@ -1,6 +1,7 @@
 {
-  "currentReport": "review/ILMIGO-CONVERSATION-RELEASE.md",
+  "currentReport": "review/ILMIGO-SUBSCRIPTION-RELEASE.md",
   "cloudEvidence": "review/cloud/verification.json",
   "result": "beta-build-success",
-  "productionReady": false
+  "productionReady": false,
+  "purchasesActivated": false
 }

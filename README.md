@@ -1,28 +1,26 @@
 # ILMIGO DIGITAL ACADEMY
 
-Version 0.4.0 source. A bilingual language-learning beta with **ILMIGO**, the robot teacher. Android debug APK and iOS simulator builds have now completed successfully on GitHub Actions.
+Version 0.4.0. A bilingual language-learning beta with **ILMIGO**, the robot teacher. Android debug APK and iOS simulator builds have now completed successfully on GitHub Actions.
 
-The latest completed artifact evidence before subscription verification is recorded below. Current subscription implementation and owner setup: [Pakistan payment guide](review/PAYMENT-SETUP-PAKISTAN.md).
-
-Current conversation release evidence: [0.3.2 report](review/ILMIGO-CONVERSATION-RELEASE.md). The older cloud report below records the preceding build.
+Current build and implementation evidence: [0.4.0 subscription report](review/ILMIGO-SUBSCRIPTION-RELEASE.md). Owner account and payout setup: [Pakistan/Meezan guide](review/PAYMENT-SETUP-PAKISTAN.md).
 
 ## Download the test app
 
-- [Android APK ZIP](https://github.com/saifulrehman62913-blip/NextGen-AI-Academy/actions/runs/40461426439/artifacts/12715201015) — extract and install `app-debug.apk` on Android.
-- [iOS simulator ZIP](https://github.com/saifulrehman62913-blip/NextGen-AI-Academy/actions/runs/40461426439/artifacts/12715205829) — for macOS ARM64 iOS Simulator; not a signed iPhone IPA.
-- [Browser preview ZIP](https://github.com/saifulrehman62913-blip/NextGen-AI-Academy/actions/runs/40461426439/artifacts/12714213326) — open `ILMIGO-preview.html` in a modern browser.
+- [Android APK ZIP](https://github.com/saifulrehman62913-blip/NextGen-AI-Academy/actions/runs/40466353657/artifacts/12716114249) — extract and install `app-debug.apk` on Android.
+- [iOS simulator ZIP](https://github.com/saifulrehman62913-blip/NextGen-AI-Academy/actions/runs/40466353657/artifacts/12717280168) — for macOS ARM64 iOS Simulator; not a signed iPhone IPA.
+- [Browser preview ZIP](https://github.com/saifulrehman62913-blip/NextGen-AI-Academy/actions/runs/40466353657/artifacts/12716613278) — open `ILMIGO-preview.html` in a modern browser.
 
 GitHub sign-in may be required for downloads. Artifacts expire on 25 January 2027. These are test/beta artifacts, not store releases.
 
-[Successful workflow run](https://github.com/saifulrehman62913-blip/NextGen-AI-Academy/actions/runs/40461426439) · [Detailed verification report](review/ILMIGO-CONVERSATION-RELEASE.md) · [Machine-readable evidence](review/cloud/verification.json)
+[Successful workflow run](https://github.com/saifulrehman62913-blip/NextGen-AI-Academy/actions/runs/40466353657) · [Detailed verification report](review/ILMIGO-SUBSCRIPTION-RELEASE.md) · [Machine-readable evidence](review/cloud/verification.json)
 
-Verified code commit: `71dfb6392fef0f17f908badd4e33aecdc83fdfd6`. Flutter 3.47.8 stable; Node 24.21.0.
+Verified code commit: `b1959da4bfe0dba3a0616e9075809c8d5fae7cc1`. Flutter 3.47.8 stable; Node 24.21.0.
 
 | Verification | Result |
 |---|---|
-| Web/backend/content checks | 54 passed |
-| Flutter tests, Linux | 13 passed |
-| Flutter tests, macOS | 13 passed |
+| Web/backend/content checks | 62 cloud; 63 local after web-only corrections |
+| Flutter tests, Linux | 14 passed |
+| Flutter tests, macOS | 14 passed |
 | Native analysis | 0 errors; 8 informational notes |
 | Android debug APK | Built |
 | iOS simulator app | Built |

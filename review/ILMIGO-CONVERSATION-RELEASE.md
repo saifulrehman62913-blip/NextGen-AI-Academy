@@ -1,3 +1,5 @@
+> Historical 0.3.2 evidence. The [0.4.0 subscription report](ILMIGO-SUBSCRIPTION-RELEASE.md) records the current build.
+
 # ILMIGO DIGITAL ACADEMY 0.3.2 — conversation beta
 
 ## Verified builds
