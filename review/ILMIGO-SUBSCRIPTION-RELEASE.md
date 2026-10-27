@@ -1,3 +1,5 @@
+> Historical 0.4.0 build. The [0.4.1 reliability report](ILMIGO-RELIABILITY-RELEASE.md) records the latest verified app, database, Docker and browser checks.
+
 # ILMIGO DIGITAL ACADEMY 0.4.0 — annual subscription implementation
 
 Owner-confirmed plan: **USD 10 per year base price**, with **one explicit free 3-day/72-hour trial per verified account**. Payout preference: Meezan Bank, Pakistan. No merchant/bank account or live payment has been configured or verified.

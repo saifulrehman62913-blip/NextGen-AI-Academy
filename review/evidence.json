@@ -1,5 +1,5 @@
 {
-  "currentReport": "review/ILMIGO-SUBSCRIPTION-RELEASE.md",
+  "currentReport": "review/ILMIGO-RELIABILITY-RELEASE.md",
   "cloudEvidence": "review/cloud/verification.json",
   "result": "beta-build-success",
   "productionReady": false,

@@ -1,22 +1,42 @@
 {
-  "version": "0.4.0",
+  "version": "0.4.1",
   "repository": "saifulrehman62913-blip/NextGen-AI-Academy",
-  "verifiedCodeCommit": "b1959da4bfe0dba3a0616e9075809c8d5fae7cc1",
-  "runId": 40466353657,
+  "verifiedCodeCommit": "99322a2c1f44297a9728eee646710f2d95518a30",
+  "runId": 40474428692,
   "result": "success",
   "nodeTests": {
-    "cloudPassed": 62,
-    "localPassedAfterWebCorrections": 63,
+    "passed": 73,
     "failed": 0
   },
   "flutterTests": {
-    "distinctTests": 14,
+    "distinctTests": 22,
     "hosts": 2,
-    "passedPerHost": 14
+    "passedPerHost": 22
   },
   "nativeAnalysis": {
     "errors": 0,
     "informational": 8
+  },
+  "postgresql": {
+    "version": 16,
+    "migrations": 3,
+    "assertions": 24,
+    "actualConcurrentCalls": true,
+    "auth": "disposable stand-in auth schema, not live Supabase"
+  },
+  "docker": {
+    "build": "passed",
+    "runtimeHttpSmoke": "passed",
+    "liveProviders": false
+  },
+  "browser": {
+    "tool": "Playwright 1.64.1",
+    "version": "Chrome 155.0.8059.39",
+    "scenarios": 3,
+    "result": "passed",
+    "physicalDevice": false,
+    "externalFontsBlocked": true,
+    "screenshotsManuallyReviewed": false
   },
   "plan": {
     "currency": "USD",
@@ -27,66 +47,81 @@
   },
   "artifacts": [
     {
-      "id": 12717280168,
-      "name": "ilmigo-ios-simulator",
-      "size_in_bytes": 59165588,
-      "url": "https://api.github.com/repos/saifulrehman62913-blip/NextGen-AI-Academy/actions/artifacts/12717280168",
-      "archive_download_url": "https://api.github.com/repos/saifulrehman62913-blip/NextGen-AI-Academy/actions/artifacts/12717280168/zip",
-      "expired": false,
-      "created_at": "2026-10-27T07:24:22Z",
-      "expires_at": "2027-01-25T07:18:41Z",
-      "updated_at": "2026-10-27T07:24:22Z",
-      "digest": "sha256:7bb16726b789d4b31b5b61643a2072195e0e96ae04c50dedbd04a080c9d7c880",
-      "workflow_run": {
-        "id": 40466353657,
-        "repository_id": 1185151325,
-        "head_repository_id": 1185151325,
-        "head_branch": "main",
-        "head_sha": "b1959da4bfe0dba3a0616e9075809c8d5fae7cc1"
-      }
-    },
-    {
-      "id": 12716613278,
-      "name": "ilmigo-web-preview",
-      "size_in_bytes": 91581,
-      "url": "https://api.github.com/repos/saifulrehman62913-blip/NextGen-AI-Academy/actions/artifacts/12716613278",
-      "archive_download_url": "https://api.github.com/repos/saifulrehman62913-blip/NextGen-AI-Academy/actions/artifacts/12716613278/zip",
-      "expired": false,
-      "created_at": "2026-10-27T07:18:49Z",
-      "expires_at": "2027-01-25T07:18:41Z",
-      "updated_at": "2026-10-27T07:18:49Z",
-      "digest": "sha256:d8dd82575294d536f031e8e41aa90c600730169e98d87dc767c0abaabfbc195e",
-      "workflow_run": {
-        "id": 40466353657,
-        "repository_id": 1185151325,
-        "head_repository_id": 1185151325,
-        "head_branch": "main",
-        "head_sha": "b1959da4bfe0dba3a0616e9075809c8d5fae7cc1"
-      }
-    },
-    {
-      "id": 12716114249,
+      "id": 12720370667,
       "name": "ilmigo-android-debug",
-      "size_in_bytes": 79658326,
-      "url": "https://api.github.com/repos/saifulrehman62913-blip/NextGen-AI-Academy/actions/artifacts/12716114249",
-      "archive_download_url": "https://api.github.com/repos/saifulrehman62913-blip/NextGen-AI-Academy/actions/artifacts/12716114249/zip",
+      "size_in_bytes": 79661146,
+      "url": "https://api.github.com/repos/saifulrehman62913-blip/NextGen-AI-Academy/actions/artifacts/12720370667",
+      "archive_download_url": "https://api.github.com/repos/saifulrehman62913-blip/NextGen-AI-Academy/actions/artifacts/12720370667/zip",
       "expired": false,
-      "created_at": "2026-10-27T07:24:05Z",
-      "expires_at": "2027-01-25T07:18:41Z",
-      "updated_at": "2026-10-27T07:24:05Z",
-      "digest": "sha256:e5559b10e86d3528d7ebfc9c9949f65037a25b82accc2fa340f0f64dd27eb549",
+      "created_at": "2026-10-27T08:39:49Z",
+      "expires_at": "2027-01-25T08:34:15Z",
+      "updated_at": "2026-10-27T08:39:49Z",
+      "digest": "sha256:c98c809d5f9d01a1fb65e3ae6c5dc7916a166f1547e2492264c2381e362bb371",
       "workflow_run": {
-        "id": 40466353657,
+        "id": 40474428692,
         "repository_id": 1185151325,
         "head_repository_id": 1185151325,
         "head_branch": "main",
-        "head_sha": "b1959da4bfe0dba3a0616e9075809c8d5fae7cc1"
+        "head_sha": "99322a2c1f44297a9728eee646710f2d95518a30"
+      }
+    },
+    {
+      "id": 12719569809,
+      "name": "ilmigo-ios-simulator",
+      "size_in_bytes": 59170673,
+      "url": "https://api.github.com/repos/saifulrehman62913-blip/NextGen-AI-Academy/actions/artifacts/12719569809",
+      "archive_download_url": "https://api.github.com/repos/saifulrehman62913-blip/NextGen-AI-Academy/actions/artifacts/12719569809/zip",
+      "expired": false,
+      "created_at": "2026-10-27T08:40:01Z",
+      "expires_at": "2027-01-25T08:34:15Z",
+      "updated_at": "2026-10-27T08:40:01Z",
+      "digest": "sha256:7cb9eec4d4dad029f37b1e708d6776cc75257ea893c894cb7a7446696763a4fd",
+      "workflow_run": {
+        "id": 40474428692,
+        "repository_id": 1185151325,
+        "head_repository_id": 1185151325,
+        "head_branch": "main",
+        "head_sha": "99322a2c1f44297a9728eee646710f2d95518a30"
+      }
+    },
+    {
+      "id": 12718814919,
+      "name": "ilmigo-web-preview",
+      "size_in_bytes": 92529,
+      "url": "https://api.github.com/repos/saifulrehman62913-blip/NextGen-AI-Academy/actions/artifacts/12718814919",
+      "archive_download_url": "https://api.github.com/repos/saifulrehman62913-blip/NextGen-AI-Academy/actions/artifacts/12718814919/zip",
+      "expired": false,
+      "created_at": "2026-10-27T08:36:13Z",
+      "expires_at": "2027-01-25T08:34:15Z",
+      "updated_at": "2026-10-27T08:36:13Z",
+      "digest": "sha256:f7d2c34c5dd3593bad95a8a3950d647d2ecc1676fb5816a2a799cadf6b84a0ad",
+      "workflow_run": {
+        "id": 40474428692,
+        "repository_id": 1185151325,
+        "head_repository_id": 1185151325,
+        "head_branch": "main",
+        "head_sha": "99322a2c1f44297a9728eee646710f2d95518a30"
+      }
+    },
+    {
+      "id": 12718704965,
+      "name": "ilmigo-browser-smoke",
+      "size_in_bytes": 341381,
+      "url": "https://api.github.com/repos/saifulrehman62913-blip/NextGen-AI-Academy/actions/artifacts/12718704965",
+      "archive_download_url": "https://api.github.com/repos/saifulrehman62913-blip/NextGen-AI-Academy/actions/artifacts/12718704965/zip",
+      "expired": false,
+      "created_at": "2026-10-27T08:36:11Z",
+      "expires_at": "2027-01-25T08:34:15Z",
+      "updated_at": "2026-10-27T08:36:11Z",
+      "digest": "sha256:1163f4ad69fc931790ffbcba4d4cbe067b4cf8382fb9d47593d80917326b996f",
+      "workflow_run": {
+        "id": 40474428692,
+        "repository_id": 1185151325,
+        "head_repository_id": 1185151325,
+        "head_branch": "main",
+        "head_sha": "99322a2c1f44297a9728eee646710f2d95518a30"
       }
     }
-  ],
-  "additionalWebCorrections": [
-    "Ignore lesson-entry membership replies after an account/profile switch",
-    "Keep paid-mode initialization working when local storage is full"
   ],
   "liveServicesConfigured": false,
   "purchasesActivated": false,

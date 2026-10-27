@@ -11,7 +11,7 @@ docker build -t ilmigo-backend .
 docker run --rm --env-file .env -p 3000:3000 ilmigo-backend
 ```
 
-The image generates curriculum during its build. Its allowlisted build context excludes `.env`, exports, caches and signing materials. Inject runtime credentials using the hosting provider's secret manager. Place the service behind HTTPS and set `APP_ORIGIN` to the exact public web origin (without a trailing slash). The health check verifies HTTP availability only, not provider connectivity. The image build and HTTP smoke checks have now passed on GitHub Actions in run 40472289586. This proves the unconfigured container starts and serves the app; it does not verify live providers.
+The image generates curriculum during its build. Its allowlisted build context excludes `.env`, exports, caches and signing materials. Inject runtime credentials using the hosting provider's secret manager. Place the service behind HTTPS and set `APP_ORIGIN` to the exact public web origin (without a trailing slash). The health check verifies HTTP availability only, not provider connectivity. The image build and HTTP smoke checks have now passed on GitHub Actions in run 40474428692. This proves the unconfigured container starts and serves the app; it does not verify live providers.
 
 Before deployment, run the secret-safe, offline configuration check:
 

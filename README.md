@@ -1,29 +1,32 @@
 # ILMIGO DIGITAL ACADEMY
 
-Version 0.4.0. A bilingual language-learning beta with **ILMIGO**, the robot teacher. Android debug APK and iOS simulator builds have now completed successfully on GitHub Actions.
+Version 0.4.1. A bilingual language-learning beta with **ILMIGO**, the robot teacher. Android debug APK and iOS simulator builds have now completed successfully on GitHub Actions.
 
-Current build and implementation evidence: [0.4.0 subscription report](review/ILMIGO-SUBSCRIPTION-RELEASE.md). Owner account and payout setup: [Pakistan/Meezan guide](review/PAYMENT-SETUP-PAKISTAN.md).
+Current build and implementation evidence: [0.4.1 reliability report](review/ILMIGO-RELIABILITY-RELEASE.md). Owner account and payout setup: [Pakistan/Meezan guide](review/PAYMENT-SETUP-PAKISTAN.md).
 
 ## Download the test app
 
-- [Android APK ZIP](https://github.com/saifulrehman62913-blip/NextGen-AI-Academy/actions/runs/40466353657/artifacts/12716114249) — extract and install `app-debug.apk` on Android.
-- [iOS simulator ZIP](https://github.com/saifulrehman62913-blip/NextGen-AI-Academy/actions/runs/40466353657/artifacts/12717280168) — for macOS ARM64 iOS Simulator; not a signed iPhone IPA.
-- [Browser preview ZIP](https://github.com/saifulrehman62913-blip/NextGen-AI-Academy/actions/runs/40466353657/artifacts/12716613278) — open `ILMIGO-preview.html` in a modern browser.
+- [Android APK ZIP](https://github.com/saifulrehman62913-blip/NextGen-AI-Academy/actions/runs/40474428692/artifacts/12720370667) — extract and install `app-debug.apk` on Android.
+- [iOS simulator ZIP](https://github.com/saifulrehman62913-blip/NextGen-AI-Academy/actions/runs/40474428692/artifacts/12719569809) — for macOS ARM64 iOS Simulator; not a signed iPhone IPA.
+- [Browser preview ZIP](https://github.com/saifulrehman62913-blip/NextGen-AI-Academy/actions/runs/40474428692/artifacts/12718814919) — open `ILMIGO-preview.html` in a modern browser.
 
 GitHub sign-in may be required for downloads. Artifacts expire on 25 January 2027. These are test/beta artifacts, not store releases.
 
-[Successful workflow run](https://github.com/saifulrehman62913-blip/NextGen-AI-Academy/actions/runs/40466353657) · [Detailed verification report](review/ILMIGO-SUBSCRIPTION-RELEASE.md) · [Machine-readable evidence](review/cloud/verification.json)
+[Successful workflow run](https://github.com/saifulrehman62913-blip/NextGen-AI-Academy/actions/runs/40474428692) · [Detailed verification report](review/ILMIGO-RELIABILITY-RELEASE.md) · [Machine-readable evidence](review/cloud/verification.json)
 
-Verified code commit: `b1959da4bfe0dba3a0616e9075809c8d5fae7cc1`. Flutter 3.47.8 stable; Node 24.21.0.
+Verified code commit: `99322a2c1f44297a9728eee646710f2d95518a30`. Flutter 3.47.8 stable; Node 24.21.0.
 
 | Verification | Result |
 |---|---|
-| Web/backend/content checks | 62 cloud; 63 local after web-only corrections |
-| Flutter tests, Linux | 14 passed |
-| Flutter tests, macOS | 14 passed |
+| Web/backend/content checks | 73 passed |
+| Flutter tests, Linux | 22 passed |
+| Flutter tests, macOS | 22 passed |
 | Native analysis | 0 errors; 8 informational notes |
 | Android debug APK | Built |
 | iOS simulator app | Built |
+| PostgreSQL migration/RLS/concurrency assertions | 24 passed |
+| Backend Docker image + HTTP smoke | Passed |
+| Desktop/family/Urdu mobile Chrome scenarios | 3 passed |
 
 ## What is included
 
@@ -57,7 +60,7 @@ npm test
 npm run verify
 ```
 
-`npm run verify` also attempts native checks: it exits 2 when prerequisites are blocked, 1 on failure, and 0 only when all required checks pass. Older local-host reports under `review/build/` record the missing SDK before cloud verification became available. Current cloud evidence is under `review/cloud/`. CI now also applies all three migrations to a disposable PostgreSQL 16 database, checks RLS/concurrency and builds/runs the backend Docker image.
+`npm run verify` also attempts native checks: it exits 2 when prerequisites are blocked, 1 on failure, and 0 only when all required checks pass. Older local-host reports under `review/build/` record the missing SDK before cloud verification became available. Current cloud evidence is under `review/cloud/`. CI now also applies all three migrations to a disposable PostgreSQL 16 database, checks RLS/concurrency, builds/runs the backend Docker image and exercises three real Chrome flows. Playwright is a pinned CI-only dependency; the backend has no runtime npm dependencies.
 
 ## Native Android / iOS source
 
