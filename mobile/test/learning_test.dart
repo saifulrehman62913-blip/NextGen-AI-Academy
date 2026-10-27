@@ -77,7 +77,7 @@ void main() {
     expect(find.text('0'),findsWidgets);
     await tester.pumpWidget(const SizedBox());
   }, timeout: const Timeout(Duration(seconds:60)));
-  testWidgets('custom synced goal opens and stays current after profile changes', (tester) async {
+  testWidgets('restored custom goal opens and stays current after goal changes', (tester) async {
     final s=LearningStore();await tester.runAsync(() => s.load());s.onboarded=true;
     s.learner.goal='Medical interview preparation';
     await tester.pumpWidget(IlmigoApp(store:s));await tester.pump();
