@@ -2,6 +2,7 @@
 import {chromium} from 'playwright';
 import assert from 'node:assert/strict';
 import {mkdir,writeFile} from 'node:fs/promises';
+import {randomUUID} from 'node:crypto';
 const out=new URL('../review/browser/',import.meta.url);await mkdir(out,{recursive:true});
 const browser=await chromium.launch({channel:'chrome',headless:true});
 const failures=[],scenarios=[];let currentPage;
@@ -77,6 +78,45 @@ try{
  await urdu.screenshot({path:new URL('urdu-mobile.png',out).pathname,fullPage:true});
  await urdu.reload({waitUntil:'domcontentloaded'});await urdu.locator('html[dir="rtl"]').waitFor();assert.equal((await active(urdu)).name,'Urdu QA');
  scenarios.push('Urdu mobile: RTL, language selection, viewport width and saved onboarding');
+ await mobile.close();
+ // Cloud boundaries are tested against the actual backend in Node/PostgreSQL.
+ // This fixture exercises only the browser's credential transition and recovery UX.
+ const owner='11111111-1111-4111-a111-111111111111',parentToken='parent-sensitive-access',parentRefresh='parent-sensitive-refresh',childToken='ilmigo_child_'+'x'.repeat(43);
+ const cloudContext=await browser.newContext({viewport:{width:1280,height:900}}),cloudPage=currentPage=await cloudContext.newPage();cloudPage.setDefaultTimeout(15000);
+ const cloudRows=new Map();let issuedChildId=null,revoked=false;
+ const fulfill=(route,value,status=200)=>route.fulfill({status,contentType:'application/json',body:JSON.stringify(value)});
+ await cloudPage.route('**/api/**',async route=>{
+  const request=route.request(),path=new URL(request.url()).pathname,data=request.postData()?request.postDataJSON():{};
+  if(path==='/api/config')return fulfill(route,{cloud:true,ai:false,purchases:false,childSessions:true,childConsentVersion:'child-cloud-v1',subscription:{enabled:false}});
+  if(path==='/api/auth/otp')return fulfill(route,{sent:true});
+  if(path==='/api/auth/verify')return fulfill(route,{access_token:parentToken,refresh_token:parentRefresh,userId:data.email==='other@example.test'?'66666666-6666-4666-a666-666666666666':owner});
+  if(path==='/api/sync'){
+   const childMode=request.headers().authorization===`Bearer ${childToken}`;
+   if(childMode){assert.ok(data.profiles.every(p=>p.id===issuedChildId&&p.kind==='child'));return fulfill(route,{profiles:[...cloudRows.values()].filter(p=>p.id===issuedChildId)});}
+   for(const p of data.profiles){let row=cloudRows.get(p.localId);if(!row){if(p.kind==='child'){assert.equal(p.childConsent,true);assert.equal(p.childConsentVersion,'child-cloud-v1');}row={id:randomUUID(),localId:p.localId};}Object.assign(row,{name:p.name,kind:p.kind,language:p.language,goal:p.goal,completed:p.completed||{},days:p.days||[]});cloudRows.set(p.localId,row);}
+   return fulfill(route,{profiles:[...cloudRows.values()]});
+  }
+  if(path==='/api/child-session'){assert.equal(request.headers().authorization,`Bearer ${parentToken}`);assert.equal(data.consent,true);issuedChildId=data.profileId;return fulfill(route,{access_token:childToken,userId:owner,scope:'child',childProfileId:issuedChildId,expires_at:Math.floor(Date.now()/1000)+86400});}
+  if(path==='/api/child-session/revoke'){assert.equal(request.headers().authorization,`Bearer ${parentToken}`);revoked=true;return fulfill(route,{revoked:true});}
+  return route.continue();
+ });
+ await onboard(cloudPage);await cloudPage.locator('nav [data-nav="family"]').click();await cloudPage.locator('[data-action="login"]').click();
+ await cloudPage.locator('#email').fill('parent@example.test');await cloudPage.locator('#send-code').click();await cloudPage.locator('#otp').fill('123456');await cloudPage.locator('#verify-form button').click();
+ const account=()=>cloudPage.evaluate(id=>JSON.parse(localStorage.getItem('ilmigo-v2:'+id)),owner);
+ await cloudPage.waitForFunction(id=>JSON.parse(sessionStorage.getItem('ilmigo-auth'))?.userId===id,owner);
+ const before=await account(),parentId=before.active,pinAnswers=['284619','284619'];
+ cloudPage.on('dialog',async dialog=>{if(dialog.type()==='confirm'){await dialog.accept();return;}if(!pinAnswers.length){failures.push('Unexpected cloud parent PIN dialog');await dialog.dismiss();}else await dialog.accept(pinAnswers.shift());});
+ await cloudPage.locator('[data-action="add-profile"]').click();await cloudPage.locator('#child-name').fill('Cloud child');await cloudPage.locator('#parent-consent').check();await cloudPage.locator('#child-form button').click();
+ await cloudPage.waitForFunction(()=>JSON.parse(sessionStorage.getItem('ilmigo-auth'))?.scope==='child');
+ const stored=await cloudPage.evaluate(()=>sessionStorage.getItem('ilmigo-auth'));assert.ok(!stored.includes(parentToken));assert.ok(!stored.includes(parentRefresh));assert.equal(JSON.parse(stored).refresh_token,undefined);
+ const pinBefore=await cloudPage.evaluate(id=>JSON.parse(localStorage.getItem('ilmigo-v2:'+id+':parent')).hash,owner);
+ pinAnswers.push('284619');await cloudPage.locator(`[data-profile="${parentId}"]`).click();await cloudPage.locator('#email').fill('other@example.test');await cloudPage.locator('#send-code').click();await cloudPage.locator('#otp').fill('123456');await cloudPage.locator('#verify-form button').click();
+ await cloudPage.getByText('Verify the parent email for this account.',{exact:true}).waitFor();assert.equal(await cloudPage.evaluate(()=>JSON.parse(sessionStorage.getItem('ilmigo-auth')).scope),'child');
+ await cloudPage.locator('#email').fill('parent@example.test');await cloudPage.locator('#send-code').click();await cloudPage.locator('#otp').fill('123456');await cloudPage.locator('#verify-form button').click();
+ await cloudPage.waitForFunction(()=>JSON.parse(sessionStorage.getItem('ilmigo-auth'))?.scope!=='child');assert.equal((await account()).active,parentId);
+ assert.deepEqual(await cloudPage.evaluate(id=>JSON.parse(localStorage.getItem('ilmigo-v2:'+id+':parent')).hash,owner),pinBefore);
+ await cloudPage.locator('[data-action="revoke-child-sessions"]').click();await cloudPage.getByText('Child sessions ended. Progress was kept.',{exact:true}).waitFor();assert.equal(revoked,true);
+ scenarios.push('Mocked cloud UI: explicit child consent, parent-token removal, same-owner email return and revocation');
  assert.deepEqual(failures,[],'Browser application errors');
  await writeFile(new URL('checks.json',out),JSON.stringify({browser:browser.version(),scenarios,result:'passed',liveProviders:false,physicalDevice:false},null,2)+'\n');
  console.log(`Browser smoke passed: ${scenarios.length} scenarios; Chromium ${browser.version()}.`);

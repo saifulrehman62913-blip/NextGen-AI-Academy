@@ -10,8 +10,10 @@ class CloudService {
   CloudService({http.Client? client,String? baseUrl}):_client=client??http.Client(),baseUrl=baseUrl??origin;
   final http.Client _client;
   final String baseUrl;
-  void close(){_sessionVersion++;token=null;userId=null;_refreshToken=null;_refreshing=null;_client.close();}
+  void close(){_sessionVersion++;token=null;userId=null;childProfileId=null;_refreshToken=null;_refreshing=null;_client.close();}
   String? token, userId;
+  String? childProfileId;
+  bool get isChildSession=>childProfileId!=null;
   String? _refreshToken;
   int _sessionVersion=0;
   bool _signingOut=false;
@@ -69,19 +71,28 @@ class CloudService {
     if(!_sameSession(owner,version))throw Exception('Account changed. Please try again.');
     if(result['access_token'] is! String||(result['access_token'] as String).isEmpty||result['userId'] is! String||(result['userId'] as String).isEmpty)throw Exception('Invalid sign-in response.');
     if(expectedUserId!=null&&result['userId']!=expectedUserId)throw Exception('Verify the email for this family account. A different account cannot reset its PIN.');
-    _sessionVersion++;_refreshing=null;token=result['access_token'] as String;userId=result['userId'] as String;
+    _sessionVersion++;_refreshing=null;childProfileId=null;token=result['access_token'] as String;userId=result['userId'] as String;
     _refreshToken=result['refresh_token'] is String?result['refresh_token'] as String:null;
   }
-  Future<void> sync(LearningStore store,{bool restore=false}) async {
+  Future<void> enterChild(LearningStore store,Learner child,{required bool consent}) async {
+    if(isChildSession||!signedIn||!child.isChild||!consent)throw Exception('A signed-in parent must consent to child cloud access.');
+    final owner=userId,version=_sessionVersion;
+    await sync(store,consentedChildId:child.id);
+    if(!_sameSession(owner,version)||store.ownerId!=owner||child.cloudId==null)throw Exception('Account changed. Please try again.');
+    final result=await request('/api/child-session',{'profileId':child.cloudId,'consent':true,'consentVersion':'child-cloud-v1'});
+    if(!_sameSession(owner,version)||result['userId']!=owner||result['scope']!='child'||result['childProfileId']!=child.cloudId||result['access_token'] is! String||!(result['access_token'] as String).startsWith('ilmigo_child_'))throw Exception('Child session could not be verified.');
+    _sessionVersion++;_refreshing=null;_refreshToken=null;token=result['access_token'] as String;childProfileId=child.cloudId;
+  }
+  Future<void> sync(LearningStore store,{bool restore=false,String? consentedChildId}) async {
     final owner=userId;if(owner==null || store.ownerId!=owner)throw Exception('Open your own account space before syncing.');
-    final data = await request('/api/sync', {'profiles': restore?<Map<String,dynamic>>[]:store.profiles.map((p) => {'id': p.cloudId, 'localId': p.id, 'name': p.name, 'kind': p.kind, 'language': p.language, 'goal': p.goal, 'completed': p.completed, 'days':p.days}).toList()});
-    if(userId!=owner || store.ownerId!=owner)return;store.mergeCloud(data['profiles'] as List,restore:restore);if(restore)store.onboarded=true;await store.save();
+    final data = await request('/api/sync', {'profiles': restore?<Map<String,dynamic>>[]:store.profiles.where((p)=>isChildSession?p.cloudId==childProfileId&&p.isChild:!p.isChild||p.cloudId!=null||p.id==consentedChildId).map((p) => {'id': p.cloudId, 'localId': p.id, 'name': p.name, 'kind': p.kind, 'language': p.language, 'goal': p.goal, 'completed': p.completed, 'days':p.days,if(p.id==consentedChildId)'childConsent':true,if(p.id==consentedChildId)'childConsentVersion':'child-cloud-v1'}).toList()});
+    if(userId!=owner || store.ownerId!=owner)return;store.mergeCloud(data['profiles'] as List,restore:restore&&!isChildSession);if(isChildSession){final bound=store.profiles.where((p)=>p.cloudId==childProfileId&&p.isChild).toList();if(bound.isEmpty)throw Exception('The child profile could not be restored. Ask a parent to sign in.');store.active=bound.first.id;}if(restore)store.onboarded=true;await store.save();
   }
   Future<void> signOut(LearningStore store,{bool eraseLocal=false}) async {
     if(_signingOut)return;_signingOut=true;
     try{
       if(eraseLocal){await store.deleteAccountStore();}else{await store.switchAccount(null);}
-      _sessionVersion++;token=null;userId=null;_refreshToken=null;_refreshing=null;
+      _sessionVersion++;token=null;userId=null;childProfileId=null;_refreshToken=null;_refreshing=null;
     }finally{_signingOut=false;}
   }
 }

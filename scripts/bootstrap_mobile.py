@@ -6,11 +6,14 @@ import shutil
 import subprocess
 import sys
 import xml.etree.ElementTree as ET
+from release_signing import configure_release
 root=Path(__file__).resolve().parents[1]
 mobile=root/'mobile'
 if not shutil.which('flutter'):
     sys.exit('Flutter SDK is missing. Install Flutter stable, add flutter/bin to PATH, and rerun this script.')
 subprocess.run(['flutter','create','--no-pub','--empty','--org','com.ilmigo','--project-name','ilmigo','--platforms','android,ios','.'],cwd=mobile,check=True)
+gradle=mobile/'android/app/build.gradle.kts'
+gradle.write_text(configure_release(gradle.read_text()))
 generated_test=mobile/'test/widget_test.dart'
 if generated_test.exists() and 'MyApp' in generated_test.read_text():
     generated_test.unlink()

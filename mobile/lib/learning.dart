@@ -121,8 +121,9 @@ class LearningStore extends ChangeNotifier {
     for (final raw in rows) {
       final row = raw as Map<String, dynamic>;
       Learner? local;
-      for (final p in profiles) { if (p.cloudId == row['id'] || p.id == row['localId']) { local = p; break; } }
-      local ??= Learner(id: (row['localId'] ?? row['id']) as String, name: row['name'] as String, kind: row['kind'] as String, language: row['language'] as String, goal: row['goal'] as String? ?? 'Everyday conversation');
+      for(final p in profiles){if(p.cloudId==row['id']){local=p;break;}}
+      if(local==null){for(final p in profiles){if(p.cloudId==null&&p.id==row['localId']&&p.kind==row['kind']){local=p;break;}}}
+      local ??= Learner(id: profiles.any((p)=>p.id==(row['localId']??row['id']))?newProfileId():(row['localId']??row['id']) as String, name: row['name'] as String, kind: row['kind'] as String, language: row['language'] as String, goal: row['goal'] as String? ?? 'Everyday conversation');
       if (!profiles.contains(local)) profiles.add(local);
       local.cloudId = row['id'] as String;
       local.name=row['name'] as String;local.kind=row['kind'] as String;local.language=row['language'] as String;local.goal=goalLabels.containsKey(row['goal'])?row['goal'] as String:'Everyday conversation';

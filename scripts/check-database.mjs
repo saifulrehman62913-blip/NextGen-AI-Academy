@@ -1,6 +1,7 @@
 // Real PostgreSQL checks in a fresh local CI database; never use a live project.
 import {spawn} from 'node:child_process';
 import {fileURLToPath} from 'node:url';
+import assert from 'node:assert/strict';
 const root=fileURLToPath(new URL('../',import.meta.url));
 if(process.env.ILMIGO_TEST_DATABASE!=='true'||process.env.PGDATABASE!=='ilmigo_ci'||!['127.0.0.1','localhost'].includes(process.env.PGHOST))throw Error('Refusing database setup: requires explicit disposable localhost ilmigo_ci test database.');
 async function psql(args){
@@ -9,7 +10,7 @@ async function psql(args){
 const sql=statement=>psql(['-c',statement]);
 if(await sql("select to_regclass('public.profiles') is not null")!=='f')throw Error('Refusing to reuse a database containing application tables.');
 await psql(['-f','tests/database/setup.sql']);
-for(const name of ['001_ilmigo.sql','002_review_fixes.sql','003_account_trials.sql'])await psql(['-f',`supabase/migrations/${name}`]);
+for(const name of ['001_ilmigo.sql','002_review_fixes.sql','003_account_trials.sql','004_child_sessions.sql'])await psql(['-f',`supabase/migrations/${name}`]);
 const A='11111111-1111-4111-a111-111111111111',B='22222222-2222-4222-a222-222222222222';
 let assertions=0;
 async function check(statement){if(await sql(`select (${statement}) is true`)!=='t')throw Error(`Database assertion failed: ${statement}`);assertions++;}
@@ -44,7 +45,23 @@ await sql(`insert into course_drafts(language,status,lessons,review_note,reviewe
 const courses=await sql(`set role authenticated; set request.jwt.claim.sub='${B}'; select count(*) from course_drafts`);
 if(courses.split('\n').at(-1)!=='0')throw Error('General authenticated user read paid course bodies.');assertions++;
 // Learning-data deletion keeps trial; auth-account deletion cascades it.
+const childA='44444444-4444-4444-a444-444444444444',childB='55555555-5555-4555-a555-555555555555';
+await sql(`insert into profiles(id,owner_id,local_key,name,kind,parent_consent_at) values('${childA}','${A}','child-a','CI child A','child',now()),('${childB}','${B}','child-b','CI child B','child',now())`);
+await check("not has_function_privilege('authenticated','public.grant_child_session(uuid,uuid,text)','EXECUTE')");
+await check("not has_table_privilege('authenticated','public.child_sessions','SELECT')");
+await check("not has_table_privilege('anon','public.child_consent_events','SELECT')");
+await assert.rejects(sql(`set role service_role; select grant_child_session('${A}','${childB}','${'0'.repeat(64)}')`),/owned child profile/);assertions++;
+await Promise.all(Array.from({length:8},(_,i)=>sql(`set role service_role; select grant_child_session('${A}','${childA}','${i.toString(16).padStart(64,'0')}')`)));
+await check(`(select count(*)=5 from child_sessions where profile_id='${childA}')`);
+await check(`(select bool_and(expires_at-created_at=interval '24 hours') from child_sessions where profile_id='${childA}')`);
+await check(`(select parent_consent_version='child-cloud-v1' from profiles where id='${childA}')`);
+await check(`(select count(*)=8 from child_consent_events where profile_id='${childA}' and action='grant')`);
+await sql(`set role service_role; select grant_child_session('${B}','${childB}','${'f'.repeat(64)}'); select revoke_child_sessions('${A}')`);
+await check(`not exists(select 1 from child_sessions where owner_id='${A}')`);
+await check(`(select count(*)=1 from child_sessions where owner_id='${B}')`);
+await check(`exists(select 1 from child_consent_events where owner_id='${A}' and action='revoke')`);
 await sql(`delete from profiles where owner_id='${A}'`);await check(`exists(select 1 from account_trials where owner_id='${A}')`);
+await check(`not exists(select 1 from child_consent_events where owner_id='${A}')`);
 const families=await Promise.allSettled(Array.from({length:14},(_,i)=>sql(`set role service_role; insert into profiles(owner_id,local_key,name,kind) values('${A}','family-${i}','CI family','adult')`)));
 if(families.filter(r=>r.status==='fulfilled').length!==12||families.some(r=>r.status==='rejected'&&!String(r.reason).includes('Family profile limit reached')))throw Error('Concurrent family limit did not preserve exactly 12 profiles.');assertions++;
 await sql(`set role service_role; insert into profiles(owner_id,local_key,name,kind) values('${A}',(select local_key from profiles where owner_id='${A}' limit 1),'Retry','adult') on conflict(owner_id,local_key) do nothing`);

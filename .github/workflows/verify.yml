@@ -92,6 +92,8 @@ jobs:
       - name: Build Android debug APK
         run: flutter build apk --debug
         working-directory: mobile
+      - name: Reject release signing without owner credentials
+        run: python3 scripts/check-release-signing.py
       - uses: actions/upload-artifact@v4
         with:
           name: ilmigo-android-debug

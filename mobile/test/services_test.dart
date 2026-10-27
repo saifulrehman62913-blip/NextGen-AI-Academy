@@ -6,6 +6,7 @@ import 'package:http/testing.dart';
 import 'package:ilmigo/services.dart';
 import 'package:ilmigo/learning.dart';
 import 'package:flutter_tts/flutter_tts.dart';
+import 'package:shared_preferences/shared_preferences.dart';
 
 class DelayedVoice extends Fake implements FlutterTts {
   final checks=<Completer<dynamic>>[];
@@ -22,6 +23,37 @@ class FailingSignOutStore extends LearningStore {
 }
 
 void main(){
+  TestWidgetsFlutterBinding.ensureInitialized();
+  setUp(()=>SharedPreferences.setMockInitialValues({}));
+  test('child mode drops parent credentials, syncs one profile and cannot refresh into parent access',() async {
+    const owner='11111111-1111-4111-a111-111111111111',kid='22222222-2222-4222-a222-222222222222';
+    final store=LearningStore();await store.load();await store.switchAccount(owner);
+    final child=Learner(id:'child-local',name:'Child',kind:'child');store.profiles.add(child);int refreshes=0;final scopes=<String>[];
+    final service=CloudService(baseUrl:'https://test.invalid',client:MockClient((request) async {
+      final body=request.body.isEmpty?<String,dynamic>{}:jsonDecode(request.body) as Map<String,dynamic>;
+      if(request.url.path=='/api/auth/verify'){final other=body['email']=='b@example.test';return http.Response(jsonEncode({'access_token':other?'parent-B':'parent-A','refresh_token':'parent-refresh','userId':other?'B':owner}),200);}
+      if(request.url.path=='/api/sync'){
+        final childMode=request.headers['Authorization']!.contains('ilmigo_child_');scopes.add(childMode?'child':'parent');
+        final incoming=body['profiles'] as List;if(childMode){expect(incoming.length,1);expect(incoming.single['id'],kid);}else{expect(incoming.last['childConsent'],true);}
+        return http.Response(jsonEncode({'profiles':incoming.map((p)=>{'id':p['kind']=='child'?kid:'33333333-3333-4333-a333-333333333333','localId':p['localId'],'name':p['name'],'kind':p['kind'],'language':p['language'],'goal':p['goal'],'completed':{},'days':[]}).toList()}),200);
+      }
+      if(request.url.path=='/api/child-session'){expect(body['consent'],true);return http.Response(jsonEncode({'access_token':'ilmigo_child_${List.filled(43,'x').join()}','scope':'child','userId':owner,'childProfileId':kid}),200);}
+      if(request.url.path=='/api/auth/refresh')refreshes++;
+      return http.Response('{"error":"Child session expired. Ask a parent."}',401);
+    }));addTearDown(service.close);
+    await service.verify('a@example.test','123456');await service.enterChild(store,child,consent:true);
+    expect(service.isChildSession,true);expect(service.childProfileId,kid);expect(service.token,startsWith('ilmigo_child_'));
+    await service.sync(store);expect(scopes,['parent','child']);expect(store.learner.cloudId,kid);expect(store.profiles.length,2);
+    await expectLater(service.request('/api/entitlements'),throwsException);expect(refreshes,0);
+    await expectLater(service.verify('b@example.test','123456',expectedUserId:owner),throwsException);expect(service.isChildSession,true);
+    await service.verify('a@example.test','123456',expectedUserId:owner);expect(service.isChildSession,false);expect(service.token,'parent-A');
+  });
+  test('cloud identity takes priority over a forged local alias when merging child progress',() async {
+    final store=LearningStore();await store.load();final adult=store.learner;adult.cloudId='adult-cloud';
+    final child=Learner(id:'child-local',cloudId:'child-cloud',name:'Child',kind:'child');store.profiles.add(child);
+    store.mergeCloud([{'id':'child-cloud','localId':adult.id,'name':'Updated child','kind':'child','language':'en','goal':'School & study','completed':{},'days':[]}]);
+    expect(adult.kind,'adult');expect(adult.cloudId,'adult-cloud');expect(child.name,'Updated child');expect(store.profiles.length,2);
+  });
   test('stopping voice prevents a delayed playback from starting after leaving a screen',() async {
     final engine=DelayedVoice(),voice=VoiceService(engine:engine);
     final pending=voice.speak('old phrase','en');await voice.stop();engine.checks.single.complete(true);await pending;expect(engine.spoken,isEmpty);
