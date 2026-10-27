@@ -1,3 +1,5 @@
+> Historical 0.4.1 evidence. The [0.5.0 child-session release report](ILMIGO-CHILD-SESSIONS-RELEASE.md) records the current verified code and signing safeguard.
+
 # ILMIGO DIGITAL ACADEMY 0.4.1 — reliability and functional review
 
 Verified application code: `99322a2c1f44297a9728eee646710f2d95518a30`.

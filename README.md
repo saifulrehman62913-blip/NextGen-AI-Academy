@@ -1,32 +1,32 @@
 # ILMIGO DIGITAL ACADEMY
 
-Version 0.4.1. A bilingual language-learning beta with **ILMIGO**, the robot teacher. Android debug APK and iOS simulator builds have now completed successfully on GitHub Actions.
+Version 0.5.0. A bilingual language-learning beta with **ILMIGO**, the robot teacher. Android debug APK and iOS simulator builds have now completed successfully on GitHub Actions.
 
-Current build and implementation evidence: [0.4.1 reliability report](review/ILMIGO-RELIABILITY-RELEASE.md). Owner account and payout setup: [Pakistan/Meezan guide](review/PAYMENT-SETUP-PAKISTAN.md).
+Current build and implementation evidence: [0.5.0 child-session/release report](review/ILMIGO-CHILD-SESSIONS-RELEASE.md). Owner account and payout setup: [Pakistan/Meezan guide](review/PAYMENT-SETUP-PAKISTAN.md).
 
 ## Download the test app
 
-- [Android APK ZIP](https://github.com/saifulrehman62913-blip/NextGen-AI-Academy/actions/runs/40474428692/artifacts/12720370667) — extract and install `app-debug.apk` on Android.
-- [iOS simulator ZIP](https://github.com/saifulrehman62913-blip/NextGen-AI-Academy/actions/runs/40474428692/artifacts/12719569809) — for macOS ARM64 iOS Simulator; not a signed iPhone IPA.
-- [Browser preview ZIP](https://github.com/saifulrehman62913-blip/NextGen-AI-Academy/actions/runs/40474428692/artifacts/12718814919) — open `ILMIGO-preview.html` in a modern browser.
+- [Android APK ZIP](https://github.com/saifulrehman62913-blip/NextGen-AI-Academy/actions/runs/40485530870/artifacts/12724508239) — extract and install `app-debug.apk` on Android.
+- [iOS simulator ZIP](https://github.com/saifulrehman62913-blip/NextGen-AI-Academy/actions/runs/40485530870/artifacts/12724818262) — for macOS ARM64 iOS Simulator; not a signed iPhone IPA.
+- [Browser preview ZIP](https://github.com/saifulrehman62913-blip/NextGen-AI-Academy/actions/runs/40485530870/artifacts/12724977366) — open `ILMIGO-preview.html` in a modern browser.
 
 GitHub sign-in may be required for downloads. Artifacts expire on 25 January 2027. These are test/beta artifacts, not store releases.
 
-[Successful workflow run](https://github.com/saifulrehman62913-blip/NextGen-AI-Academy/actions/runs/40474428692) · [Detailed verification report](review/ILMIGO-RELIABILITY-RELEASE.md) · [Machine-readable evidence](review/cloud/verification.json)
+[Successful workflow run](https://github.com/saifulrehman62913-blip/NextGen-AI-Academy/actions/runs/40485530870) · [Detailed verification report](review/ILMIGO-CHILD-SESSIONS-RELEASE.md) · [Machine-readable evidence](review/cloud/verification.json)
 
-Verified code commit: `99322a2c1f44297a9728eee646710f2d95518a30`. Flutter 3.47.8 stable; Node 24.21.0.
+Verified code commit: `0ad137bc7ddfd6c1593c6d4801f4cdeed3a6579e`. Flutter 3.47.8 stable; Node 24.21.0.
 
 | Verification | Result |
 |---|---|
-| Web/backend/content checks | 73 passed |
-| Flutter tests, Linux | 22 passed |
-| Flutter tests, macOS | 22 passed |
+| Web/backend/content checks | 81 passed |
+| Flutter tests, Linux | 24 passed |
+| Flutter tests, macOS | 24 passed |
 | Native analysis | 0 errors; 8 informational notes |
 | Android debug APK | Built |
 | iOS simulator app | Built |
-| PostgreSQL migration/RLS/concurrency assertions | 24 passed |
+| PostgreSQL migration/RLS/concurrency assertions | 36 passed |
 | Backend Docker image + HTTP smoke | Passed |
-| Desktop/family/Urdu mobile Chrome scenarios | 3 passed |
+| Desktop/family/Urdu mobile/cloud-role Chrome scenarios | 4 passed |
 
 ## What is included
 
@@ -41,7 +41,7 @@ Verified code commit: `99322a2c1f44297a9728eee646710f2d95518a30`. Flutter 3.47.8
 
 The 40 lessons are original curriculum drafts awaiting qualified language/audio review. Ten planned hours per language do not guarantee professional fluency or CEFR/occupational certification. The other 32 languages in the catalog remain **coming soon**.
 
-The current APK is an offline-capable preview built without a backend URL. Live accounts/cloud AI/payment services are not active. Real-device/voice/visual QA, production parent consent/session controls, release signing and store publication remain pending. See the detailed report for limits.
+The current APK is an offline-capable preview built without a backend URL. Live accounts/cloud AI/payment services are not active. Real-device/voice/visual QA, final production consent-policy review, actual release signing and store publication remain pending. See the detailed report for limits.
 
 ## Run or regenerate the web app
 
@@ -60,7 +60,7 @@ npm test
 npm run verify
 ```
 
-`npm run verify` also attempts native checks: it exits 2 when prerequisites are blocked, 1 on failure, and 0 only when all required checks pass. Older local-host reports under `review/build/` record the missing SDK before cloud verification became available. Current cloud evidence is under `review/cloud/`. CI now also applies all three migrations to a disposable PostgreSQL 16 database, checks RLS/concurrency, builds/runs the backend Docker image and exercises three real Chrome flows. Playwright is a pinned CI-only dependency; the backend has no runtime npm dependencies.
+`npm run verify` also attempts native checks: it exits 2 when prerequisites are blocked, 1 on failure, and 0 only when all required checks pass. Older local-host reports under `review/build/` record the missing SDK before cloud verification became available. Current cloud evidence is under `review/cloud/`. CI now also applies all four migrations to a disposable PostgreSQL 16 database, checks RLS/concurrency, builds/runs the backend Docker image and exercises four Chrome flows (one cloud fixture). Playwright is a pinned CI-only dependency; the backend has no runtime npm dependencies.
 
 ## Native Android / iOS source
 
@@ -89,14 +89,15 @@ Do not place server secrets in Flutter defines. Apple signing/provisioning is re
 
 ## Cloud setup and API
 
+Apply `004_child_sessions.sql` after 001–003 before deploying 0.5.0. Parent-to-child cloud entry discards active parent credentials; normal return needs the PIN and same-owner email verification. Guest/local-only profiles still use the local PIN.
+
 The [production setup checklist](review/PRODUCTION-SETUP.md) includes the Docker deployment commands, secret-safe configuration check and remaining account/product acceptance work. Adding deployment files does not activate providers or establish production readiness.
 
-1. Create a Supabase project; apply migrations `001_ilmigo.sql`, then `002_review_fixes.sql` under `supabase/migrations/`. Existing 0.1 installations apply only 002 after a backup.
-2. For the annual plan, apply `003_account_trials.sql` after 001/002. It stores one fixed 72-hour trial per verified account and restricts direct course-table reads.
-3. Enable email OTP and put `{{ .Token }}` in the email template. Set up production SMTP before public launch.
-3. Copy `.env.example` to `.env`; configure the Supabase URL, anon key, **server-only** service role key and exact `APP_ORIGIN`.
-4. Optionally configure `OPENAI_API_KEY`/`OPENAI_MODEL` and server-only `REVENUECAT_SECRET_KEY`.
-5. Run behind HTTPS with web/backend on the same origin, then test actual providers and database policies in staging.
+1. Create/select a Supabase project. New projects apply `001_ilmigo.sql`, `002_review_fixes.sql`, `003_account_trials.sql`, then `004_child_sessions.sql`. Existing projects back up first and apply only missing migrations, in order; a 0.1 installation needs 002–004.
+2. Enable email OTP and put `{{ .Token }}` in the email template. Configure production SMTP and verify actual email delivery.
+3. Copy `.env.example` to `.env` for local use; set Supabase URL/anon key, **server-only** service-role key and exact `APP_ORIGIN`. In hosting, use the secret manager.
+4. Configure server-only OpenAI/RevenueCat credentials and actual annual product IDs. Enable subscriptions only after store setup, reviewed content, final terms and sandbox lifecycle checks.
+5. Host web/backend on the same HTTPS origin. Verify real parent/child consent, scoped progress, same-owner parent return, revocation and deletion in staging before public launch.
 
 Migration 002 stores daily history, merges completion dates monotonically, limits family size transactionally and preserves anonymised review audit identity when the reviewer's auth account is deleted. It has not been executed against a live project here. Older dates never saved by 0.1 cannot be reconstructed without surviving device history/backups.
 
@@ -111,6 +112,8 @@ Main routes:
 - `GET /api/entitlements`: server-verified annual entitlement, trial timestamps and access status.
 - `POST /api/trial` with owned adult `profileId` and `confirm:true`: starts/returns the same one-time 72-hour trial; never creates a charge.
 - `GET /api/member-catalog`: lesson bodies after verified trial/paid access when subscriptions are enabled. Public catalog routes return metadata only in that mode.
+- `POST /api/child-session`: owned-child scope with explicit `child-cloud-v1` consent; raw child tokens are not stored server-side.
+- `POST /api/child-session/revoke` with `confirm:true`: parent-only revocation of child cloud sessions; progress remains.
 - `POST /api/delete-data`: deletes owned cloud learning profiles/progress; login/quota and local data remain. A subsequent explicit sync can upload local data again.
 - `POST /api/delete-account` with `{confirm:"DELETE"}`: deletes the authenticated account/cloud data; clients remove its local store. Store subscriptions must be cancelled separately.
 - `GET/POST /api/admin/courses`: trusted admin-only studio. Assign roles via server-managed `app_metadata`, never user-editable metadata.
@@ -121,7 +124,7 @@ No live project or secret was provisioned in this task. Never commit service-rol
 
 Guest and signed-in users have separate device stores; signing out opens guest space. A new account never silently inherits another account's profiles. Adults can explicitly import guest data they own. Late sync responses after an account switch are ignored. Legacy 0.1 device data is retained as guest data because that version did not bind it to a verified owner.
 
-Parent PINs use salted PBKDF2 hashes, are separate from progress exports and have a retry cooldown. Signed-in owners can recover adult access by verifying the same account's email; another account cannot reset the gate. Guest PINs have no verified email recovery. A local PIN is not encryption, verified age/parenthood or protection from someone controlling device storage. Use device locking/supervision; production needs verified parent consent and independently scoped child sessions.
+Parent PINs use salted PBKDF2 hashes, are separate from progress exports and have a retry cooldown. Signed-in owners can recover adult access by verifying the same account's email; another account cannot reset the gate. Guest PINs have no verified email recovery. A local PIN is not encryption, verified age/parenthood or protection from someone controlling device storage. Use device locking/supervision; cloud child access now uses separate expiring/revocable profile-scoped credentials with explicit versioned parent attestation. This does not verify legal guardianship or certify market-specific consent compliance.
 
 Child live AI and voice recognition are disabled. Device/browser recognition may use its provider. ILMIGO does not store audio. Writing drafts are local and included in backups, not cloud progress sync. AI receives submitted text only on request. Web fonts may contact Google Fonts; the standalone preview uses system fonts.
 
