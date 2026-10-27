@@ -1,18 +1,18 @@
 # ILMIGO DIGITAL ACADEMY
 
-Version 0.5.1. A bilingual language-learning beta with **ILMIGO**, the robot teacher. Android debug APK and iOS simulator builds have now completed successfully on GitHub Actions.
+Version 0.5.2. A bilingual language-learning beta with **ILMIGO**, the robot teacher. Android debug APK and iOS simulator builds have now completed successfully on GitHub Actions.
 
-Current build and implementation evidence: [0.5.1 goal fixes and paid-build preparation](review/ILMIGO-PAID-RELEASE-PREPARATION.md), with [0.5.0 child-session details](review/ILMIGO-CHILD-SESSIONS-RELEASE.md). Owner account and payout setup: [Pakistan/Meezan guide](review/PAYMENT-SETUP-PAKISTAN.md).
+Current build and implementation evidence: [0.5.2 browser timeout fix and verified builds](review/ILMIGO-BROWSER-TIMEOUT-RELEASE.md), with [0.5.0 child-session details](review/ILMIGO-CHILD-SESSIONS-RELEASE.md). Owner account and payout setup: [Pakistan/Meezan guide](review/PAYMENT-SETUP-PAKISTAN.md).
 
 ## Download the test app
 
-- [Android APK ZIP](https://github.com/saifulrehman62913-blip/NextGen-AI-Academy/actions/runs/40498273610/artifacts/12732207001) — extract and install `app-debug.apk` on Android.
-- [iOS simulator ZIP](https://github.com/saifulrehman62913-blip/NextGen-AI-Academy/actions/runs/40498273610/artifacts/12731817720) — for macOS ARM64 iOS Simulator; not a signed iPhone IPA.
-- [Browser preview ZIP](https://github.com/saifulrehman62913-blip/NextGen-AI-Academy/actions/runs/40498273610/artifacts/12732306138) — open `ILMIGO-preview.html` in a modern browser.
+- [Android APK ZIP](https://github.com/saifulrehman62913-blip/NextGen-AI-Academy/actions/runs/40522025719/artifacts/12741499578) — extract and install `app-debug.apk` on Android.
+- [iOS simulator ZIP](https://github.com/saifulrehman62913-blip/NextGen-AI-Academy/actions/runs/40522025719/artifacts/12742028331) — for macOS ARM64 iOS Simulator; not a signed iPhone IPA.
+- [Browser preview ZIP](https://github.com/saifulrehman62913-blip/NextGen-AI-Academy/actions/runs/40522025719/artifacts/12741394453) — open `ILMIGO-preview.html` in a modern browser.
 
 GitHub sign-in may be required for downloads. Artifacts expire on 25 January 2027. These are test/beta artifacts, not store releases.
 
-[Successful workflow run](https://github.com/saifulrehman62913-blip/NextGen-AI-Academy/actions/runs/40498273610) · [Detailed verification report](review/ILMIGO-PAID-RELEASE-PREPARATION.md) · [Machine-readable evidence](review/cloud/paid-release-verification.json)
+[Successful workflow run](https://github.com/saifulrehman62913-blip/NextGen-AI-Academy/actions/runs/40522025719) · [Detailed verification report](review/ILMIGO-BROWSER-TIMEOUT-RELEASE.md) · [Machine-readable evidence](review/cloud/browser-timeout-verification.json)
 
 Verified code commit: `0ad137bc7ddfd6c1593c6d4801f4cdeed3a6579e`. Flutter 3.47.8 stable; Node 24.21.0.
 
@@ -60,7 +60,7 @@ npm test
 npm run verify
 ```
 
-`npm run verify` also attempts native checks: it exits 2 when prerequisites are blocked, 1 on failure, and 0 only when all required checks pass. Older local-host reports under `review/build/` record the missing SDK before cloud verification became available. Current cloud evidence is under `review/cloud/`. CI now also applies all four migrations to a disposable PostgreSQL 16 database, checks RLS/concurrency, builds/runs the backend Docker image and exercises four Chrome flows (one cloud fixture). Playwright is a pinned CI-only dependency; the backend has no runtime npm dependencies.
+`npm run verify` also attempts native checks: it exits 2 when prerequisites are blocked, 1 on failure, and 0 only when all required checks pass. Older local-host reports under `review/build/` record the missing SDK before cloud verification became available. Current cloud evidence is under `review/cloud/`. CI now also applies all four migrations to a disposable PostgreSQL 16 database, checks RLS/concurrency, builds/runs the backend Docker image and exercises five Chrome flows (cloud fixtures and a stalled HTTP request). Playwright is a pinned CI-only dependency; the backend has no runtime npm dependencies.
 
 ## Native Android / iOS source
 
