@@ -84,7 +84,7 @@ void main() {
     await tester.tap(find.text('My space'));await tester.pumpAndSettle();
     expect(tester.takeException(),isNull);
     expect(find.text('Medical interview preparation'),findsOneWidget);
-    s.learner.goal='Academic research';s.notifyListeners();await tester.pumpAndSettle();
+    s.learner.goal='Academic research';await tester.runAsync(() => s.save());await tester.pumpAndSettle();
     expect(tester.takeException(),isNull);expect(find.text('Academic research'),findsOneWidget);
     await tester.pumpWidget(const SizedBox());
   }, timeout: const Timeout(Duration(seconds:60)));
