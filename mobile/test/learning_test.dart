@@ -66,11 +66,15 @@ void main() {
     final l=s.lessons.firstWhere((l)=>l['level']=='professional');expect(s.complete(l,l['quiz']['answer']),false);expect(s.complete(l,lessonQuestions(l).map((q)=>q['answer']).toList()),true);
   });
   testWidgets('dashboard opens with honest guest progress', (tester) async {
-    final s=LearningStore();await s.load();s.onboarded=true;
+    final s=LearningStore();
+    // Asset decoding may use a real isolate for the larger curriculum. Load it
+    // outside the widget fake clock rather than deadlocking the test harness.
+    await tester.runAsync(() => s.load());
+    s.onboarded=true;
     await tester.pumpWidget(IlmigoApp(store:s));await tester.pump();
     expect(find.text('ILMIGO'),findsOneWidget);
     expect(find.text('Hello, Learner ☀'),findsOneWidget);
     expect(find.text('0'),findsWidgets);
     await tester.pumpWidget(const SizedBox());
-  });
+  }, timeout: const Timeout(Duration(seconds:60)));
 }
