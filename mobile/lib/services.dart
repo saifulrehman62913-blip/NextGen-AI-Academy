@@ -48,12 +48,16 @@ class VoiceService {
 // Enable only after reviewed paid content and store products have been approved.
 class BillingService {
   static const enabled = bool.fromEnvironment('ENABLE_PURCHASES', defaultValue: false);
+  static const requiredBuild = bool.fromEnvironment('SUBSCRIPTIONS_REQUIRED', defaultValue: false);
+  String? _accountId;
   static const androidKey = String.fromEnvironment('REVENUECAT_ANDROID_KEY');
   static const appleKey = String.fromEnvironment('REVENUECAT_IOS_KEY');
   Future<void> configure(String accountId) async {
     final key = Platform.isIOS ? appleKey : androidKey;
     if (!enabled || key.isEmpty) throw Exception('Purchases are not enabled in this build.');
-    await Purchases.configure(PurchasesConfiguration(key)..appUserID = accountId);
+    if(_accountId==accountId)return;
+    if(_accountId==null){await Purchases.configure(PurchasesConfiguration(key)..appUserID = accountId);}else{await Purchases.logIn(accountId);}
+    _accountId=accountId;
   }
   Future<Offerings> offerings() => Purchases.getOfferings();
   Future<CustomerInfo> purchase(Package package) => Purchases.purchasePackage(package);

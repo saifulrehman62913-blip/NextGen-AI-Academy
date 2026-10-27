@@ -1,8 +1,10 @@
 // Checks presence and URL shape only. Never contacts providers or prints secrets.
 import { pathToFileURL } from 'node:url';
+import { subscriptionSettings } from '../server/subscription.mjs';
 
 export function checkProductionConfig(env) {
   const issues = [];
+  try { subscriptionSettings(env); } catch(error) { issues.push(error.message); }
   const httpsURL = (name, originOnly = false) => {
     try {
       const url = new URL(env[name]);

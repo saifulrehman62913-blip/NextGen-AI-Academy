@@ -5,6 +5,10 @@ import 'package:http/testing.dart';
 import 'package:ilmigo/services.dart';
 
 void main(){
+  test('unconfigured beta cannot open a real store purchase session',() async {
+    expect(BillingService.enabled,false);
+    await expectLater(BillingService().configure('verified-owner'),throwsException);
+  });
   test('parent recovery rejects another verified user without replacing the session',() async {
     final service=CloudService(baseUrl:'https://test.invalid',client:MockClient((request) async=>http.Response(jsonEncode({'access_token':'token-B','userId':'B'}),200)));
     addTearDown(service.close);service.token='token-A';service.userId='A';
