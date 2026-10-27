@@ -9,7 +9,7 @@ parser=argparse.ArgumentParser()
 parser.add_argument('--checkout',help='Optional new empty local checkout directory')
 args=parser.parse_args()
 files=[]
-for directory,patterns in [('scripts',['*.py','*.mjs']),('shared',['*.mjs']),('server',['*.mjs']),('web',['*.html','*.js','*.css','*.svg','*.webmanifest']),('tests',['*.mjs']),('mobile/lib',['*.dart']),('mobile/test',['*.dart']),('supabase/migrations',['*.sql']),('.github/workflows',['*.yml']),('review',['*.md','*.mjs','*.json','*.txt']),('review/build',['*.json','*.log']),('review/history',['*.json','*.txt']),('courses',['*.md'])]:
+for directory,patterns in [('scripts',['*.py','*.mjs']),('shared',['*.mjs']),('server',['*.mjs']),('web',['*.html','*.js','*.css','*.svg','*.webmanifest']),('tests',['*.mjs']),('mobile/lib',['*.dart']),('mobile/test',['*.dart']),('supabase/migrations',['*.sql']),('.github/workflows',['*.yml']),('review',['*.md','*.mjs','*.json','*.txt']),('review/build',['*.json','*.log']),('review/cloud',['*.json']),('review/history',['*.json','*.txt']),('courses',['*.md'])]:
  for pattern in patterns:
   files.extend((root/directory).glob(pattern))
 files.extend(root/name for name in ['README.md','package.json','.gitignore','.env.example','mobile/pubspec.yaml'])

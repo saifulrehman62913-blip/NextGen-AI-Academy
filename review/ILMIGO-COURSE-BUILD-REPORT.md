@@ -1,3 +1,5 @@
+> Historical pre-cloud report. Actual native builds now pass: see [ILMIGO-CLOUD-BUILD-REPORT.md](ILMIGO-CLOUD-BUILD-REPORT.md).
+
 # ILMIGO 0.3.1 — Courses, build verification aur bug fixes
 
 Date: 27 October 2026.
