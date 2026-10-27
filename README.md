@@ -32,6 +32,7 @@ Verified code commit: `78063c16ee4bed2080b4ef88b1199e1096959120`. Flutter 3.47.8
 - Real local progress, streaks/XP, saved lesson resumption and writing drafts.
 - Separate family/account stores, explicit guest import, parent PIN and same-account email PIN recovery when cloud service is configured.
 - Source integrations for Supabase, text AI feedback and disabled-by-default RevenueCat billing.
+- Lesson-scoped adult AI conversations with follow-up questions, bilingual explanations, optional device speech recognition and a button to hear each reply with installed device TTS. Conversations remain in screen/page memory, reset when leaving or changing profile, and share the 3 trial / 20 Plus daily turn quota. Provider/device verification still requires owner configuration.
 
 The 40 lessons are original curriculum drafts awaiting qualified language/audio review. Ten planned hours per language do not guarantee professional fluency or CEFR/occupational certification. The other 32 languages in the catalog remain **coming soon**.
 
@@ -99,6 +100,7 @@ Main routes:
 - `POST /api/auth/otp`, `POST /api/auth/verify`: email OTP; no automatic token refresh yet.
 - `POST /api/sync`: owner-checked profiles, latest completions and full stored practice-day history.
 - `POST /api/speaking`: adult/owner-checked **text** feedback, not audio pronunciation grading. Quota: 3 trial / 20 Plus turns per UTC day; a failed upstream request can consume a reservation.
+- `POST /api/conversation`: bounded adult lesson conversation; text history only, owner and language checked, shared AI quota. Returns a target-language reply and English/Urdu explanation; clients use device recognition/TTS, not continuous streamed audio.
 - `GET /api/entitlements`: server-side RevenueCat entitlement lookup.
 - `POST /api/delete-data`: deletes owned cloud learning profiles/progress; login/quota and local data remain. A subsequent explicit sync can upload local data again.
 - `POST /api/delete-account` with `{confirm:"DELETE"}`: deletes the authenticated account/cloud data; clients remove its local store. Store subscriptions must be cancelled separately.

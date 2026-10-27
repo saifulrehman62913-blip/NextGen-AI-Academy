@@ -24,7 +24,7 @@ This checks field presence and URL shape only. It does not prove that keys are v
 ## Owner account setup and acceptance
 
 - Supabase: create/select the owner's project; apply migrations 001 and 002; configure email OTP and production SMTP. Verify sign-in, cross-account isolation, progress sync, parent recovery and account deletion against the real database.
-- OpenAI: configure the server key and billing/usage limits. Verify adult text-feedback requests and quotas. Full conversational audio teaching is not implemented by the existing text-feedback endpoint.
+- OpenAI: configure the server key and billing/usage limits. Verify adult text-feedback requests and quotas. The new lesson-scoped conversation endpoint supports text exchanges with device speech recognition and device TTS on clients. Live provider and physical-device checks remain required; no audio pronunciation scoring is provided.
 - RevenueCat/store accounts: decide products and prices; configure entitlement `plus`; complete paid-content gating and subscription terms before enabling purchases. Verify purchase, restore, renewal, expiry and cancellation in store sandboxes. The current purchase flag remains disabled.
 - Android: owner-controlled release keystore/Play signing and production application ID are required. Keep signing material in protected CI secrets, never source control. The existing artifact is debug signed.
 - Apple: Apple Developer membership, App Store Connect app, team/bundle identifiers, certificate and provisioning profile are required for an installable signed IPA/TestFlight. The existing simulator artifact cannot install on an iPhone.
@@ -32,7 +32,7 @@ This checks field presence and URL shape only. It does not prove that keys are v
 ## Product work still requiring completion
 
 - Author and obtain qualified review for the remaining 32 catalog languages. Review and expand the current 40 English/Urdu draft lessons; they are not a complete professional-fluency qualification.
-- Implement full lesson-based voice conversation if that release scope is retained; test recognition, audio responses, connectivity and microphone permission behavior on actual supported devices.
+- Verify the new lesson-based conversation on configured providers and real devices: speech recognition, installed-device TTS replies, connectivity and microphone permission behavior. This is user-triggered turn-taking, not continuous real-time audio streaming.
 - Complete independently scoped child sessions and the production parent-consent flow before a public child-account launch.
 - Perform Android/iPhone device, accessibility, RTL and audio QA. Store privacy declarations must reflect the final configured providers and behavior.
 
