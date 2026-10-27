@@ -3,7 +3,7 @@ import {chromium} from 'playwright';
 import assert from 'node:assert/strict';
 import {mkdir,writeFile} from 'node:fs/promises';
 const out=new URL('../review/browser/',import.meta.url);await mkdir(out,{recursive:true});
-const browser=await chromium.launch({headless:true});
+const browser=await chromium.launch({channel:'chrome',headless:true});
 const failures=[],scenarios=[];let currentPage;
 const state=page=>page.evaluate(()=>JSON.parse(localStorage.getItem('ilmigo-v2:guest')));
 const active=async page=>{const saved=await state(page);return saved.profiles.find(p=>p.id===saved.active);};
