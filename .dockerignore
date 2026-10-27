@@ -1,0 +1,11 @@
+*
+!Dockerfile
+!package.json
+!scripts/
+!scripts/*.py
+!shared/
+!shared/*.mjs
+!web/
+!web/**
+!server/
+!server/*.mjs

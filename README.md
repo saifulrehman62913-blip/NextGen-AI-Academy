@@ -83,6 +83,8 @@ Do not place server secrets in Flutter defines. Apple signing/provisioning is re
 
 ## Cloud setup and API
 
+The [production setup checklist](review/PRODUCTION-SETUP.md) includes the Docker deployment commands, secret-safe configuration check and remaining account/product acceptance work. Adding deployment files does not activate providers or establish production readiness.
+
 1. Create a Supabase project; apply migrations `001_ilmigo.sql`, then `002_review_fixes.sql` under `supabase/migrations/`. Existing 0.1 installations apply only 002 after a backup.
 2. Enable email OTP and put `{{ .Token }}` in the email template. Set up production SMTP before public launch.
 3. Copy `.env.example` to `.env`; configure the Supabase URL, anon key, **server-only** service role key and exact `APP_ORIGIN`.

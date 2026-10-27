@@ -1,0 +1,39 @@
+# Production setup and outstanding verification
+
+The successful beta build is not a deployed production service. This checklist records actual dependencies; no account, payment or signing setup has been completed by adding these files.
+
+## Backend deployment
+
+The repository now includes a non-root, multi-stage Docker image. Build from the repository root:
+
+```sh
+docker build -t ilmigo-backend .
+docker run --rm --env-file .env -p 3000:3000 ilmigo-backend
+```
+
+The image generates curriculum during its build. Its allowlisted build context excludes `.env`, exports, caches and signing materials. Inject runtime credentials using the hosting provider's secret manager. Place the service behind HTTPS and set `APP_ORIGIN` to the exact public web origin (without a trailing slash). The health check verifies HTTP availability only, not provider connectivity. The Docker build has not been executed in this workspace because Docker is unavailable here.
+
+Before deployment, run the secret-safe, offline configuration check:
+
+```sh
+node --env-file=.env scripts/check-production-config.mjs
+```
+
+This checks field presence and URL shape only. It does not prove that keys are valid or that external services work. Never paste credentials in chat or commit them to the public repository.
+
+## Owner account setup and acceptance
+
+- Supabase: create/select the owner's project; apply migrations 001 and 002; configure email OTP and production SMTP. Verify sign-in, cross-account isolation, progress sync, parent recovery and account deletion against the real database.
+- OpenAI: configure the server key and billing/usage limits. Verify adult text-feedback requests and quotas. Full conversational audio teaching is not implemented by the existing text-feedback endpoint.
+- RevenueCat/store accounts: decide products and prices; configure entitlement `plus`; complete paid-content gating and subscription terms before enabling purchases. Verify purchase, restore, renewal, expiry and cancellation in store sandboxes. The current purchase flag remains disabled.
+- Android: owner-controlled release keystore/Play signing and production application ID are required. Keep signing material in protected CI secrets, never source control. The existing artifact is debug signed.
+- Apple: Apple Developer membership, App Store Connect app, team/bundle identifiers, certificate and provisioning profile are required for an installable signed IPA/TestFlight. The existing simulator artifact cannot install on an iPhone.
+
+## Product work still requiring completion
+
+- Author and obtain qualified review for the remaining 32 catalog languages. Review and expand the current 40 English/Urdu draft lessons; they are not a complete professional-fluency qualification.
+- Implement full lesson-based voice conversation if that release scope is retained; test recognition, audio responses, connectivity and microphone permission behavior on actual supported devices.
+- Complete independently scoped child sessions and the production parent-consent flow before a public child-account launch.
+- Perform Android/iPhone device, accessibility, RTL and audio QA. Store privacy declarations must reflect the final configured providers and behavior.
+
+Account setup alone does not finish these product tasks. Do not label the app production complete until the resulting implementation and acceptance checks have evidence.

@@ -12,7 +12,7 @@ files=[]
 for directory,patterns in [('scripts',['*.py','*.mjs']),('shared',['*.mjs']),('server',['*.mjs']),('web',['*.html','*.js','*.css','*.svg','*.webmanifest']),('tests',['*.mjs']),('mobile/lib',['*.dart']),('mobile/test',['*.dart']),('supabase/migrations',['*.sql']),('.github/workflows',['*.yml']),('review',['*.md','*.mjs','*.json','*.txt']),('review/build',['*.json','*.log']),('review/cloud',['*.json']),('review/history',['*.json','*.txt']),('courses',['*.md'])]:
  for pattern in patterns:
   files.extend((root/directory).glob(pattern))
-files.extend(root/name for name in ['README.md','package.json','.gitignore','.env.example','mobile/pubspec.yaml'])
+files.extend(root/name for name in ['README.md','package.json','.gitignore','.env.example','Dockerfile','.dockerignore','mobile/pubspec.yaml'])
 files=sorted(set(files))
 out=root/'release';out.mkdir(exist_ok=True)
 manifest={'purpose':'Ready-to-upload source. Repository choice/public visibility must be confirmed before upload.','files':[]}
