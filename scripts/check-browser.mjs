@@ -129,6 +129,56 @@ try{
  await stalledRoute?.abort().catch(()=>{});
  assert.equal(await cloudPage.evaluate(()=>sessionStorage.getItem('ilmigo-auth')),beforeTimeoutAuth);
  scenarios.push('Actual browser HTTP: stalled request aborts once without replay or credential loss');
+ // Course studio uses the same tab session but must rotate expired tokens and
+ // display authorization failures without turning a read into a publish action.
+ const adminToken='qa-admin-refreshed-access',adminRefresh='qa-admin-refreshed-refresh';
+ let adminReads=0,adminWrites=0,adminRefreshes=0;
+ await cloudPage.route('**/api/auth/refresh',async route=>{
+  adminRefreshes++;const request=route.request();assert.equal(request.headers().authorization,undefined);
+  assert.deepEqual(request.postDataJSON(),{refresh_token:parentRefresh,expectedUserId:owner});
+  return fulfill(route,{access_token:adminToken,refresh_token:adminRefresh,userId:owner});
+ });
+ await cloudPage.route('**/api/admin/courses',async route=>{
+  const request=route.request();
+  if(request.method()!=='GET'){adminWrites++;return fulfill(route,{error:'No publication is authorized in this read-only fixture.'},403);}
+  adminReads++;
+  if(adminReads===1){assert.equal(request.headers().authorization,`Bearer ${parentToken}`);return fulfill(route,{error:'Your session has expired.'},401);}
+  assert.equal(request.headers().authorization,`Bearer ${adminToken}`);
+  return adminReads===2?fulfill(route,{courses:[{language:'en',status:'draft',lessons:[lesson]}]}):fulfill(route,{error:'A course administrator account is required.'},403);
+ });
+ await cloudPage.goto('http://127.0.0.1:3000/admin.html',{waitUntil:'domcontentloaded'});
+ await cloudPage.locator('#load').click();
+ await cloudPage.waitForFunction(()=>{try{return JSON.parse(document.querySelector('#result').textContent).courses?.[0]?.status==='draft';}catch{return false;}});
+ const rotated=await cloudPage.evaluate(()=>JSON.parse(sessionStorage.getItem('ilmigo-auth')));
+ assert.equal(rotated.userId,owner);assert.equal(rotated.access_token,adminToken);assert.equal(rotated.refresh_token,adminRefresh);
+ assert.equal(adminRefreshes,1);assert.equal(adminReads,2);assert.equal(adminWrites,0);
+ assert.equal(await cloudPage.locator('#status').inputValue(),'draft','Loading data must not promote the editor status');
+ await cloudPage.locator('#load').click();await cloudPage.getByText('A course administrator account is required.',{exact:true}).waitFor();
+ assert.equal(await cloudPage.locator('#load').isDisabled(),false);assert.equal(await cloudPage.locator('#save').isDisabled(),false);
+ assert.equal(adminWrites,0,'Read-only studio navigation must not publish or save a course');
+ await cloudPage.screenshot({path:new URL('course-studio.png',out).pathname,fullPage:true});
+ scenarios.push('Mocked course studio: session refresh persists, drafts remain read-only and role denial recovers controls');
+
+ // A fresh context has no existing worker. Seed another app's cache before
+ // activating the real worker to prove it only removes its own old namespace.
+ const workerContext=await browser.newContext(),workerPage=currentPage=await workerContext.newPage();workerPage.setDefaultTimeout(15000);
+ workerPage.on('pageerror',error=>failures.push(error.message));
+ await workerPage.route('https://fonts.googleapis.com/**',route=>route.abort());await workerPage.route('https://fonts.gstatic.com/**',route=>route.abort());
+ await workerPage.goto('http://127.0.0.1:3000/admin.html',{waitUntil:'domcontentloaded'});
+ const cacheKeys=await workerPage.evaluate(async()=>{
+  await caches.open('qa-other-application-v1');await caches.open('ilmigo-v-qa-old');
+  const registration=await navigator.serviceWorker.register('/sw.js');
+  const worker=registration.installing||registration.waiting||registration.active;
+  if(worker.state!=='activated')await new Promise((resolve,reject)=>{
+   worker.addEventListener('statechange',()=>{if(worker.state==='activated')resolve();else if(worker.state==='redundant')reject(Error('Worker installation failed'));});
+  });
+  return caches.keys();
+ });
+ assert.ok(cacheKeys.includes('qa-other-application-v1'),'Worker activation must preserve unrelated applications');
+ assert.ok(!cacheKeys.includes('ilmigo-v-qa-old'),'Worker activation must retire its own old namespace');
+ assert.ok(cacheKeys.some(key=>key.startsWith('ilmigo-v')),'The worker must install its current offline cache');
+ await workerContext.close();
+ scenarios.push('Actual service worker activation: own old caches removed, unrelated same-origin cache preserved');
  assert.deepEqual(failures,[],'Browser application errors');
  await writeFile(new URL('checks.json',out),JSON.stringify({browser:browser.version(),scenarios,result:'passed',liveProviders:false,physicalDevice:false},null,2)+'\n');
  console.log(`Browser smoke passed: ${scenarios.length} scenarios; Chromium ${browser.version()}.`);

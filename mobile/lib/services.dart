@@ -16,6 +16,7 @@ class CloudService {
   bool get isChildSession=>childProfileId!=null;
   String? _refreshToken;
   int _sessionVersion=0;
+  int get sessionVersion=>_sessionVersion;
   bool _signingOut=false;
   Future<void>? _refreshing;
   bool get configured {final uri=Uri.tryParse(baseUrl);return uri!=null&&uri.host.isNotEmpty&&uri.userInfo.isEmpty&&uri.query.isEmpty&&uri.fragment.isEmpty&&(uri.scheme=='https'||uri.scheme=='http'&&['localhost','127.0.0.1','10.0.2.2'].contains(uri.host));}

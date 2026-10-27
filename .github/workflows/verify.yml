@@ -84,7 +84,7 @@ jobs:
       - name: Generate native projects and install dependencies
         run: python3 scripts/bootstrap_mobile.py
       - name: Analyze native source
-        run: flutter analyze --no-fatal-infos --no-fatal-warnings
+        run: flutter analyze
         working-directory: mobile
       - name: Run Flutter tests
         run: flutter test --reporter expanded --concurrency 1 --timeout 120s --fail-fast
@@ -115,7 +115,7 @@ jobs:
       - name: Generate native projects and install dependencies
         run: python3 scripts/bootstrap_mobile.py
       - name: Analyze native source
-        run: flutter analyze --no-fatal-infos --no-fatal-warnings
+        run: flutter analyze
         working-directory: mobile
       - name: Run Flutter tests
         run: flutter test --reporter expanded --concurrency 1 --timeout 120s --fail-fast

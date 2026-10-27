@@ -7,6 +7,7 @@ import {assertObject,validateLesson,validateCatalog,validateSync,validDay} from 
 import {conversationHistory,conversationReply} from '../shared/conversation.mjs';
 import {subscriptionPlan,subscriptionSettings,trialStatus,paidEntitlement} from './subscription.mjs';
 import {childConsentVersion,childTokenHash,newChildToken,childRouteAllowed} from './child-session.mjs';
+import {configuredOrigin} from './runtime-config.mjs';
 const ROOT=resolve(dirname(fileURLToPath(import.meta.url)),'..');
 const catalog=JSON.parse(await readFile(resolve(ROOT,'shared/catalog.json'),'utf8'));
 const MIME={'.html':'text/html; charset=utf-8','.js':'text/javascript; charset=utf-8','.mjs':'text/javascript; charset=utf-8','.css':'text/css; charset=utf-8','.json':'application/json; charset=utf-8','.svg':'image/svg+xml','.webmanifest':'application/manifest+json'};
@@ -15,12 +16,14 @@ const fail=(status,message)=>{throw new HttpError(status,message);};
 const clean=(s,max=80)=>typeof s==='string'?s.trim().slice(0,max):'';
 export function createApp(env=process.env,fetcher=fetch){
   const cloud=Boolean(env.SUPABASE_URL&&env.SUPABASE_ANON_KEY&&env.SUPABASE_SERVICE_ROLE_KEY);
+  const supabaseOrigin=env.SUPABASE_URL?configuredOrigin(env.SUPABASE_URL,'SUPABASE_URL'):null;
+  const appOrigin=env.APP_ORIGIN?configuredOrigin(env.APP_ORIGIN,'APP_ORIGIN'):`http://localhost:${env.PORT||3000}`;
   const subscriptions=subscriptionSettings(env);
   const rate=new Map();
   let contentCache=null, contentLoaded=0;
   function throttle(key,max=10,windowMs=600000){const now=Date.now();for(const [k,v]of rate)if(v.until<now)rate.delete(k);const item=rate.get(key)||{count:0,until:now+windowMs};if(++item.count>max)fail(429,'Too many requests. Please wait before trying again.');rate.set(key,item);}
-  async function request(url,opts={},authentication=false){let response;try{response=await fetcher(url,{...opts,signal:AbortSignal.timeout(20000)});}catch(error){if(error?.name==='TimeoutError'||error?.name==='AbortError')fail(504,'The connected service took too long. Please try again.');fail(502,'The connected service is unavailable. Please try again later.');}if(!response.ok)fail(authentication&&[400,401,403].includes(response.status)?401:502,authentication?'Your session has expired. Please sign in again.':'The connected service could not complete this request.');if(response.status===204||response.headers?.get('content-length')==='0')return null;let result;try{const raw=await response.text();result=raw?JSON.parse(raw):null;}catch{fail(502,'The connected service returned an unreadable response.');}return result;}
-  const supa=(path,options={})=>request(`${env.SUPABASE_URL}/rest/v1/${path}`,{...options,headers:{apikey:env.SUPABASE_SERVICE_ROLE_KEY,Authorization:`Bearer ${env.SUPABASE_SERVICE_ROLE_KEY}`,'Content-Type':'application/json',Prefer:'return=representation',...options.headers}});
+  async function request(url,opts={},authentication=false){let response;try{response=await fetcher(url,{...opts,signal:AbortSignal.timeout(20000)});}catch(error){if(error?.name==='TimeoutError'||error?.name==='AbortError')fail(504,'The connected service took too long. Please try again.');fail(502,'The connected service is unavailable. Please try again later.');}if(!response.ok){if(authentication==='email-code'&&[400,401,403,422].includes(response.status))fail(400,'The email code is invalid or expired. Request a new code and try again.');fail(authentication===true&&[400,401,403].includes(response.status)?401:502,authentication===true?'Your session has expired. Please sign in again.':'The connected service could not complete this request.');}if(response.status===204||response.headers?.get('content-length')==='0')return null;let result;try{const raw=await response.text();result=raw?JSON.parse(raw):null;}catch(error){if(error?.name==='TimeoutError'||error?.name==='AbortError')fail(504,'The connected service took too long. Please try again.');fail(502,'The connected service returned an unreadable response.');}return result;}
+  const supa=(path,options={})=>request(`${supabaseOrigin}/rest/v1/${path}`,{...options,headers:{apikey:env.SUPABASE_SERVICE_ROLE_KEY,Authorization:`Bearer ${env.SUPABASE_SERVICE_ROLE_KEY}`,'Content-Type':'application/json',Prefer:'return=representation',...options.headers}});
   async function activeCatalog(){
     if(!cloud)return catalog;
     if(contentCache&&Date.now()-contentLoaded<30000)return contentCache;
@@ -35,7 +38,7 @@ export function createApp(env=process.env,fetcher=fetch){
     if(!session||session.consent_version!==childConsentVersion||!(Date.parse(session.expires_at)>Date.now()))fail(401,'Child session expired or revoked. Ask a parent to sign in again.');
     const profile=await ownedProfile(session.owner_id,session.profile_id);if(profile.kind!=='child')fail(401,'Child session is no longer valid.');
     return {id:session.owner_id,childProfileId:profile.id,childProfile:profile};
-  }const u=await request(`${env.SUPABASE_URL}/auth/v1/user`,{headers:{apikey:env.SUPABASE_ANON_KEY,Authorization:token}},true);if(!u?.id)fail(401,'Your session has expired. Please sign in again.');if(u.is_anonymous===true||('email_confirmed_at' in u&&!u.email_confirmed_at))fail(403,'Verify your account email before using cloud learning.');return u;}
+  }const u=await request(`${supabaseOrigin}/auth/v1/user`,{headers:{apikey:env.SUPABASE_ANON_KEY,Authorization:token}},true);if(!u?.id)fail(401,'Your session has expired. Please sign in again.');if(u.is_anonymous===true||('email_confirmed_at' in u&&!u.email_confirmed_at))fail(403,'Verify your account email before using cloud learning.');return u;}
   async function body(req,maxSize=262144){const parts=[];let size=0;for await(const part of req){size+=part.length;if(size>maxSize)fail(413,'Request is too large.');parts.push(part);}let parsed;try{parsed=JSON.parse(Buffer.concat(parts).toString()||'{}');}catch{fail(400,'A valid JSON request is required.');}return assertObject(parsed);}
   async function ownedProfile(uid,id){if(!/^[0-9a-f]{8}-[0-9a-f]{4}-[0-9a-f]{4}-[0-9a-f]{4}-[0-9a-f]{12}$/i.test(id||''))fail(400,'Sync your profile before using this feature.');const rows=await supa(`profiles?id=eq.${id}&owner_id=eq.${uid}&select=*`);if(!rows[0])fail(404,'Learning profile not found.');return rows[0];}
   async function premium(uid){if(!env.REVENUECAT_SECRET_KEY)return false;const result=await request(`https://api.revenuecat.com/v1/subscribers/${encodeURIComponent(uid)}`,{headers:{Authorization:`Bearer ${env.REVENUECAT_SECRET_KEY}`}});return paidEntitlement(result.subscriber?.entitlements?.plus,subscriptions.enabled?subscriptions.productIds:[]);}
@@ -48,17 +51,17 @@ export function createApp(env=process.env,fetcher=fetch){
     if(req.method!=='POST'&&path!=='/api/admin/courses'&&path!=='/api/entitlements'&&path!=='/api/member-catalog')fail(405,'Method not allowed.');
     if(path==='/api/auth/otp'){
       if(!cloud)fail(503,'Email sign-in is not configured.');throttle(`otp:${req.socket.remoteAddress}`,5);
-      const data=await body(req),email=clean(data.email,254);if(!/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email))fail(400,'Enter a valid email address.');
-      await request(`${env.SUPABASE_URL}/auth/v1/otp`,{method:'POST',headers:{apikey:env.SUPABASE_ANON_KEY,'Content-Type':'application/json'},body:JSON.stringify({email,create_user:true})});return {sent:true};
+      const data=await body(req),email=typeof data.email==='string'?data.email.trim():'';if(email.length>254||!/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email))fail(400,'Enter a valid email address.');
+      await request(`${supabaseOrigin}/auth/v1/otp`,{method:'POST',headers:{apikey:env.SUPABASE_ANON_KEY,'Content-Type':'application/json'},body:JSON.stringify({email,create_user:true})});return {sent:true};
     }
     if(path==='/api/auth/verify'){
-      if(!cloud)fail(503,'Email sign-in is not configured.');throttle(`verify:${req.socket.remoteAddress}`,10);const data=await body(req),email=clean(data.email,254),token=clean(data.token,10);
-      if(!email||!/^\d{6,10}$/.test(token))fail(400,'Enter the code from your email.');const result=await request(`${env.SUPABASE_URL}/auth/v1/verify`,{method:'POST',headers:{apikey:env.SUPABASE_ANON_KEY,'Content-Type':'application/json'},body:JSON.stringify({email,token,type:'email'})});if(!result?.access_token||!result.user?.id)fail(502,'The sign-in service returned an incomplete session.');return {access_token:result.access_token,refresh_token:result.refresh_token,expires_at:result.expires_at,userId:result.user.id};
+      if(!cloud)fail(503,'Email sign-in is not configured.');throttle(`verify:${req.socket.remoteAddress}`,10);const data=await body(req),email=typeof data.email==='string'?data.email.trim():'',token=typeof data.token==='string'?data.token.trim():'';
+      if(email.length>254||!/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email)||!/^\d{6,10}$/.test(token))fail(400,'Enter your email address and its code.');const result=await request(`${supabaseOrigin}/auth/v1/verify`,{method:'POST',headers:{apikey:env.SUPABASE_ANON_KEY,'Content-Type':'application/json'},body:JSON.stringify({email,token,type:'email'})},'email-code');if(!result?.access_token||!result.user?.id)fail(502,'The sign-in service returned an incomplete session.');return {access_token:result.access_token,refresh_token:result.refresh_token,expires_at:result.expires_at,userId:result.user.id};
     }
     if(path==='/api/auth/refresh'){
       if(!cloud)fail(503,'Email sign-in is not configured.');throttle(`refresh:${req.socket.remoteAddress}`,60,60000);
       const data=await body(req);if(typeof data.refresh_token!=='string'||!data.refresh_token.trim()||data.refresh_token.length>4096||typeof data.expectedUserId!=='string'||!data.expectedUserId||data.expectedUserId.length>128)fail(400,'A refresh token and expected account are required.');
-      const result=await request(`${env.SUPABASE_URL}/auth/v1/token?grant_type=refresh_token`,{method:'POST',headers:{apikey:env.SUPABASE_ANON_KEY,'Content-Type':'application/json'},body:JSON.stringify({refresh_token:data.refresh_token})},true);
+      const result=await request(`${supabaseOrigin}/auth/v1/token?grant_type=refresh_token`,{method:'POST',headers:{apikey:env.SUPABASE_ANON_KEY,'Content-Type':'application/json'},body:JSON.stringify({refresh_token:data.refresh_token})},true);
       if(!result?.user?.id||result.user.id!==data.expectedUserId)fail(401,'The refreshed session does not match this account. Please sign in again.');
       if(typeof result.access_token!=='string'||!result.access_token||typeof result.refresh_token!=='string'||!result.refresh_token)fail(502,'The sign-in service returned an incomplete session.');
       return {access_token:result.access_token,refresh_token:result.refresh_token,expires_at:result.expires_at,userId:result.user.id};
@@ -140,14 +143,14 @@ export function createApp(env=process.env,fetcher=fetch){
     if(path==='/api/delete-data'){await body(req);await supa(`profiles?owner_id=eq.${u.id}`,{method:'DELETE',headers:{Prefer:'return=minimal'}});return {deleted:true};}
     if(path==='/api/delete-account'){
       const data=await body(req);if(data.confirm!=='DELETE')fail(400,'Explicit account deletion confirmation is required.');
-      await request(`${env.SUPABASE_URL}/auth/v1/admin/users/${encodeURIComponent(u.id)}`,{method:'DELETE',headers:{apikey:env.SUPABASE_SERVICE_ROLE_KEY,Authorization:`Bearer ${env.SUPABASE_SERVICE_ROLE_KEY}`}});
+      await request(`${supabaseOrigin}/auth/v1/admin/users/${encodeURIComponent(u.id)}`,{method:'DELETE',headers:{apikey:env.SUPABASE_SERVICE_ROLE_KEY,Authorization:`Bearer ${env.SUPABASE_SERVICE_ROLE_KEY}`}});
       return {deleted:true};
     }
     if(path==='/api/admin/courses'){
       if(u.app_metadata?.role!=='admin')fail(403,'A course administrator account is required.');
       if(req.method==='GET')return {courses:await supa('course_drafts?select=*&order=updated_at.desc')};
       if(req.method!=='POST')fail(405,'Method not allowed.');const data=await body(req,2097152);const language=catalog.languages.find(l=>l.id===data.language);if(!language)fail(400,'Choose a language from the catalog.');
-      if(!['draft','review','published'].includes(data.status))fail(400,'Invalid content status.');if(data.status==='published'&&(!data.reviewed||!clean(data.reviewNote,2000)))fail(400,'Publishing requires a completed language/audio review and a review note.');
+      if(!['draft','review','published'].includes(data.status))fail(400,'Invalid content status.');if(data.status==='published'&&(data.reviewed!==true||!clean(data.reviewNote,2000)))fail(400,'Publishing requires a completed language/audio review and a review note.');
       if(!Array.isArray(data.lessons)||!data.lessons.length||data.lessons.length>100)fail(400,'Supply 1–100 structured lessons.');
       const ids=new Set();
       for(const l of data.lessons){
@@ -164,7 +167,7 @@ export function createApp(env=process.env,fetcher=fetch){
       const url=new URL(req.url,'http://localhost');let path;try{path=decodeURIComponent(url.pathname);}catch{fail(400,'Invalid path.');}
       if(path.startsWith('/api/')){
         res.setHeader('Cache-Control','no-store');
-        if(req.headers.origin){const origin=env.APP_ORIGIN||`http://localhost:${env.PORT||3000}`;if(req.headers.origin!==origin)fail(403,'This origin is not allowed.');}
+        if(req.headers.origin){if(req.headers.origin!==appOrigin)fail(403,'This origin is not allowed.');}
         const result=await api(req,res,path);res.writeHead(200,{'Content-Type':'application/json; charset=utf-8'});res.end(JSON.stringify(result));return;
       }
       if(!['GET','HEAD'].includes(req.method))fail(405,'Method not allowed.');

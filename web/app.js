@@ -11,6 +11,7 @@ try{const bundled=validateCatalog(await bootstrapClient.request('/shared/catalog
 if(!catalog){document.querySelector('#app').textContent='ILMIGO could not load. Reconnect to download your lesson library.';throw Error('Catalog unavailable');}
 try{config=await bootstrapClient.request('/api/config');}catch{}
 try{const remote=validateCatalog(await bootstrapClient.request('/api/catalog'));if((remote.revision||1)>=(catalog.revision||1)){catalog=remote;deviceStorage.setItem('ilmigo-catalog-v2',JSON.stringify(catalog));}}catch{}
+let profileSwitchVersion=0;
 let page='home',filter='',languageFilter='all',lessonRun=null,ticker=null,recognition=null,auth=null;
 try{const saved=JSON.parse(sessionStorage.getItem('ilmigo-auth'));if(saved?.userId&&saved?.access_token)auth=saved;}catch{}
 const sessionClient=new ApiSession({getSession:()=>auth,setSession:(next,expected)=>{if(auth!==expected)return false;Object.assign(auth,next);persistAuth();return true;}});
@@ -73,14 +74,15 @@ async function api(path,data){return sessionClient.request(path,data);}
 function persistAuth(){try{if(auth)sessionStorage.setItem('ilmigo-auth',JSON.stringify(auth));else sessionStorage.removeItem('ilmigo-auth');}catch{try{sessionStorage.removeItem('ilmigo-auth');}catch{/* Storage is blocked; this page keeps its session only in memory. */}}}
 function loginModal(recoverParent=false,unlockOnly=false){const recoveryOwner=recoverParent?accounts.owner:null;if(recoverParent&&!recoveryOwner)return toast(tr('Guest PINs have no verified email recovery. Use your saved PIN or restore your backup on a reset device.','مہمان پن کے لیے تصدیق شدہ ای میل نہیں۔ محفوظ پن استعمال کریں یا ری سیٹ آلے پر بیک اپ بحال کریں۔'));if(p().kind==='child'&&!recoverParent)return toast(tr('An adult must sign in from their profile.','بالغ اپنے پروفائل سے سائن ان کریں۔'));if(!config.cloud)return modal(`<h2>${tr('Your cloud is not connected yet','کلاؤڈ ابھی منسلک نہیں')}</h2><p>${tr('Email sign-in needs the owner’s Supabase configuration. You can keep learning on this device and export a backup from My space.','ای میل سائن ان کے لیے مالک کی Supabase ترتیب ضروری ہے۔ فی الحال اس آلے پر سیکھیں اور بیک اپ لیں۔')}</p><button class="primary" data-nav="family">${tr('Open my space','میری جگہ کھولیں')}</button>`);modal(`<h2>${recoverParent?tr('Recover parent access','والدین کی رسائی بحال کریں'):tr('Bring your progress along','اپنی پیش رفت ساتھ رکھیں')}</h2><p>${tr('We’ll send a sign-in code to your email.','آپ کی ای میل پر سائن ان کوڈ بھیجیں گے۔')}</p><form id="login-form"><label for="email">Email</label><input id="email" type="email" required autocomplete="email"><button class="primary" id="send-code">${tr('Send code','کوڈ بھیجیں')}</button></form><form id="verify-form" hidden><label for="otp">Email code</label><input id="otp" inputmode="numeric" required maxlength="10"><button class="primary">${tr('Verify & sign in','تصدیق اور سائن ان')}</button></form>`);let email='';overlay.querySelector('#login-form').onsubmit=async e=>{e.preventDefault();email=overlay.querySelector('#email').value;const b=overlay.querySelector('#send-code');b.disabled=true;try{await api('/api/auth/otp',{email});overlay.querySelector('#verify-form').hidden=false;toast(tr('Check your email for the code.','ای میل پر کوڈ دیکھیں۔'));}catch(err){toast(err.message);}finally{b.disabled=false;}};overlay.querySelector('#verify-form').onsubmit=async e=>{e.preventDefault();const form=e.currentTarget,previousAuth=auth,previousState=state;if(form.dataset.busy)return;form.dataset.busy='true';try{const verified=await api('/api/auth/verify',{email,token:overlay.querySelector('#otp').value});if(!form.isConnected||auth!==previousAuth||state!==previousState)return;if(recoverParent){if(accounts.owner!==recoveryOwner||state.ownerId!==recoveryOwner)throw Error('Account changed. Start recovery again.');if(unlockOnly){if(verified.userId!==recoveryOwner)throw Error('Verify the parent email for this account.');const adult=state.profiles.find(pr=>pr.kind==='adult');if(!adult)throw Error('Ask the account owner to restore the family.');state.active=adult.id;}else{recoverParentAccess(state,verified.userId,deviceStorage,`${accounts.key()}:parent`);}auth=verified;persistAuth();save();closeModal();render();if(unlockOnly){await syncCloud();closeModal();render();toast(tr('Parent access restored.','والدین کی رسائی بحال ہو گئی۔'));return;}const reset=await ensureParentPin();toast(tr(reset?'Parent access recovered. New PIN saved.':'Account verified. Set a parent PIN before opening a child profile.',reset?'والدین کی رسائی بحال اور نیا پن محفوظ ہو گیا۔':'اکاؤنٹ کی تصدیق ہو گئی۔ بچے کا پروفائل کھولنے سے پہلے پن بنائیں۔'));return;}const returning=accounts.has(verified.userId);accounts.save(state);auth=verified;state=accounts.open(auth.userId);persistAuth();await syncCloud(!returning);closeModal();render();toast(tr('You’re signed in.','سائن ان ہو گیا۔'));}catch(err){if(form.isConnected)toast(err.message);}finally{delete form.dataset.busy;}};}
 async function syncCloud(restore=false,consentedChildId=null){
- if(!auth)return;const owner=auth.userId,snapshot=state;if(accounts.owner!==owner||snapshot.ownerId!==owner)throw Error('Sign in again to open your account learning space.');
+ if(!auth)return;const session=auth,owner=auth.userId,snapshot=state;if(accounts.owner!==owner||snapshot.ownerId!==owner)throw Error('Sign in again to open your account learning space.');
  const cloud=await api('/api/sync',{profiles:restore?[]:snapshot.profiles.filter(pr=>auth.scope==='child'?pr.kind==='child'&&pr.cloudId===auth.childProfileId:pr.kind!=='child'||pr.cloudId||pr.id===consentedChildId).map(pr=>({id:pr.cloudId||null,localId:pr.id,name:pr.name,kind:pr.kind,language:pr.language,goal:pr.goal,completed:pr.completed,days:pr.days,...(pr.id===consentedChildId?{childConsent:true,childConsentVersion:config.childConsentVersion||'child-cloud-v1'}:{})}))});
- if(state!==snapshot||auth?.userId!==owner)return;
+ if(state!==snapshot||auth!==session||auth?.userId!==owner)return;
  if(restore&&cloud.profiles.length&&auth.scope!=='child')snapshot.profiles=[];
  for(const remote of cloud.profiles){let local=snapshot.profiles.find(pr=>pr.cloudId===remote.id)||snapshot.profiles.find(pr=>!pr.cloudId&&pr.id===remote.localId&&pr.kind===remote.kind);if(!local){const candidate=remote.localId||remote.id;local={id:snapshot.profiles.some(pr=>pr.id===candidate)?crypto.randomUUID():candidate,name:remote.name,kind:remote.kind,language:remote.language,goal:remote.goal,completed:{},sessions:{},days:[],saved:[],reminders:false};snapshot.profiles.push(local);}mergeProgress(local,remote);}
  if(auth.scope==='child'){const bound=snapshot.profiles.find(pr=>pr.kind==='child'&&pr.cloudId===auth.childProfileId);if(!bound)throw Error('Ask a parent to restore the child profile.');snapshot.active=bound.id;}
  if(!snapshot.profiles.some(pr=>pr.id===snapshot.active))snapshot.active=snapshot.profiles[0].id;
  if(typeof config!=='undefined'&&config.subscription?.enabled){try{await refreshMemberCatalog();}catch{if(state===snapshot)catalog={...catalog,lessons:[]};}}
+ if(state!==snapshot||auth!==session)return;
  if(restore&&auth.scope!=='child'){snapshot.onboarded=true;const adult=snapshot.profiles.find(pr=>pr.kind==='adult');if(adult)snapshot.active=adult.id;else{const parent=emptyState().profiles[0];parent.name='Parent';snapshot.profiles.push(parent);snapshot.active=parent.id;}}save();
 }
 
@@ -131,9 +133,9 @@ function stopPracticeMedia(){
 
 async function refreshMemberCatalog(){
  if(!config.subscription?.enabled||!auth)return;
- const owner=auth.userId,snapshot=state;
+ const session=auth,owner=auth.userId,snapshot=state,learner=p();
  const remote=validateCatalog(await api('/api/member-catalog'));
- if(auth?.userId===owner&&state===snapshot)catalog=remote;
+ if(auth===session&&auth?.userId===owner&&state===snapshot&&p()===learner)catalog=remote;
 }
 async function membershipModal(){
  if(p().kind==='child')return toast(tr('A parent must manage the trial and subscription.','آزمائش اور سبسکرپشن والدین سنبھالیں۔'));
@@ -160,19 +162,21 @@ async function membershipModal(){
 }
 
 async function switchProfile(id){
- const target=state.profiles.find(pr=>pr.id===id);if(!target||target.id===state.active)return;
- if(auth?.scope==='child'){if(!await unlockParent())return;return loginModal(true,true);}
- if(p().kind==='child'&&target.kind==='adult'&&!await unlockParent())return;
- if(target.kind==='child'&&!parentGate().configured){if(p().kind==='child'||!await ensureParentPin())return;}
- if(target.kind==='child'&&auth){
+ const version=++profileSwitchVersion,target=state.profiles.find(pr=>pr.id===id);
+ const snapshot=state,previous=auth,active=state.active;
+ const valid=()=>version===profileSwitchVersion&&state===snapshot&&auth===previous&&state.active===active&&state.profiles.includes(target);
+ if(!target||target.id===active)return;
+ if(previous?.scope==='child'){if(!await unlockParent()||!valid())return;return loginModal(true,true);}
+ if(p().kind==='child'&&target.kind==='adult'){if(!await unlockParent()||!valid())return;}
+ if(target.kind==='child'&&!parentGate().configured){if(p().kind==='child'||!await ensureParentPin()||!valid())return;}
+ if(target.kind==='child'&&previous){
   if(!confirm(tr('I am this learner’s parent/guardian and consent to saving their nickname, language and progress in my family cloud account. Child AI/microphone recognition stay off. Parent access will require my PIN and email verification.','میں والد یا سرپرست ہوں اور بچے کا مختصر نام، زبان اور پیش رفت اپنے خاندانی کلاؤڈ اکاؤنٹ میں محفوظ کرنے کی اجازت دیتا ہوں۔ بچے کا AI اور مائیک بند رہیں گے۔ والدین کی رسائی کے لیے پن اور ای میل تصدیق درکار ہوگی۔')))return;
-  const previous=auth,snapshot=state;
-  await syncCloud(false,target.id);if(auth!==previous||state!==snapshot)return;
+  await syncCloud(false,target.id);if(!valid())return;
   const child=await api('/api/child-session',{profileId:target.cloudId,consent:true,consentVersion:config.childConsentVersion||'child-cloud-v1'});
-  if(auth!==previous||state!==snapshot)return;
+  if(!valid())return;
   if(child.scope!=='child'||child.userId!==previous.userId||child.childProfileId!==target.cloudId||typeof child.access_token!=='string'||!child.access_token.startsWith('ilmigo_child_'))throw Error('Child session could not be verified.');
   auth={access_token:child.access_token,userId:child.userId,scope:'child',childProfileId:child.childProfileId,expires_at:child.expires_at};persistAuth();
  }
  state.active=target.id;save();render();
- if(auth?.scope==='child'){try{await refreshMemberCatalog();render();}catch{/* Paid lessons stay closed until access can be verified. */}}
+ if(auth?.scope==='child'){try{await refreshMemberCatalog();if(state===snapshot&&state.active===target.id)render();}catch{/* Paid lessons stay closed until access can be verified. */}}
 }

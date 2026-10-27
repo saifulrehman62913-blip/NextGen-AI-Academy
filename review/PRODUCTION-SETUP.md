@@ -1,5 +1,7 @@
 # Production setup and outstanding verification
 
+Current consolidated owner steps: [OWNER-LAUNCH-SETUP.md](OWNER-LAUNCH-SETUP.md), including the manual Android workflow, signed Apple export helper and read-only deployment checker.
+
 The successful beta build is not a deployed production service. This checklist records actual dependencies; no account, payment or signing setup has been completed by adding these files.
 
 ## Backend deployment

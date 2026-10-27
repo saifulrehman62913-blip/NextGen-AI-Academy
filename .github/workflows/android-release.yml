@@ -1,0 +1,87 @@
+name: Owner signed Android release
+on:
+  workflow_dispatch:
+    inputs:
+      acceptance_verified:
+        description: Owner has verified staging, publisher terms and release acceptance
+        required: true
+        type: boolean
+        default: false
+permissions:
+  contents: read
+concurrency:
+  group: ilmigo-owner-android-release
+  cancel-in-progress: false
+jobs:
+  release:
+    runs-on: ubuntu-24.04
+    timeout-minutes: 30
+    env:
+      API_BASE_URL: ${{ vars.ILMIGO_API_BASE_URL }}
+      REVENUECAT_ANDROID_KEY: ${{ vars.ILMIGO_REVENUECAT_ANDROID_KEY }}
+      ILMIGO_ANDROID_KEYSTORE_BASE64: ${{ secrets.ILMIGO_ANDROID_KEYSTORE_BASE64 }}
+      ILMIGO_ANDROID_STORE_PASSWORD: ${{ secrets.ILMIGO_ANDROID_STORE_PASSWORD }}
+      ILMIGO_ANDROID_KEY_ALIAS: ${{ secrets.ILMIGO_ANDROID_KEY_ALIAS }}
+      ILMIGO_ANDROID_KEY_PASSWORD: ${{ secrets.ILMIGO_ANDROID_KEY_PASSWORD }}
+      ILMIGO_RELEASE_ACCEPTANCE: ${{ inputs.acceptance_verified && 'verified' || '' }}
+    steps:
+      - uses: actions/checkout@v4
+      - name: Validate owner setup before installing build tools
+        shell: bash
+        run: |
+          python3 - <<'PY'
+          import base64, importlib.util, os, sys
+          from pathlib import Path
+          if os.environ.get('GITHUB_REF') != 'refs/heads/main':
+              sys.exit('Owner release must use the reviewed main branch.')
+          if not os.environ.get('ILMIGO_ANDROID_KEYSTORE_BASE64'):
+              sys.exit('ILMIGO_ANDROID_KEYSTORE_BASE64 owner secret is missing.')
+          try:
+              value=base64.b64decode(os.environ['ILMIGO_ANDROID_KEYSTORE_BASE64'],validate=True)
+              if not value:raise ValueError()
+          except (ValueError,TypeError):
+              sys.exit('Owner keystore secret must contain valid nonempty base64.')
+          key=Path(os.environ['RUNNER_TEMP'])/'ilmigo-owner-upload.jks'
+          key.write_bytes(value);key.chmod(0o600)
+          os.environ['ILMIGO_ANDROID_KEYSTORE']=str(key)
+          with open(os.environ['GITHUB_ENV'],'a') as output:
+              output.write('ILMIGO_ANDROID_KEYSTORE='+str(key)+'\n')
+          spec=importlib.util.spec_from_file_location('paid','scripts/build-paid-android.py')
+          sys.path.insert(0,'scripts');module=importlib.util.module_from_spec(spec);spec.loader.exec_module(module)
+          issues=module.validate(os.environ)
+          if issues:
+              for issue in issues:print(issue,file=sys.stderr)
+              sys.exit(1)
+          PY
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '24'
+      - uses: subosito/flutter-action@v2
+        with:
+          channel: stable
+          flutter-version: '3.47.8'
+          cache: true
+      - name: Generate and test source
+        run: |
+          npm run build
+          node --test --test-isolation=none tests/*.test.mjs
+          python3 scripts/bootstrap_mobile.py
+      - name: Check native code
+        working-directory: mobile
+        run: |
+          flutter analyze
+          flutter test --reporter expanded --concurrency 1 --timeout 120s --fail-fast
+      - name: Verify deployed paid access boundaries
+        run: node scripts/check-deployment.mjs
+      - name: Build paid owner-signed AAB
+        run: python3 scripts/build-paid-android.py
+      - uses: actions/upload-artifact@v4
+        with:
+          name: ilmigo-owner-signed-android-aab
+          path: mobile/build/app/outputs/bundle/release/app-release.aab
+          if-no-files-found: error
+          retention-days: 7
+      - name: Remove temporary owner keystore
+        if: always()
+        shell: bash
+        run: python3 -c "import os,pathlib; (pathlib.Path(os.environ['RUNNER_TEMP'])/'ilmigo-owner-upload.jks').unlink(missing_ok=True)"
