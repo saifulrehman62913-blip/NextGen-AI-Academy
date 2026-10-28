@@ -52,9 +52,9 @@ test('failed refreshed-session persistence removes stale credentials and does no
 });
 test('service worker activation preserves caches belonging to other same-origin applications',async()=>{
  const handlers={},deleted=[];const self={addEventListener:(name,handler)=>handlers[name]=handler};
- const caches={keys:async()=>['other-app-v1','ilmigo-v4.1','ilmigo-v5.1','ilmigo-v6.0'],delete:async key=>deleted.push(key)};
+ const caches={keys:async()=>['other-app-v1','ilmigo-v4.1','ilmigo-v5.1','ilmigo-v6.0','ilmigo-v6.1'],delete:async key=>deleted.push(key)};
  vm.runInNewContext(worker,{self,caches});let finished;handlers.activate({waitUntil:p=>finished=p});await finished;
- assert.deepEqual(deleted,['ilmigo-v4.1','ilmigo-v5.1']);
+ assert.deepEqual(deleted,['ilmigo-v4.1','ilmigo-v5.1','ilmigo-v6.0']);
 });
 test('service worker falls back to cache when network headers or response bodies stall',async()=>{
  for(const bodyStalls of [false,true]){

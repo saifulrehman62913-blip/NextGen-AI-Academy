@@ -25,7 +25,7 @@ def prepare(destination):
         archive.writestr('READ-ME.md','''# Pending audio production and review
 
 This archive contains exact lesson reading scripts, not audio files or approvals. Every evidence field is empty/pending.
-A connected production account must be selected before any billed generation. Estimated credits assume one separate speech call per lesson and exclude retries/alternate voices. Provider coverage is unverified; never silently replace an unsupported language with another language.
+The owner requires a free-only workflow: do not purchase a plan or invoke paid speech generation. The connected Free workspace has no available speech models. Existing device/browser TTS is a playback option where a target-language voice is installed; it does not create these recording files. To populate this archive, supply permitted native-speaker recordings or use a verified free speech engine that supports the exact target language. Never silently substitute another language. Any credit estimates in the manifest are historical planning metadata, not authorization to spend.
 
 Before approval: create or supply the actual recording, record its SHA-256 and provider/locale/voice/version, check decoding/duration/silence, then have a competent language reviewer listen to the full recording and compare every phrase with the approved target text. Check accents, tones, vowel length, register, dialect and script-specific pronunciation. Record corrections, reviewer identity/competence and date. Bind approval to both the script and recording hashes. A changed script, voice or recording requires renewed review.
 
