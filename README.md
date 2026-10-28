@@ -1,18 +1,18 @@
 # ILMIGO DIGITAL ACADEMY
 
-Version 0.7.0. A bilingual language-learning beta with **ILMIGO**, the robot teacher. Android debug APK and iOS simulator builds have now completed successfully on GitHub Actions.
+Version 0.7.1. A bilingual language-learning beta with **ILMIGO**, the robot teacher. Android debug APK and iOS simulator builds have now completed successfully on GitHub Actions.
 
-Current build and implementation evidence: [0.7.0 multilingual foundation courses](review/ILMIGO-32-LANGUAGE-FOUNDATIONS.md), with [0.5.0 child-session details](review/ILMIGO-CHILD-SESSIONS-RELEASE.md). Owner account and payout setup: [Pakistan/Meezan guide](review/PAYMENT-SETUP-PAKISTAN.md).
+Current build and implementation evidence: [0.7.1 assessment fix and review handoff](review/ILMIGO-COURSE-QUALITY-RECHECK.md), with [0.5.0 child-session details](review/ILMIGO-CHILD-SESSIONS-RELEASE.md). Owner account and payout setup: [Pakistan/Meezan guide](review/PAYMENT-SETUP-PAKISTAN.md).
 
 ## Download the test app
 
-- [Android APK ZIP](https://github.com/saifulrehman62913-blip/NextGen-AI-Academy/actions/runs/40633111573/artifacts/12792940448) — extract and install `app-debug.apk` on Android.
-- [iOS simulator ZIP](https://github.com/saifulrehman62913-blip/NextGen-AI-Academy/actions/runs/40633111573/artifacts/12792532432) — for macOS ARM64 iOS Simulator; not a signed iPhone IPA.
-- [Browser preview ZIP](https://github.com/saifulrehman62913-blip/NextGen-AI-Academy/actions/runs/40633111573/artifacts/12792666698) — open `ILMIGO-preview.html` in a modern browser.
+- [Android APK ZIP](https://github.com/saifulrehman62913-blip/NextGen-AI-Academy/actions/runs/40634854235/artifacts/12793201500) — extract and install `app-debug.apk` on Android.
+- [iOS simulator ZIP](https://github.com/saifulrehman62913-blip/NextGen-AI-Academy/actions/runs/40634854235/artifacts/12792978148) — for macOS ARM64 iOS Simulator; not a signed iPhone IPA.
+- [Browser preview ZIP](https://github.com/saifulrehman62913-blip/NextGen-AI-Academy/actions/runs/40634854235/artifacts/12792373836) — open `ILMIGO-preview.html` in a modern browser.
 
 GitHub sign-in may be required for downloads. Artifacts expire on 26 January 2027. These are test/beta artifacts, not store releases.
 
-[Successful workflow run](https://github.com/saifulrehman62913-blip/NextGen-AI-Academy/actions/runs/40633111573) · [Detailed verification report](review/ILMIGO-32-LANGUAGE-FOUNDATIONS.md) · [Machine-readable evidence](review/cloud/foundation-course-verification.json)
+[Successful workflow run](https://github.com/saifulrehman62913-blip/NextGen-AI-Academy/actions/runs/40634854235) · [Detailed verification report](review/ILMIGO-COURSE-QUALITY-RECHECK.md) · [Machine-readable evidence](review/cloud/course-quality-verification.json)
 
 Verified code commit: `0ad137bc7ddfd6c1593c6d4801f4cdeed3a6579e`. Flutter 3.47.8 stable; Node 24.21.0.
 
@@ -146,4 +146,6 @@ Historical reviews record pre-fix/pre-cloud states. The current successful cloud
 
 Language availability audit: [34-language lesson counts](review/language-availability.json). English/Urdu have 20 draft lessons each; the other 32 languages now have three introductory draft lessons each (136 total). Qualified language/audio review and professional-level expansion remain pending.
 
-Current machine evidence: [0.7.0 verification](review/cloud/foundation-course-verification.json). Browser CI now exercises eight scenarios, including a lesson flow in each of the 32 new languages.
+Current machine evidence: [0.7.0 verification](review/cloud/course-quality-verification.json). Browser CI now exercises eight scenarios, including a lesson flow in each of the 32 new languages.
+
+Course/audio/professional approvals remain pending. [Qualified-review handoff](review/ILMIGO-COURSE-QUALITY-RECHECK.md) provides exact snapshots and blank evidence records; it is not proof of qualification.
