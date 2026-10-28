@@ -1,0 +1,211 @@
+{
+  "catalogLanguages": 34,
+  "authoredLessons": 40,
+  "allLanguagesWorking": false,
+  "languages": [
+    {
+      "id": "ur",
+      "name": "Urdu",
+      "status": "sample",
+      "authoredLessons": 20
+    },
+    {
+      "id": "en",
+      "name": "English",
+      "status": "sample",
+      "authoredLessons": 20
+    },
+    {
+      "id": "pa",
+      "name": "Punjabi",
+      "status": "coming_soon",
+      "authoredLessons": 0
+    },
+    {
+      "id": "sd",
+      "name": "Sindhi",
+      "status": "coming_soon",
+      "authoredLessons": 0
+    },
+    {
+      "id": "skr",
+      "name": "Saraiki",
+      "status": "coming_soon",
+      "authoredLessons": 0
+    },
+    {
+      "id": "ps",
+      "name": "Pashto",
+      "status": "coming_soon",
+      "authoredLessons": 0
+    },
+    {
+      "id": "fa",
+      "name": "Persian / Farsi",
+      "status": "coming_soon",
+      "authoredLessons": 0
+    },
+    {
+      "id": "ar",
+      "name": "Arabic",
+      "status": "coming_soon",
+      "authoredLessons": 0
+    },
+    {
+      "id": "tr",
+      "name": "Turkish",
+      "status": "coming_soon",
+      "authoredLessons": 0
+    },
+    {
+      "id": "hi",
+      "name": "Hindi",
+      "status": "coming_soon",
+      "authoredLessons": 0
+    },
+    {
+      "id": "bn",
+      "name": "Bengali",
+      "status": "coming_soon",
+      "authoredLessons": 0
+    },
+    {
+      "id": "gu",
+      "name": "Gujarati",
+      "status": "coming_soon",
+      "authoredLessons": 0
+    },
+    {
+      "id": "ta",
+      "name": "Tamil",
+      "status": "coming_soon",
+      "authoredLessons": 0
+    },
+    {
+      "id": "te",
+      "name": "Telugu",
+      "status": "coming_soon",
+      "authoredLessons": 0
+    },
+    {
+      "id": "ml",
+      "name": "Malayalam",
+      "status": "coming_soon",
+      "authoredLessons": 0
+    },
+    {
+      "id": "ne",
+      "name": "Nepali",
+      "status": "coming_soon",
+      "authoredLessons": 0
+    },
+    {
+      "id": "si",
+      "name": "Sinhala",
+      "status": "coming_soon",
+      "authoredLessons": 0
+    },
+    {
+      "id": "zh",
+      "name": "Mandarin Chinese",
+      "status": "coming_soon",
+      "authoredLessons": 0
+    },
+    {
+      "id": "ja",
+      "name": "Japanese",
+      "status": "coming_soon",
+      "authoredLessons": 0
+    },
+    {
+      "id": "ko",
+      "name": "Korean",
+      "status": "coming_soon",
+      "authoredLessons": 0
+    },
+    {
+      "id": "id",
+      "name": "Indonesian",
+      "status": "coming_soon",
+      "authoredLessons": 0
+    },
+    {
+      "id": "ms",
+      "name": "Malay",
+      "status": "coming_soon",
+      "authoredLessons": 0
+    },
+    {
+      "id": "th",
+      "name": "Thai",
+      "status": "coming_soon",
+      "authoredLessons": 0
+    },
+    {
+      "id": "vi",
+      "name": "Vietnamese",
+      "status": "coming_soon",
+      "authoredLessons": 0
+    },
+    {
+      "id": "fr",
+      "name": "French",
+      "status": "coming_soon",
+      "authoredLessons": 0
+    },
+    {
+      "id": "es",
+      "name": "Spanish",
+      "status": "coming_soon",
+      "authoredLessons": 0
+    },
+    {
+      "id": "de",
+      "name": "German",
+      "status": "coming_soon",
+      "authoredLessons": 0
+    },
+    {
+      "id": "it",
+      "name": "Italian",
+      "status": "coming_soon",
+      "authoredLessons": 0
+    },
+    {
+      "id": "pt",
+      "name": "Portuguese",
+      "status": "coming_soon",
+      "authoredLessons": 0
+    },
+    {
+      "id": "ru",
+      "name": "Russian",
+      "status": "coming_soon",
+      "authoredLessons": 0
+    },
+    {
+      "id": "nl",
+      "name": "Dutch",
+      "status": "coming_soon",
+      "authoredLessons": 0
+    },
+    {
+      "id": "pl",
+      "name": "Polish",
+      "status": "coming_soon",
+      "authoredLessons": 0
+    },
+    {
+      "id": "sw",
+      "name": "Swahili",
+      "status": "coming_soon",
+      "authoredLessons": 0
+    },
+    {
+      "id": "so",
+      "name": "Somali",
+      "status": "coming_soon",
+      "authoredLessons": 0
+    }
+  ]
+}
