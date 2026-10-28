@@ -63,7 +63,8 @@ if __name__=='__main__':
     import runpy
     base=runpy.run_path(str(ROOT/'scripts/create_content.py'))['content']
     from foundation_courses import extend,export
-    expanded=extend(build(base))
+    from course_quality import balance_assessments
+    expanded=balance_assessments(extend(build(base)))
     write(expanded)
     export(expanded)
     print('Built 136 draft lessons: English/Urdu 20 each, 32 foundation courses 3 each. Qualified review pending.')

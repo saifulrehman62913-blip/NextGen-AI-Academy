@@ -5,7 +5,7 @@ import {validateCatalog} from '../shared/schema.mjs';
 import {emptyState,profile,courseLessons,nextLesson,lessonQuestions,completeLesson,totalXP} from '../shared/learning.mjs';
 const catalog=JSON.parse(await readFile(new URL('../shared/catalog.json',import.meta.url)));
 test('all 32 new languages have three unique usable beginner drafts and honest review metadata',()=>{
- validateCatalog(catalog);assert.equal(catalog.lessons.length,136);assert.equal(catalog.revision,4);
+ validateCatalog(catalog);assert.equal(catalog.lessons.length,136);assert.equal(catalog.revision,5);
  for(const language of catalog.languages.filter(l=>!['en','ur'].includes(l.id))){
   const lessons=courseLessons(catalog,language.id);assert.equal(language.status,'sample');assert.equal(lessons.length,3);assert.deepEqual(lessons.map(l=>l.order),[0,1,2]);
   assert.equal(new Set(lessons.map(l=>l.reading)).size,3);

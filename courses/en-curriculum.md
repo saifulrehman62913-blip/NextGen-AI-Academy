@@ -89,7 +89,7 @@ Write three sentences using today’s phrases. Read them aloud, check each word,
 **Assessment and answer key**
 
 1. How do you ask someone’s name? / آپ کسی کا نام کیسے پوچھتے ہیں؟
-   Options: Where is the door? | What is your name? | Good night
+   Options: Where is the door? | Good night | What is your name?
    Answer: What is your name?
 
 ### 3. Count on yourself / گنتی سیکھیں
@@ -133,7 +133,7 @@ Write three sentences using today’s phrases. Read them aloud, check each word,
 **Assessment and answer key**
 
 1. Which word means 3? / کون سا لفظ ۳ کے معنی دیتا ہے؟
-   Options: Two | Three | Five
+   Options: Three | Two | Five
    Answer: Three
 
 ### 4. A little every day / روزمرہ کی عادتیں
@@ -232,13 +232,13 @@ Write a four-line invitation with a day, time and place. Then change one detail 
 **Assessment and answer key**
 
 1. When will Sara and Ali meet? / سارہ اور علی کب ملیں گے؟
-   Options: Today at nine. | Tomorrow at four. | Tomorrow at ten.
+   Options: Today at nine. | Tomorrow at ten. | Tomorrow at four.
    Answer: Tomorrow at four.
 2. Which preposition goes before a clock time? / انگریزی میں گھڑی کے وقت سے پہلے کون سا لفظ آتا ہے؟
-   Options: on | at | in
+   Options: at | on | in
    Answer: at
 3. What should a clear meeting plan include? / ملاقات کے واضح منصوبے میں کیا ہونا چاہیے؟
-   Options: Only a name. | Only a date. | Day, time and place.
+   Options: Only a name. | Day, time and place. | Only a date.
    Answer: Day, time and place.
 
 ### 6. Shop politely / خریداری کی گفتگو
@@ -292,10 +292,10 @@ Role-play a purchase of three items. Ask the price and quantity, check the total
 **Assessment and answer key**
 
 1. How much do Hina’s two notebooks cost? / حنا کی دو کاپیوں کی قیمت کتنی ہے؟
-   Options: One hundred rupees. | Two hundred rupees. | Three hundred rupees.
+   Options: One hundred rupees. | Three hundred rupees. | Two hundred rupees.
    Answer: Two hundred rupees.
 2. Which phrase politely requests an item? / کون سا جملہ شائستگی سے چیز مانگتا ہے؟
-   Options: Give it now! | I would like two notebooks. | I am tomorrow.
+   Options: I would like two notebooks. | Give it now! | I am tomorrow.
    Answer: I would like two notebooks.
 3. What does Hina request at the counter? / حنا کاؤنٹر پر کیا مانگتی ہے؟
    Options: A ticket. | A receipt. | A meeting.
@@ -352,10 +352,10 @@ Draw a simple route from a bus stop to a library. Give three directions, use one
 **Assessment and answer key**
 
 1. Where should Omar turn? / عمر کہاں مڑے؟
-   Options: Right at the school. | Left at the bank. | Behind the bus.
+   Options: Right at the school. | Behind the bus. | Left at the bank.
    Answer: Left at the bank.
 2. Where is the library? / لائبریری کہاں ہے؟
-   Options: Opposite the bank. | Next to the school. | Inside the bus stop.
+   Options: Next to the school. | Opposite the bank. | Inside the bus stop.
    Answer: Next to the school.
 3. Why does Omar repeat the route? / عمر راستہ کیوں دہراتا ہے؟
    Options: To change the destination. | To check his understanding. | To ask the price.
@@ -412,10 +412,10 @@ Tell a one-minute story about a past day using first, then and finally. Write fi
 **Assessment and answer key**
 
 1. What did Bilal do first with his friend? / بلال نے دوست کے ساتھ پہلے کیا کیا؟
-   Options: They bought a ball. | They had lunch. | They went home.
+   Options: They bought a ball. | They went home. | They had lunch.
    Answer: They had lunch.
 2. Which question describes a completed past day? / کون سا سوال گزرے ہوئے دن کے بارے میں ہے؟
-   Options: What will you do tomorrow? | What did you do yesterday? | What time is it now?
+   Options: What did you do yesterday? | What will you do tomorrow? | What time is it now?
    Answer: What did you do yesterday?
 3. When did they return? / وہ کب واپس آئے؟
    Options: After midnight. | Before sunset. | Next week.
@@ -474,10 +474,10 @@ Write a rescheduling email with the original appointment, one short reason, two 
 **Assessment and answer key**
 
 1. Why does Nadia ask for a change? / نادیہ وقت بدلنے کی درخواست کیوں کرتی ہے؟
-   Options: She has no calendar. | A school event conflicts with the meeting. | The course has ended.
+   Options: She has no calendar. | The course has ended. | A school event conflicts with the meeting.
    Answer: A school event conflicts with the meeting.
 2. Which proposal is polite and specific? / کون سی تجویز شائستہ اور واضح ہے؟
-   Options: Change it sometime. | Could we meet on Wednesday at ten? | You must wait.
+   Options: Could we meet on Wednesday at ten? | Change it sometime. | You must wait.
    Answer: Could we meet on Wednesday at ten?
 3. What completes the rescheduling process? / وقت بدلنے کا عمل کیسے مکمل ہوتا ہے؟
    Options: One person suggests a day. | Both people confirm the new time. | The old message is deleted.
@@ -534,10 +534,10 @@ Ask a partner about a learning difficulty. Offer two options with reasons, let t
 **Assessment and answer key**
 
 1. What is Faisal’s main goal? / فیصل کا بنیادی مقصد کیا ہے؟
-   Options: To buy a recorder. | To speak more confidently. | To stop studying.
+   Options: To buy a recorder. | To stop studying. | To speak more confidently.
    Answer: To speak more confidently.
 2. Which word introduces an option rather than an obligation? / کون سا لفظ پابندی کے بجائے ایک امکان بتاتا ہے؟
-   Options: must | could | never
+   Options: could | must | never
    Answer: could
 3. When will they review the plan? / وہ منصوبے کا جائزہ کب لیں گے؟
    Options: After a year. | After a week. | Immediately before starting.
@@ -594,10 +594,10 @@ Compare two real study options in a table with cost, time and practice. Give a o
 **Assessment and answer key**
 
 1. Why does Amina choose online study? / آمنہ آن لائن تعلیم کیوں چنتی ہے؟
-   Options: It is the cheapest. | It fits her changing work schedule. | It needs daily travel.
+   Options: It is the cheapest. | It needs daily travel. | It fits her changing work schedule.
    Answer: It fits her changing work schedule.
 2. What does the online course require Amina to organise? / آن لائن کورس میں آمنہ کو کیا خود منظم کرنا ہوگا؟
-   Options: A classroom building. | Speaking practice. | A bus service.
+   Options: Speaking practice. | A classroom building. | A bus service.
    Answer: Speaking practice.
 3. Which comparison is supported by the passage? / متن کے مطابق کون سا موازنہ درست ہے؟
    Options: Online is best for everyone. | The evening course costs less but needs travel. | Both courses are free.
@@ -654,10 +654,10 @@ Write an 80-word request email with a subject, context, two specific questions a
 **Assessment and answer key**
 
 1. What does Hamza need before arranging his shifts? / شفٹ طے کرنے سے پہلے حمزہ کو کیا چاہیے؟
-   Options: A receipt for payment. | The timetable and class format. | A new job.
+   Options: A receipt for payment. | A new job. | The timetable and class format.
    Answer: The timetable and class format.
 2. Has Hamza already paid? / کیا حمزہ ادائیگی کر چکا ہے؟
-   Options: Yes, yesterday. | No, he has not paid yet. | The email does not mention payment.
+   Options: No, he has not paid yet. | Yes, yesterday. | The email does not mention payment.
    Answer: No, he has not paid yet.
 3. What does by Friday mean? / جمعے تک کا کیا مطلب ہے؟
    Options: Only after Friday. | No later than Friday. | Any time next month.
@@ -716,10 +716,10 @@ Write a 100-word summary separating findings, limitations and a next step. Give 
 **Assessment and answer key**
 
 1. Which result is actually reported? / رپورٹ میں واقعی کون سا نتیجہ بیان ہوا؟
-   Options: Every learner became fluent. | Average quiz results improved. | The trial lasted a year.
+   Options: Every learner became fluent. | The trial lasted a year. | Average quiz results improved.
    Answer: Average quiz results improved.
 2. Why is a causal claim limited? / سبب کے دعوے میں کیا رکاوٹ ہے؟
-   Options: The report had a title. | There was no comparison group. | Participants read the questions.
+   Options: There was no comparison group. | The report had a title. | Participants read the questions.
    Answer: There was no comparison group.
 3. Which summary is appropriately cautious? / کون سا خلاصہ مناسب طور پر محتاط ہے؟
    Options: The method guarantees fluency. | Promising results need further evaluation. | The activity has no possible value.
@@ -776,10 +776,10 @@ Draft a contingency note with a trigger, deadline, owner and backup. Explain whi
 **Assessment and answer key**
 
 1. What is the decision deadline? / فیصلے کا آخری وقت کیا ہے؟
-   Options: Friday evening. | Wednesday noon. | After the workshop.
+   Options: Friday evening. | After the workshop. | Wednesday noon.
    Answer: Wednesday noon.
 2. What changes in the backup plan? / متبادل منصوبے میں کیا بدلتا ہے؟
-   Options: The workshop date. | The delivery format. | The learning objective.
+   Options: The delivery format. | The workshop date. | The learning objective.
    Answer: The delivery format.
 3. Which sentence expresses a condition and consequence? / کون سا جملہ شرط اور نتیجہ بتاتا ہے؟
    Options: We have a room. | If delivery is confirmed, we can proceed. | The projector is black.
@@ -836,10 +836,10 @@ Disagree with a proposed deadline without criticising a person. State the shared
 **Assessment and answer key**
 
 1. What does Rehan support? / ریحان کس بات کی حمایت کرتا ہے؟
-   Options: Ignoring messages. | Faster replies. | Removing all targets.
+   Options: Ignoring messages. | Removing all targets. | Faster replies.
    Answer: Faster replies.
 2. What was the ten-minute target based on? / دس منٹ کا ہدف کس بنیاد پر تھا؟
-   Options: A completed trial. | An aspiration, not a measured estimate. | A legal rule stated in the passage.
+   Options: An aspiration, not a measured estimate. | A completed trial. | A legal rule stated in the passage.
    Answer: An aspiration, not a measured estimate.
 3. Which response keeps the disagreement constructive? / کون سا جواب اختلاف کو تعمیری رکھتا ہے؟
    Options: Your idea is foolish. | Let’s test the workload assumption. | There is nothing to discuss.
@@ -896,13 +896,13 @@ Write a complaint reply with acknowledgement, one clarifying question, an availa
 **Assessment and answer key**
 
 1. What does the agent promise by three? / کارکن تین بجے تک کیا وعدہ کرتی ہے؟
-   Options: Guaranteed delivery. | An update. | A new course certificate.
+   Options: Guaranteed delivery. | A new course certificate. | An update.
    Answer: An update.
 2. Why does she check the delivery team first? / وہ پہلے ترسیل کی ٹیم سے کیوں پوچھتی ہے؟
-   Options: To ignore the customer. | To avoid an unsupported delivery promise. | To cancel all orders.
+   Options: To avoid an unsupported delivery promise. | To ignore the customer. | To cancel all orders.
    Answer: To avoid an unsupported delivery promise.
 3. What temporary option is offered with agreement? / رضامندی سے عارضی طور پر کیا پیش کیا جاتا ہے؟
-   Options: A digital copy. | A different unrelated course. | No information.
+   Options: A different unrelated course. | A digital copy. | No information.
    Answer: A digital copy.
 
 ## Professional
@@ -958,10 +958,10 @@ Prepare a 90-second interview answer using a real study, volunteer or work examp
 **Assessment and answer key**
 
 1. What was Zainab authorised to coordinate? / زینب کی بیان کردہ ذمہ داری کیا تھی؟
-   Options: All company spending. | The schedule. | Every employee’s salary.
+   Options: All company spending. | Every employee’s salary. | The schedule.
    Answer: The schedule.
 2. Which result is supported by the account? / مثال کے مطابق کون سا نتیجہ ثابت ہے؟
-   Options: Revenue doubled. | The session started on time. | Every risk disappeared.
+   Options: The session started on time. | Revenue doubled. | Every risk disappeared.
    Answer: The session started on time.
 3. What makes the answer credible? / جواب کو قابلِ اعتماد کیا بناتا ہے؟
    Options: Invented percentages. | Specific actions and an observable result. | Taking credit for all team work.
@@ -1018,10 +1018,10 @@ Run a three-minute meeting about a study project. Record one decision, two actio
 **Assessment and answer key**
 
 1. What is the first-round method? / پہلے مرحلے کا طریقہ کیا ہے؟
-   Options: Calls to everyone first. | A short online form. | No feedback collection.
+   Options: Calls to everyone first. | No feedback collection. | A short online form.
    Answer: A short online form.
 2. Who will test the form? / فارم کون آزمائے گا؟
-   Options: Sana on Friday. | Asad on Wednesday. | An unnamed person someday.
+   Options: Asad on Wednesday. | Sana on Friday. | An unnamed person someday.
    Answer: Asad on Wednesday.
 3. Which action note is complete? / کون سا عملی نوٹ مکمل ہے؟
    Options: Questions were discussed. | Sana: draft the questions by Tuesday. | Someone should do something.
@@ -1078,10 +1078,10 @@ Negotiate a realistic two-stage delivery for a fictional project. Write scope, d
 **Assessment and answer key**
 
 1. What can the writer finish by Friday? / لکھنے والا جمعے تک کیا مکمل کر سکتا ہے؟
-   Options: All approved illustrations. | The text. | An unlimited number of new sections.
+   Options: All approved illustrations. | An unlimited number of new sections. | The text.
    Answer: The text.
 2. Why are two stages acceptable to the client? / صارف کے لیے دو مرحلے کیوں مناسب ہیں؟
-   Options: The event was cancelled. | The event needs the text first. | Acceptance criteria do not matter.
+   Options: The event needs the text first. | The event was cancelled. | Acceptance criteria do not matter.
    Answer: The event needs the text first.
 3. What should happen if a new section is added? / نیا حصہ شامل ہو تو کیا ہونا چاہیے؟
    Options: Hide the extra work. | Prepare a revised estimate. | Guarantee the same date without checking.
@@ -1138,10 +1138,10 @@ Capstone: give a three-minute recommendation, write a 150-word executive summary
 **Assessment and answer key**
 
 1. What is the recommended first step? / تجویز کردہ پہلا قدم کیا ہے؟
-   Options: Immediate expansion to every class. | A two-week pilot with one class. | A guaranteed result without measurement.
+   Options: Immediate expansion to every class. | A guaranteed result without measurement. | A two-week pilot with one class.
    Answer: A two-week pilot with one class.
 2. How should the presenter answer an unknown figure? / نامعلوم عدد کے سوال کا جواب کیسے دینا چاہیے؟
-   Options: Invent a precise percentage. | State the uncertainty and a verification step. | Change the subject without explanation.
+   Options: State the uncertainty and a verification step. | Invent a precise percentage. | Change the subject without explanation.
    Answer: State the uncertainty and a verification step.
 3. What will inform the expansion decision? / توسیع کا فیصلہ کس بنیاد پر ہوگا؟
    Options: Only the slide colours. | Measured results and teacher feedback. | The loudest person’s preference.

@@ -46,7 +46,7 @@ Write three sentences using today’s phrases. Read them aloud, check each word,
 **Assessment and answer key**
 
 1. What is a reply to السلام علیکم? / السلام علیکم کا جواب کیا ہے؟
-   Options: شکریہ | وعلیکم السلام | خدا حافظ
+   Options: وعلیکم السلام | شکریہ | خدا حافظ
    Answer: وعلیکم السلام
 
 ### 2. Introduce yourself / اپنا تعارف
@@ -176,7 +176,7 @@ Write three sentences using today’s phrases. Read them aloud, check each word,
 **Assessment and answer key**
 
 1. Which sentence means “I practise”? / کون سا جملہ مشق کرنے کے معنی دیتا ہے؟
-   Options: میں پانی پیتا ہوں۔ | میں مشق کرتا ہوں۔ | آپ کیسے ہیں؟
+   Options: میں مشق کرتا ہوں۔ | میں پانی پیتا ہوں۔ | آپ کیسے ہیں؟
    Answer: میں مشق کرتا ہوں۔
 
 ## Elementary
@@ -235,10 +235,10 @@ Write a four-line invitation with a day, time and place. Then change one detail 
    Options: آج نو بجے۔ | کل چار بجے۔ | کل دس بجے۔
    Answer: کل چار بجے۔
 2. Which preposition goes before a clock time? / انگریزی میں گھڑی کے وقت سے پہلے کون سا لفظ آتا ہے؟
-   Options: on | at | in
+   Options: on | in | at
    Answer: at
 3. What should a clear meeting plan include? / ملاقات کے واضح منصوبے میں کیا ہونا چاہیے؟
-   Options: صرف نام۔ | صرف تاریخ۔ | دن، وقت اور جگہ۔
+   Options: دن، وقت اور جگہ۔ | صرف نام۔ | صرف تاریخ۔
    Answer: دن، وقت اور جگہ۔
 
 ### 6. Shop politely / خریداری کی گفتگو
@@ -295,10 +295,10 @@ Role-play a purchase of three items. Ask the price and quantity, check the total
    Options: ایک سو روپے۔ | دو سو روپے۔ | تین سو روپے۔
    Answer: دو سو روپے۔
 2. Which phrase politely requests an item? / کون سا جملہ شائستگی سے چیز مانگتا ہے؟
-   Options: ابھی دو! | مجھے دو کاپیاں چاہئیں۔ | میں کل ہوں۔
+   Options: ابھی دو! | میں کل ہوں۔ | مجھے دو کاپیاں چاہئیں۔
    Answer: مجھے دو کاپیاں چاہئیں۔
 3. What does Hina request at the counter? / حنا کاؤنٹر پر کیا مانگتی ہے؟
-   Options: ٹکٹ۔ | رسید۔ | ملاقات۔
+   Options: رسید۔ | ٹکٹ۔ | ملاقات۔
    Answer: رسید۔
 
 ### 7. Find your way / راستہ پوچھیں
@@ -355,10 +355,10 @@ Draw a simple route from a bus stop to a library. Give three directions, use one
    Options: سکول کے پاس دائیں۔ | بینک کے پاس بائیں۔ | بس کے پیچھے۔
    Answer: بینک کے پاس بائیں۔
 2. Where is the library? / لائبریری کہاں ہے؟
-   Options: بینک کے سامنے۔ | سکول کے ساتھ۔ | بس سٹاپ کے اندر۔
+   Options: بینک کے سامنے۔ | بس سٹاپ کے اندر۔ | سکول کے ساتھ۔
    Answer: سکول کے ساتھ۔
 3. Why does Omar repeat the route? / عمر راستہ کیوں دہراتا ہے؟
-   Options: منزل بدلنے کے لیے۔ | اپنی سمجھ کی تصدیق کے لیے۔ | قیمت پوچھنے کے لیے۔
+   Options: اپنی سمجھ کی تصدیق کے لیے۔ | منزل بدلنے کے لیے۔ | قیمت پوچھنے کے لیے۔
    Answer: اپنی سمجھ کی تصدیق کے لیے۔
 
 ### 8. Talk about yesterday / گزرے دن کی بات
@@ -415,10 +415,10 @@ Tell a one-minute story about a past day using first, then and finally. Write fi
    Options: انہوں نے گیند خریدی۔ | انہوں نے دوپہر کا کھانا کھایا۔ | وہ گھر واپس گئے۔
    Answer: انہوں نے دوپہر کا کھانا کھایا۔
 2. Which question describes a completed past day? / کون سا سوال گزرے ہوئے دن کے بارے میں ہے؟
-   Options: آپ کل کیا کریں گے؟ | آپ نے کل کیا کیا؟ | اب کیا وقت ہے؟
+   Options: آپ کل کیا کریں گے؟ | اب کیا وقت ہے؟ | آپ نے کل کیا کیا؟
    Answer: آپ نے کل کیا کیا؟
 3. When did they return? / وہ کب واپس آئے؟
-   Options: آدھی رات کے بعد۔ | سورج غروب ہونے سے پہلے۔ | اگلے ہفتے۔
+   Options: سورج غروب ہونے سے پہلے۔ | آدھی رات کے بعد۔ | اگلے ہفتے۔
    Answer: سورج غروب ہونے سے پہلے۔
 
 ## Intermediate
@@ -477,10 +477,10 @@ Write a rescheduling email with the original appointment, one short reason, two 
    Options: اس کے پاس کیلنڈر نہیں۔ | سکول کی تقریب اور ملاقات کا وقت ایک ہے۔ | کورس ختم ہو گیا ہے۔
    Answer: سکول کی تقریب اور ملاقات کا وقت ایک ہے۔
 2. Which proposal is polite and specific? / کون سی تجویز شائستہ اور واضح ہے؟
-   Options: کسی وقت بدل دیں۔ | کیا ہم بدھ دس بجے مل سکتے ہیں؟ | آپ کو انتظار کرنا ہوگا۔
+   Options: کسی وقت بدل دیں۔ | آپ کو انتظار کرنا ہوگا۔ | کیا ہم بدھ دس بجے مل سکتے ہیں؟
    Answer: کیا ہم بدھ دس بجے مل سکتے ہیں؟
 3. What completes the rescheduling process? / وقت بدلنے کا عمل کیسے مکمل ہوتا ہے؟
-   Options: ایک شخص دن تجویز کرے۔ | دونوں نئے وقت کی تصدیق کریں۔ | پرانا پیغام مٹا دیا جائے۔
+   Options: دونوں نئے وقت کی تصدیق کریں۔ | ایک شخص دن تجویز کرے۔ | پرانا پیغام مٹا دیا جائے۔
    Answer: دونوں نئے وقت کی تصدیق کریں۔
 
 ### 10. Give reasons and advice / وجہ اور مشورہ
@@ -537,10 +537,10 @@ Ask a partner about a learning difficulty. Offer two options with reasons, let t
    Options: ریکارڈر خریدنا۔ | زیادہ اعتماد سے بولنا۔ | پڑھائی چھوڑنا۔
    Answer: زیادہ اعتماد سے بولنا۔
 2. Which word introduces an option rather than an obligation? / کون سا لفظ پابندی کے بجائے ایک امکان بتاتا ہے؟
-   Options: ضروری ہے | کر سکتے ہیں | کبھی نہیں
+   Options: ضروری ہے | کبھی نہیں | کر سکتے ہیں
    Answer: کر سکتے ہیں
 3. When will they review the plan? / وہ منصوبے کا جائزہ کب لیں گے؟
-   Options: ایک سال بعد۔ | ایک ہفتے بعد۔ | شروع کرنے سے فوراً پہلے۔
+   Options: ایک ہفتے بعد۔ | ایک سال بعد۔ | شروع کرنے سے فوراً پہلے۔
    Answer: ایک ہفتے بعد۔
 
 ### 11. Compare your options / متبادل کا موازنہ
@@ -597,10 +597,10 @@ Compare two real study options in a table with cost, time and practice. Give a o
    Options: یہ سب سے سستا ہے۔ | یہ اس کی بدلتی شفٹ کے مطابق ہے۔ | اس کے لیے روز سفر ضروری ہے۔
    Answer: یہ اس کی بدلتی شفٹ کے مطابق ہے۔
 2. What does the online course require Amina to organise? / آن لائن کورس میں آمنہ کو کیا خود منظم کرنا ہوگا؟
-   Options: کلاس کی عمارت۔ | بولنے کی مشق۔ | بس کی سہولت۔
+   Options: کلاس کی عمارت۔ | بس کی سہولت۔ | بولنے کی مشق۔
    Answer: بولنے کی مشق۔
 3. Which comparison is supported by the passage? / متن کے مطابق کون سا موازنہ درست ہے؟
-   Options: آن لائن کورس سب کے لیے بہتر ہے۔ | شام کا کورس سستا ہے مگر سفر درکار ہے۔ | دونوں کورس مفت ہیں۔
+   Options: شام کا کورس سستا ہے مگر سفر درکار ہے۔ | آن لائن کورس سب کے لیے بہتر ہے۔ | دونوں کورس مفت ہیں۔
    Answer: شام کا کورس سستا ہے مگر سفر درکار ہے۔
 
 ### 12. Write a clear request / واضح درخواست لکھیں
@@ -657,10 +657,10 @@ Write an 80-word request email with a subject, context, two specific questions a
    Options: ادائیگی کی رسید۔ | اوقات کا جدول اور کلاس کا طریقہ۔ | نئی ملازمت۔
    Answer: اوقات کا جدول اور کلاس کا طریقہ۔
 2. Has Hamza already paid? / کیا حمزہ ادائیگی کر چکا ہے؟
-   Options: جی ہاں، کل۔ | نہیں، اس نے ابھی ادائیگی نہیں کی۔ | ای میل میں ادائیگی کا ذکر نہیں۔
+   Options: جی ہاں، کل۔ | ای میل میں ادائیگی کا ذکر نہیں۔ | نہیں، اس نے ابھی ادائیگی نہیں کی۔
    Answer: نہیں، اس نے ابھی ادائیگی نہیں کی۔
 3. What does by Friday mean? / جمعے تک کا کیا مطلب ہے؟
-   Options: صرف جمعے کے بعد۔ | جمعے سے دیر نہیں۔ | اگلے ماہ کسی وقت بھی۔
+   Options: جمعے سے دیر نہیں۔ | صرف جمعے کے بعد۔ | اگلے ماہ کسی وقت بھی۔
    Answer: جمعے سے دیر نہیں۔
 
 ## Advanced
@@ -719,10 +719,10 @@ Write a 100-word summary separating findings, limitations and a next step. Give 
    Options: ہر طالب علم رواں ہو گیا۔ | امتحان کا اوسط نتیجہ بہتر ہوا۔ | آزمائش ایک سال جاری رہی۔
    Answer: امتحان کا اوسط نتیجہ بہتر ہوا۔
 2. Why is a causal claim limited? / سبب کے دعوے میں کیا رکاوٹ ہے؟
-   Options: رپورٹ کا عنوان تھا۔ | موازنے کا دوسرا گروپ نہیں تھا۔ | شرکا نے سوال پڑھے۔
+   Options: رپورٹ کا عنوان تھا۔ | شرکا نے سوال پڑھے۔ | موازنے کا دوسرا گروپ نہیں تھا۔
    Answer: موازنے کا دوسرا گروپ نہیں تھا۔
 3. Which summary is appropriately cautious? / کون سا خلاصہ مناسب طور پر محتاط ہے؟
-   Options: طریقہ روانی کی ضمانت ہے۔ | حوصلہ افزا نتائج کا مزید جائزہ چاہیے۔ | مشق کا کوئی فائدہ ممکن نہیں۔
+   Options: حوصلہ افزا نتائج کا مزید جائزہ چاہیے۔ | طریقہ روانی کی ضمانت ہے۔ | مشق کا کوئی فائدہ ممکن نہیں۔
    Answer: حوصلہ افزا نتائج کا مزید جائزہ چاہیے۔
 
 ### 14. Plan for uncertainty / غیر یقینی صورت کا منصوبہ
@@ -779,10 +779,10 @@ Draft a contingency note with a trigger, deadline, owner and backup. Explain whi
    Options: جمعے کی شام۔ | بدھ کی دوپہر۔ | ورکشاپ کے بعد۔
    Answer: بدھ کی دوپہر۔
 2. What changes in the backup plan? / متبادل منصوبے میں کیا بدلتا ہے؟
-   Options: ورکشاپ کی تاریخ۔ | پیشکش کا طریقہ۔ | تعلیمی مقصد۔
+   Options: ورکشاپ کی تاریخ۔ | تعلیمی مقصد۔ | پیشکش کا طریقہ۔
    Answer: پیشکش کا طریقہ۔
 3. Which sentence expresses a condition and consequence? / کون سا جملہ شرط اور نتیجہ بتاتا ہے؟
-   Options: ہمارے پاس کمرہ ہے۔ | اگر ترسیل کی تصدیق ہو تو ہم آگے بڑھ سکتے ہیں۔ | پروجیکٹر سیاہ ہے۔
+   Options: اگر ترسیل کی تصدیق ہو تو ہم آگے بڑھ سکتے ہیں۔ | ہمارے پاس کمرہ ہے۔ | پروجیکٹر سیاہ ہے۔
    Answer: اگر ترسیل کی تصدیق ہو تو ہم آگے بڑھ سکتے ہیں۔
 
 ### 15. Disagree constructively / اختلاف شائستگی سے کریں
@@ -839,10 +839,10 @@ Disagree with a proposed deadline without criticising a person. State the shared
    Options: پیغام نظرانداز کرنا۔ | تیز جواب۔ | تمام ہدف ختم کرنا۔
    Answer: تیز جواب۔
 2. What was the ten-minute target based on? / دس منٹ کا ہدف کس بنیاد پر تھا؟
-   Options: مکمل آزمائش۔ | خواہش، ناپا ہوا اندازہ نہیں۔ | متن میں بیان کردہ قانونی اصول۔
+   Options: مکمل آزمائش۔ | متن میں بیان کردہ قانونی اصول۔ | خواہش، ناپا ہوا اندازہ نہیں۔
    Answer: خواہش، ناپا ہوا اندازہ نہیں۔
 3. Which response keeps the disagreement constructive? / کون سا جواب اختلاف کو تعمیری رکھتا ہے؟
-   Options: آپ کا خیال بے وقوفانہ ہے۔ | آئیں کام کے بوجھ کا مفروضہ آزمائیں۔ | بحث کی کوئی بات نہیں۔
+   Options: آئیں کام کے بوجھ کا مفروضہ آزمائیں۔ | آپ کا خیال بے وقوفانہ ہے۔ | بحث کی کوئی بات نہیں۔
    Answer: آئیں کام کے بوجھ کا مفروضہ آزمائیں۔
 
 ### 16. Resolve a complaint / شکایت کا حل
@@ -899,7 +899,7 @@ Write a complaint reply with acknowledgement, one clarifying question, an availa
    Options: ترسیل کی ضمانت۔ | نئی اطلاع۔ | کورس کی نئی سند۔
    Answer: نئی اطلاع۔
 2. Why does she check the delivery team first? / وہ پہلے ترسیل کی ٹیم سے کیوں پوچھتی ہے؟
-   Options: صارف کو نظرانداز کرنے کے لیے۔ | غیر ثابت شدہ ترسیل کا وعدہ کرنے سے بچنے کے لیے۔ | تمام آرڈر منسوخ کرنے کے لیے۔
+   Options: صارف کو نظرانداز کرنے کے لیے۔ | تمام آرڈر منسوخ کرنے کے لیے۔ | غیر ثابت شدہ ترسیل کا وعدہ کرنے سے بچنے کے لیے۔
    Answer: غیر ثابت شدہ ترسیل کا وعدہ کرنے سے بچنے کے لیے۔
 3. What temporary option is offered with agreement? / رضامندی سے عارضی طور پر کیا پیش کیا جاتا ہے؟
    Options: ڈیجیٹل نقل۔ | غیر متعلقہ دوسرا کورس۔ | کوئی معلومات نہیں۔
@@ -961,10 +961,10 @@ Prepare a 90-second interview answer using a real study, volunteer or work examp
    Options: کمپنی کے تمام اخراجات۔ | اوقات کی ترتیب۔ | ہر ملازم کی تنخواہ۔
    Answer: اوقات کی ترتیب۔
 2. Which result is supported by the account? / مثال کے مطابق کون سا نتیجہ ثابت ہے؟
-   Options: آمدن دگنی ہوئی۔ | نشست وقت پر شروع ہوئی۔ | تمام خطرے ختم ہوئے۔
+   Options: آمدن دگنی ہوئی۔ | تمام خطرے ختم ہوئے۔ | نشست وقت پر شروع ہوئی۔
    Answer: نشست وقت پر شروع ہوئی۔
 3. What makes the answer credible? / جواب کو قابلِ اعتماد کیا بناتا ہے؟
-   Options: فرضی فیصد۔ | واضح اقدامات اور قابلِ مشاہدہ نتیجہ۔ | ٹیم کے تمام کام کا سہرا لینا۔
+   Options: واضح اقدامات اور قابلِ مشاہدہ نتیجہ۔ | فرضی فیصد۔ | ٹیم کے تمام کام کا سہرا لینا۔
    Answer: واضح اقدامات اور قابلِ مشاہدہ نتیجہ۔
 
 ### 18. Lead a useful meeting / مؤثر میٹنگ چلائیں
@@ -1021,10 +1021,10 @@ Run a three-minute meeting about a study project. Record one decision, two actio
    Options: پہلے سب کو کال۔ | مختصر آن لائن فارم۔ | رائے جمع نہ کرنا۔
    Answer: مختصر آن لائن فارم۔
 2. Who will test the form? / فارم کون آزمائے گا؟
-   Options: ثنا جمعے کو۔ | اسد بدھ کو۔ | کوئی نامعلوم شخص کسی دن۔
+   Options: ثنا جمعے کو۔ | کوئی نامعلوم شخص کسی دن۔ | اسد بدھ کو۔
    Answer: اسد بدھ کو۔
 3. Which action note is complete? / کون سا عملی نوٹ مکمل ہے؟
-   Options: سوالوں پر بات ہوئی۔ | ثنا: منگل تک سوالوں کا مسودہ بنائیں۔ | کوئی کچھ کرے۔
+   Options: ثنا: منگل تک سوالوں کا مسودہ بنائیں۔ | سوالوں پر بات ہوئی۔ | کوئی کچھ کرے۔
    Answer: ثنا: منگل تک سوالوں کا مسودہ بنائیں۔
 
 ### 19. Negotiate scope and deadlines / کام اور وقت پر بات چیت
@@ -1081,10 +1081,10 @@ Negotiate a realistic two-stage delivery for a fictional project. Write scope, d
    Options: تمام منظور شدہ تصویریں۔ | متن۔ | لامحدود نئے حصے۔
    Answer: متن۔
 2. Why are two stages acceptable to the client? / صارف کے لیے دو مرحلے کیوں مناسب ہیں؟
-   Options: تقریب منسوخ ہو گئی۔ | تقریب کے لیے پہلے متن ضروری ہے۔ | قبولیت کا معیار اہم نہیں۔
+   Options: تقریب منسوخ ہو گئی۔ | قبولیت کا معیار اہم نہیں۔ | تقریب کے لیے پہلے متن ضروری ہے۔
    Answer: تقریب کے لیے پہلے متن ضروری ہے۔
 3. What should happen if a new section is added? / نیا حصہ شامل ہو تو کیا ہونا چاہیے؟
-   Options: اضافی کام چھپا دیں۔ | نیا تخمینہ تیار کریں۔ | بغیر جانچ اسی تاریخ کی ضمانت دیں۔
+   Options: نیا تخمینہ تیار کریں۔ | اضافی کام چھپا دیں۔ | بغیر جانچ اسی تاریخ کی ضمانت دیں۔
    Answer: نیا تخمینہ تیار کریں۔
 
 ### 20. Present and defend a recommendation / سفارش پیش کریں اور وضاحت دیں
@@ -1141,9 +1141,9 @@ Capstone: give a three-minute recommendation, write a 150-word executive summary
    Options: فوراً تمام کلاسوں تک توسیع۔ | ایک کلاس کے ساتھ دو ہفتے کی آزمائش۔ | بغیر پیمائش یقینی نتیجہ۔
    Answer: ایک کلاس کے ساتھ دو ہفتے کی آزمائش۔
 2. How should the presenter answer an unknown figure? / نامعلوم عدد کے سوال کا جواب کیسے دینا چاہیے؟
-   Options: فرضی درست فیصد بتائیں۔ | غیر یقینی بات اور تصدیق کا قدم بتائیں۔ | بغیر وضاحت موضوع بدل دیں۔
+   Options: فرضی درست فیصد بتائیں۔ | بغیر وضاحت موضوع بدل دیں۔ | غیر یقینی بات اور تصدیق کا قدم بتائیں۔
    Answer: غیر یقینی بات اور تصدیق کا قدم بتائیں۔
 3. What will inform the expansion decision? / توسیع کا فیصلہ کس بنیاد پر ہوگا؟
-   Options: صرف سلائیڈ کے رنگ۔ | ناپے گئے نتائج اور استاد کی رائے۔ | سب سے بلند آواز والے کی پسند۔
+   Options: ناپے گئے نتائج اور استاد کی رائے۔ | صرف سلائیڈ کے رنگ۔ | سب سے بلند آواز والے کی پسند۔
    Answer: ناپے گئے نتائج اور استاد کی رائے۔
 
