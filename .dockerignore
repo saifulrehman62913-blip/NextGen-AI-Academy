@@ -9,3 +9,5 @@
 !web/**
 !server/
 !server/*.mjs
+
+!scripts/foundation_phrases.json

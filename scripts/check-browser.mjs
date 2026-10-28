@@ -179,6 +179,29 @@ try{
  assert.ok(cacheKeys.some(key=>key.startsWith('ilmigo-v')),'The worker must install its current offline cache');
  await workerContext.close();
  scenarios.push('Actual service worker activation: own old caches removed, unrelated same-origin cache preserved');
+ const expansionContext=await browser.newContext({viewport:{width:1280,height:900}}),expansionPage=currentPage=await expansionContext.newPage();expansionPage.setDefaultTimeout(15000);
+ await onboard(expansionPage,'en','pa');
+ const expansionLanguages=catalog.languages.filter(l=>!['en','ur'].includes(l.id));
+ assert.equal(expansionLanguages.length,32);
+ for(const language of expansionLanguages){
+  await expansionPage.locator('nav [data-nav="languages"]').click();
+  await expansionPage.locator(`[data-language="${language.id}"]`).click();
+  assert.equal((await active(expansionPage)).language,language.id);
+  await expansionPage.locator('nav [data-nav="path"]').click();
+  const first=catalog.lessons.find(l=>l.language===language.id&&l.order===0);
+  assert.ok(first);await expansionPage.locator(`[data-lesson="${first.id}"]`).first().click();
+  await expansionPage.locator('#next-block').click();await expansionPage.locator('#next-block').click();
+  assert.equal(await expansionPage.locator('.read-text').getAttribute('dir'),language.direction);
+  assert.equal((await expansionPage.locator('.read-text').textContent()).trim(),first.reading);
+  await expansionPage.locator('#next-block').click();await expansionPage.locator('#writing-response').fill('Foundation practice draft '+language.id);
+  await expansionPage.locator('#next-block').click();await answer(expansionPage,first);
+  await expansionPage.locator('.large-stat').waitFor();await expansionPage.locator('#overlay [data-action="close"]').click();
+  assert.equal((await active(expansionPage)).completed[first.id].score,1);
+ }
+ await expansionPage.reload({waitUntil:'domcontentloaded'});await expansionPage.locator('nav [data-nav="path"]').waitFor();
+ assert.equal(Object.keys((await active(expansionPage)).completed).length,32);
+ await expansionPage.screenshot({path:new URL('foundation-courses.png',out).pathname,fullPage:true});
+ scenarios.push('All 32 foundation languages: select, open reading with correct direction, save writing, pass quiz, persist progress across reload');
  assert.deepEqual(failures,[],'Browser application errors');
  await writeFile(new URL('checks.json',out),JSON.stringify({browser:browser.version(),scenarios,result:'passed',liveProviders:false,physicalDevice:false},null,2)+'\n');
  console.log(`Browser smoke passed: ${scenarios.length} scenarios; Chromium ${browser.version()}.`);

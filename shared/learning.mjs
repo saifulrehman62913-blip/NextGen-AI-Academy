@@ -54,4 +54,4 @@ export function compareTranscript(expected, actual) {
   if (!target.length || !said.size) return {matched:0,total:target.length,missing:target};
   const missing=target.filter(w=>!said.has(w));return {matched:target.length-missing.length,total:target.length,missing};
 }
-export function speechLocale(language){return ({en:'en-US',ur:'ur-PK',pa:'pa-IN',sd:'sd-PK',skr:'skr-PK',ps:'ps-AF',fa:'fa-IR',ar:'ar-SA',tr:'tr-TR',hi:'hi-IN',bn:'bn-BD',gu:'gu-IN',ta:'ta-IN',te:'te-IN',ml:'ml-IN',ne:'ne-NP',si:'si-LK',zh:'zh-CN',ja:'ja-JP',ko:'ko-KR',id:'id-ID',ms:'ms-MY',th:'th-TH',vi:'vi-VN',fr:'fr-FR',es:'es-ES',de:'de-DE',it:'it-IT',pt:'pt-PT',ru:'ru-RU',nl:'nl-NL',pl:'pl-PL',sw:'sw-KE',so:'so-SO'})[language]||language;}
+export function speechLocale(language){return ({en:'en-US',ur:'ur-PK',pa:'pa-PK',sd:'sd-PK',skr:'skr-PK',ps:'ps-AF',fa:'fa-IR',ar:'ar-SA',tr:'tr-TR',hi:'hi-IN',bn:'bn-BD',gu:'gu-IN',ta:'ta-IN',te:'te-IN',ml:'ml-IN',ne:'ne-NP',si:'si-LK',zh:'zh-CN',ja:'ja-JP',ko:'ko-KR',id:'id-ID',ms:'ms-MY',th:'th-TH',vi:'vi-VN',fr:'fr-FR',es:'es-ES',de:'de-DE',it:'it-IT',pt:'pt-PT',ru:'ru-RU',nl:'nl-NL',pl:'pl-PL',sw:'sw-KE',so:'so-SO'})[language]||language;}

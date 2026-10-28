@@ -54,7 +54,7 @@ test('enabled subscription hides public course bodies and member endpoint fails 
  for(const url of ['/api/catalog','/shared/catalog.json','/shared/%63atalog.json','/shared/./catalog.json']){const response=await s.get(url);assert.equal(response.status,200);assert.equal((await response.json()).lessons.length,0);}
  assert.equal((await s.get('/api/member-catalog')).status,401);
  assert.equal((await s.get('/api/member-catalog',{headers:auth})).status,402);
- for(const opts of [{trial:row(-1)},{paid:true}]){const mock=provider(opts),other=await run(t,env,mock.fetch);const response=await other.get('/api/member-catalog',{headers:auth});assert.equal(response.status,200);assert.equal((await response.json()).lessons.length,40);}
+ for(const opts of [{trial:row(-1)},{paid:true}]){const mock=provider(opts),other=await run(t,env,mock.fetch);const response=await other.get('/api/member-catalog',{headers:auth});assert.equal(response.status,200);assert.equal((await response.json()).lessons.length,136);}
 });
 test('expired trial blocks AI before quota/provider while active trial and paid plan use separate limits',async t=>{
  for(const opts of [{},{trial:row(-100)},{trial:row(-1)},{paid:true},{paid:true,expires:false}]){

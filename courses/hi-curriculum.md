@@ -1,0 +1,87 @@
+# ILMIGO · Hindi introductory foundation
+
+Original draft: qualified language and audio review pending. Three suggested 30-minute practice sessions. Not a complete professional course.
+
+Reading, partner drill, writing and four answer-key checks per lesson. Roman aids are approximate.
+
+## Greetings and courtesy
+
+Hindi uses Devanagari, read left to right. Suniye is a respectful way to attract attention. The dot in फ़ marks a borrowed f sound, and the nasal mark in हाँ affects pronunciation.
+
+**Daily plan:** 5m review, 8m words/patterns, 7m read/listen, 7m speak/write, 3m assessment.
+
+- नमस्ते — Hello / greeting / سلام / ملاقات (namaste)
+- अलविदा — Goodbye / leaving / رخصت ہونے کا جملہ (alvida)
+- धन्यवाद — Thank you / شکریہ (dhanyavaad)
+- कृपया — Please / request / درخواست میں شائستگی (kripaya)
+
+**Reading / drill**
+
+नमस्ते
+अलविदा
+धन्यवाद
+कृपया
+
+Copy each target expression carefully. Cover the model and write it from memory. Match each expression to its meaning. Practise saying all four with a partner; for counting, take turns in order. Do not treat the drill as a natural conversation.
+
+**Quiz answer key**
+
+- Choose the taught expression for: Hello / greeting. → नमस्ते
+- Choose the taught expression for: Goodbye / leaving. → अलविदा
+- Choose the taught expression for: Thank you. → धन्यवाद
+- Choose the taught expression for: Please / request. → कृपया
+
+## Simple replies and apologies
+
+Hindi uses Devanagari, read left to right. Suniye is a respectful way to attract attention. The dot in फ़ marks a borrowed f sound, and the nasal mark in हाँ affects pronunciation.
+
+**Daily plan:** 5m review, 8m words/patterns, 7m read/listen, 7m speak/write, 3m assessment.
+
+- हाँ — Yes / affirmation / ہاں / مثبت جواب (haan)
+- नहीं — No / negative reply / نہیں / منفی جواب (nahin)
+- सुनिए — Excuse me / attention or passing / متوجہ کرنا یا گزرنے کی اجازت (suniye)
+- माफ़ कीजिए — Sorry / apology / معذرت (maaf kijiye)
+
+**Reading / drill**
+
+हाँ
+नहीं
+सुनिए
+माफ़ कीजिए
+
+Copy each target expression carefully. Cover the model and write it from memory. Match each expression to its meaning. Practise saying all four with a partner; for counting, take turns in order. Do not treat the drill as a natural conversation.
+
+**Quiz answer key**
+
+- Choose the taught expression for: Yes / affirmation. → हाँ
+- Choose the taught expression for: No / negative reply. → नहीं
+- Choose the taught expression for: Excuse me / attention or passing. → सुनिए
+- Choose the taught expression for: Sorry / apology. → माफ़ कीजिए
+
+## Count from one to four
+
+Hindi uses Devanagari, read left to right. Suniye is a respectful way to attract attention. The dot in फ़ marks a borrowed f sound, and the nasal mark in हाँ affects pronunciation.
+
+**Daily plan:** 5m review, 8m words/patterns, 7m read/listen, 7m speak/write, 3m assessment.
+
+- एक — One / ایک (ek)
+- दो — Two / دو (do)
+- तीन — Three / تین (teen)
+- चार — Four / چار (chaar)
+
+**Reading / drill**
+
+एक
+दो
+तीन
+चार
+
+Copy each target expression carefully. Cover the model and write it from memory. Match each expression to its meaning. Practise saying all four with a partner; for counting, take turns in order. Do not treat the drill as a natural conversation.
+
+**Quiz answer key**
+
+- Choose the taught expression for: One. → एक
+- Choose the taught expression for: Two. → दो
+- Choose the taught expression for: Three. → तीन
+- Choose the taught expression for: Four. → चार
+

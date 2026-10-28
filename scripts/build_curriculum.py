@@ -62,5 +62,8 @@ if __name__=='__main__':
     # Run create_content.py for the baseline, then build() adds the authored units.
     import runpy
     base=runpy.run_path(str(ROOT/'scripts/create_content.py'))['content']
-    write(build(base))
-    print('Built 40 original lessons across five levels; 2 curricula exported. Language review pending.')
+    from foundation_courses import extend,export
+    expanded=extend(build(base))
+    write(expanded)
+    export(expanded)
+    print('Built 136 draft lessons: English/Urdu 20 each, 32 foundation courses 3 each. Qualified review pending.')
