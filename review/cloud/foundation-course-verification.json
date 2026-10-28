@@ -1,0 +1,103 @@
+{
+  "version": "0.7.0",
+  "applicationCommit": "6133d669df71c7e5f4d6b984267d2b42038c7392",
+  "runId": 40633111573,
+  "result": "success",
+  "catalogLanguages": 34,
+  "totalDraftLessons": 136,
+  "newFoundationLanguages": 32,
+  "newLessonsPerLanguage": 3,
+  "newDraftLessons": 96,
+  "nodeTests": 114,
+  "flutterDistinctTests": 30,
+  "flutterHosts": [
+    "Linux",
+    "macOS"
+  ],
+  "nativeAnalysis": "No issues found on both hosts",
+  "postgresqlMigrations": 4,
+  "postgresqlAssertions": 36,
+  "browserScenarios": 8,
+  "allNewLanguagesBrowserLessonFlowVerified": true,
+  "qualifiedLanguageReview": false,
+  "physicalDeviceAudioVerified": false,
+  "liveProvidersConfigured": false,
+  "artifacts": [
+    {
+      "id": 12792940448,
+      "name": "ilmigo-android-debug",
+      "size_in_bytes": 79722492,
+      "url": "https://api.github.com/repos/saifulrehman62913-blip/NextGen-AI-Academy/actions/artifacts/12792940448",
+      "archive_download_url": "https://api.github.com/repos/saifulrehman62913-blip/NextGen-AI-Academy/actions/artifacts/12792940448/zip",
+      "expired": false,
+      "created_at": "2026-10-28T04:40:25Z",
+      "expires_at": "2027-01-26T04:34:43Z",
+      "updated_at": "2026-10-28T04:40:25Z",
+      "digest": "sha256:b49a24debe25ad46b981c5e9690682bd0f4bc1cdce2b2b2721a76b2e6848ba19",
+      "workflow_run": {
+        "id": 40633111573,
+        "repository_id": 1185151325,
+        "head_repository_id": 1185151325,
+        "head_branch": "main",
+        "head_sha": "6133d669df71c7e5f4d6b984267d2b42038c7392"
+      }
+    },
+    {
+      "id": 12792671623,
+      "name": "ilmigo-browser-smoke",
+      "size_in_bytes": 618246,
+      "url": "https://api.github.com/repos/saifulrehman62913-blip/NextGen-AI-Academy/actions/artifacts/12792671623",
+      "archive_download_url": "https://api.github.com/repos/saifulrehman62913-blip/NextGen-AI-Academy/actions/artifacts/12792671623/zip",
+      "expired": false,
+      "created_at": "2026-10-28T04:36:16Z",
+      "expires_at": "2027-01-26T04:34:43Z",
+      "updated_at": "2026-10-28T04:36:16Z",
+      "digest": "sha256:2da8bfc5544747e2768e6fe9c50c0c6f5f5f52529db5f8410c4759bba6cabeb8",
+      "workflow_run": {
+        "id": 40633111573,
+        "repository_id": 1185151325,
+        "head_repository_id": 1185151325,
+        "head_branch": "main",
+        "head_sha": "6133d669df71c7e5f4d6b984267d2b42038c7392"
+      }
+    },
+    {
+      "id": 12792666698,
+      "name": "ilmigo-web-preview",
+      "size_in_bytes": 123375,
+      "url": "https://api.github.com/repos/saifulrehman62913-blip/NextGen-AI-Academy/actions/artifacts/12792666698",
+      "archive_download_url": "https://api.github.com/repos/saifulrehman62913-blip/NextGen-AI-Academy/actions/artifacts/12792666698/zip",
+      "expired": false,
+      "created_at": "2026-10-28T04:36:18Z",
+      "expires_at": "2027-01-26T04:34:43Z",
+      "updated_at": "2026-10-28T04:36:18Z",
+      "digest": "sha256:93e025fae3ef4660fabb9732772f39e9b73ea95fff18340a0d14778d1c2dcd0e",
+      "workflow_run": {
+        "id": 40633111573,
+        "repository_id": 1185151325,
+        "head_repository_id": 1185151325,
+        "head_branch": "main",
+        "head_sha": "6133d669df71c7e5f4d6b984267d2b42038c7392"
+      }
+    },
+    {
+      "id": 12792532432,
+      "name": "ilmigo-ios-simulator",
+      "size_in_bytes": 59204447,
+      "url": "https://api.github.com/repos/saifulrehman62913-blip/NextGen-AI-Academy/actions/artifacts/12792532432",
+      "archive_download_url": "https://api.github.com/repos/saifulrehman62913-blip/NextGen-AI-Academy/actions/artifacts/12792532432/zip",
+      "expired": false,
+      "created_at": "2026-10-28T04:38:29Z",
+      "expires_at": "2027-01-26T04:34:43Z",
+      "updated_at": "2026-10-28T04:38:29Z",
+      "digest": "sha256:aa1fffc840b7431b1edab04b8d18cc082d982b4965823ef8973e0689adc82d80",
+      "workflow_run": {
+        "id": 40633111573,
+        "repository_id": 1185151325,
+        "head_repository_id": 1185151325,
+        "head_branch": "main",
+        "head_sha": "6133d669df71c7e5f4d6b984267d2b42038c7392"
+      }
+    }
+  ]
+}

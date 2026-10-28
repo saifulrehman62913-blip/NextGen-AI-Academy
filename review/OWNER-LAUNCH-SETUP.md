@@ -78,4 +78,4 @@ The helper validates profile expiry/team/bundle/distribution and signing identit
 
 Before paid publication, verify live OTP, child-session consent/revocation, sync/recovery/deletion, AI quotas and real store sandbox purchase/restore/renewal/expiry/cancellation. Fill the actual publisher identity, support/privacy contact, privacy URL and store declarations. Those details cannot be inferred from the app name. Scope the store listing to reviewed/published content only.
 
-The user has kept course expansion, qualified course review, the other 32 language curricula and physical-device testing outside the current coding round. They remain separate release requirements; this setup guide does not mark them complete or override them.
+Version 0.7.0 adds three introductory draft lessons to each of the other 32 languages; English/Urdu retain 20 draft lessons each. Qualified language/audio review, expansion beyond these starter courses and physical-device testing remain separate release requirements. This setup guide does not mark them complete.

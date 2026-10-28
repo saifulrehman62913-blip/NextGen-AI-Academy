@@ -1,18 +1,18 @@
 # ILMIGO DIGITAL ACADEMY
 
-Version 0.6.0. A bilingual language-learning beta with **ILMIGO**, the robot teacher. Android debug APK and iOS simulator builds have now completed successfully on GitHub Actions.
+Version 0.7.0. A bilingual language-learning beta with **ILMIGO**, the robot teacher. Android debug APK and iOS simulator builds have now completed successfully on GitHub Actions.
 
-Current build and implementation evidence: [0.6.0 app review and verified builds](review/ILMIGO-LAUNCH-HARDENING-RELEASE.md), with [0.5.0 child-session details](review/ILMIGO-CHILD-SESSIONS-RELEASE.md). Owner account and payout setup: [Pakistan/Meezan guide](review/PAYMENT-SETUP-PAKISTAN.md).
+Current build and implementation evidence: [0.7.0 multilingual foundation courses](review/ILMIGO-32-LANGUAGE-FOUNDATIONS.md), with [0.5.0 child-session details](review/ILMIGO-CHILD-SESSIONS-RELEASE.md). Owner account and payout setup: [Pakistan/Meezan guide](review/PAYMENT-SETUP-PAKISTAN.md).
 
 ## Download the test app
 
-- [Android APK ZIP](https://github.com/saifulrehman62913-blip/NextGen-AI-Academy/actions/runs/40525822488/artifacts/12743843366) — extract and install `app-debug.apk` on Android.
-- [iOS simulator ZIP](https://github.com/saifulrehman62913-blip/NextGen-AI-Academy/actions/runs/40525822488/artifacts/12743693410) — for macOS ARM64 iOS Simulator; not a signed iPhone IPA.
-- [Browser preview ZIP](https://github.com/saifulrehman62913-blip/NextGen-AI-Academy/actions/runs/40525822488/artifacts/12742889860) — open `ILMIGO-preview.html` in a modern browser.
+- [Android APK ZIP](https://github.com/saifulrehman62913-blip/NextGen-AI-Academy/actions/runs/40633111573/artifacts/12792940448) — extract and install `app-debug.apk` on Android.
+- [iOS simulator ZIP](https://github.com/saifulrehman62913-blip/NextGen-AI-Academy/actions/runs/40633111573/artifacts/12792532432) — for macOS ARM64 iOS Simulator; not a signed iPhone IPA.
+- [Browser preview ZIP](https://github.com/saifulrehman62913-blip/NextGen-AI-Academy/actions/runs/40633111573/artifacts/12792666698) — open `ILMIGO-preview.html` in a modern browser.
 
-GitHub sign-in may be required for downloads. Artifacts expire on 25 January 2027. These are test/beta artifacts, not store releases.
+GitHub sign-in may be required for downloads. Artifacts expire on 26 January 2027. These are test/beta artifacts, not store releases.
 
-[Successful workflow run](https://github.com/saifulrehman62913-blip/NextGen-AI-Academy/actions/runs/40525822488) · [Detailed verification report](review/ILMIGO-LAUNCH-HARDENING-RELEASE.md) · [Machine-readable evidence](review/cloud/browser-timeout-verification.json)
+[Successful workflow run](https://github.com/saifulrehman62913-blip/NextGen-AI-Academy/actions/runs/40633111573) · [Detailed verification report](review/ILMIGO-32-LANGUAGE-FOUNDATIONS.md) · [Machine-readable evidence](review/cloud/foundation-course-verification.json)
 
 Verified code commit: `0ad137bc7ddfd6c1593c6d4801f4cdeed3a6579e`. Flutter 3.47.8 stable; Node 24.21.0.
 
@@ -39,7 +39,7 @@ Verified code commit: `0ad137bc7ddfd6c1593c6d4801f4cdeed3a6579e`. Flutter 3.47.8
 - Source integrations for Supabase, text AI feedback and disabled-by-default RevenueCat billing.
 - Lesson-scoped adult AI conversations with follow-up questions, bilingual explanations, optional device speech recognition and a button to hear each reply with installed device TTS. Conversations remain in screen/page memory, reset when leaving or changing profile, and share the 3 trial / 20 Plus daily turn quota. Provider/device verification still requires owner configuration.
 
-The 40 lessons are original curriculum drafts awaiting qualified language/audio review. Ten planned hours per language do not guarantee professional fluency or CEFR/occupational certification. The other 32 languages in the catalog remain **coming soon**.
+All 136 lessons are curriculum drafts awaiting qualified language/audio review. English/Urdu retain 20 lessons each; the other 32 languages have three beginner lessons each. These are not complete professional-fluency courses or CEFR/occupational certification.
 
 The current APK is an offline-capable preview built without a backend URL. Live accounts/cloud AI/payment services are not active. Real-device/voice/visual QA, final production consent-policy review, actual release signing and store publication remain pending. See the detailed report for limits.
 
@@ -60,7 +60,7 @@ npm test
 npm run verify
 ```
 
-`npm run verify` also attempts native checks: it exits 2 when prerequisites are blocked, 1 on failure, and 0 only when all required checks pass. Older local-host reports under `review/build/` record the missing SDK before cloud verification became available. Current cloud evidence is under `review/cloud/`. CI now also applies all four migrations to a disposable PostgreSQL 16 database, checks RLS/concurrency, builds/runs the backend Docker image and exercises five Chrome flows (cloud fixtures and a stalled HTTP request). Playwright is a pinned CI-only dependency; the backend has no runtime npm dependencies.
+`npm run verify` also attempts native checks: it exits 2 when prerequisites are blocked, 1 on failure, and 0 only when all required checks pass. Older local-host reports under `review/build/` record the missing SDK before cloud verification became available. Current cloud evidence is under `review/cloud/`. CI now also applies all four migrations to a disposable PostgreSQL 16 database, checks RLS/concurrency, builds/runs the backend Docker image and exercises eight Chrome scenarios (including every new language, cloud/admin fixtures and offline caching). Playwright is a pinned CI-only dependency; the backend has no runtime npm dependencies.
 
 ## Native Android / iOS source
 
@@ -144,4 +144,6 @@ RevenueCat purchase/restore code remains **off by default**. Do not enable purch
 
 Historical reviews record pre-fix/pre-cloud states. The current successful cloud run/report above supersedes their native-build-blocked status, while their remaining production/content limitations still apply.
 
-Language availability audit: [34-language lesson counts](review/language-availability.json). Only English/Urdu have authored draft lessons; the remaining 32 are not working courses.
+Language availability audit: [34-language lesson counts](review/language-availability.json). English/Urdu have 20 draft lessons each; the other 32 languages now have three introductory draft lessons each (136 total). Qualified language/audio review and professional-level expansion remain pending.
+
+Current machine evidence: [0.7.0 verification](review/cloud/foundation-course-verification.json). Browser CI now exercises eight scenarios, including a lesson flow in each of the 32 new languages.

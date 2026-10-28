@@ -1,211 +1,246 @@
 {
   "catalogLanguages": 34,
-  "authoredLessons": 40,
-  "allLanguagesWorking": false,
+  "authoredLessons": 136,
+  "allLanguagesHaveDraftLessons": true,
+  "allLanguagesProfessionallyReviewed": false,
   "languages": [
     {
       "id": "ur",
       "name": "Urdu",
       "status": "sample",
+      "reviewStatus": "pending",
       "authoredLessons": 20
     },
     {
       "id": "en",
       "name": "English",
       "status": "sample",
+      "reviewStatus": "pending",
       "authoredLessons": 20
     },
     {
       "id": "pa",
       "name": "Punjabi",
-      "status": "coming_soon",
-      "authoredLessons": 0
+      "status": "sample",
+      "reviewStatus": "pending",
+      "authoredLessons": 3
     },
     {
       "id": "sd",
       "name": "Sindhi",
-      "status": "coming_soon",
-      "authoredLessons": 0
+      "status": "sample",
+      "reviewStatus": "pending",
+      "authoredLessons": 3
     },
     {
       "id": "skr",
       "name": "Saraiki",
-      "status": "coming_soon",
-      "authoredLessons": 0
+      "status": "sample",
+      "reviewStatus": "pending",
+      "authoredLessons": 3
     },
     {
       "id": "ps",
       "name": "Pashto",
-      "status": "coming_soon",
-      "authoredLessons": 0
+      "status": "sample",
+      "reviewStatus": "pending",
+      "authoredLessons": 3
     },
     {
       "id": "fa",
       "name": "Persian / Farsi",
-      "status": "coming_soon",
-      "authoredLessons": 0
+      "status": "sample",
+      "reviewStatus": "pending",
+      "authoredLessons": 3
     },
     {
       "id": "ar",
       "name": "Arabic",
-      "status": "coming_soon",
-      "authoredLessons": 0
+      "status": "sample",
+      "reviewStatus": "pending",
+      "authoredLessons": 3
     },
     {
       "id": "tr",
       "name": "Turkish",
-      "status": "coming_soon",
-      "authoredLessons": 0
+      "status": "sample",
+      "reviewStatus": "pending",
+      "authoredLessons": 3
     },
     {
       "id": "hi",
       "name": "Hindi",
-      "status": "coming_soon",
-      "authoredLessons": 0
+      "status": "sample",
+      "reviewStatus": "pending",
+      "authoredLessons": 3
     },
     {
       "id": "bn",
       "name": "Bengali",
-      "status": "coming_soon",
-      "authoredLessons": 0
+      "status": "sample",
+      "reviewStatus": "pending",
+      "authoredLessons": 3
     },
     {
       "id": "gu",
       "name": "Gujarati",
-      "status": "coming_soon",
-      "authoredLessons": 0
+      "status": "sample",
+      "reviewStatus": "pending",
+      "authoredLessons": 3
     },
     {
       "id": "ta",
       "name": "Tamil",
-      "status": "coming_soon",
-      "authoredLessons": 0
+      "status": "sample",
+      "reviewStatus": "pending",
+      "authoredLessons": 3
     },
     {
       "id": "te",
       "name": "Telugu",
-      "status": "coming_soon",
-      "authoredLessons": 0
+      "status": "sample",
+      "reviewStatus": "pending",
+      "authoredLessons": 3
     },
     {
       "id": "ml",
       "name": "Malayalam",
-      "status": "coming_soon",
-      "authoredLessons": 0
+      "status": "sample",
+      "reviewStatus": "pending",
+      "authoredLessons": 3
     },
     {
       "id": "ne",
       "name": "Nepali",
-      "status": "coming_soon",
-      "authoredLessons": 0
+      "status": "sample",
+      "reviewStatus": "pending",
+      "authoredLessons": 3
     },
     {
       "id": "si",
       "name": "Sinhala",
-      "status": "coming_soon",
-      "authoredLessons": 0
+      "status": "sample",
+      "reviewStatus": "pending",
+      "authoredLessons": 3
     },
     {
       "id": "zh",
       "name": "Mandarin Chinese",
-      "status": "coming_soon",
-      "authoredLessons": 0
+      "status": "sample",
+      "reviewStatus": "pending",
+      "authoredLessons": 3
     },
     {
       "id": "ja",
       "name": "Japanese",
-      "status": "coming_soon",
-      "authoredLessons": 0
+      "status": "sample",
+      "reviewStatus": "pending",
+      "authoredLessons": 3
     },
     {
       "id": "ko",
       "name": "Korean",
-      "status": "coming_soon",
-      "authoredLessons": 0
+      "status": "sample",
+      "reviewStatus": "pending",
+      "authoredLessons": 3
     },
     {
       "id": "id",
       "name": "Indonesian",
-      "status": "coming_soon",
-      "authoredLessons": 0
+      "status": "sample",
+      "reviewStatus": "pending",
+      "authoredLessons": 3
     },
     {
       "id": "ms",
       "name": "Malay",
-      "status": "coming_soon",
-      "authoredLessons": 0
+      "status": "sample",
+      "reviewStatus": "pending",
+      "authoredLessons": 3
     },
     {
       "id": "th",
       "name": "Thai",
-      "status": "coming_soon",
-      "authoredLessons": 0
+      "status": "sample",
+      "reviewStatus": "pending",
+      "authoredLessons": 3
     },
     {
       "id": "vi",
       "name": "Vietnamese",
-      "status": "coming_soon",
-      "authoredLessons": 0
+      "status": "sample",
+      "reviewStatus": "pending",
+      "authoredLessons": 3
     },
     {
       "id": "fr",
       "name": "French",
-      "status": "coming_soon",
-      "authoredLessons": 0
+      "status": "sample",
+      "reviewStatus": "pending",
+      "authoredLessons": 3
     },
     {
       "id": "es",
       "name": "Spanish",
-      "status": "coming_soon",
-      "authoredLessons": 0
+      "status": "sample",
+      "reviewStatus": "pending",
+      "authoredLessons": 3
     },
     {
       "id": "de",
       "name": "German",
-      "status": "coming_soon",
-      "authoredLessons": 0
+      "status": "sample",
+      "reviewStatus": "pending",
+      "authoredLessons": 3
     },
     {
       "id": "it",
       "name": "Italian",
-      "status": "coming_soon",
-      "authoredLessons": 0
+      "status": "sample",
+      "reviewStatus": "pending",
+      "authoredLessons": 3
     },
     {
       "id": "pt",
       "name": "Portuguese",
-      "status": "coming_soon",
-      "authoredLessons": 0
+      "status": "sample",
+      "reviewStatus": "pending",
+      "authoredLessons": 3
     },
     {
       "id": "ru",
       "name": "Russian",
-      "status": "coming_soon",
-      "authoredLessons": 0
+      "status": "sample",
+      "reviewStatus": "pending",
+      "authoredLessons": 3
     },
     {
       "id": "nl",
       "name": "Dutch",
-      "status": "coming_soon",
-      "authoredLessons": 0
+      "status": "sample",
+      "reviewStatus": "pending",
+      "authoredLessons": 3
     },
     {
       "id": "pl",
       "name": "Polish",
-      "status": "coming_soon",
-      "authoredLessons": 0
+      "status": "sample",
+      "reviewStatus": "pending",
+      "authoredLessons": 3
     },
     {
       "id": "sw",
       "name": "Swahili",
-      "status": "coming_soon",
-      "authoredLessons": 0
+      "status": "sample",
+      "reviewStatus": "pending",
+      "authoredLessons": 3
     },
     {
       "id": "so",
       "name": "Somali",
-      "status": "coming_soon",
-      "authoredLessons": 0
+      "status": "sample",
+      "reviewStatus": "pending",
+      "authoredLessons": 3
     }
   ]
 }
