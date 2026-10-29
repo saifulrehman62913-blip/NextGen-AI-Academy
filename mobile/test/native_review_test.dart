@@ -22,6 +22,33 @@ class DeferredPracticeCloud extends CloudService {
 void main(){
   TestWidgetsFlutterBinding.ensureInitialized();
   setUp(()=>SharedPreferences.setMockInitialValues({}));
+  testWidgets('offline speaking offers local practice without dead sign-in or AI actions',(tester) async {
+    final store=LearningStore();await tester.runAsync(()=>store.load());
+    final cloud=CloudService();addTearDown(cloud.close);expect(cloud.configured,false);
+    await tester.pumpWidget(MaterialApp(home:Scaffold(body:PracticeView(store:store,cloud:cloud,voice:VoiceService(),onLogin:() async {fail('Offline practice must not request sign-in.');}))));
+    expect(find.text('Ask ILMIGO'),findsNothing);
+    expect(find.text('Talk with ILMIGO'),findsNothing);
+    expect(find.text('Send conversation turn'),findsNothing);
+    expect(find.text('Listen'),findsOneWidget);
+    await tester.ensureVisible(find.byType(TextField));
+    await tester.enterText(find.byType(TextField),store.nextLesson!['speaking'] as String);
+    final compare=find.widgetWithText(OutlinedButton,'Compare words');
+    await tester.ensureVisible(compare);await tester.tap(compare);await tester.pump();
+    expect(find.textContaining('target words found'),findsOneWidget);
+    expect(tester.takeException(),isNull);await tester.pumpWidget(const SizedBox());
+  },timeout:const Timeout(Duration(seconds:60)));
+  testWidgets('offline family screen keeps local profiles and privacy without purchase prompts',(tester) async {
+    final store=LearningStore();await tester.runAsync(()=>store.load());store.onboarded=true;
+    await tester.pumpWidget(IlmigoApp(store:store));await tester.pump();
+    await tester.tap(find.text('My space'));await tester.pump();
+    expect(find.text('Learning profiles'),findsOneWidget);
+    expect(find.text('Privacy & data'),findsOneWidget);
+    expect(find.text('Sign in with email'),findsNothing);
+    expect(find.text('ILMIGO Plus ✦'),findsNothing);
+    expect(find.text('Trial & subscription status'),findsNothing);
+    expect(find.textContaining('saved on this device'),findsOneWidget);
+    expect(tester.takeException(),isNull);await tester.pumpWidget(const SizedBox());
+  },timeout:const Timeout(Duration(seconds:60)));
   testWidgets('practice phrase uses each course reading direction, including non-Urdu RTL languages',(tester) async {
     final store=LearningStore();await tester.runAsync(()=>store.load());
     final cloud=CloudService();addTearDown(cloud.close);
