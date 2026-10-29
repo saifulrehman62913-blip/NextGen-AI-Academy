@@ -12,7 +12,11 @@ Optional recognition now matches the complete language subtag rather than accept
 
 Two native widget regressions verify usable offline word comparison and the family screen's local controls without dead account/purchase prompts. Existing cloud fixtures continue exercising the configured AI path. No production credentials, paid plan, live AI, payment activation, owner signing or store publication is included.
 
-Verification: pending latest native cloud run. The previous 0.8.0 run verified 124 Node tests and 33 Flutter tests per host. Update this report with the exact 0.8.1 commit/run and artifacts only after they succeed.
+Verification completed successfully on 29 October 2026: app commit `422f4a4dbb3badf5245ea59e7db76798a22f0f14`, run [40845892353](https://github.com/saifulrehman62913-blip/NextGen-AI-Academy/actions/runs/40845892353). All 124 Node tests, 37 Flutter tests per host, clean native analysis on both hosts, 36 PostgreSQL assertions, Docker/HTTP checks and eight real Chrome scenarios passed. Android debug APK and iOS simulator builds succeeded. See [machine evidence](cloud/offline-edition-verification.json).
+
+Android debug ZIP: https://github.com/saifulrehman62913-blip/NextGen-AI-Academy/actions/runs/40845892353/artifacts/12884319736
+
+iOS simulator ZIP: https://github.com/saifulrehman62913-blip/NextGen-AI-Academy/actions/runs/40845892353/artifacts/12884967196
 
 ## Installation and limits
 

@@ -1,32 +1,33 @@
 # ILMIGO DIGITAL ACADEMY
 
-Version 0.8.0. A bilingual language-learning beta with **ILMIGO**, the robot teacher. Android debug APK and iOS simulator builds have now completed successfully on GitHub Actions.
+Version 0.8.1. A bilingual language-learning beta with **ILMIGO**, the robot teacher. Android debug APK and iOS simulator builds have now completed successfully on GitHub Actions.
 
-Current course expansion: [0.8.0 introductions](review/ILMIGO-INTRODUCTION-EXPANSION.md). Prior build and implementation evidence: [0.7.1 assessment fix and review handoff](review/ILMIGO-COURSE-QUALITY-RECHECK.md), with [0.5.0 child-session details](review/ILMIGO-CHILD-SESSIONS-RELEASE.md). Owner account and payout setup: [Pakistan/Meezan guide](review/PAYMENT-SETUP-PAKISTAN.md).
+Current native edition: [free offline beta](review/ILMIGO-FREE-OFFLINE-EDITION.md). Course expansion: [0.8.0 introductions](review/ILMIGO-INTRODUCTION-EXPANSION.md). Prior build and implementation evidence: [0.7.1 assessment fix and review handoff](review/ILMIGO-COURSE-QUALITY-RECHECK.md), with [0.5.0 child-session details](review/ILMIGO-CHILD-SESSIONS-RELEASE.md). Owner account and payout setup: [Pakistan/Meezan guide](review/PAYMENT-SETUP-PAKISTAN.md).
 
-## Download the test app
+## Download the free offline test app
 
-- [Android APK ZIP](https://github.com/saifulrehman62913-blip/NextGen-AI-Academy/actions/runs/40634854235/artifacts/12793201500) — extract and install `app-debug.apk` on Android.
-- [iOS simulator ZIP](https://github.com/saifulrehman62913-blip/NextGen-AI-Academy/actions/runs/40634854235/artifacts/12792978148) — for macOS ARM64 iOS Simulator; not a signed iPhone IPA.
-- [Browser preview ZIP](https://github.com/saifulrehman62913-blip/NextGen-AI-Academy/actions/runs/40634854235/artifacts/12792373836) — open `ILMIGO-preview.html` in a modern browser.
+- [Android APK ZIP](https://github.com/saifulrehman62913-blip/NextGen-AI-Academy/actions/runs/40845892353/artifacts/12884319736) — extract and install `app-debug.apk` on Android.
+- [iOS simulator ZIP](https://github.com/saifulrehman62913-blip/NextGen-AI-Academy/actions/runs/40845892353/artifacts/12884967196) — simulator only, not a signed physical-iPhone IPA.
+- [Browser preview ZIP](https://github.com/saifulrehman62913-blip/NextGen-AI-Academy/actions/runs/40845892353/artifacts/12884324446) — open `ILMIGO-preview.html`; cloud services are disabled.
+- [Android installation guide](review/FREE-ANDROID-QUICKSTART.md).
 
-GitHub sign-in may be required for downloads. Artifacts expire on 26 January 2027. These are test/beta artifacts, not store releases.
+GitHub sign-in may be required to download artifacts; the native offline app itself does not need an account or purchase for bundled lessons. Artifacts expire on 27 January 2027. These are debug/simulator beta builds, not store releases. Debug builds can have different signing keys across runs: if Android rejects an update, do not uninstall or clear app data merely to retry, because local progress can be lost.
 
-[Successful workflow run](https://github.com/saifulrehman62913-blip/NextGen-AI-Academy/actions/runs/40634854235) · [Detailed verification report](review/ILMIGO-COURSE-QUALITY-RECHECK.md) · [Machine-readable evidence](review/cloud/course-quality-verification.json)
+[Successful workflow run](https://github.com/saifulrehman62913-blip/NextGen-AI-Academy/actions/runs/40845892353) · [Offline edition report](review/ILMIGO-FREE-OFFLINE-EDITION.md) · [Machine evidence](review/cloud/offline-edition-verification.json)
 
-Verified code commit: `0ad137bc7ddfd6c1593c6d4801f4cdeed3a6579e`. Flutter 3.47.8 stable; Node 24.21.0.
+Verified application commit: `422f4a4dbb3badf5245ea59e7db76798a22f0f14`. Flutter 3.47.8; Node 24.
 
 | Verification | Result |
 |---|---|
-| Web/backend/content checks | 81 passed |
-| Flutter tests, Linux | 24 passed |
-| Flutter tests, macOS | 24 passed |
-| Native analysis | 0 errors; 8 informational notes |
+| Node tests | 124 passed, zero failed |
+| Flutter tests, Linux | 37 passed |
+| Flutter tests, macOS | Same 37 tests passed |
+| Native analysis | No issues found on both hosts |
 | Android debug APK | Built |
 | iOS simulator app | Built |
-| PostgreSQL migration/RLS/concurrency assertions | 36 passed |
-| Backend Docker image + HTTP smoke | Passed |
-| Desktop/family/Urdu mobile/cloud-role Chrome scenarios | 4 passed |
+| PostgreSQL integration assertions | 36 passed |
+| Docker build and HTTP smoke | Passed, 168 lessons |
+| Real Chrome scenarios | Eight passed |
 
 ## What is included
 
