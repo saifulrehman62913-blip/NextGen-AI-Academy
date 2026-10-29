@@ -12,6 +12,11 @@ String newProfileId() { final r=Random.secure();return List.generate(16,(_)=>r.n
 const goalLabels={'Everyday conversation':'روزمرہ کی گفتگو','Travel & connections':'سفر اور تعلقات','School & study':'سکول اور تعلیم','Work & interviews':'کام اور انٹرویو'};
 String speechLocale(String language)=>const {'en':'en-US','ur':'ur-PK','pa':'pa-PK','sd':'sd-PK','skr':'skr-PK','ps':'ps-AF','fa':'fa-IR','ar':'ar-SA','tr':'tr-TR','hi':'hi-IN','bn':'bn-BD','gu':'gu-IN','ta':'ta-IN','te':'te-IN','ml':'ml-IN','ne':'ne-NP','si':'si-LK','zh':'zh-CN','ja':'ja-JP','ko':'ko-KR','id':'id-ID','ms':'ms-MY','th':'th-TH','vi':'vi-VN','fr':'fr-FR','es':'es-ES','de':'de-DE','it':'it-IT','pt':'pt-PT','ru':'ru-RU','nl':'nl-NL','pl':'pl-PL','sw':'sw-KE','so':'so-SO'}[language]??language;
 
+// Ignore taught punctuation while preserving accents and target-script letters.
+String normalizePracticeText(String value)=>value.toLowerCase()
+    .replaceAll(RegExp(r'''[.,!?؛،۔؟।॥。！？、，；：“”‘’"'«»()\[\]{}:;¿¡…\-]'''),'')
+    .replaceAll(RegExp(r'\s+'),' ').trim();
+
 String dayKey([DateTime? date]) {
   final d = date ?? DateTime.now();
   return '${d.year}-${d.month.toString().padLeft(2, '0')}-${d.day.toString().padLeft(2, '0')}';

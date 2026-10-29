@@ -6,6 +6,8 @@ This native build has no configured backend URL and does not require an account 
 
 When cloud configuration is absent, speaking practice offers device Listen, optional supported recognition and local word comparison. It hides unavailable AI/conversation controls. The family page displays local-saving guidance and hides email sign-in and subscription prompts. Privacy copy also explains the lack of cloud backup without directing offline users to unavailable sign-in. Direct sign-in attempts return a clear local-edition message rather than opening a nonworking OTP flow. Cloud-configured editions retain their existing signed-in AI flow and paid-access guards.
 
+Native word comparison now ignores common target-script punctuation (including Arabic/Urdu question marks, Indic danda and East Asian stops) without stripping meaningful accents/letters. A regression covers these cases.
+
 Two native widget regressions verify usable offline word comparison and the family screen's local controls without dead account/purchase prompts. Existing cloud fixtures continue exercising the configured AI path. No production credentials, paid plan, live AI, payment activation, owner signing or store publication is included.
 
 Verification: pending latest native cloud run. The previous 0.8.0 run verified 124 Node tests and 33 Flutter tests per host. Update this report with the exact 0.8.1 commit/run and artifacts only after they succeed.

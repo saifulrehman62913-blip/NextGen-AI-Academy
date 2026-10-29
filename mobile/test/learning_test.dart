@@ -11,6 +11,20 @@ import 'package:ilmigo/parent.dart';
 void main() {
   TestWidgetsFlutterBinding.ensureInitialized();
   setUp(() => SharedPreferences.setMockInitialValues({}));
+  test('practice comparison ignores target-script punctuation without discarding meaningful letters',(){
+    for(final pair in <List<String>>[
+      ['آپ کا نام کیا ہے؟','آپ کا نام کیا ہے'],
+      ['ما اسمك؟','ما اسمك'],
+      ['मेरा नाम अली है।','मेरा नाम अली है'],
+      ['我叫阿里。','我叫阿里'],
+      ['お名前は何ですか。','お名前は何ですか'],
+      ['¿Cómo se llama usted?','Cómo se llama usted'],
+      ['  Hello,   Ali!  ','hello ali'],
+      ['Je m’appelle Ali.','Je mappelle Ali'],
+    ]){expect(normalizePracticeText(pair[0]),normalizePracticeText(pair[1]));}
+    expect(normalizePracticeText('sí'),isNot(normalizePracticeText('si')));
+    expect(normalizePracticeText('कला'),isNot(normalizePracticeText('काल')));
+  });
   test('streak crosses month boundaries and survives a missed current day', () {
     final p=Learner(id:'a',name:'Ali',days:['2026-09-30','2026-10-01']);
     expect(p.streak(DateTime(2026,10,2)),2);
