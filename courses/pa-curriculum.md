@@ -1,6 +1,6 @@
 # ILMIGO · Punjabi introductory foundation
 
-Original draft: qualified language and audio review pending. Three suggested 30-minute practice sessions. Not a complete professional course.
+Original draft: qualified language and audio review pending. Four suggested 30-minute practice sessions. Not a complete professional course.
 
 Reading, partner drill, writing and four answer-key checks per lesson. Roman aids are approximate.
 
@@ -84,4 +84,31 @@ Copy each target expression carefully. Cover the model and write it from memory.
 - Choose the taught expression for: Two. → دو
 - Choose the taught expression for: Three. → تن
 - Choose the taught expression for: Four. → چار
+
+## Introduce yourself politely
+
+This course uses Pakistani Punjabi in Shahmukhi script, read right to left. Gurmukhi is a different writing system. Meharbani karo is a courteous request; social context affects register. The model introduces a speaker named Ali. Respectful address is used where shown; gender, register and local usage need qualified review. Forms of learning can mark an ongoing activity or a general habit rather than matching the English tense word for word.
+
+**Daily plan:** 5m review, 8m words/patterns, 7m read/listen, 7m speak/write, 3m assessment.
+
+- میرا ناں علی اے۔ — My name is Ali. / میرا نام علی ہے۔ (mera naa Ali ae)
+- تہاڈا ناں کی اے؟ — What is your name? / آپ کا نام کیا ہے؟ (tuhaada naa ki ae)
+- تہاڈے نال مل کے خوشی ہوئی۔ — Nice to meet you. / آپ سے مل کر خوشی ہوئی۔ (tuhaaday naal mil kay khushi hoi)
+- میں سکھ رہا آں۔ — I am learning. / میں سیکھ رہا ہوں / رہی ہوں۔ (main sikh reha aan)
+
+**Reading / drill**
+
+میرا ناں علی اے۔
+تہاڈا ناں کی اے؟
+تہاڈے نال مل کے خوشی ہوئی۔
+میں سکھ رہا آں۔
+
+Introduce yourself with your own name in place of Ali. Ask a partner their name using the taught form, then use the meeting and learning expressions. Write a four-line introduction and repeat it without reading. Confirm gender and respectful-address changes with a competent speaker; do not invent word-for-word translations.
+
+**Quiz answer key**
+
+- Choose the taught expression for: My name is Ali.. → میرا ناں علی اے۔
+- Choose the taught expression for: What is your name?. → تہاڈا ناں کی اے؟
+- Choose the taught expression for: Nice to meet you.. → تہاڈے نال مل کے خوشی ہوئی۔
+- Choose the taught expression for: I am learning.. → میں سکھ رہا آں۔
 

@@ -67,4 +67,4 @@ if __name__=='__main__':
     expanded=balance_assessments(extend(build(base)))
     write(expanded)
     export(expanded)
-    print('Built 136 draft lessons: English/Urdu 20 each, 32 foundation courses 3 each. Qualified review pending.')
+    print('Built 168 draft lessons: English/Urdu 20 each, 32 foundation courses 4 each. Qualified review pending.')

@@ -22,6 +22,19 @@ class DeferredPracticeCloud extends CloudService {
 void main(){
   TestWidgetsFlutterBinding.ensureInitialized();
   setUp(()=>SharedPreferences.setMockInitialValues({}));
+  testWidgets('practice phrase uses each course reading direction, including non-Urdu RTL languages',(tester) async {
+    final store=LearningStore();await tester.runAsync(()=>store.load());
+    final cloud=CloudService();addTearDown(cloud.close);
+    for(final language in store.catalog['languages'] as List){
+      store.learner.language=language['id'] as String;
+      final target=store.nextLesson!['speaking'] as String;
+      await tester.pumpWidget(MaterialApp(home:Scaffold(body:PracticeView(key:ValueKey(language['id']),store:store,cloud:cloud,voice:VoiceService(),onLogin:() async {}))));
+      final phrase=tester.widget<Text>(find.text(target).first);
+      expect(phrase.textDirection,language['direction']=='rtl'?TextDirection.rtl:TextDirection.ltr,reason:language['id'] as String);
+      expect(tester.takeException(),isNull);
+    }
+    await tester.pumpWidget(const SizedBox());
+  },timeout:const Timeout(Duration(seconds:60)));
   testWidgets('assessment radio groups keep every question independently selected',(tester) async {
     final store=LearningStore();await tester.runAsync(()=>store.load());
     final lesson=store.nextLesson!,questions=lessonQuestions(lesson),voice=VoiceService();

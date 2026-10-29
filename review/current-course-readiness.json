@@ -1,0 +1,788 @@
+{
+  "checkedAtDatePakistan": "2026-10-29",
+  "catalogRevision": 6,
+  "lessons": 168,
+  "languageCount": 34,
+  "qualifiedApprovalGranted": false,
+  "physicalPhoneAccessAvailable": false,
+  "deployedBackendProvided": false,
+  "languages": [
+    {
+      "id": "ur",
+      "language": "Urdu",
+      "lessonCount": 20,
+      "plannedMinutes": 600,
+      "levelCounts": {
+        "beginner": 4,
+        "elementary": 4,
+        "intermediate": 4,
+        "advanced": 4,
+        "professional": 4
+      },
+      "levelsWithoutContent": [],
+      "qualifiedReviewComplete": false,
+      "qualifiedAudioReviewComplete": false,
+      "professionalCourseComplete": false,
+      "nextAuthoringWork": "Author coherent progressive lessons, readings, dialogues and assessments for missing levels; deepen existing content; obtain competent review before publication."
+    },
+    {
+      "id": "en",
+      "language": "English",
+      "lessonCount": 20,
+      "plannedMinutes": 600,
+      "levelCounts": {
+        "beginner": 4,
+        "elementary": 4,
+        "intermediate": 4,
+        "advanced": 4,
+        "professional": 4
+      },
+      "levelsWithoutContent": [],
+      "qualifiedReviewComplete": false,
+      "qualifiedAudioReviewComplete": false,
+      "professionalCourseComplete": false,
+      "nextAuthoringWork": "Author coherent progressive lessons, readings, dialogues and assessments for missing levels; deepen existing content; obtain competent review before publication."
+    },
+    {
+      "id": "pa",
+      "language": "Punjabi",
+      "lessonCount": 4,
+      "plannedMinutes": 120,
+      "levelCounts": {
+        "beginner": 4,
+        "elementary": 0,
+        "intermediate": 0,
+        "advanced": 0,
+        "professional": 0
+      },
+      "levelsWithoutContent": [
+        "elementary",
+        "intermediate",
+        "advanced",
+        "professional"
+      ],
+      "qualifiedReviewComplete": false,
+      "qualifiedAudioReviewComplete": false,
+      "professionalCourseComplete": false,
+      "nextAuthoringWork": "Author coherent progressive lessons, readings, dialogues and assessments for missing levels; deepen existing content; obtain competent review before publication."
+    },
+    {
+      "id": "sd",
+      "language": "Sindhi",
+      "lessonCount": 4,
+      "plannedMinutes": 120,
+      "levelCounts": {
+        "beginner": 4,
+        "elementary": 0,
+        "intermediate": 0,
+        "advanced": 0,
+        "professional": 0
+      },
+      "levelsWithoutContent": [
+        "elementary",
+        "intermediate",
+        "advanced",
+        "professional"
+      ],
+      "qualifiedReviewComplete": false,
+      "qualifiedAudioReviewComplete": false,
+      "professionalCourseComplete": false,
+      "nextAuthoringWork": "Author coherent progressive lessons, readings, dialogues and assessments for missing levels; deepen existing content; obtain competent review before publication."
+    },
+    {
+      "id": "skr",
+      "language": "Saraiki",
+      "lessonCount": 4,
+      "plannedMinutes": 120,
+      "levelCounts": {
+        "beginner": 4,
+        "elementary": 0,
+        "intermediate": 0,
+        "advanced": 0,
+        "professional": 0
+      },
+      "levelsWithoutContent": [
+        "elementary",
+        "intermediate",
+        "advanced",
+        "professional"
+      ],
+      "qualifiedReviewComplete": false,
+      "qualifiedAudioReviewComplete": false,
+      "professionalCourseComplete": false,
+      "nextAuthoringWork": "Author coherent progressive lessons, readings, dialogues and assessments for missing levels; deepen existing content; obtain competent review before publication."
+    },
+    {
+      "id": "ps",
+      "language": "Pashto",
+      "lessonCount": 4,
+      "plannedMinutes": 120,
+      "levelCounts": {
+        "beginner": 4,
+        "elementary": 0,
+        "intermediate": 0,
+        "advanced": 0,
+        "professional": 0
+      },
+      "levelsWithoutContent": [
+        "elementary",
+        "intermediate",
+        "advanced",
+        "professional"
+      ],
+      "qualifiedReviewComplete": false,
+      "qualifiedAudioReviewComplete": false,
+      "professionalCourseComplete": false,
+      "nextAuthoringWork": "Author coherent progressive lessons, readings, dialogues and assessments for missing levels; deepen existing content; obtain competent review before publication."
+    },
+    {
+      "id": "fa",
+      "language": "Persian / Farsi",
+      "lessonCount": 4,
+      "plannedMinutes": 120,
+      "levelCounts": {
+        "beginner": 4,
+        "elementary": 0,
+        "intermediate": 0,
+        "advanced": 0,
+        "professional": 0
+      },
+      "levelsWithoutContent": [
+        "elementary",
+        "intermediate",
+        "advanced",
+        "professional"
+      ],
+      "qualifiedReviewComplete": false,
+      "qualifiedAudioReviewComplete": false,
+      "professionalCourseComplete": false,
+      "nextAuthoringWork": "Author coherent progressive lessons, readings, dialogues and assessments for missing levels; deepen existing content; obtain competent review before publication."
+    },
+    {
+      "id": "ar",
+      "language": "Arabic",
+      "lessonCount": 4,
+      "plannedMinutes": 120,
+      "levelCounts": {
+        "beginner": 4,
+        "elementary": 0,
+        "intermediate": 0,
+        "advanced": 0,
+        "professional": 0
+      },
+      "levelsWithoutContent": [
+        "elementary",
+        "intermediate",
+        "advanced",
+        "professional"
+      ],
+      "qualifiedReviewComplete": false,
+      "qualifiedAudioReviewComplete": false,
+      "professionalCourseComplete": false,
+      "nextAuthoringWork": "Author coherent progressive lessons, readings, dialogues and assessments for missing levels; deepen existing content; obtain competent review before publication."
+    },
+    {
+      "id": "tr",
+      "language": "Turkish",
+      "lessonCount": 4,
+      "plannedMinutes": 120,
+      "levelCounts": {
+        "beginner": 4,
+        "elementary": 0,
+        "intermediate": 0,
+        "advanced": 0,
+        "professional": 0
+      },
+      "levelsWithoutContent": [
+        "elementary",
+        "intermediate",
+        "advanced",
+        "professional"
+      ],
+      "qualifiedReviewComplete": false,
+      "qualifiedAudioReviewComplete": false,
+      "professionalCourseComplete": false,
+      "nextAuthoringWork": "Author coherent progressive lessons, readings, dialogues and assessments for missing levels; deepen existing content; obtain competent review before publication."
+    },
+    {
+      "id": "hi",
+      "language": "Hindi",
+      "lessonCount": 4,
+      "plannedMinutes": 120,
+      "levelCounts": {
+        "beginner": 4,
+        "elementary": 0,
+        "intermediate": 0,
+        "advanced": 0,
+        "professional": 0
+      },
+      "levelsWithoutContent": [
+        "elementary",
+        "intermediate",
+        "advanced",
+        "professional"
+      ],
+      "qualifiedReviewComplete": false,
+      "qualifiedAudioReviewComplete": false,
+      "professionalCourseComplete": false,
+      "nextAuthoringWork": "Author coherent progressive lessons, readings, dialogues and assessments for missing levels; deepen existing content; obtain competent review before publication."
+    },
+    {
+      "id": "bn",
+      "language": "Bengali",
+      "lessonCount": 4,
+      "plannedMinutes": 120,
+      "levelCounts": {
+        "beginner": 4,
+        "elementary": 0,
+        "intermediate": 0,
+        "advanced": 0,
+        "professional": 0
+      },
+      "levelsWithoutContent": [
+        "elementary",
+        "intermediate",
+        "advanced",
+        "professional"
+      ],
+      "qualifiedReviewComplete": false,
+      "qualifiedAudioReviewComplete": false,
+      "professionalCourseComplete": false,
+      "nextAuthoringWork": "Author coherent progressive lessons, readings, dialogues and assessments for missing levels; deepen existing content; obtain competent review before publication."
+    },
+    {
+      "id": "gu",
+      "language": "Gujarati",
+      "lessonCount": 4,
+      "plannedMinutes": 120,
+      "levelCounts": {
+        "beginner": 4,
+        "elementary": 0,
+        "intermediate": 0,
+        "advanced": 0,
+        "professional": 0
+      },
+      "levelsWithoutContent": [
+        "elementary",
+        "intermediate",
+        "advanced",
+        "professional"
+      ],
+      "qualifiedReviewComplete": false,
+      "qualifiedAudioReviewComplete": false,
+      "professionalCourseComplete": false,
+      "nextAuthoringWork": "Author coherent progressive lessons, readings, dialogues and assessments for missing levels; deepen existing content; obtain competent review before publication."
+    },
+    {
+      "id": "ta",
+      "language": "Tamil",
+      "lessonCount": 4,
+      "plannedMinutes": 120,
+      "levelCounts": {
+        "beginner": 4,
+        "elementary": 0,
+        "intermediate": 0,
+        "advanced": 0,
+        "professional": 0
+      },
+      "levelsWithoutContent": [
+        "elementary",
+        "intermediate",
+        "advanced",
+        "professional"
+      ],
+      "qualifiedReviewComplete": false,
+      "qualifiedAudioReviewComplete": false,
+      "professionalCourseComplete": false,
+      "nextAuthoringWork": "Author coherent progressive lessons, readings, dialogues and assessments for missing levels; deepen existing content; obtain competent review before publication."
+    },
+    {
+      "id": "te",
+      "language": "Telugu",
+      "lessonCount": 4,
+      "plannedMinutes": 120,
+      "levelCounts": {
+        "beginner": 4,
+        "elementary": 0,
+        "intermediate": 0,
+        "advanced": 0,
+        "professional": 0
+      },
+      "levelsWithoutContent": [
+        "elementary",
+        "intermediate",
+        "advanced",
+        "professional"
+      ],
+      "qualifiedReviewComplete": false,
+      "qualifiedAudioReviewComplete": false,
+      "professionalCourseComplete": false,
+      "nextAuthoringWork": "Author coherent progressive lessons, readings, dialogues and assessments for missing levels; deepen existing content; obtain competent review before publication."
+    },
+    {
+      "id": "ml",
+      "language": "Malayalam",
+      "lessonCount": 4,
+      "plannedMinutes": 120,
+      "levelCounts": {
+        "beginner": 4,
+        "elementary": 0,
+        "intermediate": 0,
+        "advanced": 0,
+        "professional": 0
+      },
+      "levelsWithoutContent": [
+        "elementary",
+        "intermediate",
+        "advanced",
+        "professional"
+      ],
+      "qualifiedReviewComplete": false,
+      "qualifiedAudioReviewComplete": false,
+      "professionalCourseComplete": false,
+      "nextAuthoringWork": "Author coherent progressive lessons, readings, dialogues and assessments for missing levels; deepen existing content; obtain competent review before publication."
+    },
+    {
+      "id": "ne",
+      "language": "Nepali",
+      "lessonCount": 4,
+      "plannedMinutes": 120,
+      "levelCounts": {
+        "beginner": 4,
+        "elementary": 0,
+        "intermediate": 0,
+        "advanced": 0,
+        "professional": 0
+      },
+      "levelsWithoutContent": [
+        "elementary",
+        "intermediate",
+        "advanced",
+        "professional"
+      ],
+      "qualifiedReviewComplete": false,
+      "qualifiedAudioReviewComplete": false,
+      "professionalCourseComplete": false,
+      "nextAuthoringWork": "Author coherent progressive lessons, readings, dialogues and assessments for missing levels; deepen existing content; obtain competent review before publication."
+    },
+    {
+      "id": "si",
+      "language": "Sinhala",
+      "lessonCount": 4,
+      "plannedMinutes": 120,
+      "levelCounts": {
+        "beginner": 4,
+        "elementary": 0,
+        "intermediate": 0,
+        "advanced": 0,
+        "professional": 0
+      },
+      "levelsWithoutContent": [
+        "elementary",
+        "intermediate",
+        "advanced",
+        "professional"
+      ],
+      "qualifiedReviewComplete": false,
+      "qualifiedAudioReviewComplete": false,
+      "professionalCourseComplete": false,
+      "nextAuthoringWork": "Author coherent progressive lessons, readings, dialogues and assessments for missing levels; deepen existing content; obtain competent review before publication."
+    },
+    {
+      "id": "zh",
+      "language": "Mandarin Chinese",
+      "lessonCount": 4,
+      "plannedMinutes": 120,
+      "levelCounts": {
+        "beginner": 4,
+        "elementary": 0,
+        "intermediate": 0,
+        "advanced": 0,
+        "professional": 0
+      },
+      "levelsWithoutContent": [
+        "elementary",
+        "intermediate",
+        "advanced",
+        "professional"
+      ],
+      "qualifiedReviewComplete": false,
+      "qualifiedAudioReviewComplete": false,
+      "professionalCourseComplete": false,
+      "nextAuthoringWork": "Author coherent progressive lessons, readings, dialogues and assessments for missing levels; deepen existing content; obtain competent review before publication."
+    },
+    {
+      "id": "ja",
+      "language": "Japanese",
+      "lessonCount": 4,
+      "plannedMinutes": 120,
+      "levelCounts": {
+        "beginner": 4,
+        "elementary": 0,
+        "intermediate": 0,
+        "advanced": 0,
+        "professional": 0
+      },
+      "levelsWithoutContent": [
+        "elementary",
+        "intermediate",
+        "advanced",
+        "professional"
+      ],
+      "qualifiedReviewComplete": false,
+      "qualifiedAudioReviewComplete": false,
+      "professionalCourseComplete": false,
+      "nextAuthoringWork": "Author coherent progressive lessons, readings, dialogues and assessments for missing levels; deepen existing content; obtain competent review before publication."
+    },
+    {
+      "id": "ko",
+      "language": "Korean",
+      "lessonCount": 4,
+      "plannedMinutes": 120,
+      "levelCounts": {
+        "beginner": 4,
+        "elementary": 0,
+        "intermediate": 0,
+        "advanced": 0,
+        "professional": 0
+      },
+      "levelsWithoutContent": [
+        "elementary",
+        "intermediate",
+        "advanced",
+        "professional"
+      ],
+      "qualifiedReviewComplete": false,
+      "qualifiedAudioReviewComplete": false,
+      "professionalCourseComplete": false,
+      "nextAuthoringWork": "Author coherent progressive lessons, readings, dialogues and assessments for missing levels; deepen existing content; obtain competent review before publication."
+    },
+    {
+      "id": "id",
+      "language": "Indonesian",
+      "lessonCount": 4,
+      "plannedMinutes": 120,
+      "levelCounts": {
+        "beginner": 4,
+        "elementary": 0,
+        "intermediate": 0,
+        "advanced": 0,
+        "professional": 0
+      },
+      "levelsWithoutContent": [
+        "elementary",
+        "intermediate",
+        "advanced",
+        "professional"
+      ],
+      "qualifiedReviewComplete": false,
+      "qualifiedAudioReviewComplete": false,
+      "professionalCourseComplete": false,
+      "nextAuthoringWork": "Author coherent progressive lessons, readings, dialogues and assessments for missing levels; deepen existing content; obtain competent review before publication."
+    },
+    {
+      "id": "ms",
+      "language": "Malay",
+      "lessonCount": 4,
+      "plannedMinutes": 120,
+      "levelCounts": {
+        "beginner": 4,
+        "elementary": 0,
+        "intermediate": 0,
+        "advanced": 0,
+        "professional": 0
+      },
+      "levelsWithoutContent": [
+        "elementary",
+        "intermediate",
+        "advanced",
+        "professional"
+      ],
+      "qualifiedReviewComplete": false,
+      "qualifiedAudioReviewComplete": false,
+      "professionalCourseComplete": false,
+      "nextAuthoringWork": "Author coherent progressive lessons, readings, dialogues and assessments for missing levels; deepen existing content; obtain competent review before publication."
+    },
+    {
+      "id": "th",
+      "language": "Thai",
+      "lessonCount": 4,
+      "plannedMinutes": 120,
+      "levelCounts": {
+        "beginner": 4,
+        "elementary": 0,
+        "intermediate": 0,
+        "advanced": 0,
+        "professional": 0
+      },
+      "levelsWithoutContent": [
+        "elementary",
+        "intermediate",
+        "advanced",
+        "professional"
+      ],
+      "qualifiedReviewComplete": false,
+      "qualifiedAudioReviewComplete": false,
+      "professionalCourseComplete": false,
+      "nextAuthoringWork": "Author coherent progressive lessons, readings, dialogues and assessments for missing levels; deepen existing content; obtain competent review before publication."
+    },
+    {
+      "id": "vi",
+      "language": "Vietnamese",
+      "lessonCount": 4,
+      "plannedMinutes": 120,
+      "levelCounts": {
+        "beginner": 4,
+        "elementary": 0,
+        "intermediate": 0,
+        "advanced": 0,
+        "professional": 0
+      },
+      "levelsWithoutContent": [
+        "elementary",
+        "intermediate",
+        "advanced",
+        "professional"
+      ],
+      "qualifiedReviewComplete": false,
+      "qualifiedAudioReviewComplete": false,
+      "professionalCourseComplete": false,
+      "nextAuthoringWork": "Author coherent progressive lessons, readings, dialogues and assessments for missing levels; deepen existing content; obtain competent review before publication."
+    },
+    {
+      "id": "fr",
+      "language": "French",
+      "lessonCount": 4,
+      "plannedMinutes": 120,
+      "levelCounts": {
+        "beginner": 4,
+        "elementary": 0,
+        "intermediate": 0,
+        "advanced": 0,
+        "professional": 0
+      },
+      "levelsWithoutContent": [
+        "elementary",
+        "intermediate",
+        "advanced",
+        "professional"
+      ],
+      "qualifiedReviewComplete": false,
+      "qualifiedAudioReviewComplete": false,
+      "professionalCourseComplete": false,
+      "nextAuthoringWork": "Author coherent progressive lessons, readings, dialogues and assessments for missing levels; deepen existing content; obtain competent review before publication."
+    },
+    {
+      "id": "es",
+      "language": "Spanish",
+      "lessonCount": 4,
+      "plannedMinutes": 120,
+      "levelCounts": {
+        "beginner": 4,
+        "elementary": 0,
+        "intermediate": 0,
+        "advanced": 0,
+        "professional": 0
+      },
+      "levelsWithoutContent": [
+        "elementary",
+        "intermediate",
+        "advanced",
+        "professional"
+      ],
+      "qualifiedReviewComplete": false,
+      "qualifiedAudioReviewComplete": false,
+      "professionalCourseComplete": false,
+      "nextAuthoringWork": "Author coherent progressive lessons, readings, dialogues and assessments for missing levels; deepen existing content; obtain competent review before publication."
+    },
+    {
+      "id": "de",
+      "language": "German",
+      "lessonCount": 4,
+      "plannedMinutes": 120,
+      "levelCounts": {
+        "beginner": 4,
+        "elementary": 0,
+        "intermediate": 0,
+        "advanced": 0,
+        "professional": 0
+      },
+      "levelsWithoutContent": [
+        "elementary",
+        "intermediate",
+        "advanced",
+        "professional"
+      ],
+      "qualifiedReviewComplete": false,
+      "qualifiedAudioReviewComplete": false,
+      "professionalCourseComplete": false,
+      "nextAuthoringWork": "Author coherent progressive lessons, readings, dialogues and assessments for missing levels; deepen existing content; obtain competent review before publication."
+    },
+    {
+      "id": "it",
+      "language": "Italian",
+      "lessonCount": 4,
+      "plannedMinutes": 120,
+      "levelCounts": {
+        "beginner": 4,
+        "elementary": 0,
+        "intermediate": 0,
+        "advanced": 0,
+        "professional": 0
+      },
+      "levelsWithoutContent": [
+        "elementary",
+        "intermediate",
+        "advanced",
+        "professional"
+      ],
+      "qualifiedReviewComplete": false,
+      "qualifiedAudioReviewComplete": false,
+      "professionalCourseComplete": false,
+      "nextAuthoringWork": "Author coherent progressive lessons, readings, dialogues and assessments for missing levels; deepen existing content; obtain competent review before publication."
+    },
+    {
+      "id": "pt",
+      "language": "Portuguese",
+      "lessonCount": 4,
+      "plannedMinutes": 120,
+      "levelCounts": {
+        "beginner": 4,
+        "elementary": 0,
+        "intermediate": 0,
+        "advanced": 0,
+        "professional": 0
+      },
+      "levelsWithoutContent": [
+        "elementary",
+        "intermediate",
+        "advanced",
+        "professional"
+      ],
+      "qualifiedReviewComplete": false,
+      "qualifiedAudioReviewComplete": false,
+      "professionalCourseComplete": false,
+      "nextAuthoringWork": "Author coherent progressive lessons, readings, dialogues and assessments for missing levels; deepen existing content; obtain competent review before publication."
+    },
+    {
+      "id": "ru",
+      "language": "Russian",
+      "lessonCount": 4,
+      "plannedMinutes": 120,
+      "levelCounts": {
+        "beginner": 4,
+        "elementary": 0,
+        "intermediate": 0,
+        "advanced": 0,
+        "professional": 0
+      },
+      "levelsWithoutContent": [
+        "elementary",
+        "intermediate",
+        "advanced",
+        "professional"
+      ],
+      "qualifiedReviewComplete": false,
+      "qualifiedAudioReviewComplete": false,
+      "professionalCourseComplete": false,
+      "nextAuthoringWork": "Author coherent progressive lessons, readings, dialogues and assessments for missing levels; deepen existing content; obtain competent review before publication."
+    },
+    {
+      "id": "nl",
+      "language": "Dutch",
+      "lessonCount": 4,
+      "plannedMinutes": 120,
+      "levelCounts": {
+        "beginner": 4,
+        "elementary": 0,
+        "intermediate": 0,
+        "advanced": 0,
+        "professional": 0
+      },
+      "levelsWithoutContent": [
+        "elementary",
+        "intermediate",
+        "advanced",
+        "professional"
+      ],
+      "qualifiedReviewComplete": false,
+      "qualifiedAudioReviewComplete": false,
+      "professionalCourseComplete": false,
+      "nextAuthoringWork": "Author coherent progressive lessons, readings, dialogues and assessments for missing levels; deepen existing content; obtain competent review before publication."
+    },
+    {
+      "id": "pl",
+      "language": "Polish",
+      "lessonCount": 4,
+      "plannedMinutes": 120,
+      "levelCounts": {
+        "beginner": 4,
+        "elementary": 0,
+        "intermediate": 0,
+        "advanced": 0,
+        "professional": 0
+      },
+      "levelsWithoutContent": [
+        "elementary",
+        "intermediate",
+        "advanced",
+        "professional"
+      ],
+      "qualifiedReviewComplete": false,
+      "qualifiedAudioReviewComplete": false,
+      "professionalCourseComplete": false,
+      "nextAuthoringWork": "Author coherent progressive lessons, readings, dialogues and assessments for missing levels; deepen existing content; obtain competent review before publication."
+    },
+    {
+      "id": "sw",
+      "language": "Swahili",
+      "lessonCount": 4,
+      "plannedMinutes": 120,
+      "levelCounts": {
+        "beginner": 4,
+        "elementary": 0,
+        "intermediate": 0,
+        "advanced": 0,
+        "professional": 0
+      },
+      "levelsWithoutContent": [
+        "elementary",
+        "intermediate",
+        "advanced",
+        "professional"
+      ],
+      "qualifiedReviewComplete": false,
+      "qualifiedAudioReviewComplete": false,
+      "professionalCourseComplete": false,
+      "nextAuthoringWork": "Author coherent progressive lessons, readings, dialogues and assessments for missing levels; deepen existing content; obtain competent review before publication."
+    },
+    {
+      "id": "so",
+      "language": "Somali",
+      "lessonCount": 4,
+      "plannedMinutes": 120,
+      "levelCounts": {
+        "beginner": 4,
+        "elementary": 0,
+        "intermediate": 0,
+        "advanced": 0,
+        "professional": 0
+      },
+      "levelsWithoutContent": [
+        "elementary",
+        "intermediate",
+        "advanced",
+        "professional"
+      ],
+      "qualifiedReviewComplete": false,
+      "qualifiedAudioReviewComplete": false,
+      "professionalCourseComplete": false,
+      "nextAuthoringWork": "Author coherent progressive lessons, readings, dialogues and assessments for missing levels; deepen existing content; obtain competent review before publication."
+    }
+  ],
+  "notes": [
+    "Level labels and completed automated tests do not establish professional fluency.",
+    "This is a technical coverage audit, not qualified linguistic approval.",
+    "Every track needs curriculum development and qualified review; coverage alone is not sufficient."
+  ]
+}

@@ -1,6 +1,6 @@
 # ILMIGO · Mandarin Chinese introductory foundation
 
-Original draft: qualified language and audio review pending. Three suggested 30-minute practice sessions. Not a complete professional course.
+Original draft: qualified language and audio review pending. Four suggested 30-minute practice sessions. Not a complete professional course.
 
 Reading, partner drill, writing and four answer-key checks per lesson. Roman aids are approximate.
 
@@ -84,4 +84,31 @@ Copy each target expression carefully. Cover the model and write it from memory.
 - Choose the taught expression for: Two. → 二
 - Choose the taught expression for: Three. → 三
 - Choose the taught expression for: Four. → 四
+
+## Introduce yourself politely
+
+These are Mandarin forms in simplified Chinese characters. Pinyin tone marks matter. Shì and bú shì affirm or deny an identity statement; Mandarin does not use one universal yes/no pair for every kind of question. The model introduces a speaker named Ali. Respectful address is used where shown; gender, register and local usage need qualified review. Forms of learning can mark an ongoing activity or a general habit rather than matching the English tense word for word.
+
+**Daily plan:** 5m review, 8m words/patterns, 7m read/listen, 7m speak/write, 3m assessment.
+
+- 我叫阿里。 — My name is Ali. / میرا نام علی ہے۔ (wǒ jiào Ālǐ)
+- 你叫什么名字？ — What is your name? / آپ کا نام کیا ہے؟ (nǐ jiào shénme míngzi)
+- 很高兴认识你。 — Nice to meet you. / آپ سے مل کر خوشی ہوئی۔ (hěn gāoxìng rènshi nǐ)
+- 我在学习。 — I am learning. / میں سیکھ رہا ہوں / رہی ہوں۔ (wǒ zài xuéxí)
+
+**Reading / drill**
+
+我叫阿里。
+你叫什么名字？
+很高兴认识你。
+我在学习。
+
+Introduce yourself with your own name in place of Ali. Ask a partner their name using the taught form, then use the meeting and learning expressions. Write a four-line introduction and repeat it without reading. Confirm gender and respectful-address changes with a competent speaker; do not invent word-for-word translations.
+
+**Quiz answer key**
+
+- Choose the taught expression for: My name is Ali.. → 我叫阿里。
+- Choose the taught expression for: What is your name?. → 你叫什么名字？
+- Choose the taught expression for: Nice to meet you.. → 很高兴认识你。
+- Choose the taught expression for: I am learning.. → 我在学习。
 

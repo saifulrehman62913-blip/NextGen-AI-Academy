@@ -29,7 +29,7 @@ The owner requires a free-only workflow: do not purchase a plan or invoke paid s
 
 Before approval: create or supply the actual recording, record its SHA-256 and provider/locale/voice/version, check decoding/duration/silence, then have a competent language reviewer listen to the full recording and compare every phrase with the approved target text. Check accents, tones, vowel length, register, dialect and script-specific pronunciation. Record corrections, reviewer identity/competence and date. Bind approval to both the script and recording hashes. A changed script, voice or recording requires renewed review.
 
-These lesson recordings alone do not validate every device's TTS voice, arbitrary AI replies or all individual-word playback. Device/provider audio can vary. They also do not turn three beginner lessons into a complete professional course. No audio or human review has been created by this packaging command.
+These lesson recordings alone do not validate every device's TTS voice, arbitrary AI replies or all individual-word playback. Device/provider audio can vary. They also do not turn four beginner lessons into a complete professional course. No audio or human review has been created by this packaging command.
 ''')
     return manifest
 

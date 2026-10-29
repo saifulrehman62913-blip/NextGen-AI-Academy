@@ -1,6 +1,6 @@
 # ILMIGO · Malayalam introductory foundation
 
-Original draft: qualified language and audio review pending. Three suggested 30-minute practice sessions. Not a complete professional course.
+Original draft: qualified language and audio review pending. Four suggested 30-minute practice sessions. Not a complete professional course.
 
 Reading, partner drill, writing and four answer-key checks per lesson. Roman aids are approximate.
 
@@ -84,4 +84,31 @@ Copy each target expression carefully. Cover the model and write it from memory.
 - Choose the taught expression for: Two. → രണ്ട്
 - Choose the taught expression for: Three. → മൂന്ന്
 - Choose the taught expression for: Four. → നാല്
+
+## Introduce yourself politely
+
+Malayalam reads left to right. Poyi varaam is a common leaving expression. Athé affirms; illa denies absence/existence, while other negative contexts can use alla. Do not substitute a standalone reply into every sentence. The model introduces a speaker named Ali. Respectful address is used where shown; gender, register and local usage need qualified review. Forms of learning can mark an ongoing activity or a general habit rather than matching the English tense word for word.
+
+**Daily plan:** 5m review, 8m words/patterns, 7m read/listen, 7m speak/write, 3m assessment.
+
+- എന്റെ പേര് അലി എന്നാണ്. — My name is Ali. / میرا نام علی ہے۔ (ente peru Ali ennaanu)
+- നിങ്ങളുടെ പേര് എന്താണ്? — What is your name? / آپ کا نام کیا ہے؟ (ningalude peru enthaanu)
+- നിങ്ങളെ കണ്ടതിൽ സന്തോഷം. — Nice to meet you. / آپ سے مل کر خوشی ہوئی۔ (ningale kandathil santhosham)
+- ഞാൻ പഠിച്ചുകൊണ്ടിരിക്കുന്നു. — I am learning. / میں سیکھ رہا ہوں / رہی ہوں۔ (njaan padichukondirikkunnu)
+
+**Reading / drill**
+
+എന്റെ പേര് അലി എന്നാണ്.
+നിങ്ങളുടെ പേര് എന്താണ്?
+നിങ്ങളെ കണ്ടതിൽ സന്തോഷം.
+ഞാൻ പഠിച്ചുകൊണ്ടിരിക്കുന്നു.
+
+Introduce yourself with your own name in place of Ali. Ask a partner their name using the taught form, then use the meeting and learning expressions. Write a four-line introduction and repeat it without reading. Confirm gender and respectful-address changes with a competent speaker; do not invent word-for-word translations.
+
+**Quiz answer key**
+
+- Choose the taught expression for: My name is Ali.. → എന്റെ പേര് അലി എന്നാണ്.
+- Choose the taught expression for: What is your name?. → നിങ്ങളുടെ പേര് എന്താണ്?
+- Choose the taught expression for: Nice to meet you.. → നിങ്ങളെ കണ്ടതിൽ സന്തോഷം.
+- Choose the taught expression for: I am learning.. → ഞാൻ പഠിച്ചുകൊണ്ടിരിക്കുന്നു.
 

@@ -1,34 +1,1228 @@
 {
-"pa":{"phrases":["السلام علیکم","خدا حافظ","شکریہ","مہربانی کرو","ہاں","نئیں","ذرا سنو","معاف کرنا","اک","دو","تن","چار"],"roman":["assalam alaikum","khuda hafiz","shukriya","meharbani karo","haan","nain","zara suno","maaf karna","ikk","do","tinn","chaar"],"note":"This course uses Pakistani Punjabi in Shahmukhi script, read right to left. Gurmukhi is a different writing system. Meharbani karo is a courteous request; social context affects register."},
-"sd":{"phrases":["السلام عليڪم","خدا حافظ","مهرباني","مهرباني ڪري","ها","نه","معاف ڪجو","معاف ڪجو","هڪ","ٻه","ٽي","چار"],"roman":["assalam alaikum","khuda hafiz","meharbani","meharbani kare","haa","na","maaf kajo","maaf kajo","hik","ba","te","chaar"],"note":"Sindhi is written right to left here. The letters ٻ and ٽ represent sounds different from ordinary ب and ت. The same expression maaf kajo can serve as excuse me or an apology; use context."},
-"skr":{"phrases":["السلام علیکم","اللہ حافظ","مہربانی","مہربانی کرو","ہاں","کائناں","ذرا سُݨو","معاف کرو","ہِک","ݙو","ترَے","چار"],"roman":["assalam alaikum","allah hafiz","meharbani","meharbani karo","haan","kaain","zara suno","maaf karo","hikk","ddo","tray","chaar"],"note":"Saraiki is shown in its Pakistani Arabic-derived script, read right to left. Distinctive letters such as ݙ are important. Everyday wording and number pronunciation vary by region; these are approximate practice forms."},
-"ps":{"phrases":["سلام","خدای پامان","مننه","مهرباني وکړئ","هو","نه","وبښئ","بخښنه غواړم","یو","دوه","درې","څلور"],"roman":["salaam","khudai paamaan","manana","meharbani wakrai","ho","na","wabakhai","bakhana ghwaram","yaw","dwa","dre","tsalor"],"note":"Pashto reads right to left. This is a general introductory set, not a Swabi-specific dialect course. Respectful plural request forms are used; regional pronunciations of ښ and ږ vary."},
-"fa":{"phrases":["سلام","خداحافظ","ممنون","لطفاً","بله","نه","ببخشید","متأسفم","یک","دو","سه","چهار"],"roman":["salaam","khodaahaafez","mamnoon","lotfan","bale","na","bebakhshid","moteassefam","yek","do","se","chahaar"],"note":"Persian reads right to left. These are Iranian Persian introductory forms. Lotfan commonly accompanies a request; bebakhshid can politely attract attention or introduce an apology."},
-"ar":{"phrases":["مرحبًا","إلى اللقاء","شكرًا","من فضلك","نعم","لا","عفوًا","أنا آسف","واحد","اثنان","ثلاثة","أربعة"],"roman":["marhaban","ila al-liqaa","shukran","min fadlik","naam","laa","afwan","ana aasif","waahid","ithnaan","thalaatha","arbaa"],"note":"These are introductory Modern Standard Arabic forms, not a specific spoken dialect. Ana aasif is a masculine speaker form; a feminine speaker says ana aasifa (أنا آسفة). Numbers here are citation forms; agreement changes in sentences."},
-"tr":{"phrases":["Merhaba","Hoşça kal","Teşekkür ederim","Lütfen","Evet","Hayır","Affedersiniz","Özür dilerim","bir","iki","üç","dört"],"note":"Turkish uses a Latin alphabet. Dotless ı differs from i; ş sounds approximately like English sh and ç like ch. Hoşça kal is said to someone staying when you leave; a person staying can reply Güle güle."},
-"hi":{"phrases":["नमस्ते","अलविदा","धन्यवाद","कृपया","हाँ","नहीं","सुनिए","माफ़ कीजिए","एक","दो","तीन","चार"],"roman":["namaste","alvida","dhanyavaad","kripaya","haan","nahin","suniye","maaf kijiye","ek","do","teen","chaar"],"note":"Hindi uses Devanagari, read left to right. Suniye is a respectful way to attract attention. The dot in फ़ marks a borrowed f sound, and the nasal mark in हाँ affects pronunciation."},
-"bn":{"phrases":["নমস্কার","বিদায়","ধন্যবাদ","অনুগ্রহ করে","হ্যাঁ","না","এই যে","দুঃখিত","এক","দুই","তিন","চার"],"roman":["nomoshkar","biday","dhonnobad","onugroho kore","hyan","na","ei je","dukkhito","ek","dui","tin","char"],"note":"Bengali uses its own left-to-right script. Nomoshkar is one greeting; greetings vary by community. Ei je attracts attention. Roman letters are only a pronunciation aid, not a substitute for the script."},
-"gu":{"phrases":["નમસ્તે","આવજો","આભાર","કૃપા કરીને","હા","ના","જરા સાંભળો","માફ કરશો","એક","બે","ત્રણ","ચાર"],"roman":["namaste","aavjo","aabhaar","kripa karine","haa","naa","jara saambhalo","maaf karsho","ek","be","tran","chaar"],"note":"Gujarati reads left to right in its own script. Aavjo is a common parting expression. Respectful requests can use કરશો; do not infer word-by-word English order from a whole expression."},
-"ta":{"phrases":["வணக்கம்","போய் வருகிறேன்","நன்றி","தயவுசெய்து","ஆம்","இல்லை","மன்னிக்கவும்","மன்னிக்கவும்","ஒன்று","இரண்டு","மூன்று","நான்கு"],"roman":["vanakkam","poy varugiren","nandri","thayavuseythu","aam","illai","mannikkavum","mannikkavum","ondru","irandu","moondru","naangu"],"note":"Tamil reads left to right. Poy varugiren is a parting expression meaning that the speaker is leaving and will return. Mannikkavum can serve as excuse me or sorry. Spoken forms differ from these careful written forms."},
-"te":{"phrases":["నమస్కారం","వెళ్లి వస్తాను","ధన్యవాదాలు","దయచేసి","అవును","కాదు","కొంచెం వినండి","క్షమించండి","ఒకటి","రెండు","మూడు","నాలుగు"],"roman":["namaskaaram","velli vastaanu","dhanyavaadaalu","dayachesi","avunu","kaadu","konchem vinandi","kshaminchandi","okati","rendu","moodu","naalugu"],"note":"Telugu reads left to right. Velli vastaanu is a leaving expression. Kaadu is a negative reply for identification; Telugu has other negative forms for absence or actions. These numbers are standalone counting forms."},
-"ml":{"phrases":["നമസ്കാരം","പോയി വരാം","നന്ദി","ദയവായി","അതെ","ഇല്ല","ഒന്ന് കേൾക്കൂ","ക്ഷമിക്കണം","ഒന്ന്","രണ്ട്","മൂന്ന്","നാല്"],"roman":["namaskaaram","poyi varaam","nandi","dayavaayi","athe","illa","onnu kelkkoo","kshamikkanam","onnu","randu","moonnu","naalu"],"note":"Malayalam reads left to right. Poyi varaam is a common leaving expression. Athé affirms; illa denies absence/existence, while other negative contexts can use alla. Do not substitute a standalone reply into every sentence."},
-"ne":{"phrases":["नमस्ते","फेरि भेटौँला","धन्यवाद","कृपया","हो","होइन","सुन्नुहोस्","माफ गर्नुहोस्","एक","दुई","तीन","चार"],"roman":["namaste","pheri bhetaunla","dhanyabaad","kripaya","ho","hoina","sunnuhos","maaf garnuhos","ek","dui","tin","chaar"],"note":"Nepali uses Devanagari. The ending -nuhos gives a respectful request. Ho and hoina answer identification statements; context determines which affirmative or negative verb form is needed."},
-"si":{"phrases":["ආයුබෝවන්","ගිහින් එන්නම්","ස්තුතියි","කරුණාකර","ඔව්","නැහැ","පොඩ්ඩක් අහන්න","සමාවෙන්න","එක","දෙක","තුන","හතර"],"roman":["aayubowan","gihin ennam","stutiyi","karunaakara","ow","naehae","poddak ahanna","samaawenna","eka","deka","thuna","hathara"],"note":"Sinhala uses a left-to-right script. Aayubowan is a respectful greeting. Gihin ennam is a leaving expression. Roman spellings here are approximate; vowel length and consonant contrasts require listening practice."},
-"zh":{"phrases":["你好","再见","谢谢","请","是","不是","请问","对不起","一","二","三","四"],"roman":["nǐ hǎo","zài jiàn","xiè xie","qǐng","shì","bú shì","qǐng wèn","duì bu qǐ","yī","èr","sān","sì"],"note":"These are Mandarin forms in simplified Chinese characters. Pinyin tone marks matter. Shì and bú shì affirm or deny an identity statement; Mandarin does not use one universal yes/no pair for every kind of question."},
-"ja":{"phrases":["こんにちは","さようなら","ありがとうございます","お願いします","はい","いいえ","すみません","ごめんなさい","一","二","三","四"],"roman":["konnichiwa","sayounara","arigatou gozaimasu","onegai shimasu","hai","iie","sumimasen","gomennasai","ichi","ni","san","yon"],"note":"Japanese uses kana and kanji. Konnichiwa is mainly a daytime greeting. Sayounara often suggests a longer parting; casual short-term goodbyes differ. Onegai shimasu is a polite request expression, not a word-for-word equivalent in every English please sentence."},
-"ko":{"phrases":["안녕하세요","안녕히 가세요","감사합니다","부탁합니다","네","아니요","실례합니다","죄송합니다","하나","둘","셋","넷"],"roman":["annyeonghaseyo","annyeonghi gaseyo","gamsahamnida","butakhamnida","ne","aniyo","sillyehamnida","joesonghamnida","hana","dul","set","net"],"note":"These Korean forms use polite speech. Annyeonghi gaseyo is said to someone leaving; someone leaving can say annyeonghi gyeseyo to a person staying. Numbers here are native Korean standalone forms; Sino-Korean numbers serve other purposes."},
-"id":{"phrases":["Halo","Sampai jumpa","Terima kasih","Tolong","Ya","Tidak","Permisi","Maaf","satu","dua","tiga","empat"],"note":"Indonesian uses Latin script. Tolong often requests help; silakan invites someone to do something. Tidak negates many verbs/adjectives; bukan is used in other negative contexts. Keep these phrases in their taught situations."},
-"ms":{"phrases":["Helo","Jumpa lagi","Terima kasih","Tolong","Ya","Tidak","Tumpang lalu","Maaf","satu","dua","tiga","empat"],"note":"This course uses Malay in Rumi Latin script. Tolong is used when requesting help. Tumpang lalu politely asks to pass. Malay and Indonesian share many words but are distinct standards with usage differences."},
-"th":{"phrases":["สวัสดี","ลาก่อน","ขอบคุณ","กรุณา","ใช่","ไม่ใช่","ขอทางหน่อย","ขอโทษ","หนึ่ง","สอง","สาม","สี่"],"roman":["sawatdi","la kon","khop khun","karuna","chai","mai chai","kho thang noi","kho thot","nueng","song","sam","si"],"note":"Thai is tonal; these unmarked Roman aids do not encode tones. Polite particles khrap (ครับ) and kha (ค่ะ/คะ) depend on speaker/context. Chai/mai chai answer identification questions; other yes/no questions can repeat their verb."},
-"vi":{"phrases":["Xin chào","Tạm biệt","Cảm ơn","Làm ơn","Vâng","Không","Xin phép","Xin lỗi","một","hai","ba","bốn"],"note":"Vietnamese uses Latin letters with essential vowel and tone marks. Vâng is a respectful affirmative; dạ is also used in respectful replies. Pronouns and ways of addressing people depend on age and relationship."},
-"fr":{"phrases":["Bonjour","Au revoir","Merci","S’il vous plaît","Oui","Non","Excusez-moi","Je suis désolé","un","deux","trois","quatre"],"note":"French vous is respectful or plural. Je suis désolé is a masculine written form; a feminine speaker writes désolée. Many final letters are not pronounced, so the written forms are not phonetic transcriptions."},
-"es":{"phrases":["Hola","Adiós","Gracias","Por favor","Sí","No","Disculpe","Lo siento","uno","dos","tres","cuatro"],"note":"Spanish accent marks are meaningful: sí means yes, while si means if. Disculpe is a respectful attention/apology form. Standalone uno changes form before certain nouns; counting is not the whole number-agreement system."},
-"de":{"phrases":["Hallo","Auf Wiedersehen","Danke","Bitte","Ja","Nein","Entschuldigen Sie","Es tut mir leid","eins","zwei","drei","vier"],"note":"German Sie is a respectful form of address and is capitalized here. Bitte can mean please or you are welcome depending on context. Standalone eins changes before nouns, for example ein Buch."},
-"it":{"phrases":["Buongiorno","Arrivederci","Grazie","Per favore","Sì","No","Mi scusi","Mi dispiace","uno","due","tre","quattro"],"note":"Italian Mi scusi is a respectful attention form. Sì with an accent is yes. Uno is a standalone counting form whose form can change with the following noun. Double consonants affect pronunciation."},
-"pt":{"phrases":["Olá","Até logo","Obrigado","Por favor","Sim","Não","Com licença","Desculpe","um","dois","três","quatro"],"note":"Portuguese Obrigado is used by a masculine speaker; a feminine speaker says Obrigada. Com licença politely asks permission to pass. Pronunciation differs between Brazilian and European varieties; nasal vowels matter."},
-"ru":{"phrases":["Здравствуйте","До свидания","Спасибо","Пожалуйста","Да","Нет","Разрешите пройти","Извините","один","два","три","четыре"],"roman":["zdravstvuyte","do svidaniya","spasibo","pozhaluysta","da","nyet","razreshite proyti","izvinite","odin","dva","tri","chetyre"],"note":"Russian uses Cyrillic. Zdravstvuyte is respectful or plural. Razreshite proyti asks permission to pass. Numbers here are citation forms; their form and the following noun change with gender and grammatical case."},
-"nl":{"phrases":["Hallo","Tot ziens","Dank u","Alstublieft","Ja","Nee","Pardon","Het spijt me","een","twee","drie","vier"],"note":"Dutch u is respectful; je is familiar. Alstublieft can mean please or accompany handing something over. Een is the written counting form one; één can distinguish it from the indefinite article in context."},
-"pl":{"phrases":["Dzień dobry","Do widzenia","Dziękuję","Proszę","Tak","Nie","Przepraszam","Przepraszam","jeden","dwa","trzy","cztery"],"note":"Polish diacritics are essential. Przepraszam serves both excuse me and sorry. Dzień dobry is a daytime greeting. Counting forms change with gender and case in sentences; these are introductory standalone forms."},
-"sw":{"phrases":["Habari","Kwaheri","Asante","Tafadhali","Ndiyo","Hapana","Samahani","Samahani","moja","mbili","tatu","nne"],"note":"Swahili Habari asks for news/how things are; a common reply is nzuri. Samahani can attract attention or express an apology. Some numbers change with noun class when counting actual objects; these are standalone forms."},
-"so":{"phrases":["Salaan","Nabad gelyo","Mahadsanid","Fadlan","Haa","Maya","Iga raalli ahow","Waan ka xumahay","kow","laba","saddex","afar"],"note":"Somali uses Latin script with meaningful long vowels and doubled consonants. Iga raalli ahow is an excuse/apology expression. The letters c and x represent consonants unlike their usual English values. These are introductory standalone counting forms."}
+  "pa": {
+    "phrases": [
+      "السلام علیکم",
+      "خدا حافظ",
+      "شکریہ",
+      "مہربانی کرو",
+      "ہاں",
+      "نئیں",
+      "ذرا سنو",
+      "معاف کرنا",
+      "اک",
+      "دو",
+      "تن",
+      "چار"
+    ],
+    "roman": [
+      "assalam alaikum",
+      "khuda hafiz",
+      "shukriya",
+      "meharbani karo",
+      "haan",
+      "nain",
+      "zara suno",
+      "maaf karna",
+      "ikk",
+      "do",
+      "tinn",
+      "chaar"
+    ],
+    "note": "This course uses Pakistani Punjabi in Shahmukhi script, read right to left. Gurmukhi is a different writing system. Meharbani karo is a courteous request; social context affects register.",
+    "introPhrases": [
+      "میرا ناں علی اے۔",
+      "تہاڈا ناں کی اے؟",
+      "تہاڈے نال مل کے خوشی ہوئی۔",
+      "میں سکھ رہا آں۔"
+    ],
+    "introRoman": [
+      "mera naa Ali ae",
+      "tuhaada naa ki ae",
+      "tuhaaday naal mil kay khushi hoi",
+      "main sikh reha aan"
+    ],
+    "introNote": "The model introduces a speaker named Ali. Respectful address is used where shown; gender, register and local usage need qualified review. Forms of learning can mark an ongoing activity or a general habit rather than matching the English tense word for word."
+  },
+  "sd": {
+    "phrases": [
+      "السلام عليڪم",
+      "خدا حافظ",
+      "مهرباني",
+      "مهرباني ڪري",
+      "ها",
+      "نه",
+      "معاف ڪجو",
+      "معاف ڪجو",
+      "هڪ",
+      "ٻه",
+      "ٽي",
+      "چار"
+    ],
+    "roman": [
+      "assalam alaikum",
+      "khuda hafiz",
+      "meharbani",
+      "meharbani kare",
+      "haa",
+      "na",
+      "maaf kajo",
+      "maaf kajo",
+      "hik",
+      "ba",
+      "te",
+      "chaar"
+    ],
+    "note": "Sindhi is written right to left here. The letters ٻ and ٽ represent sounds different from ordinary ب and ت. The same expression maaf kajo can serve as excuse me or an apology; use context.",
+    "introPhrases": [
+      "منهنجو نالو علي آهي۔",
+      "توهان جو نالو ڇا آهي؟",
+      "توهان سان ملي خوشي ٿي۔",
+      "مان سکي رهيو آهيان۔"
+    ],
+    "introRoman": [
+      "munhinjo naalo Ali aahe",
+      "tawhaan jo naalo chhaa aahe",
+      "tawhaan saan mili khushi thi",
+      "maan sikhi rahiyo aahyaan"
+    ],
+    "introNote": "The model introduces a speaker named Ali. Respectful address is used where shown; gender, register and local usage need qualified review. Forms of learning can mark an ongoing activity or a general habit rather than matching the English tense word for word."
+  },
+  "skr": {
+    "phrases": [
+      "السلام علیکم",
+      "اللہ حافظ",
+      "مہربانی",
+      "مہربانی کرو",
+      "ہاں",
+      "کائناں",
+      "ذرا سُݨو",
+      "معاف کرو",
+      "ہِک",
+      "ݙو",
+      "ترَے",
+      "چار"
+    ],
+    "roman": [
+      "assalam alaikum",
+      "allah hafiz",
+      "meharbani",
+      "meharbani karo",
+      "haan",
+      "kaain",
+      "zara suno",
+      "maaf karo",
+      "hikk",
+      "ddo",
+      "tray",
+      "chaar"
+    ],
+    "note": "Saraiki is shown in its Pakistani Arabic-derived script, read right to left. Distinctive letters such as ݙ are important. Everyday wording and number pronunciation vary by region; these are approximate practice forms.",
+    "introPhrases": [
+      "میݙا ناں علی ہے۔",
+      "تہاݙا ناں کیا ہے؟",
+      "تہاݙے نال مل کے خوشی تھی۔",
+      "میں سکھدا پیاں۔"
+    ],
+    "introRoman": [
+      "meda naa Ali hai",
+      "tuhaada naa kya hai",
+      "tuhaaday naal mil kay khushi thi",
+      "main sikhda pyaan"
+    ],
+    "introNote": "Saraiki spelling and spoken forms vary regionally. This is an unreviewed draft in Arabic-derived script; a competent Saraiki reviewer must confirm the name question and progressive learning form before publication."
+  },
+  "ps": {
+    "phrases": [
+      "سلام",
+      "خدای پامان",
+      "مننه",
+      "مهرباني وکړئ",
+      "هو",
+      "نه",
+      "وبښئ",
+      "بخښنه غواړم",
+      "یو",
+      "دوه",
+      "درې",
+      "څلور"
+    ],
+    "roman": [
+      "salaam",
+      "khudai paamaan",
+      "manana",
+      "meharbani wakrai",
+      "ho",
+      "na",
+      "wabakhai",
+      "bakhana ghwaram",
+      "yaw",
+      "dwa",
+      "dre",
+      "tsalor"
+    ],
+    "note": "Pashto reads right to left. This is a general introductory set, not a Swabi-specific dialect course. Respectful plural request forms are used; regional pronunciations of ښ and ږ vary.",
+    "introPhrases": [
+      "زما نوم علي دی.",
+      "ستاسو نوم څه دی؟",
+      "ستاسو په لیدو خوشحاله شوم.",
+      "زه زده کړه کوم."
+    ],
+    "introRoman": [
+      "zmaa num Ali day",
+      "staaso num tsa day",
+      "staaso pa lido khushhaala shwam",
+      "za zda kra kawum"
+    ],
+    "introNote": "The model introduces a speaker named Ali. Respectful address is used where shown; gender, register and local usage need qualified review. Forms of learning can mark an ongoing activity or a general habit rather than matching the English tense word for word."
+  },
+  "fa": {
+    "phrases": [
+      "سلام",
+      "خداحافظ",
+      "ممنون",
+      "لطفاً",
+      "بله",
+      "نه",
+      "ببخشید",
+      "متأسفم",
+      "یک",
+      "دو",
+      "سه",
+      "چهار"
+    ],
+    "roman": [
+      "salaam",
+      "khodaahaafez",
+      "mamnoon",
+      "lotfan",
+      "bale",
+      "na",
+      "bebakhshid",
+      "moteassefam",
+      "yek",
+      "do",
+      "se",
+      "chahaar"
+    ],
+    "note": "Persian reads right to left. These are Iranian Persian introductory forms. Lotfan commonly accompanies a request; bebakhshid can politely attract attention or introduce an apology.",
+    "introPhrases": [
+      "نام من علی است.",
+      "نام شما چیست؟",
+      "از آشنایی با شما خوشوقتم.",
+      "من در حال یادگیری هستم."
+    ],
+    "introRoman": [
+      "naam-e man Ali ast",
+      "naam-e shomaa chist",
+      "az aashnaayi baa shomaa khoshvaghtam",
+      "man dar haal-e yaadgiri hastam"
+    ],
+    "introNote": "The model introduces a speaker named Ali. Respectful address is used where shown; gender, register and local usage need qualified review. Forms of learning can mark an ongoing activity or a general habit rather than matching the English tense word for word."
+  },
+  "ar": {
+    "phrases": [
+      "مرحبًا",
+      "إلى اللقاء",
+      "شكرًا",
+      "من فضلك",
+      "نعم",
+      "لا",
+      "عفوًا",
+      "أنا آسف",
+      "واحد",
+      "اثنان",
+      "ثلاثة",
+      "أربعة"
+    ],
+    "roman": [
+      "marhaban",
+      "ila al-liqaa",
+      "shukran",
+      "min fadlik",
+      "naam",
+      "laa",
+      "afwan",
+      "ana aasif",
+      "waahid",
+      "ithnaan",
+      "thalaatha",
+      "arbaa"
+    ],
+    "note": "These are introductory Modern Standard Arabic forms, not a specific spoken dialect. Ana aasif is a masculine speaker form; a feminine speaker says ana aasifa (أنا آسفة). Numbers here are citation forms; agreement changes in sentences.",
+    "introPhrases": [
+      "اسمي علي.",
+      "ما اسمك؟",
+      "سعدت بلقائك.",
+      "أنا أتعلم."
+    ],
+    "introRoman": [
+      "ismii Ali",
+      "maa ismuka",
+      "saʿidtu biliqaaʾika",
+      "anaa ataʿallam"
+    ],
+    "introNote": "Arabic model uses a masculine speaker and addressee; vowels and endings change with gender, for example ismuki for a female addressee. Unvocalized script does not display every short vowel."
+  },
+  "tr": {
+    "phrases": [
+      "Merhaba",
+      "Hoşça kal",
+      "Teşekkür ederim",
+      "Lütfen",
+      "Evet",
+      "Hayır",
+      "Affedersiniz",
+      "Özür dilerim",
+      "bir",
+      "iki",
+      "üç",
+      "dört"
+    ],
+    "note": "Turkish uses a Latin alphabet. Dotless ı differs from i; ş sounds approximately like English sh and ç like ch. Hoşça kal is said to someone staying when you leave; a person staying can reply Güle güle.",
+    "introPhrases": [
+      "Benim adım Ali.",
+      "Adınız ne?",
+      "Tanıştığımıza memnun oldum.",
+      "Öğreniyorum."
+    ],
+    "introRoman": [
+      "Benim adım Ali.",
+      "Adınız ne?",
+      "Tanıştığımıza memnun oldum.",
+      "Öğreniyorum."
+    ],
+    "introNote": "The model introduces a speaker named Ali. Respectful address is used where shown; gender, register and local usage need qualified review. Forms of learning can mark an ongoing activity or a general habit rather than matching the English tense word for word."
+  },
+  "hi": {
+    "phrases": [
+      "नमस्ते",
+      "अलविदा",
+      "धन्यवाद",
+      "कृपया",
+      "हाँ",
+      "नहीं",
+      "सुनिए",
+      "माफ़ कीजिए",
+      "एक",
+      "दो",
+      "तीन",
+      "चार"
+    ],
+    "roman": [
+      "namaste",
+      "alvida",
+      "dhanyavaad",
+      "kripaya",
+      "haan",
+      "nahin",
+      "suniye",
+      "maaf kijiye",
+      "ek",
+      "do",
+      "teen",
+      "chaar"
+    ],
+    "note": "Hindi uses Devanagari, read left to right. Suniye is a respectful way to attract attention. The dot in फ़ marks a borrowed f sound, and the nasal mark in हाँ affects pronunciation.",
+    "introPhrases": [
+      "मेरा नाम अली है।",
+      "आपका नाम क्या है?",
+      "आपसे मिलकर खुशी हुई।",
+      "मैं सीख रहा हूँ।"
+    ],
+    "introRoman": [
+      "meraa naam Ali hai",
+      "aapkaa naam kyaa hai",
+      "aapse milkar khushii huii",
+      "main siikh rahaa huun"
+    ],
+    "introNote": "The model introduces a speaker named Ali. Respectful address is used where shown; gender, register and local usage need qualified review. Forms of learning can mark an ongoing activity or a general habit rather than matching the English tense word for word."
+  },
+  "bn": {
+    "phrases": [
+      "নমস্কার",
+      "বিদায়",
+      "ধন্যবাদ",
+      "অনুগ্রহ করে",
+      "হ্যাঁ",
+      "না",
+      "এই যে",
+      "দুঃখিত",
+      "এক",
+      "দুই",
+      "তিন",
+      "চার"
+    ],
+    "roman": [
+      "nomoshkar",
+      "biday",
+      "dhonnobad",
+      "onugroho kore",
+      "hyan",
+      "na",
+      "ei je",
+      "dukkhito",
+      "ek",
+      "dui",
+      "tin",
+      "char"
+    ],
+    "note": "Bengali uses its own left-to-right script. Nomoshkar is one greeting; greetings vary by community. Ei je attracts attention. Roman letters are only a pronunciation aid, not a substitute for the script.",
+    "introPhrases": [
+      "আমার নাম আলী।",
+      "আপনার নাম কী?",
+      "আপনার সঙ্গে পরিচিত হয়ে ভালো লাগল।",
+      "আমি শিখছি।"
+    ],
+    "introRoman": [
+      "amar nam Ali",
+      "apnar nam ki",
+      "apnar shonge porichito hoye bhalo laglo",
+      "ami shikhchhi"
+    ],
+    "introNote": "The model introduces a speaker named Ali. Respectful address is used where shown; gender, register and local usage need qualified review. Forms of learning can mark an ongoing activity or a general habit rather than matching the English tense word for word."
+  },
+  "gu": {
+    "phrases": [
+      "નમસ્તે",
+      "આવજો",
+      "આભાર",
+      "કૃપા કરીને",
+      "હા",
+      "ના",
+      "જરા સાંભળો",
+      "માફ કરશો",
+      "એક",
+      "બે",
+      "ત્રણ",
+      "ચાર"
+    ],
+    "roman": [
+      "namaste",
+      "aavjo",
+      "aabhaar",
+      "kripa karine",
+      "haa",
+      "naa",
+      "jara saambhalo",
+      "maaf karsho",
+      "ek",
+      "be",
+      "tran",
+      "chaar"
+    ],
+    "note": "Gujarati reads left to right in its own script. Aavjo is a common parting expression. Respectful requests can use કરશો; do not infer word-by-word English order from a whole expression.",
+    "introPhrases": [
+      "મારું નામ અલી છે.",
+      "તમારું નામ શું છે?",
+      "તમને મળીને આનંદ થયો.",
+      "હું શીખી રહ્યો છું."
+    ],
+    "introRoman": [
+      "maarun naam Ali chhe",
+      "tamaarun naam shun chhe",
+      "tamne maline aanand thayo",
+      "hun shikhi rahyo chhun"
+    ],
+    "introNote": "The model introduces a speaker named Ali. Respectful address is used where shown; gender, register and local usage need qualified review. Forms of learning can mark an ongoing activity or a general habit rather than matching the English tense word for word."
+  },
+  "ta": {
+    "phrases": [
+      "வணக்கம்",
+      "போய் வருகிறேன்",
+      "நன்றி",
+      "தயவுசெய்து",
+      "ஆம்",
+      "இல்லை",
+      "மன்னிக்கவும்",
+      "மன்னிக்கவும்",
+      "ஒன்று",
+      "இரண்டு",
+      "மூன்று",
+      "நான்கு"
+    ],
+    "roman": [
+      "vanakkam",
+      "poy varugiren",
+      "nandri",
+      "thayavuseythu",
+      "aam",
+      "illai",
+      "mannikkavum",
+      "mannikkavum",
+      "ondru",
+      "irandu",
+      "moondru",
+      "naangu"
+    ],
+    "note": "Tamil reads left to right. Poy varugiren is a parting expression meaning that the speaker is leaving and will return. Mannikkavum can serve as excuse me or sorry. Spoken forms differ from these careful written forms.",
+    "introPhrases": [
+      "என் பெயர் அலி.",
+      "உங்கள் பெயர் என்ன?",
+      "உங்களைச் சந்தித்ததில் மகிழ்ச்சி.",
+      "நான் கற்றுக்கொள்கிறேன்."
+    ],
+    "introRoman": [
+      "en peyar Ali",
+      "ungal peyar enna",
+      "ungalaich sandhiththadhil magizhchi",
+      "naan katrukkolgiren"
+    ],
+    "introNote": "The model introduces a speaker named Ali. Respectful address is used where shown; gender, register and local usage need qualified review. Forms of learning can mark an ongoing activity or a general habit rather than matching the English tense word for word."
+  },
+  "te": {
+    "phrases": [
+      "నమస్కారం",
+      "వెళ్లి వస్తాను",
+      "ధన్యవాదాలు",
+      "దయచేసి",
+      "అవును",
+      "కాదు",
+      "కొంచెం వినండి",
+      "క్షమించండి",
+      "ఒకటి",
+      "రెండు",
+      "మూడు",
+      "నాలుగు"
+    ],
+    "roman": [
+      "namaskaaram",
+      "velli vastaanu",
+      "dhanyavaadaalu",
+      "dayachesi",
+      "avunu",
+      "kaadu",
+      "konchem vinandi",
+      "kshaminchandi",
+      "okati",
+      "rendu",
+      "moodu",
+      "naalugu"
+    ],
+    "note": "Telugu reads left to right. Velli vastaanu is a leaving expression. Kaadu is a negative reply for identification; Telugu has other negative forms for absence or actions. These numbers are standalone counting forms.",
+    "introPhrases": [
+      "నా పేరు అలీ.",
+      "మీ పేరు ఏమిటి?",
+      "మిమ్మల్ని కలవడం సంతోషంగా ఉంది.",
+      "నేను నేర్చుకుంటున్నాను."
+    ],
+    "introRoman": [
+      "naa peru Ali",
+      "mee peru emiti",
+      "mimmalni kalavadam santoshangaa undi",
+      "nenu nerchukuntunnaanu"
+    ],
+    "introNote": "The model introduces a speaker named Ali. Respectful address is used where shown; gender, register and local usage need qualified review. Forms of learning can mark an ongoing activity or a general habit rather than matching the English tense word for word."
+  },
+  "ml": {
+    "phrases": [
+      "നമസ്കാരം",
+      "പോയി വരാം",
+      "നന്ദി",
+      "ദയവായി",
+      "അതെ",
+      "ഇല്ല",
+      "ഒന്ന് കേൾക്കൂ",
+      "ക്ഷമിക്കണം",
+      "ഒന്ന്",
+      "രണ്ട്",
+      "മൂന്ന്",
+      "നാല്"
+    ],
+    "roman": [
+      "namaskaaram",
+      "poyi varaam",
+      "nandi",
+      "dayavaayi",
+      "athe",
+      "illa",
+      "onnu kelkkoo",
+      "kshamikkanam",
+      "onnu",
+      "randu",
+      "moonnu",
+      "naalu"
+    ],
+    "note": "Malayalam reads left to right. Poyi varaam is a common leaving expression. Athé affirms; illa denies absence/existence, while other negative contexts can use alla. Do not substitute a standalone reply into every sentence.",
+    "introPhrases": [
+      "എന്റെ പേര് അലി എന്നാണ്.",
+      "നിങ്ങളുടെ പേര് എന്താണ്?",
+      "നിങ്ങളെ കണ്ടതിൽ സന്തോഷം.",
+      "ഞാൻ പഠിച്ചുകൊണ്ടിരിക്കുന്നു."
+    ],
+    "introRoman": [
+      "ente peru Ali ennaanu",
+      "ningalude peru enthaanu",
+      "ningale kandathil santhosham",
+      "njaan padichukondirikkunnu"
+    ],
+    "introNote": "The model introduces a speaker named Ali. Respectful address is used where shown; gender, register and local usage need qualified review. Forms of learning can mark an ongoing activity or a general habit rather than matching the English tense word for word."
+  },
+  "ne": {
+    "phrases": [
+      "नमस्ते",
+      "फेरि भेटौँला",
+      "धन्यवाद",
+      "कृपया",
+      "हो",
+      "होइन",
+      "सुन्नुहोस्",
+      "माफ गर्नुहोस्",
+      "एक",
+      "दुई",
+      "तीन",
+      "चार"
+    ],
+    "roman": [
+      "namaste",
+      "pheri bhetaunla",
+      "dhanyabaad",
+      "kripaya",
+      "ho",
+      "hoina",
+      "sunnuhos",
+      "maaf garnuhos",
+      "ek",
+      "dui",
+      "tin",
+      "chaar"
+    ],
+    "note": "Nepali uses Devanagari. The ending -nuhos gives a respectful request. Ho and hoina answer identification statements; context determines which affirmative or negative verb form is needed.",
+    "introPhrases": [
+      "मेरो नाम अली हो।",
+      "तपाईंको नाम के हो?",
+      "तपाईंलाई भेटेर खुसी लाग्यो।",
+      "म सिक्दै छु।"
+    ],
+    "introRoman": [
+      "mero naam Ali ho",
+      "tapaainko naam ke ho",
+      "tapaainlaai bhetera khusi laagyo",
+      "ma sikdai chhu"
+    ],
+    "introNote": "The model introduces a speaker named Ali. Respectful address is used where shown; gender, register and local usage need qualified review. Forms of learning can mark an ongoing activity or a general habit rather than matching the English tense word for word."
+  },
+  "si": {
+    "phrases": [
+      "ආයුබෝවන්",
+      "ගිහින් එන්නම්",
+      "ස්තුතියි",
+      "කරුණාකර",
+      "ඔව්",
+      "නැහැ",
+      "පොඩ්ඩක් අහන්න",
+      "සමාවෙන්න",
+      "එක",
+      "දෙක",
+      "තුන",
+      "හතර"
+    ],
+    "roman": [
+      "aayubowan",
+      "gihin ennam",
+      "stutiyi",
+      "karunaakara",
+      "ow",
+      "naehae",
+      "poddak ahanna",
+      "samaawenna",
+      "eka",
+      "deka",
+      "thuna",
+      "hathara"
+    ],
+    "note": "Sinhala uses a left-to-right script. Aayubowan is a respectful greeting. Gihin ennam is a leaving expression. Roman spellings here are approximate; vowel length and consonant contrasts require listening practice.",
+    "introPhrases": [
+      "මගේ නම අලී.",
+      "ඔබේ නම මොකක්ද?",
+      "ඔබ හමුවීම සතුටක්.",
+      "මම ඉගෙන ගන්නවා."
+    ],
+    "introRoman": [
+      "mage nama Ali",
+      "obe nama mokakda",
+      "oba hamuwima sathutak",
+      "mama igena gannawaa"
+    ],
+    "introNote": "The model introduces a speaker named Ali. Respectful address is used where shown; gender, register and local usage need qualified review. Forms of learning can mark an ongoing activity or a general habit rather than matching the English tense word for word."
+  },
+  "zh": {
+    "phrases": [
+      "你好",
+      "再见",
+      "谢谢",
+      "请",
+      "是",
+      "不是",
+      "请问",
+      "对不起",
+      "一",
+      "二",
+      "三",
+      "四"
+    ],
+    "roman": [
+      "nǐ hǎo",
+      "zài jiàn",
+      "xiè xie",
+      "qǐng",
+      "shì",
+      "bú shì",
+      "qǐng wèn",
+      "duì bu qǐ",
+      "yī",
+      "èr",
+      "sān",
+      "sì"
+    ],
+    "note": "These are Mandarin forms in simplified Chinese characters. Pinyin tone marks matter. Shì and bú shì affirm or deny an identity statement; Mandarin does not use one universal yes/no pair for every kind of question.",
+    "introPhrases": [
+      "我叫阿里。",
+      "你叫什么名字？",
+      "很高兴认识你。",
+      "我在学习。"
+    ],
+    "introRoman": [
+      "wǒ jiào Ālǐ",
+      "nǐ jiào shénme míngzi",
+      "hěn gāoxìng rènshi nǐ",
+      "wǒ zài xuéxí"
+    ],
+    "introNote": "The model introduces a speaker named Ali. Respectful address is used where shown; gender, register and local usage need qualified review. Forms of learning can mark an ongoing activity or a general habit rather than matching the English tense word for word."
+  },
+  "ja": {
+    "phrases": [
+      "こんにちは",
+      "さようなら",
+      "ありがとうございます",
+      "お願いします",
+      "はい",
+      "いいえ",
+      "すみません",
+      "ごめんなさい",
+      "一",
+      "二",
+      "三",
+      "四"
+    ],
+    "roman": [
+      "konnichiwa",
+      "sayounara",
+      "arigatou gozaimasu",
+      "onegai shimasu",
+      "hai",
+      "iie",
+      "sumimasen",
+      "gomennasai",
+      "ichi",
+      "ni",
+      "san",
+      "yon"
+    ],
+    "note": "Japanese uses kana and kanji. Konnichiwa is mainly a daytime greeting. Sayounara often suggests a longer parting; casual short-term goodbyes differ. Onegai shimasu is a polite request expression, not a word-for-word equivalent in every English please sentence.",
+    "introPhrases": [
+      "私の名前はアリです。",
+      "お名前は何ですか。",
+      "お会いできてうれしいです。",
+      "勉強しています。"
+    ],
+    "introRoman": [
+      "watashi no namae wa Ari desu",
+      "onamae wa nan desu ka",
+      "oai dekite ureshii desu",
+      "benkyou shite imasu"
+    ],
+    "introNote": "Use polite desu/masu speech in this model. Watashi no namae wa is explicit beginner practice; natural introductions can be shorter. Long vowels and pitch require listening review."
+  },
+  "ko": {
+    "phrases": [
+      "안녕하세요",
+      "안녕히 가세요",
+      "감사합니다",
+      "부탁합니다",
+      "네",
+      "아니요",
+      "실례합니다",
+      "죄송합니다",
+      "하나",
+      "둘",
+      "셋",
+      "넷"
+    ],
+    "roman": [
+      "annyeonghaseyo",
+      "annyeonghi gaseyo",
+      "gamsahamnida",
+      "butakhamnida",
+      "ne",
+      "aniyo",
+      "sillyehamnida",
+      "joesonghamnida",
+      "hana",
+      "dul",
+      "set",
+      "net"
+    ],
+    "note": "These Korean forms use polite speech. Annyeonghi gaseyo is said to someone leaving; someone leaving can say annyeonghi gyeseyo to a person staying. Numbers here are native Korean standalone forms; Sino-Korean numbers serve other purposes.",
+    "introPhrases": [
+      "제 이름은 알리입니다.",
+      "성함이 어떻게 되세요?",
+      "만나서 반갑습니다.",
+      "저는 배우고 있습니다."
+    ],
+    "introRoman": [
+      "je ireumeun Alliyimnida",
+      "seonghami eotteoke doeseyo",
+      "mannaseo bangapseumnida",
+      "jeoneun baeugo itseumnida"
+    ],
+    "introNote": "Seongham is an honorific word for the other person’s name, not your own name. These introductions use polite speech; the respectful name question is intended for an adult."
+  },
+  "id": {
+    "phrases": [
+      "Halo",
+      "Sampai jumpa",
+      "Terima kasih",
+      "Tolong",
+      "Ya",
+      "Tidak",
+      "Permisi",
+      "Maaf",
+      "satu",
+      "dua",
+      "tiga",
+      "empat"
+    ],
+    "note": "Indonesian uses Latin script. Tolong often requests help; silakan invites someone to do something. Tidak negates many verbs/adjectives; bukan is used in other negative contexts. Keep these phrases in their taught situations.",
+    "introPhrases": [
+      "Nama saya Ali.",
+      "Siapa nama Anda?",
+      "Senang bertemu dengan Anda.",
+      "Saya sedang belajar."
+    ],
+    "introRoman": [
+      "Nama saya Ali.",
+      "Siapa nama Anda?",
+      "Senang bertemu dengan Anda.",
+      "Saya sedang belajar."
+    ],
+    "introNote": "The model introduces a speaker named Ali. Respectful address is used where shown; gender, register and local usage need qualified review. Forms of learning can mark an ongoing activity or a general habit rather than matching the English tense word for word."
+  },
+  "ms": {
+    "phrases": [
+      "Helo",
+      "Jumpa lagi",
+      "Terima kasih",
+      "Tolong",
+      "Ya",
+      "Tidak",
+      "Tumpang lalu",
+      "Maaf",
+      "satu",
+      "dua",
+      "tiga",
+      "empat"
+    ],
+    "note": "This course uses Malay in Rumi Latin script. Tolong is used when requesting help. Tumpang lalu politely asks to pass. Malay and Indonesian share many words but are distinct standards with usage differences.",
+    "introPhrases": [
+      "Nama saya Ali.",
+      "Siapa nama anda?",
+      "Gembira dapat berkenalan dengan anda.",
+      "Saya sedang belajar."
+    ],
+    "introRoman": [
+      "Nama saya Ali.",
+      "Siapa nama anda?",
+      "Gembira dapat berkenalan dengan anda.",
+      "Saya sedang belajar."
+    ],
+    "introNote": "The model introduces a speaker named Ali. Respectful address is used where shown; gender, register and local usage need qualified review. Forms of learning can mark an ongoing activity or a general habit rather than matching the English tense word for word."
+  },
+  "th": {
+    "phrases": [
+      "สวัสดี",
+      "ลาก่อน",
+      "ขอบคุณ",
+      "กรุณา",
+      "ใช่",
+      "ไม่ใช่",
+      "ขอทางหน่อย",
+      "ขอโทษ",
+      "หนึ่ง",
+      "สอง",
+      "สาม",
+      "สี่"
+    ],
+    "roman": [
+      "sawatdi",
+      "la kon",
+      "khop khun",
+      "karuna",
+      "chai",
+      "mai chai",
+      "kho thang noi",
+      "kho thot",
+      "nueng",
+      "song",
+      "sam",
+      "si"
+    ],
+    "note": "Thai is tonal; these unmarked Roman aids do not encode tones. Polite particles khrap (ครับ) and kha (ค่ะ/คะ) depend on speaker/context. Chai/mai chai answer identification questions; other yes/no questions can repeat their verb.",
+    "introPhrases": [
+      "ผมชื่ออาลีครับ",
+      "คุณชื่ออะไรครับ",
+      "ยินดีที่ได้รู้จักครับ",
+      "ผมกำลังเรียนรู้ครับ"
+    ],
+    "introRoman": [
+      "phom chue Ali khrap",
+      "khun chue arai khrap",
+      "yin di thi dai ru chak khrap",
+      "phom kamlang rian ru khrap"
+    ],
+    "introNote": "Ali uses the masculine pronoun phom and polite particle khrap. Other speakers may use different pronouns/particles. Roman aids omit tones and cannot teach accurate pronunciation alone."
+  },
+  "vi": {
+    "phrases": [
+      "Xin chào",
+      "Tạm biệt",
+      "Cảm ơn",
+      "Làm ơn",
+      "Vâng",
+      "Không",
+      "Xin phép",
+      "Xin lỗi",
+      "một",
+      "hai",
+      "ba",
+      "bốn"
+    ],
+    "note": "Vietnamese uses Latin letters with essential vowel and tone marks. Vâng is a respectful affirmative; dạ is also used in respectful replies. Pronouns and ways of addressing people depend on age and relationship.",
+    "introPhrases": [
+      "Tôi tên là Ali.",
+      "Bạn tên là gì?",
+      "Rất vui được gặp bạn.",
+      "Tôi đang học."
+    ],
+    "introRoman": [
+      "Tôi tên là Ali.",
+      "Bạn tên là gì?",
+      "Rất vui được gặp bạn.",
+      "Tôi đang học."
+    ],
+    "introNote": "Toi/ban is a limited teaching model. Vietnamese forms of address depend on relationship and age; do not apply ban automatically to every adult."
+  },
+  "fr": {
+    "phrases": [
+      "Bonjour",
+      "Au revoir",
+      "Merci",
+      "S’il vous plaît",
+      "Oui",
+      "Non",
+      "Excusez-moi",
+      "Je suis désolé",
+      "un",
+      "deux",
+      "trois",
+      "quatre"
+    ],
+    "note": "French vous is respectful or plural. Je suis désolé is a masculine written form; a feminine speaker writes désolée. Many final letters are not pronounced, so the written forms are not phonetic transcriptions.",
+    "introPhrases": [
+      "Je m’appelle Ali.",
+      "Comment vous appelez-vous ?",
+      "Je suis ravi de vous rencontrer.",
+      "Je suis en train d’apprendre."
+    ],
+    "introRoman": [
+      "Je m’appelle Ali.",
+      "Comment vous appelez-vous ?",
+      "Je suis ravi de vous rencontrer.",
+      "Je suis en train d’apprendre."
+    ],
+    "introNote": "The model speaker Ali uses masculine ravi; a feminine speaker writes ravie. Vous is used for respectful or plural address."
+  },
+  "es": {
+    "phrases": [
+      "Hola",
+      "Adiós",
+      "Gracias",
+      "Por favor",
+      "Sí",
+      "No",
+      "Disculpe",
+      "Lo siento",
+      "uno",
+      "dos",
+      "tres",
+      "cuatro"
+    ],
+    "note": "Spanish accent marks are meaningful: sí means yes, while si means if. Disculpe is a respectful attention/apology form. Standalone uno changes form before certain nouns; counting is not the whole number-agreement system.",
+    "introPhrases": [
+      "Me llamo Alí.",
+      "¿Cómo se llama usted?",
+      "Me alegra conocerle.",
+      "Estoy aprendiendo."
+    ],
+    "introRoman": [
+      "Me llamo Alí.",
+      "¿Cómo se llama usted?",
+      "Me alegra conocerle.",
+      "Estoy aprendiendo."
+    ],
+    "introNote": "The model introduces a speaker named Ali. Respectful address is used where shown; gender, register and local usage need qualified review. Forms of learning can mark an ongoing activity or a general habit rather than matching the English tense word for word."
+  },
+  "de": {
+    "phrases": [
+      "Hallo",
+      "Auf Wiedersehen",
+      "Danke",
+      "Bitte",
+      "Ja",
+      "Nein",
+      "Entschuldigen Sie",
+      "Es tut mir leid",
+      "eins",
+      "zwei",
+      "drei",
+      "vier"
+    ],
+    "note": "German Sie is a respectful form of address and is capitalized here. Bitte can mean please or you are welcome depending on context. Standalone eins changes before nouns, for example ein Buch.",
+    "introPhrases": [
+      "Ich heiße Ali.",
+      "Wie heißen Sie?",
+      "Es freut mich, Sie kennenzulernen.",
+      "Ich lerne gerade."
+    ],
+    "introRoman": [
+      "Ich heiße Ali.",
+      "Wie heißen Sie?",
+      "Es freut mich, Sie kennenzulernen.",
+      "Ich lerne gerade."
+    ],
+    "introNote": "The model introduces a speaker named Ali. Respectful address is used where shown; gender, register and local usage need qualified review. Forms of learning can mark an ongoing activity or a general habit rather than matching the English tense word for word."
+  },
+  "it": {
+    "phrases": [
+      "Buongiorno",
+      "Arrivederci",
+      "Grazie",
+      "Per favore",
+      "Sì",
+      "No",
+      "Mi scusi",
+      "Mi dispiace",
+      "uno",
+      "due",
+      "tre",
+      "quattro"
+    ],
+    "note": "Italian Mi scusi is a respectful attention form. Sì with an accent is yes. Uno is a standalone counting form whose form can change with the following noun. Double consonants affect pronunciation.",
+    "introPhrases": [
+      "Mi chiamo Ali.",
+      "Come si chiama?",
+      "Mi fa piacere conoscerla.",
+      "Sto imparando."
+    ],
+    "introRoman": [
+      "Mi chiamo Ali.",
+      "Come si chiama?",
+      "Mi fa piacere conoscerla.",
+      "Sto imparando."
+    ],
+    "introNote": "The model introduces a speaker named Ali. Respectful address is used where shown; gender, register and local usage need qualified review. Forms of learning can mark an ongoing activity or a general habit rather than matching the English tense word for word."
+  },
+  "pt": {
+    "phrases": [
+      "Olá",
+      "Até logo",
+      "Obrigado",
+      "Por favor",
+      "Sim",
+      "Não",
+      "Com licença",
+      "Desculpe",
+      "um",
+      "dois",
+      "três",
+      "quatro"
+    ],
+    "note": "Portuguese Obrigado is used by a masculine speaker; a feminine speaker says Obrigada. Com licença politely asks permission to pass. Pronunciation differs between Brazilian and European varieties; nasal vowels matter.",
+    "introPhrases": [
+      "O meu nome é Ali.",
+      "Como se chama?",
+      "É um prazer conhecê-lo.",
+      "Estou a aprender."
+    ],
+    "introRoman": [
+      "O meu nome é Ali.",
+      "Como se chama?",
+      "É um prazer conhecê-lo.",
+      "Estou a aprender."
+    ],
+    "introNote": "This lesson consistently teaches a European Portuguese model: O meu nome, Como se chama, conhecê-lo and Estou a aprender. Brazilian usage and pronunciation differ. The model addresses a man; the corresponding feminine form is conhecê-la."
+  },
+  "ru": {
+    "phrases": [
+      "Здравствуйте",
+      "До свидания",
+      "Спасибо",
+      "Пожалуйста",
+      "Да",
+      "Нет",
+      "Разрешите пройти",
+      "Извините",
+      "один",
+      "два",
+      "три",
+      "четыре"
+    ],
+    "roman": [
+      "zdravstvuyte",
+      "do svidaniya",
+      "spasibo",
+      "pozhaluysta",
+      "da",
+      "nyet",
+      "razreshite proyti",
+      "izvinite",
+      "odin",
+      "dva",
+      "tri",
+      "chetyre"
+    ],
+    "note": "Russian uses Cyrillic. Zdravstvuyte is respectful or plural. Razreshite proyti asks permission to pass. Numbers here are citation forms; their form and the following noun change with gender and grammatical case.",
+    "introPhrases": [
+      "Меня зовут Али.",
+      "Как вас зовут?",
+      "Рад с вами познакомиться.",
+      "Я учусь."
+    ],
+    "introRoman": [
+      "menya zovut Ali",
+      "kak vas zovut",
+      "rad s vami poznakomitsya",
+      "ya uchus"
+    ],
+    "introNote": "The model speaker Ali uses masculine rad; a feminine speaker uses rada. Vas/vami use respectful or plural address."
+  },
+  "nl": {
+    "phrases": [
+      "Hallo",
+      "Tot ziens",
+      "Dank u",
+      "Alstublieft",
+      "Ja",
+      "Nee",
+      "Pardon",
+      "Het spijt me",
+      "een",
+      "twee",
+      "drie",
+      "vier"
+    ],
+    "note": "Dutch u is respectful; je is familiar. Alstublieft can mean please or accompany handing something over. Een is the written counting form one; één can distinguish it from the indefinite article in context.",
+    "introPhrases": [
+      "Ik heet Ali.",
+      "Hoe heet u?",
+      "Aangenaam kennis te maken.",
+      "Ik ben aan het leren."
+    ],
+    "introRoman": [
+      "Ik heet Ali.",
+      "Hoe heet u?",
+      "Aangenaam kennis te maken.",
+      "Ik ben aan het leren."
+    ],
+    "introNote": "The model introduces a speaker named Ali. Respectful address is used where shown; gender, register and local usage need qualified review. Forms of learning can mark an ongoing activity or a general habit rather than matching the English tense word for word."
+  },
+  "pl": {
+    "phrases": [
+      "Dzień dobry",
+      "Do widzenia",
+      "Dziękuję",
+      "Proszę",
+      "Tak",
+      "Nie",
+      "Przepraszam",
+      "Przepraszam",
+      "jeden",
+      "dwa",
+      "trzy",
+      "cztery"
+    ],
+    "note": "Polish diacritics are essential. Przepraszam serves both excuse me and sorry. Dzień dobry is a daytime greeting. Counting forms change with gender and case in sentences; these are introductory standalone forms.",
+    "introPhrases": [
+      "Mam na imię Ali.",
+      "Jak ma Pan na imię?",
+      "Miło mi Pana poznać.",
+      "Uczę się."
+    ],
+    "introRoman": [
+      "Mam na imię Ali.",
+      "Jak ma Pan na imię?",
+      "Miło mi Pana poznać.",
+      "Uczę się."
+    ],
+    "introNote": "The model addresses one adult man with Pan/Pana; use Pani for one adult woman and appropriate forms for other audiences. Do not use this as a universal question for every person."
+  },
+  "sw": {
+    "phrases": [
+      "Habari",
+      "Kwaheri",
+      "Asante",
+      "Tafadhali",
+      "Ndiyo",
+      "Hapana",
+      "Samahani",
+      "Samahani",
+      "moja",
+      "mbili",
+      "tatu",
+      "nne"
+    ],
+    "note": "Swahili Habari asks for news/how things are; a common reply is nzuri. Samahani can attract attention or express an apology. Some numbers change with noun class when counting actual objects; these are standalone forms.",
+    "introPhrases": [
+      "Jina langu ni Ali.",
+      "Jina lako ni nani?",
+      "Ninafurahi kukutana nawe.",
+      "Ninajifunza."
+    ],
+    "introRoman": [
+      "Jina langu ni Ali.",
+      "Jina lako ni nani?",
+      "Ninafurahi kukutana nawe.",
+      "Ninajifunza."
+    ],
+    "introNote": "The model introduces a speaker named Ali. Respectful address is used where shown; gender, register and local usage need qualified review. Forms of learning can mark an ongoing activity or a general habit rather than matching the English tense word for word."
+  },
+  "so": {
+    "phrases": [
+      "Salaan",
+      "Nabad gelyo",
+      "Mahadsanid",
+      "Fadlan",
+      "Haa",
+      "Maya",
+      "Iga raalli ahow",
+      "Waan ka xumahay",
+      "kow",
+      "laba",
+      "saddex",
+      "afar"
+    ],
+    "note": "Somali uses Latin script with meaningful long vowels and doubled consonants. Iga raalli ahow is an excuse/apology expression. The letters c and x represent consonants unlike their usual English values. These are introductory standalone counting forms.",
+    "introPhrases": [
+      "Magacaygu waa Cali.",
+      "Magacaa?",
+      "Waan ku faraxsanahay inaan kula kulmo.",
+      "Wax baan baranayaa."
+    ],
+    "introRoman": [
+      "Magacaygu waa Cali.",
+      "Magacaa?",
+      "Waan ku faraxsanahay inaan kula kulmo.",
+      "Wax baan baranayaa."
+    ],
+    "introNote": "Cali is the Somali spelling of the name Ali. Magacaa is a common short name question. Somali c does not have its usual English sound."
+  }
 }

@@ -1,8 +1,8 @@
 # ILMIGO DIGITAL ACADEMY
 
-Version 0.7.1. A bilingual language-learning beta with **ILMIGO**, the robot teacher. Android debug APK and iOS simulator builds have now completed successfully on GitHub Actions.
+Version 0.8.0. A bilingual language-learning beta with **ILMIGO**, the robot teacher. Android debug APK and iOS simulator builds have now completed successfully on GitHub Actions.
 
-Current build and implementation evidence: [0.7.1 assessment fix and review handoff](review/ILMIGO-COURSE-QUALITY-RECHECK.md), with [0.5.0 child-session details](review/ILMIGO-CHILD-SESSIONS-RELEASE.md). Owner account and payout setup: [Pakistan/Meezan guide](review/PAYMENT-SETUP-PAKISTAN.md).
+Current course expansion: [0.8.0 introductions](review/ILMIGO-INTRODUCTION-EXPANSION.md). Prior build and implementation evidence: [0.7.1 assessment fix and review handoff](review/ILMIGO-COURSE-QUALITY-RECHECK.md), with [0.5.0 child-session details](review/ILMIGO-CHILD-SESSIONS-RELEASE.md). Owner account and payout setup: [Pakistan/Meezan guide](review/PAYMENT-SETUP-PAKISTAN.md).
 
 ## Download the test app
 
@@ -39,7 +39,7 @@ Verified code commit: `0ad137bc7ddfd6c1593c6d4801f4cdeed3a6579e`. Flutter 3.47.8
 - Source integrations for Supabase, text AI feedback and disabled-by-default RevenueCat billing.
 - Lesson-scoped adult AI conversations with follow-up questions, bilingual explanations, optional device speech recognition and a button to hear each reply with installed device TTS. Conversations remain in screen/page memory, reset when leaving or changing profile, and share the 3 trial / 20 Plus daily turn quota. Provider/device verification still requires owner configuration.
 
-All 136 lessons are curriculum drafts awaiting qualified language/audio review. English/Urdu retain 20 lessons each; the other 32 languages have three beginner lessons each. These are not complete professional-fluency courses or CEFR/occupational certification.
+All 168 lessons are curriculum drafts awaiting qualified language/audio review. English/Urdu retain 20 lessons each; the other 32 languages have four beginner lessons each. These are not complete professional-fluency courses or CEFR/occupational certification.
 
 The current APK is an offline-capable preview built without a backend URL. Live accounts/cloud AI/payment services are not active. Real-device/voice/visual QA, final production consent-policy review, actual release signing and store publication remain pending. See the detailed report for limits.
 
@@ -144,8 +144,8 @@ RevenueCat purchase/restore code remains **off by default**. Do not enable purch
 
 Historical reviews record pre-fix/pre-cloud states. The current successful cloud run/report above supersedes their native-build-blocked status, while their remaining production/content limitations still apply.
 
-Language availability audit: [34-language lesson counts](review/language-availability.json). English/Urdu have 20 draft lessons each; the other 32 languages now have three introductory draft lessons each (136 total). Qualified language/audio review and professional-level expansion remain pending.
+Language availability audit: [34-language lesson counts](review/language-availability.json). English/Urdu have 20 draft lessons each; the other 32 languages now have four introductory draft lessons each (168 total). Qualified language/audio review and professional-level expansion remain pending.
 
-Current machine evidence: [0.7.0 verification](review/cloud/course-quality-verification.json). Browser CI now exercises eight scenarios, including a lesson flow in each of the 32 new languages.
+Prior machine evidence: [0.7.0 verification](review/cloud/course-quality-verification.json). Browser CI now exercises eight scenarios, including a lesson flow in each of the 32 new languages.
 
 Course/audio/professional approvals remain pending. [Qualified-review handoff](review/ILMIGO-COURSE-QUALITY-RECHECK.md) provides exact snapshots and blank evidence records; it is not proof of qualification.

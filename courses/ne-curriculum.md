@@ -1,6 +1,6 @@
 # ILMIGO · Nepali introductory foundation
 
-Original draft: qualified language and audio review pending. Three suggested 30-minute practice sessions. Not a complete professional course.
+Original draft: qualified language and audio review pending. Four suggested 30-minute practice sessions. Not a complete professional course.
 
 Reading, partner drill, writing and four answer-key checks per lesson. Roman aids are approximate.
 
@@ -84,4 +84,31 @@ Copy each target expression carefully. Cover the model and write it from memory.
 - Choose the taught expression for: Two. → दुई
 - Choose the taught expression for: Three. → तीन
 - Choose the taught expression for: Four. → चार
+
+## Introduce yourself politely
+
+Nepali uses Devanagari. The ending -nuhos gives a respectful request. Ho and hoina answer identification statements; context determines which affirmative or negative verb form is needed. The model introduces a speaker named Ali. Respectful address is used where shown; gender, register and local usage need qualified review. Forms of learning can mark an ongoing activity or a general habit rather than matching the English tense word for word.
+
+**Daily plan:** 5m review, 8m words/patterns, 7m read/listen, 7m speak/write, 3m assessment.
+
+- मेरो नाम अली हो। — My name is Ali. / میرا نام علی ہے۔ (mero naam Ali ho)
+- तपाईंको नाम के हो? — What is your name? / آپ کا نام کیا ہے؟ (tapaainko naam ke ho)
+- तपाईंलाई भेटेर खुसी लाग्यो। — Nice to meet you. / آپ سے مل کر خوشی ہوئی۔ (tapaainlaai bhetera khusi laagyo)
+- म सिक्दै छु। — I am learning. / میں سیکھ رہا ہوں / رہی ہوں۔ (ma sikdai chhu)
+
+**Reading / drill**
+
+मेरो नाम अली हो।
+तपाईंको नाम के हो?
+तपाईंलाई भेटेर खुसी लाग्यो।
+म सिक्दै छु।
+
+Introduce yourself with your own name in place of Ali. Ask a partner their name using the taught form, then use the meeting and learning expressions. Write a four-line introduction and repeat it without reading. Confirm gender and respectful-address changes with a competent speaker; do not invent word-for-word translations.
+
+**Quiz answer key**
+
+- Choose the taught expression for: My name is Ali.. → मेरो नाम अली हो।
+- Choose the taught expression for: What is your name?. → तपाईंको नाम के हो?
+- Choose the taught expression for: Nice to meet you.. → तपाईंलाई भेटेर खुसी लाग्यो।
+- Choose the taught expression for: I am learning.. → म सिक्दै छु।
 

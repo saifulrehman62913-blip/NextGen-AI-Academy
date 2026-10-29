@@ -11,5 +11,5 @@ def balance_assessments(content):
             wrong=[choice for choice in choices if choice!=answer]
             question['options']=wrong[:target]+[answer]+wrong[target:]
         lesson['quiz']=questions[0]
-    content['revision']=5
+    content['revision']=6
     return content

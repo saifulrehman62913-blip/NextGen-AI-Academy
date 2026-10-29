@@ -4,11 +4,33 @@ import {readFile} from 'node:fs/promises';
 import {validateCatalog} from '../shared/schema.mjs';
 import {emptyState,profile,courseLessons,nextLesson,lessonQuestions,completeLesson,totalXP} from '../shared/learning.mjs';
 const catalog=JSON.parse(await readFile(new URL('../shared/catalog.json',import.meta.url)));
-test('all 32 new languages have three unique usable beginner drafts and honest review metadata',()=>{
- validateCatalog(catalog);assert.equal(catalog.lessons.length,136);assert.equal(catalog.revision,5);
+const phrases=JSON.parse(await readFile(new URL('../scripts/foundation_phrases.json',import.meta.url)));
+test('new introductions preserve the original three lesson scripts and use explicit target-language source',()=>{
+ for(const [code,data] of Object.entries(phrases)){
+  const lessons=courseLessons(catalog,code);
+  assert.deepEqual(lessons.slice(0,3).flatMap(l=>l.words.map(w=>w.text)),data.phrases);
+  const intro=lessons[3];assert.equal(intro.id,`${code}-foundation-introductions`);
+  assert.deepEqual(intro.words.map(w=>w.text),data.introPhrases);
+  assert.deepEqual(intro.words.map(w=>w.transliteration),data.introRoman);
+  assert.equal(intro.reading,data.introPhrases.join('\n'));
+  assert.equal(intro.reviewStatus,'pending');assert.ok(intro.usageNote.includes(data.introNote));
+  assert.equal(catalog.curriculum.plannedMinutesByLanguage[code],120);
+ }
+});
+test('existing starter-course completion leads to the new introduction without losing progress',()=>{
+ for(const code of Object.keys(phrases)){
+  const learner=profile(emptyState());learner.language=code;
+  const lessons=courseLessons(catalog,code);
+  for(const lesson of lessons.slice(0,3))assert.equal(completeLesson(learner,lesson,lessonQuestions(lesson).map(q=>q.answer)),true);
+  assert.equal(totalXP(learner),90);assert.equal(nextLesson(catalog,learner).id,`${code}-foundation-introductions`);
+  assert.equal(Object.keys(learner.completed).length,3);
+ }
+});
+test('all 32 new languages have four unique usable beginner drafts and honest review metadata',()=>{
+ validateCatalog(catalog);assert.equal(catalog.lessons.length,168);assert.equal(catalog.revision,6);
  for(const language of catalog.languages.filter(l=>!['en','ur'].includes(l.id))){
-  const lessons=courseLessons(catalog,language.id);assert.equal(language.status,'sample');assert.equal(lessons.length,3);assert.deepEqual(lessons.map(l=>l.order),[0,1,2]);
-  assert.equal(new Set(lessons.map(l=>l.reading)).size,3);
+  const lessons=courseLessons(catalog,language.id);assert.equal(language.status,'sample');assert.equal(lessons.length,4);assert.deepEqual(lessons.map(l=>l.order),[0,1,2,3]);
+  assert.equal(new Set(lessons.map(l=>l.reading)).size,4);
   for(const l of lessons){assert.equal(l.level,'beginner');assert.equal(l.reviewStatus,'pending');assert.equal(l.practiceType,'phrase_drill');assert.equal(l.words.length,4);assert.equal(l.checks.length,4);assert.ok(l.usageNote.length>70);assert.equal(l.translation.en.split('\n').length,4);assert.equal(l.translation.ur.split('\n').length,4);}
  }
 });
@@ -19,6 +41,6 @@ test('each new language progresses, rejects a wrong quiz and keeps replay XP ide
    assert.equal(nextLesson(catalog,learner).id,l.id);const answers=lessonQuestions(l).map(q=>q.answer),wrong=[...answers];wrong[0]=l.checks[0].options.find(x=>x!==wrong[0]);
    assert.equal(completeLesson(learner,l,wrong),false);assert.equal(completeLesson(learner,l,answers),true);const xp=totalXP(learner);completeLesson(learner,l,answers);assert.equal(totalXP(learner),xp);
   }
-  assert.equal(Object.keys(learner.completed).length,3);assert.equal(totalXP(learner),90);
+  assert.equal(Object.keys(learner.completed).length,4);assert.equal(totalXP(learner),120);
  }
 });

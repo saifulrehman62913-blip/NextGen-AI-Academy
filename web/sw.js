@@ -1,4 +1,4 @@
-const CACHE='ilmigo-v6.1';
+const CACHE='ilmigo-v6.2';
 const ASSETS=['/','/index.html','/style.css','/app.js','/icon.svg','/shared/catalog.json','/shared/learning.mjs','/shared/accounts.mjs','/shared/schema.mjs','/shared/parent.mjs','/shared/session.mjs','/manifest.webmanifest'];
 // A stalled network must not hide an already cached offline app. Consume the
 // static response body inside the deadline so a header-only response cannot hang.

@@ -1,6 +1,6 @@
 # ILMIGO · Saraiki introductory foundation
 
-Original draft: qualified language and audio review pending. Three suggested 30-minute practice sessions. Not a complete professional course.
+Original draft: qualified language and audio review pending. Four suggested 30-minute practice sessions. Not a complete professional course.
 
 Reading, partner drill, writing and four answer-key checks per lesson. Roman aids are approximate.
 
@@ -84,4 +84,31 @@ Copy each target expression carefully. Cover the model and write it from memory.
 - Choose the taught expression for: Two. → ݙو
 - Choose the taught expression for: Three. → ترَے
 - Choose the taught expression for: Four. → چار
+
+## Introduce yourself politely
+
+Saraiki is shown in its Pakistani Arabic-derived script, read right to left. Distinctive letters such as ݙ are important. Everyday wording and number pronunciation vary by region; these are approximate practice forms. Saraiki spelling and spoken forms vary regionally. This is an unreviewed draft in Arabic-derived script; a competent Saraiki reviewer must confirm the name question and progressive learning form before publication.
+
+**Daily plan:** 5m review, 8m words/patterns, 7m read/listen, 7m speak/write, 3m assessment.
+
+- میݙا ناں علی ہے۔ — My name is Ali. / میرا نام علی ہے۔ (meda naa Ali hai)
+- تہاݙا ناں کیا ہے؟ — What is your name? / آپ کا نام کیا ہے؟ (tuhaada naa kya hai)
+- تہاݙے نال مل کے خوشی تھی۔ — Nice to meet you. / آپ سے مل کر خوشی ہوئی۔ (tuhaaday naal mil kay khushi thi)
+- میں سکھدا پیاں۔ — I am learning. / میں سیکھ رہا ہوں / رہی ہوں۔ (main sikhda pyaan)
+
+**Reading / drill**
+
+میݙا ناں علی ہے۔
+تہاݙا ناں کیا ہے؟
+تہاݙے نال مل کے خوشی تھی۔
+میں سکھدا پیاں۔
+
+Introduce yourself with your own name in place of Ali. Ask a partner their name using the taught form, then use the meeting and learning expressions. Write a four-line introduction and repeat it without reading. Confirm gender and respectful-address changes with a competent speaker; do not invent word-for-word translations.
+
+**Quiz answer key**
+
+- Choose the taught expression for: My name is Ali.. → میݙا ناں علی ہے۔
+- Choose the taught expression for: What is your name?. → تہاݙا ناں کیا ہے؟
+- Choose the taught expression for: Nice to meet you.. → تہاݙے نال مل کے خوشی تھی۔
+- Choose the taught expression for: I am learning.. → میں سکھدا پیاں۔
 

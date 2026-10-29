@@ -1,6 +1,6 @@
 # ILMIGO · Turkish introductory foundation
 
-Original draft: qualified language and audio review pending. Three suggested 30-minute practice sessions. Not a complete professional course.
+Original draft: qualified language and audio review pending. Four suggested 30-minute practice sessions. Not a complete professional course.
 
 Reading, partner drill, writing and four answer-key checks per lesson. Roman aids are approximate.
 
@@ -84,4 +84,31 @@ Copy each target expression carefully. Cover the model and write it from memory.
 - Choose the taught expression for: Two. → iki
 - Choose the taught expression for: Three. → üç
 - Choose the taught expression for: Four. → dört
+
+## Introduce yourself politely
+
+Turkish uses a Latin alphabet. Dotless ı differs from i; ş sounds approximately like English sh and ç like ch. Hoşça kal is said to someone staying when you leave; a person staying can reply Güle güle. The model introduces a speaker named Ali. Respectful address is used where shown; gender, register and local usage need qualified review. Forms of learning can mark an ongoing activity or a general habit rather than matching the English tense word for word.
+
+**Daily plan:** 5m review, 8m words/patterns, 7m read/listen, 7m speak/write, 3m assessment.
+
+- Benim adım Ali. — My name is Ali. / میرا نام علی ہے۔ (Benim adım Ali.)
+- Adınız ne? — What is your name? / آپ کا نام کیا ہے؟ (Adınız ne?)
+- Tanıştığımıza memnun oldum. — Nice to meet you. / آپ سے مل کر خوشی ہوئی۔ (Tanıştığımıza memnun oldum.)
+- Öğreniyorum. — I am learning. / میں سیکھ رہا ہوں / رہی ہوں۔ (Öğreniyorum.)
+
+**Reading / drill**
+
+Benim adım Ali.
+Adınız ne?
+Tanıştığımıza memnun oldum.
+Öğreniyorum.
+
+Introduce yourself with your own name in place of Ali. Ask a partner their name using the taught form, then use the meeting and learning expressions. Write a four-line introduction and repeat it without reading. Confirm gender and respectful-address changes with a competent speaker; do not invent word-for-word translations.
+
+**Quiz answer key**
+
+- Choose the taught expression for: My name is Ali.. → Benim adım Ali.
+- Choose the taught expression for: What is your name?. → Adınız ne?
+- Choose the taught expression for: Nice to meet you.. → Tanıştığımıza memnun oldum.
+- Choose the taught expression for: I am learning.. → Öğreniyorum.
 

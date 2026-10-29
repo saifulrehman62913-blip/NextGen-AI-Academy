@@ -1,6 +1,6 @@
 # ILMIGO · Portuguese introductory foundation
 
-Original draft: qualified language and audio review pending. Three suggested 30-minute practice sessions. Not a complete professional course.
+Original draft: qualified language and audio review pending. Four suggested 30-minute practice sessions. Not a complete professional course.
 
 Reading, partner drill, writing and four answer-key checks per lesson. Roman aids are approximate.
 
@@ -84,4 +84,31 @@ Copy each target expression carefully. Cover the model and write it from memory.
 - Choose the taught expression for: Two. → dois
 - Choose the taught expression for: Three. → três
 - Choose the taught expression for: Four. → quatro
+
+## Introduce yourself politely
+
+Portuguese Obrigado is used by a masculine speaker; a feminine speaker says Obrigada. Com licença politely asks permission to pass. Pronunciation differs between Brazilian and European varieties; nasal vowels matter. This lesson consistently teaches a European Portuguese model: O meu nome, Como se chama, conhecê-lo and Estou a aprender. Brazilian usage and pronunciation differ. The model addresses a man; the corresponding feminine form is conhecê-la.
+
+**Daily plan:** 5m review, 8m words/patterns, 7m read/listen, 7m speak/write, 3m assessment.
+
+- O meu nome é Ali. — My name is Ali. / میرا نام علی ہے۔ (O meu nome é Ali.)
+- Como se chama? — What is your name? / آپ کا نام کیا ہے؟ (Como se chama?)
+- É um prazer conhecê-lo. — Nice to meet you. / آپ سے مل کر خوشی ہوئی۔ (É um prazer conhecê-lo.)
+- Estou a aprender. — I am learning. / میں سیکھ رہا ہوں / رہی ہوں۔ (Estou a aprender.)
+
+**Reading / drill**
+
+O meu nome é Ali.
+Como se chama?
+É um prazer conhecê-lo.
+Estou a aprender.
+
+Introduce yourself with your own name in place of Ali. Ask a partner their name using the taught form, then use the meeting and learning expressions. Write a four-line introduction and repeat it without reading. Confirm gender and respectful-address changes with a competent speaker; do not invent word-for-word translations.
+
+**Quiz answer key**
+
+- Choose the taught expression for: My name is Ali.. → O meu nome é Ali.
+- Choose the taught expression for: What is your name?. → Como se chama?
+- Choose the taught expression for: Nice to meet you.. → É um prazer conhecê-lo.
+- Choose the taught expression for: I am learning.. → Estou a aprender.
 

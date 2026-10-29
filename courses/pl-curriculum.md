@@ -1,6 +1,6 @@
 # ILMIGO · Polish introductory foundation
 
-Original draft: qualified language and audio review pending. Three suggested 30-minute practice sessions. Not a complete professional course.
+Original draft: qualified language and audio review pending. Four suggested 30-minute practice sessions. Not a complete professional course.
 
 Reading, partner drill, writing and four answer-key checks per lesson. Roman aids are approximate.
 
@@ -84,4 +84,31 @@ Copy each target expression carefully. Cover the model and write it from memory.
 - Choose the taught expression for: Two. → dwa
 - Choose the taught expression for: Three. → trzy
 - Choose the taught expression for: Four. → cztery
+
+## Introduce yourself politely
+
+Polish diacritics are essential. Przepraszam serves both excuse me and sorry. Dzień dobry is a daytime greeting. Counting forms change with gender and case in sentences; these are introductory standalone forms. The model addresses one adult man with Pan/Pana; use Pani for one adult woman and appropriate forms for other audiences. Do not use this as a universal question for every person.
+
+**Daily plan:** 5m review, 8m words/patterns, 7m read/listen, 7m speak/write, 3m assessment.
+
+- Mam na imię Ali. — My name is Ali. / میرا نام علی ہے۔ (Mam na imię Ali.)
+- Jak ma Pan na imię? — What is your name? / آپ کا نام کیا ہے؟ (Jak ma Pan na imię?)
+- Miło mi Pana poznać. — Nice to meet you. / آپ سے مل کر خوشی ہوئی۔ (Miło mi Pana poznać.)
+- Uczę się. — I am learning. / میں سیکھ رہا ہوں / رہی ہوں۔ (Uczę się.)
+
+**Reading / drill**
+
+Mam na imię Ali.
+Jak ma Pan na imię?
+Miło mi Pana poznać.
+Uczę się.
+
+Introduce yourself with your own name in place of Ali. Ask a partner their name using the taught form, then use the meeting and learning expressions. Write a four-line introduction and repeat it without reading. Confirm gender and respectful-address changes with a competent speaker; do not invent word-for-word translations.
+
+**Quiz answer key**
+
+- Choose the taught expression for: My name is Ali.. → Mam na imię Ali.
+- Choose the taught expression for: What is your name?. → Jak ma Pan na imię?
+- Choose the taught expression for: Nice to meet you.. → Miło mi Pana poznać.
+- Choose the taught expression for: I am learning.. → Uczę się.
 

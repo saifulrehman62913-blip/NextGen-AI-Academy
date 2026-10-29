@@ -1,6 +1,6 @@
 # ILMIGO · Russian introductory foundation
 
-Original draft: qualified language and audio review pending. Three suggested 30-minute practice sessions. Not a complete professional course.
+Original draft: qualified language and audio review pending. Four suggested 30-minute practice sessions. Not a complete professional course.
 
 Reading, partner drill, writing and four answer-key checks per lesson. Roman aids are approximate.
 
@@ -84,4 +84,31 @@ Copy each target expression carefully. Cover the model and write it from memory.
 - Choose the taught expression for: Two. → два
 - Choose the taught expression for: Three. → три
 - Choose the taught expression for: Four. → четыре
+
+## Introduce yourself politely
+
+Russian uses Cyrillic. Zdravstvuyte is respectful or plural. Razreshite proyti asks permission to pass. Numbers here are citation forms; their form and the following noun change with gender and grammatical case. The model speaker Ali uses masculine rad; a feminine speaker uses rada. Vas/vami use respectful or plural address.
+
+**Daily plan:** 5m review, 8m words/patterns, 7m read/listen, 7m speak/write, 3m assessment.
+
+- Меня зовут Али. — My name is Ali. / میرا نام علی ہے۔ (menya zovut Ali)
+- Как вас зовут? — What is your name? / آپ کا نام کیا ہے؟ (kak vas zovut)
+- Рад с вами познакомиться. — Nice to meet you. / آپ سے مل کر خوشی ہوئی۔ (rad s vami poznakomitsya)
+- Я учусь. — I am learning. / میں سیکھ رہا ہوں / رہی ہوں۔ (ya uchus)
+
+**Reading / drill**
+
+Меня зовут Али.
+Как вас зовут?
+Рад с вами познакомиться.
+Я учусь.
+
+Introduce yourself with your own name in place of Ali. Ask a partner their name using the taught form, then use the meeting and learning expressions. Write a four-line introduction and repeat it without reading. Confirm gender and respectful-address changes with a competent speaker; do not invent word-for-word translations.
+
+**Quiz answer key**
+
+- Choose the taught expression for: My name is Ali.. → Меня зовут Али.
+- Choose the taught expression for: What is your name?. → Как вас зовут?
+- Choose the taught expression for: Nice to meet you.. → Рад с вами познакомиться.
+- Choose the taught expression for: I am learning.. → Я учусь.
 

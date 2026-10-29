@@ -93,9 +93,9 @@ void main() {
     final s=LearningStore();await s.load();expect(validCatalog(s.catalog),true);
     final languages=(s.catalog['languages'] as List).where((l)=>!['en','ur'].contains(l['id']));expect(languages.length,32);
     for(final language in languages){
-      s.learner.language=language['id'] as String;s.learner.completed.clear();expect(s.lessons.length,3);
+      s.learner.language=language['id'] as String;s.learner.completed.clear();expect(s.lessons.length,4);
       for(final lesson in s.lessons){expect(s.nextLesson?['id'],lesson['id']);expect(s.complete(lesson,lessonQuestions(lesson).map((q)=>q['answer']).toList()),true);}
-      expect(s.learner.completed.length,3);expect(s.learner.xp,90);
+      expect(s.learner.completed.length,4);expect(s.learner.xp,120);
     }
   });
 

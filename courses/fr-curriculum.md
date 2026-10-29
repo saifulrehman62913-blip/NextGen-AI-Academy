@@ -1,6 +1,6 @@
 # ILMIGO · French introductory foundation
 
-Original draft: qualified language and audio review pending. Three suggested 30-minute practice sessions. Not a complete professional course.
+Original draft: qualified language and audio review pending. Four suggested 30-minute practice sessions. Not a complete professional course.
 
 Reading, partner drill, writing and four answer-key checks per lesson. Roman aids are approximate.
 
@@ -84,4 +84,31 @@ Copy each target expression carefully. Cover the model and write it from memory.
 - Choose the taught expression for: Two. → deux
 - Choose the taught expression for: Three. → trois
 - Choose the taught expression for: Four. → quatre
+
+## Introduce yourself politely
+
+French vous is respectful or plural. Je suis désolé is a masculine written form; a feminine speaker writes désolée. Many final letters are not pronounced, so the written forms are not phonetic transcriptions. The model speaker Ali uses masculine ravi; a feminine speaker writes ravie. Vous is used for respectful or plural address.
+
+**Daily plan:** 5m review, 8m words/patterns, 7m read/listen, 7m speak/write, 3m assessment.
+
+- Je m’appelle Ali. — My name is Ali. / میرا نام علی ہے۔ (Je m’appelle Ali.)
+- Comment vous appelez-vous ? — What is your name? / آپ کا نام کیا ہے؟ (Comment vous appelez-vous ?)
+- Je suis ravi de vous rencontrer. — Nice to meet you. / آپ سے مل کر خوشی ہوئی۔ (Je suis ravi de vous rencontrer.)
+- Je suis en train d’apprendre. — I am learning. / میں سیکھ رہا ہوں / رہی ہوں۔ (Je suis en train d’apprendre.)
+
+**Reading / drill**
+
+Je m’appelle Ali.
+Comment vous appelez-vous ?
+Je suis ravi de vous rencontrer.
+Je suis en train d’apprendre.
+
+Introduce yourself with your own name in place of Ali. Ask a partner their name using the taught form, then use the meeting and learning expressions. Write a four-line introduction and repeat it without reading. Confirm gender and respectful-address changes with a competent speaker; do not invent word-for-word translations.
+
+**Quiz answer key**
+
+- Choose the taught expression for: My name is Ali.. → Je m’appelle Ali.
+- Choose the taught expression for: What is your name?. → Comment vous appelez-vous ?
+- Choose the taught expression for: Nice to meet you.. → Je suis ravi de vous rencontrer.
+- Choose the taught expression for: I am learning.. → Je suis en train d’apprendre.
 

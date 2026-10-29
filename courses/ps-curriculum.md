@@ -1,6 +1,6 @@
 # ILMIGO · Pashto introductory foundation
 
-Original draft: qualified language and audio review pending. Three suggested 30-minute practice sessions. Not a complete professional course.
+Original draft: qualified language and audio review pending. Four suggested 30-minute practice sessions. Not a complete professional course.
 
 Reading, partner drill, writing and four answer-key checks per lesson. Roman aids are approximate.
 
@@ -84,4 +84,31 @@ Copy each target expression carefully. Cover the model and write it from memory.
 - Choose the taught expression for: Two. → دوه
 - Choose the taught expression for: Three. → درې
 - Choose the taught expression for: Four. → څلور
+
+## Introduce yourself politely
+
+Pashto reads right to left. This is a general introductory set, not a Swabi-specific dialect course. Respectful plural request forms are used; regional pronunciations of ښ and ږ vary. The model introduces a speaker named Ali. Respectful address is used where shown; gender, register and local usage need qualified review. Forms of learning can mark an ongoing activity or a general habit rather than matching the English tense word for word.
+
+**Daily plan:** 5m review, 8m words/patterns, 7m read/listen, 7m speak/write, 3m assessment.
+
+- زما نوم علي دی. — My name is Ali. / میرا نام علی ہے۔ (zmaa num Ali day)
+- ستاسو نوم څه دی؟ — What is your name? / آپ کا نام کیا ہے؟ (staaso num tsa day)
+- ستاسو په لیدو خوشحاله شوم. — Nice to meet you. / آپ سے مل کر خوشی ہوئی۔ (staaso pa lido khushhaala shwam)
+- زه زده کړه کوم. — I am learning. / میں سیکھ رہا ہوں / رہی ہوں۔ (za zda kra kawum)
+
+**Reading / drill**
+
+زما نوم علي دی.
+ستاسو نوم څه دی؟
+ستاسو په لیدو خوشحاله شوم.
+زه زده کړه کوم.
+
+Introduce yourself with your own name in place of Ali. Ask a partner their name using the taught form, then use the meeting and learning expressions. Write a four-line introduction and repeat it without reading. Confirm gender and respectful-address changes with a competent speaker; do not invent word-for-word translations.
+
+**Quiz answer key**
+
+- Choose the taught expression for: My name is Ali.. → زما نوم علي دی.
+- Choose the taught expression for: What is your name?. → ستاسو نوم څه دی؟
+- Choose the taught expression for: Nice to meet you.. → ستاسو په لیدو خوشحاله شوم.
+- Choose the taught expression for: I am learning.. → زه زده کړه کوم.
 

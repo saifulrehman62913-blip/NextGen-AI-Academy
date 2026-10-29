@@ -1,6 +1,6 @@
 # ILMIGO · Swahili introductory foundation
 
-Original draft: qualified language and audio review pending. Three suggested 30-minute practice sessions. Not a complete professional course.
+Original draft: qualified language and audio review pending. Four suggested 30-minute practice sessions. Not a complete professional course.
 
 Reading, partner drill, writing and four answer-key checks per lesson. Roman aids are approximate.
 
@@ -84,4 +84,31 @@ Copy each target expression carefully. Cover the model and write it from memory.
 - Choose the taught expression for: Two. → mbili
 - Choose the taught expression for: Three. → tatu
 - Choose the taught expression for: Four. → nne
+
+## Introduce yourself politely
+
+Swahili Habari asks for news/how things are; a common reply is nzuri. Samahani can attract attention or express an apology. Some numbers change with noun class when counting actual objects; these are standalone forms. The model introduces a speaker named Ali. Respectful address is used where shown; gender, register and local usage need qualified review. Forms of learning can mark an ongoing activity or a general habit rather than matching the English tense word for word.
+
+**Daily plan:** 5m review, 8m words/patterns, 7m read/listen, 7m speak/write, 3m assessment.
+
+- Jina langu ni Ali. — My name is Ali. / میرا نام علی ہے۔ (Jina langu ni Ali.)
+- Jina lako ni nani? — What is your name? / آپ کا نام کیا ہے؟ (Jina lako ni nani?)
+- Ninafurahi kukutana nawe. — Nice to meet you. / آپ سے مل کر خوشی ہوئی۔ (Ninafurahi kukutana nawe.)
+- Ninajifunza. — I am learning. / میں سیکھ رہا ہوں / رہی ہوں۔ (Ninajifunza.)
+
+**Reading / drill**
+
+Jina langu ni Ali.
+Jina lako ni nani?
+Ninafurahi kukutana nawe.
+Ninajifunza.
+
+Introduce yourself with your own name in place of Ali. Ask a partner their name using the taught form, then use the meeting and learning expressions. Write a four-line introduction and repeat it without reading. Confirm gender and respectful-address changes with a competent speaker; do not invent word-for-word translations.
+
+**Quiz answer key**
+
+- Choose the taught expression for: My name is Ali.. → Jina langu ni Ali.
+- Choose the taught expression for: What is your name?. → Jina lako ni nani?
+- Choose the taught expression for: Nice to meet you.. → Ninafurahi kukutana nawe.
+- Choose the taught expression for: I am learning.. → Ninajifunza.
 
