@@ -18,6 +18,17 @@ class DelayedVoice extends Fake implements FlutterTts {
   @override Future<dynamic> stop() async=>1;
 }
 
+class UnavailableVoice extends Fake implements FlutterTts {
+  UnavailableVoice({this.available=true,this.selected=1});
+  final dynamic available,selected;
+  final spoken=<String>[];
+  int selections=0;
+  @override Future<dynamic> isLanguageAvailable(String language) async=>available;
+  @override Future<dynamic> setLanguage(String language) async {selections++;return selected;}
+  @override Future<dynamic> setSpeechRate(double rate) async=>1;
+  @override Future<dynamic> speak(String text,{bool focus=false}) async {spoken.add(text);return 1;}
+}
+
 class FailingSignOutStore extends LearningStore {
   @override Future<void> switchAccount(String? account,{bool persistCurrent=true}) async {throw StateError('Storage unavailable');}
 }
@@ -53,6 +64,20 @@ void main(){
     final child=Learner(id:'child-local',cloudId:'child-cloud',name:'Child',kind:'child');store.profiles.add(child);
     store.mergeCloud([{'id':'child-cloud','localId':adult.id,'name':'Updated child','kind':'child','language':'en','goal':'School & study','completed':{},'days':[]}]);
     expect(adult.kind,'adult');expect(adult.cloudId,'adult-cloud');expect(child.name,'Updated child');expect(store.profiles.length,2);
+  });
+  test('missing target voice never selects or plays a default language',() async {
+    for(final missing in [false,0,null]){
+      final engine=UnavailableVoice(available:missing),voice=VoiceService(engine:engine);
+      await expectLater(voice.speak('target phrase','skr'),throwsException);
+      expect(engine.selections,0);expect(engine.spoken,isEmpty);
+    }
+  });
+  test('failed language selection never speaks using the previous voice',() async {
+    for(final failed in [false,0,null]){
+      final engine=UnavailableVoice(selected:failed),voice=VoiceService(engine:engine);
+      await expectLater(voice.speak('target phrase','ur'),throwsException);
+      expect(engine.selections,1);expect(engine.spoken,isEmpty);
+    }
   });
   test('stopping voice prevents a delayed playback from starting after leaving a screen',() async {
     final engine=DelayedVoice(),voice=VoiceService(engine:engine);

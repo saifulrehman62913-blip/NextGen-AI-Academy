@@ -108,7 +108,8 @@ class VoiceService {
     final available = await tts.isLanguageAvailable(locale);
     if(generation!=_generation)return;
     if (available != true && available != 1) throw Exception('A $locale device voice is not installed. Use the written transliteration for now.');
-    await tts.setLanguage(locale);if(generation!=_generation)return;
+    final selected=await tts.setLanguage(locale);if(generation!=_generation)return;
+    if(selected!=true&&selected!=1)throw Exception('Could not select the $locale device voice. Check installed speech voices and try again.');
     await tts.setSpeechRate(0.42);if(generation!=_generation)return;
     await tts.speak(text);
   }
