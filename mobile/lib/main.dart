@@ -214,7 +214,7 @@ class _PracticeViewState extends State<PracticeView> {
     try{
       final ready=await speech.initialize(onError:(e){if(mounted)setState((){feedback=e.errorMsg;listening=false;});},onStatus:(status){if(mounted&&status!='listening')setState(()=>listening=false);});
       if(!ready)throw Exception(s.t('Microphone is unavailable. You can type the phrase instead.','مائیک دستیاب نہیں۔ جملہ لکھ سکتے ہیں۔'));
-      final locales=await speech.locales();final candidates=locales.where((l)=>l.localeId.startsWith(s.learner.language)).toList();
+      final locales=await speech.locales();final candidates=locales.where((l)=>speechLanguageMatches(l.localeId,s.learner.language)).toList();
       if(candidates.isEmpty)throw Exception(s.t('This device does not support speech recognition for your selected language. Type your answer instead.','اس آلے پر منتخب زبان کی آواز شناخت نہیں ہوتی۔ جواب لکھیں۔'));
       if(!mounted)return;setState(()=>listening=true);
       await speech.listen(onResult:(r){if(mounted)setState(()=>transcript.text=r.recognizedWords);},listenOptions:SpeechListenOptions(localeId:candidates.first.localeId,listenFor:const Duration(seconds:20)));

@@ -11,6 +11,16 @@ import 'package:ilmigo/parent.dart';
 void main() {
   TestWidgetsFlutterBinding.ensureInitialized();
   setUp(() => SharedPreferences.setMockInitialValues({}));
+  test('recognition language matching never accepts a different prefix language',(){
+    expect(speechLanguageMatches('pa_PK','pa'),true);
+    expect(speechLanguageMatches('EN-us','en'),true);
+    expect(speechLanguageMatches('zh-Hans-CN','zh'),true);
+    expect(speechLanguageMatches('skr_PK','skr'),true);
+    expect(speechLanguageMatches('pap','pa'),false);
+    expect(speechLanguageMatches('new_NP','ne'),false);
+    expect(speechLanguageMatches('ur_PK','skr'),false);
+    expect(speechLanguageMatches('','en'),false);
+  });
   test('practice comparison ignores target-script punctuation without discarding meaningful letters',(){
     for(final pair in <List<String>>[
       ['آپ کا نام کیا ہے؟','آپ کا نام کیا ہے'],
