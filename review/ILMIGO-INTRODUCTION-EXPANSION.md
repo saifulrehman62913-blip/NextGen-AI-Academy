@@ -10,4 +10,9 @@ Native speaking practice also fixes an Urdu-only direction condition: all RTL co
 
 Full professional curricula, higher stages for these 32 tracks, qualified language/audio review and physical-device voice acceptance remain incomplete. No recordings, human approvals, live backend, store release or payments were created by authoring these lessons. The owner confirmed hosting/Supabase accounts are not ready and device testing is currently unavailable.
 
-Local verification: 124 Node tests passed, zero failed; web build and JavaScript syntax passed. Cloud verification must be recorded after the exact release commit completes CI; no new Android/iOS artifact is claimed here yet.
+Local verification: 124 Node tests passed, zero failed; web build and JavaScript syntax passed. Cloud run 40843043860 at application commit a5afabdb369b12f46f35ca5f2d5a960998e5bde7 completed successfully on 29 October 2026: all 124 Node tests, 33 Flutter tests on each host, native analysis with no issues, 36 PostgreSQL assertions, Docker HTTP checks, eight real Chrome scenarios, Android debug APK and iOS simulator build passed. These are beta/simulator artifacts, not signed production releases or physical-phone acceptance. See review/cloud/introduction-verification.json for exact artifact metadata.
+
+
+Android debug ZIP: https://github.com/saifulrehman62913-blip/NextGen-AI-Academy/actions/runs/40843043860/artifacts/12884071766
+
+iOS simulator ZIP: https://github.com/saifulrehman62913-blip/NextGen-AI-Academy/actions/runs/40843043860/artifacts/12883269227
