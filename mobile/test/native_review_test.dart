@@ -47,6 +47,10 @@ void main(){
     expect(find.text('ILMIGO Plus ✦'),findsNothing);
     expect(find.text('Trial & subscription status'),findsNothing);
     expect(find.textContaining('saved on this device'),findsOneWidget);
+    final privacy=find.widgetWithText(OutlinedButton,'Privacy & data');
+    await tester.ensureVisible(privacy);await tester.tap(privacy);await tester.pump();
+    expect(find.textContaining('no cloud backup'),findsOneWidget);
+    expect(find.textContaining('Sign in and sync'),findsNothing);
     expect(tester.takeException(),isNull);await tester.pumpWidget(const SizedBox());
   },timeout:const Timeout(Duration(seconds:60)));
   testWidgets('practice phrase uses each course reading direction, including non-Urdu RTL languages',(tester) async {

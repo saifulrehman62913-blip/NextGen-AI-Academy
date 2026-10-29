@@ -4,7 +4,7 @@ This native build has no configured backend URL and does not require an account 
 
 ## Changes
 
-When cloud configuration is absent, speaking practice offers device Listen, optional supported recognition and local word comparison. It hides unavailable AI/conversation controls. The family page displays local-saving guidance and hides email sign-in and subscription prompts. Direct sign-in attempts return a clear local-edition message rather than opening a nonworking OTP flow. Cloud-configured editions retain their existing signed-in AI flow and paid-access guards.
+When cloud configuration is absent, speaking practice offers device Listen, optional supported recognition and local word comparison. It hides unavailable AI/conversation controls. The family page displays local-saving guidance and hides email sign-in and subscription prompts. Privacy copy also explains the lack of cloud backup without directing offline users to unavailable sign-in. Direct sign-in attempts return a clear local-edition message rather than opening a nonworking OTP flow. Cloud-configured editions retain their existing signed-in AI flow and paid-access guards.
 
 Two native widget regressions verify usable offline word comparison and the family screen's local controls without dead account/purchase prompts. Existing cloud fixtures continue exercising the configured AI path. No production credentials, paid plan, live AI, payment activation, owner signing or store publication is included.
 
