@@ -1,10 +1,10 @@
 # ILMIGO DIGITAL ACADEMY
 
-Version 0.8.1. A bilingual language-learning beta with **ILMIGO**, the robot teacher. Android debug APK and iOS simulator builds have now completed successfully on GitHub Actions.
+Version 0.9.0 source (new build verification pending). A bilingual language-learning beta with **ILMIGO**, the robot teacher. Android debug APK and iOS simulator builds have now completed successfully on GitHub Actions.
 
-Current native edition: [free offline beta](review/ILMIGO-FREE-OFFLINE-EDITION.md). Course expansion: [0.8.0 introductions](review/ILMIGO-INTRODUCTION-EXPANSION.md). Prior build and implementation evidence: [0.7.1 assessment fix and review handoff](review/ILMIGO-COURSE-QUALITY-RECHECK.md), with [0.5.0 child-session details](review/ILMIGO-CHILD-SESSIONS-RELEASE.md). Owner account and payout setup: [Pakistan/Meezan guide](review/PAYMENT-SETUP-PAKISTAN.md).
+New workplace content: [0.9.0 professional expansion](review/ILMIGO-PROFESSIONAL-EXPANSION.md). Previous verified native edition: [free offline beta](review/ILMIGO-FREE-OFFLINE-EDITION.md). Course expansion: [0.8.0 introductions](review/ILMIGO-INTRODUCTION-EXPANSION.md). Prior build and implementation evidence: [0.7.1 assessment fix and review handoff](review/ILMIGO-COURSE-QUALITY-RECHECK.md), with [0.5.0 child-session details](review/ILMIGO-CHILD-SESSIONS-RELEASE.md). Owner account and payout setup: [Pakistan/Meezan guide](review/PAYMENT-SETUP-PAKISTAN.md).
 
-## Download the free offline test app
+## Download the previous verified 0.8.1 offline test app
 
 - [Android APK ZIP](https://github.com/saifulrehman62913-blip/NextGen-AI-Academy/actions/runs/40845892353/artifacts/12884319736) — extract and install `app-debug.apk` on Android.
 - [iOS simulator ZIP](https://github.com/saifulrehman62913-blip/NextGen-AI-Academy/actions/runs/40845892353/artifacts/12884967196) — simulator only, not a signed physical-iPhone IPA.
@@ -26,13 +26,13 @@ Verified application commit: `422f4a4dbb3badf5245ea59e7db76798a22f0f14`. Flutter
 | Android debug APK | Built |
 | iOS simulator app | Built |
 | PostgreSQL integration assertions | 36 passed |
-| Docker build and HTTP smoke | Passed, 168 lessons |
+| Docker build and HTTP smoke | Passed, 176 lessons |
 | Real Chrome scenarios | Eight passed |
 
 ## What is included
 
 - Original ILMIGO robot, academy branding and English/Urdu explanations with RTL support.
-- 20 English and 20 Urdu guided lessons: four units in each of five stages, from first words to workplace communication.
+- 24 English and 24 Urdu guided lessons: four units in the first four stages and eight workplace units, from first words to workplace communication.
 - Grammar/usage notes, reading, dialogue, device listening, optional supported speech recognition, writing drafts, self-review rubrics and assessments.
 - Suggested daily plan: review 5m, words/patterns 8m, reading/listening 7m, speaking/writing 7m, assessment 3m.
 - Real local progress, streaks/XP, saved lesson resumption and writing drafts.
@@ -40,7 +40,7 @@ Verified application commit: `422f4a4dbb3badf5245ea59e7db76798a22f0f14`. Flutter
 - Source integrations for Supabase, text AI feedback and disabled-by-default RevenueCat billing.
 - Lesson-scoped adult AI conversations with follow-up questions, bilingual explanations, optional device speech recognition and a button to hear each reply with installed device TTS. Conversations remain in screen/page memory, reset when leaving or changing profile, and share the 3 trial / 20 Plus daily turn quota. Provider/device verification still requires owner configuration.
 
-All 168 lessons are curriculum drafts awaiting qualified language/audio review. English/Urdu retain 20 lessons each; the other 32 languages have four beginner lessons each. These are not complete professional-fluency courses or CEFR/occupational certification.
+All 176 lessons are curriculum drafts awaiting qualified language/audio review. English/Urdu retain 20 lessons each; the other 32 languages have four beginner lessons each. These are not complete professional-fluency courses or CEFR/occupational certification.
 
 The current APK is an offline-capable preview built without a backend URL. Live accounts/cloud AI/payment services are not active. Real-device/voice/visual QA, final production consent-policy review, actual release signing and store publication remain pending. See the detailed report for limits.
 
@@ -145,7 +145,7 @@ RevenueCat purchase/restore code remains **off by default**. Do not enable purch
 
 Historical reviews record pre-fix/pre-cloud states. The current successful cloud run/report above supersedes their native-build-blocked status, while their remaining production/content limitations still apply.
 
-Language availability audit: [34-language lesson counts](review/language-availability.json). English/Urdu have 20 draft lessons each; the other 32 languages now have four introductory draft lessons each (168 total). Qualified language/audio review and professional-level expansion remain pending.
+Language availability audit: [34-language lesson counts](review/language-availability.json). English/Urdu have 24 draft lessons each; the other 32 languages now have four introductory draft lessons each (176 total). Qualified language/audio review and professional-level expansion remain pending.
 
 Prior machine evidence: [0.7.0 verification](review/cloud/course-quality-verification.json). Browser CI now exercises eight scenarios, including a lesson flow in each of the 32 new languages.
 

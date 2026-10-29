@@ -51,7 +51,7 @@ def extend(content):
     content['curriculum']['plannedMinutesByLanguage']={l['id']:30*sum(x['language']==l['id'] for x in content['lessons']) for l in content['languages']}
     content['curriculum'].update(languages=[l['id'] for l in content['languages']],foundationLessonsPerNewCourse=4,
         lessonCounts={l['id']:sum(x['language']==l['id'] for x in content['lessons']) for l in content['languages']},
-        description='English/Urdu: 20 draft lessons each. Other 32 languages: four introductory foundation lessons each. All require qualified review; not complete professional-fluency courses.')
+        description='English/Urdu: 24 draft lessons each. Other 32 languages: four introductory foundation lessons each. All require qualified review; not complete professional-fluency courses.')
     return content
 
 def export(content):

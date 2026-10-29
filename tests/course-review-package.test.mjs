@@ -8,7 +8,7 @@ from pathlib import Path
 spec=importlib.util.spec_from_file_location('review','scripts/package-course-review.py');m=importlib.util.module_from_spec(spec);spec.loader.exec_module(m)
 with tempfile.TemporaryDirectory() as tmp:
  output=Path(tmp)/'review.zip';audit=m.package(output)
- assert len(audit['languages'])==34 and sum(x['lessonCount'] for x in audit['languages'])==168
+ assert len(audit['languages'])==34 and sum(x['lessonCount'] for x in audit['languages'])==176
  assert not audit['qualifiedReviewCompleted'] and not audit['audioReviewCompleted'] and not audit['fullProfessionalCoursesCompleted']
  with zipfile.ZipFile(output) as z:
   for summary in audit['languages']:

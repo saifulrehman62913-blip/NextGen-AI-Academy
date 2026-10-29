@@ -2,7 +2,7 @@
 
 Original draft curriculum · qualified language/audio review pending.
 
-20 guided lessons · 600 planned minutes. Repetition and real conversation are additional. Completion is practice progress, not professional certification.
+24 guided lessons · 720 planned minutes. Repetition and real conversation are additional. Completion is practice progress, not professional certification.
 
 ## Beginner
 
@@ -1146,4 +1146,244 @@ Capstone: give a three-minute recommendation, write a 150-word executive summary
 3. What will inform the expansion decision? / توسیع کا فیصلہ کس بنیاد پر ہوگا؟
    Options: Only the slide colours. | Measured results and teacher feedback. | The loudest person’s preference.
    Answer: Measured results and teacher feedback.
+
+### 21. Turn a request into a usable brief / درخواست سے کام کا واضح خاکہ بنائیں
+
+Clarify audience, deliverables, exclusions and approval before starting a professional task.
+
+کام شروع کرنے سے پہلے مخاطب، مطلوبہ نتائج، حدود اور منظوری واضح کریں۔
+
+**Plan:** review 5m, words/patterns 8m, reading/listening 7m, speaking/writing 7m, assessment 3m.
+
+**Target phrases**
+
+- Who will use the final document? — آخری دستاویز کون استعمال کرے گا؟ (Who will use the final document?)
+- What must the first version include? — پہلے ورژن میں کیا شامل ہونا ضروری ہے؟ (What must the first version include?)
+- The agreed deliverables are listed below. — طے شدہ نتائج نیچے درج ہیں۔ (The agreed deliverables are listed below.)
+- Translation is outside the agreed scope. — ترجمہ طے شدہ کام کی حد میں شامل نہیں ہے۔ (Translation is outside the agreed scope.)
+- Please confirm who will approve the draft. — براہ کرم تصدیق کریں کہ مسودہ کون منظور کرے گا۔ (Please confirm who will approve the draft.)
+- We will start after written confirmation. — ہم تحریری تصدیق کے بعد کام شروع کریں گے۔ (We will start after written confirmation.)
+
+**Pattern / usage**
+
+After please confirm, use statement order in a question with an explicit subject: Please confirm when the coordinator will respond, not when will the coordinator respond. In who will approve the draft, who is already the subject. Use must for a requirement and will for an agreed action; do not imply that proposed exclusions are already accepted.
+
+کام کے خاکے میں مخاطب، لازمی نتائج، خارج کام اور منظوری کا ذمہ دار الگ واضح کریں۔ انگریزی میں Please confirm when the coordinator will respond لکھیں: when کے بعد فاعل آتا ہے، پھر will۔ who will approve میں who خود فاعل ہے۔ اردو میں براہ کرم تصدیق کریں کہ کے بعد پوری بات لکھیں۔ شرط یا تجویز کو منظور شدہ فیصلہ نہ بنائیں۔
+
+**Reading**
+
+A community centre asks a writer for a short guide for new volunteers. The first request says only that it should be ready soon. Before estimating the work, the writer asks who will read it and what they must be able to do afterwards. The coordinator confirms a two-page English guide explaining arrival times, the contact person and three common duties. Translation and photography are excluded. The coordinator will provide the approved contact details and review the draft on Thursday. The writer sends these points back as a brief and asks for written confirmation. A clear brief makes a later change visible; it does not make every new request part of the original agreement.
+
+**Dialogue**
+
+- A: Can we begin with the information we have?
+- B: We still need the audience and the approval owner.
+- A: The coordinator will approve the volunteer guide.
+- B: Please confirm the two-page scope in writing.
+
+**Speaking and writing task**
+
+Write a 120-word fictional brief identifying audience, outcome, two deliverables, one exclusion, reviewer and review date. Read a one-minute summary aloud. Ask a partner to introduce a change and explain which part of the brief would need reconfirmation.
+
+کسی فرضی کام کا خاکہ تقریباً ۱۲۰ الفاظ میں لکھیں: مخاطب، مقصد، دو نتائج، ایک خارج کام، جائزہ لینے والا اور تاریخ واضح کریں۔ ایک منٹ کا خلاصہ بولیں۔ ساتھی ایک تبدیلی بتائے تو وضاحت کریں کہ کن نکات کی دوبارہ تصدیق درکار ہوگی۔
+
+**Self-review (not automatic grading)**
+
+- Addresses the task and audience
+- Uses today’s target expressions
+- Provides a clear order and reasons
+- Distinguishes facts from assumptions
+- States an actionable next step where relevant
+
+**Assessment and answer key**
+
+1. Who is the guide intended for? / رہنما کن لوگوں کے لیے ہے؟
+   Options: Only the writer. | An unspecified paying customer. | New volunteers.
+   Answer: New volunteers.
+2. Which work is excluded? / کون سا کام شامل نہیں ہے؟
+   Options: Translation and photography. | Arrival information. | Three common duties.
+   Answer: Translation and photography.
+3. What should the writer obtain before starting? / کام شروع کرنے سے پہلے لکھنے والے کو کیا لینا چاہیے؟
+   Options: Unlimited permission for new work. | Written confirmation of the brief. | An invented contact number.
+   Answer: Written confirmation of the brief.
+
+### 22. Hand over work without losing context / کام ضروری پس منظر کے ساتھ منتقل کریں
+
+Explain completed work, remaining actions, evidence and the next responsible person.
+
+مکمل کام، باقی اقدام، ثبوت اور اگلے ذمہ دار کی وضاحت کریں۔
+
+**Plan:** review 5m, words/patterns 8m, reading/listening 7m, speaking/writing 7m, assessment 3m.
+
+**Target phrases**
+
+- The current version is ready for review. — موجودہ ورژن جائزے کے لیے تیار ہے۔ (The current version is ready for review.)
+- These two items are still open. — یہ دو کام ابھی باقی ہیں۔ (These two items are still open.)
+- The source file is in the shared folder. — اصل فائل مشترکہ فولڈر میں ہے۔ (The source file is in the shared folder.)
+- Please check the access before the handover. — کام منتقل کرنے سے پہلے رسائی چیک کریں۔ (Please check the access before the handover.)
+- The next action belongs to the coordinator. — اگلا اقدام رابطہ کار کی ذمہ داری ہے۔ (The next action belongs to the coordinator.)
+- Please confirm that you can continue from this point. — براہ کرم تصدیق کریں کہ آپ یہاں سے کام جاری رکھ سکتے ہیں۔ (Please confirm that you can continue from this point.)
+
+**Pattern / usage**
+
+Use ready for plus a noun: ready for review differs from ready for publication. State a completed action with a clear result, then use still or not yet for unfinished work. Use an explicit subject for ownership instead of an ambiguous they.
+
+جائزے کے لیے تیار اور اشاعت کے لیے تیار الگ حالتیں ہیں۔ مکمل کام کا نتیجہ پہلے لکھیں، پھر ابھی باقی یا ابھی حتمی نہیں کے ساتھ نامکمل باتیں بتائیں۔ ذمہ داری میں نام یا کردار واضح کریں؛ مبہم وہ استعمال کر کے ذمہ دار نہ چھپائیں۔
+
+**Reading**
+
+A volunteer prepares a fictional event timetable and must hand it to a colleague before leaving. The handover includes the dated source file, a short description of the latest changes and the two items that are not final: the room number and the guest arrival time. The colleague checks access to the shared folder while both people are present. The coordinator owns confirmation of the room; the reception team will check the arrival time. The volunteer explains that the timetable is ready for review, not ready for publication. The colleague repeats the next actions and deadlines in their own words. No password is copied into the handover note. A usable handover tells the next person what they can safely do and what they must still verify.
+
+**Dialogue**
+
+- A: Is this the version we should publish?
+- B: It is the review version; two details are still open.
+- A: Who will confirm the room number?
+- B: The coordinator will confirm it before publication.
+
+**Speaking and writing task**
+
+Prepare a fictional handover with a version/date, two completed results, two open items, a named owner for each and the next review time. Perform a two-minute handover with a partner who repeats the actions. Use dummy file references and no real passwords or private information.
+
+فرضی حوالگی لکھیں جس میں ورژن یا تاریخ، دو مکمل نتائج، دو باقی کام، ہر کام کا ذمہ دار اور اگلے جائزے کا وقت ہو۔ ساتھی کے ساتھ دو منٹ میں حوالگی کریں؛ وہ اقدامات اپنی زبان میں دہرائے۔ فرضی فائل حوالے استعمال کریں؛ اصلی پاس ورڈ یا نجی معلومات نہ لکھیں۔
+
+**Self-review (not automatic grading)**
+
+- Addresses the task and audience
+- Uses today’s target expressions
+- Provides a clear order and reasons
+- Distinguishes facts from assumptions
+- States an actionable next step where relevant
+
+**Assessment and answer key**
+
+1. Which details are not final? / کون سی تفصیلات حتمی نہیں ہیں؟
+   Options: The file owner and document title. | Every completed change. | The room number and guest arrival time.
+   Answer: The room number and guest arrival time.
+2. Why does the colleague check the folder during the handover? / ساتھی حوالگی کے وقت فولڈر کیوں چیک کرتا ہے؟
+   Options: To confirm that the files are accessible. | To remove the source file. | To publish without review.
+   Answer: To confirm that the files are accessible.
+3. What is the timetable ready for? / نظام الاوقات کس کام کے لیے تیار ہے؟
+   Options: Unconditional publication. | Review. | Sharing passwords.
+   Answer: Review.
+
+### 23. Communicate a disruption responsibly / رکاوٹ کی ذمہ دارانہ اطلاع دیں
+
+Distinguish observed impact from unknown causes and commit to an update time.
+
+معلوم اثر اور نامعلوم وجہ میں فرق کریں اور اگلی اطلاع کا وقت دیں۔
+
+**Plan:** review 5m, words/patterns 8m, reading/listening 7m, speaking/writing 7m, assessment 3m.
+
+**Target phrases**
+
+- We are aware of the delay. — ہمیں تاخیر کا علم ہے۔ (We are aware of the delay.)
+- The cause has not been confirmed. — وجہ کی ابھی تصدیق نہیں ہوئی۔ (The cause has not been confirmed.)
+- Please use the alternative entrance for now. — فی الحال متبادل داخلی راستہ استعمال کریں۔ (Please use the alternative entrance for now.)
+- We will provide another update at eleven. — ہم گیارہ بجے دوبارہ اطلاع دیں گے۔ (We will provide another update at eleven.)
+- We cannot confirm a completion time yet. — ہم ابھی تکمیل کے وقت کی تصدیق نہیں کر سکتے۔ (We cannot confirm a completion time yet.)
+- Thank you for your patience. — آپ کے صبر کا شکریہ۔ (Thank you for your patience.)
+
+**Pattern / usage**
+
+Use has not been confirmed to mark missing verification. A commitment to the next update is different from a promise that the disruption will be resolved by then. Keep cause, impact and action in separate sentences so certainty does not spread from one to another.
+
+معلوم اثر، نامعلوم وجہ اور عملی ہدایت الگ جملوں میں لکھیں۔ ابھی تصدیق نہیں ہوئی غیر یقینی بات واضح کرتا ہے۔ اگلی اطلاع کا وقت دینا مسئلہ حل ہونے کے وقت کی ضمانت نہیں ہے۔ انگریزی میں has not been confirmed تصدیق نہ ہونے کی حالت بتاتا ہے۔
+
+**Reading**
+
+At a fictional community event, the main entrance opens late. Staff can see a queue outside but do not yet know why the door system is unavailable. A coordinator writes a short update stating the observed delay, asks visitors to use the clearly marked alternative entrance and says that another update will be provided at eleven. The note does not announce a cause or promise a repair time that no one has confirmed. Before sending it, a colleague checks the entrance instructions with the on-site team. At eleven, the coordinator updates visitors even though the cause is still being investigated. The new note reports what has changed and what remains unknown. This is a communication exercise; actual emergency instructions must come from the responsible local authorities.
+
+**Dialogue**
+
+- A: Can we say the entrance will reopen at eleven?
+- B: No. Eleven is the next update time, not a confirmed repair time.
+- A: What can visitors do meanwhile?
+- B: They can use the alternative entrance after the team confirms the instructions.
+
+**Speaking and writing task**
+
+For a fictional non-emergency delivery delay, write a 90-word initial update with known impact, one uncertainty, a checked temporary action and the next update time. Give a follow-up that changes one fact without inventing a cause. Ask a partner to identify any accidental promise.
+
+غیر ہنگامی فرضی ترسیل کی تاخیر پر تقریباً ۹۰ الفاظ کی پہلی اطلاع لکھیں: معلوم اثر، ایک نامعلوم بات، چیک شدہ عارضی اقدام اور اگلی اطلاع کا وقت دیں۔ پھر ایک حقیقت بدل کر اگلی اطلاع لکھیں، وجہ خود نہ بنائیں۔ ساتھی سے کوئی غیر ارادی وعدہ نشان زد کروائیں۔
+
+**Self-review (not automatic grading)**
+
+- Addresses the task and audience
+- Uses today’s target expressions
+- Provides a clear order and reasons
+- Distinguishes facts from assumptions
+- States an actionable next step where relevant
+
+**Assessment and answer key**
+
+1. What is confirmed at the beginning? / شروع میں کس بات کا علم ہے؟
+   Options: The exact technical cause. | The repair completion time. | The main entrance is delayed.
+   Answer: The main entrance is delayed.
+2. What does eleven represent? / گیارہ بجے کا وقت کس بات کے لیے ہے؟
+   Options: The next communication update. | A guaranteed repair deadline. | The final event closing time.
+   Answer: The next communication update.
+3. What should happen before sharing the alternative entrance instruction? / متبادل راستے کی ہدایت بانٹنے سے پہلے کیا ہونا چاہیے؟
+   Options: Invent a cause for the delay. | Check it with the on-site team. | Wait until every cause is known.
+   Answer: Check it with the on-site team.
+
+### 24. Deliver an integrated project recommendation / مکمل پروجیکٹ سفارش پیش کریں
+
+Integrate a brief, evidence, a recommendation, a response to challenge and a handover.
+
+کام کا خاکہ، شواہد، سفارش، اعتراض کا جواب اور حوالگی یکجا کریں۔
+
+**Plan:** review 5m, words/patterns 8m, reading/listening 7m, speaking/writing 7m, assessment 3m.
+
+**Target phrases**
+
+- The decision we need today is approval for the pilot. — آج ہمیں آزمائش کی منظوری کا فیصلہ درکار ہے۔ (The decision we need today is approval for the pilot.)
+- These figures are estimates, not measured results. — یہ اعداد تخمینے ہیں، ناپے ہوئے نتائج نہیں۔ (These figures are estimates, not measured results.)
+- Option B meets the stated budget limit. — دوسرا انتخاب بیان کردہ بجٹ کی حد میں ہے۔ (Option B meets the stated budget limit.)
+- The recommendation depends on this assumption. — سفارش اس مفروضے پر منحصر ہے۔ (The recommendation depends on this assumption.)
+- What evidence would change your decision? — کون سا ثبوت آپ کا فیصلہ بدل دے گا؟ (What evidence would change your decision?)
+- We will record the decision and the next owner. — ہم فیصلہ اور اگلا ذمہ دار لکھیں گے۔ (We will record the decision and the next owner.)
+
+**Pattern / usage**
+
+Label estimates with estimated or approximately; do not present them as measured outcomes. Link a recommendation to its condition with provided that or only if. In a challenge response, acknowledge the question, identify the unknown and state the evidence needed to decide.
+
+تخمینے کو اندازاً کہہ کر ناپے ہوئے نتیجے سے الگ کریں۔ سفارش کی شرط واضح لکھیں: صرف اس صورت میں کہ۔ اعتراض کے جواب میں سوال تسلیم کریں، نامعلوم بات بتائیں اور فیصلہ کرنے کے لیے ضروری ثبوت لکھیں۔ زبان کی مشق مکمل کرنا قابلیت کی سند نہیں ہے۔
+
+**Reading**
+
+A fictional centre must choose a format for a small volunteer workshop. The approved brief sets a budget ceiling of one hundred units and requires a printed guide for twelve participants. Option A costs an estimated one hundred and twenty units; option B costs an estimated ninety units but uses a smaller room. The presenter recommends a limited pilot of B, conditional on confirming room access and the printing estimate. A colleague challenges whether the smaller room meets the brief. The presenter acknowledges that this is an unresolved assumption and names the check that could change the recommendation. The final note records the decision requested, the assumptions, the reviewer and the next action. Completing this language exercise provides practice evidence; it does not certify professional competence or replace independent review.
+
+**Dialogue**
+
+- A: Why do you recommend the second option?
+- B: Its estimate meets the budget, provided that the room and printing checks pass.
+- A: What would make you change the recommendation?
+- B: Evidence that the room cannot meet the workshop requirements.
+
+**Speaking and writing task**
+
+Use the seven-minute production block: draft a 90-120 word recommendation in four minutes, speak for one minute, answer a partner challenge for thirty seconds, then use ninety seconds for a four-line handover naming the decision, open check, owner and deadline. Do not fabricate evidence. Refine the draft after the lesson if needed; qualified teacher feedback is separate.
+
+سات منٹ کی عملی مشق کریں: چار منٹ میں ۹۰ سے ۱۲۰ الفاظ کی سفارش کا مسودہ، ایک منٹ کی پیشکش، تیس سیکنڈ میں ساتھی کے اعتراض کا جواب، اور نوے سیکنڈ میں چار سطروں کی حوالگی لکھیں۔ فیصلہ، باقی جانچ، ذمہ دار اور آخری وقت دیں۔ ثبوت نہ گھڑیں۔ ضرورت ہو تو سبق کے بعد مسودہ بہتر کریں؛ ماہر استاد کی رائے الگ درکار ہے۔
+
+**Self-review (not automatic grading)**
+
+- Addresses the task and audience
+- Uses today’s target expressions
+- Provides a clear order and reasons
+- Distinguishes facts from assumptions
+- States an actionable next step where relevant
+
+**Assessment and answer key**
+
+1. Which option is within the stated budget estimate? / کون سا انتخاب دی گئی بجٹ کی حد کے اندر ہے؟
+   Options: Option A at one hundred and twenty units. | Both options at any cost. | Option B at ninety units.
+   Answer: Option B at ninety units.
+2. Which assumption still needs checking? / کس مفروضے کی جانچ ابھی ضروری ہے؟
+   Options: Whether the smaller room meets the requirements. | Whether the budget is unlimited. | Whether the participants need no guide.
+   Answer: Whether the smaller room meets the requirements.
+3. What does finishing this exercise establish? / یہ مشق مکمل ہونے سے کس بات کا ثبوت ملتا ہے؟
+   Options: Certified professional fluency. | Completion of a language practice task. | Independent approval of every claim.
+   Answer: Completion of a language practice task.
 

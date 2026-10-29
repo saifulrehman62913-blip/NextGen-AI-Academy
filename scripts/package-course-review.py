@@ -18,7 +18,7 @@ For each language: open course.json alongside the curriculum Markdown. Record co
 
 Audio: obtain the actual device/provider recordings for each target phrase, reading and dialogue. A qualified speaker must listen and check pronunciation, tone/stress, accent/dialect and text alignment. Record exact provider/locale/voice/version, sample file/reference, reviewer identity, competence, date and issues. Approximate Roman aids and a provider's voice-availability flag are not audio approval.
 
-Course scope: English/Urdu have 20 draft lessons; other languages have four introductory lessons. A few workplace activities or a professional level label do not establish complete professional fluency. Specify missing objectives, prerequisites, grammar, vocabulary, listening, interaction, writing, assessment and feedback before approving a complete course. Swabi-specific Pashto has not been authored separately.
+Course scope: English/Urdu have 24 draft lessons; other languages have four introductory lessons. A few workplace activities or a professional level label do not establish complete professional fluency. Specify missing objectives, prerequisites, grammar, vocabulary, listening, interaction, writing, assessment and feedback before approving a complete course. Swabi-specific Pashto has not been authored separately.
 
 Keep reviewer personal evidence private; do not commit private contact/identity documents to the public repository. SHA-256 binds each record to its exact course snapshot. Content/audio changes require renewed review of affected material. This tool cannot authenticate reviewer credentials and does not update publishing permissions or the app's pending review status.
 '''

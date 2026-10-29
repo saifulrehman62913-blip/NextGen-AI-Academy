@@ -7,7 +7,7 @@ const mobile=JSON.parse(await readFile(new URL('../mobile/assets/catalog.json',i
 test('catalog: 34 distinct languages, structured bilingual samples, 30-minute plan',()=>{
  assert.equal(catalog.languages.length,34);assert.equal(new Set(catalog.languages.map(l=>l.id)).size,34);
  assert.equal(catalog.blocks.reduce((n,b)=>n+b.minutes,0),30);
- assert.equal(catalog.lessons.length,168);assert.deepEqual(catalog,mobile);
+ assert.equal(catalog.lessons.length,176);assert.deepEqual(catalog,mobile);
  assert.deepEqual(catalog.languages.find(l=>l.id==='ps').variants,['Swabi Pashto']);
  for(const lesson of catalog.lessons){assert.ok(lesson.titleUr);assert.ok(lesson.objectiveUr);assert.ok(lesson.quiz.options.includes(lesson.quiz.answer));assert.equal(new Set(lesson.quiz.options).size,lesson.quiz.options.length);assert.ok(lesson.words.every(w=>w.text&&w.meaning&&w.meaningUr&&w.transliteration));assert.ok(['sample','draft'].includes(lesson.status));}
  for(const language of catalog.languages.filter(l=>l.status==='coming_soon'))assert.equal(catalog.lessons.filter(l=>l.language===language.id).length,0);

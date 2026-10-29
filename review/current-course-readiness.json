@@ -1,7 +1,7 @@
 {
   "checkedAtDatePakistan": "2026-10-29",
-  "catalogRevision": 6,
-  "lessons": 168,
+  "catalogRevision": 7,
+  "lessons": 176,
   "languageCount": 34,
   "qualifiedApprovalGranted": false,
   "physicalPhoneAccessAvailable": false,
@@ -10,14 +10,14 @@
     {
       "id": "ur",
       "language": "Urdu",
-      "lessonCount": 20,
-      "plannedMinutes": 600,
+      "lessonCount": 24,
+      "plannedMinutes": 720,
       "levelCounts": {
         "beginner": 4,
         "elementary": 4,
         "intermediate": 4,
         "advanced": 4,
-        "professional": 4
+        "professional": 8
       },
       "levelsWithoutContent": [],
       "qualifiedReviewComplete": false,
@@ -28,14 +28,14 @@
     {
       "id": "en",
       "language": "English",
-      "lessonCount": 20,
-      "plannedMinutes": 600,
+      "lessonCount": 24,
+      "plannedMinutes": 720,
       "levelCounts": {
         "beginner": 4,
         "elementary": 4,
         "intermediate": 4,
         "advanced": 4,
-        "professional": 4
+        "professional": 8
       },
       "levelsWithoutContent": [],
       "qualifiedReviewComplete": false,

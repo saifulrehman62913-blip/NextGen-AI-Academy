@@ -27,7 +27,7 @@ test('existing starter-course completion leads to the new introduction without l
  }
 });
 test('all 32 new languages have four unique usable beginner drafts and honest review metadata',()=>{
- validateCatalog(catalog);assert.equal(catalog.lessons.length,168);assert.equal(catalog.revision,6);
+ validateCatalog(catalog);assert.equal(catalog.lessons.length,176);assert.equal(catalog.revision,7);
  for(const language of catalog.languages.filter(l=>!['en','ur'].includes(l.id))){
   const lessons=courseLessons(catalog,language.id);assert.equal(language.status,'sample');assert.equal(lessons.length,4);assert.deepEqual(lessons.map(l=>l.order),[0,1,2,3]);
   assert.equal(new Set(lessons.map(l=>l.reading)).size,4);

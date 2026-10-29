@@ -2,7 +2,7 @@
 
 Original draft curriculum · qualified language/audio review pending.
 
-20 guided lessons · 600 planned minutes. Repetition and real conversation are additional. Completion is practice progress, not professional certification.
+24 guided lessons · 720 planned minutes. Repetition and real conversation are additional. Completion is practice progress, not professional certification.
 
 ## Beginner
 
@@ -1146,4 +1146,244 @@ Capstone: give a three-minute recommendation, write a 150-word executive summary
 3. What will inform the expansion decision? / توسیع کا فیصلہ کس بنیاد پر ہوگا؟
    Options: ناپے گئے نتائج اور استاد کی رائے۔ | صرف سلائیڈ کے رنگ۔ | سب سے بلند آواز والے کی پسند۔
    Answer: ناپے گئے نتائج اور استاد کی رائے۔
+
+### 21. Turn a request into a usable brief / درخواست سے کام کا واضح خاکہ بنائیں
+
+Clarify audience, deliverables, exclusions and approval before starting a professional task.
+
+کام شروع کرنے سے پہلے مخاطب، مطلوبہ نتائج، حدود اور منظوری واضح کریں۔
+
+**Plan:** review 5m, words/patterns 8m, reading/listening 7m, speaking/writing 7m, assessment 3m.
+
+**Target phrases**
+
+- آخری دستاویز کون استعمال کرے گا؟ — Who will use the final document? (aakhri dastavez kaun istemal karay ga)
+- پہلے ورژن میں کیا شامل ہونا ضروری ہے؟ — What must the first version include? (pehlay version mein kya shamil hona zaroori hai)
+- طے شدہ نتائج نیچے درج ہیں۔ — The agreed deliverables are listed below. (tay shuda nataij neechay darj hain)
+- ترجمہ طے شدہ کام کی حد میں شامل نہیں ہے۔ — Translation is outside the agreed scope. (tarjuma tay shuda kaam ki had mein shamil nahin hai)
+- براہ کرم تصدیق کریں کہ مسودہ کون منظور کرے گا۔ — Please confirm who will approve the draft. (barah-e-karam tasdeeq karen keh musawwada kaun manzoor karay ga)
+- ہم تحریری تصدیق کے بعد کام شروع کریں گے۔ — We will start after written confirmation. (hum tehreeri tasdeeq kay baad kaam shuru karen gay)
+
+**Pattern / usage**
+
+Urdu uses a full clause after tasdeeq karen keh (تصدیق کریں کہ). Kaun (کون) asks who; kya (کیا) asks what. Hum ... karen gay (ہم ... کریں گے) is the model future form here. Agreement and spelling need competent review before publication.
+
+کام کے خاکے میں مخاطب، لازمی نتائج، خارج کام اور منظوری کا ذمہ دار الگ واضح کریں۔ انگریزی میں Please confirm when the coordinator will respond لکھیں: when کے بعد فاعل آتا ہے، پھر will۔ who will approve میں who خود فاعل ہے۔ اردو میں براہ کرم تصدیق کریں کہ کے بعد پوری بات لکھیں۔ شرط یا تجویز کو منظور شدہ فیصلہ نہ بنائیں۔
+
+**Reading**
+
+ایک کمیونٹی مرکز لکھنے والے سے نئے رضاکاروں کے لیے مختصر رہنما کتابچہ مانگتا ہے۔ پہلی درخواست میں صرف یہ لکھا ہے کہ اسے جلد تیار کیا جائے۔ کام کا تخمینہ دینے سے پہلے لکھنے والا پوچھتا ہے کہ اسے کون پڑھے گا اور پڑھنے کے بعد کیا کر سکے گا۔ رابطہ کار تصدیق کرتا ہے کہ دو صفحات کا انگریزی رہنما درکار ہے جس میں آنے کا وقت، رابطے کا ذمہ دار اور تین عام فرائض ہوں۔ ترجمہ اور تصویریں اس کام میں شامل نہیں۔ رابطہ کار منظور شدہ رابطے کی تفصیل دے گا اور جمعرات کو مسودہ دیکھے گا۔ لکھنے والا ان نکات پر کام کا خاکہ بھیج کر تحریری تصدیق مانگتا ہے۔ کام کے واضح خاکے سے بعد کی تبدیلی پہچانی جا سکتی ہے؛ ہر نئی درخواست خود بخود پہلے معاہدے میں شامل نہیں ہو جاتی۔
+
+**Dialogue**
+
+- A: کیا موجودہ معلومات سے کام شروع کیا جا سکتا ہے؟
+- B: ہمیں ابھی مخاطب اور منظوری کے ذمہ دار کی تفصیل درکار ہے۔
+- A: رابطہ کار رضاکاروں کا رہنما منظور کرے گا۔
+- B: براہ کرم دو صفحات کے کام کی حد کی تحریری تصدیق کریں۔
+
+**Speaking and writing task**
+
+Write a 120-word fictional brief identifying audience, outcome, two deliverables, one exclusion, reviewer and review date. Read a one-minute summary aloud. Ask a partner to introduce a change and explain which part of the brief would need reconfirmation.
+
+کسی فرضی کام کا خاکہ تقریباً ۱۲۰ الفاظ میں لکھیں: مخاطب، مقصد، دو نتائج، ایک خارج کام، جائزہ لینے والا اور تاریخ واضح کریں۔ ایک منٹ کا خلاصہ بولیں۔ ساتھی ایک تبدیلی بتائے تو وضاحت کریں کہ کن نکات کی دوبارہ تصدیق درکار ہوگی۔
+
+**Self-review (not automatic grading)**
+
+- Addresses the task and audience
+- Uses today’s target expressions
+- Provides a clear order and reasons
+- Distinguishes facts from assumptions
+- States an actionable next step where relevant
+
+**Assessment and answer key**
+
+1. Who is the guide intended for? / رہنما کن لوگوں کے لیے ہے؟
+   Options: صرف لکھنے والا۔ | نئے رضاکار۔ | کوئی نامعلوم ادائیگی کرنے والا صارف۔
+   Answer: نئے رضاکار۔
+2. Which work is excluded? / کون سا کام شامل نہیں ہے؟
+   Options: آنے کی معلومات۔ | تین عام فرائض۔ | ترجمہ اور تصویریں۔
+   Answer: ترجمہ اور تصویریں۔
+3. What should the writer obtain before starting? / کام شروع کرنے سے پہلے لکھنے والے کو کیا لینا چاہیے؟
+   Options: کام کے خاکے کی تحریری تصدیق۔ | نئے کام کی لامحدود اجازت۔ | خود بنایا ہوا رابطہ نمبر۔
+   Answer: کام کے خاکے کی تحریری تصدیق۔
+
+### 22. Hand over work without losing context / کام ضروری پس منظر کے ساتھ منتقل کریں
+
+Explain completed work, remaining actions, evidence and the next responsible person.
+
+مکمل کام، باقی اقدام، ثبوت اور اگلے ذمہ دار کی وضاحت کریں۔
+
+**Plan:** review 5m, words/patterns 8m, reading/listening 7m, speaking/writing 7m, assessment 3m.
+
+**Target phrases**
+
+- موجودہ ورژن جائزے کے لیے تیار ہے۔ — The current version is ready for review. (maujooda version jaizay kay liye tayyar hai)
+- یہ دو کام ابھی باقی ہیں۔ — These two items are still open. (yeh do kaam abhi baqi hain)
+- اصل فائل مشترکہ فولڈر میں ہے۔ — The source file is in the shared folder. (asal file mushtarka folder mein hai)
+- کام منتقل کرنے سے پہلے رسائی چیک کریں۔ — Please check the access before the handover. (kaam muntaqil karnay say pehlay rasai check karen)
+- اگلا اقدام رابطہ کار کی ذمہ داری ہے۔ — The next action belongs to the coordinator. (agla iqdam rabta kar ki zimmedari hai)
+- براہ کرم تصدیق کریں کہ آپ یہاں سے کام جاری رکھ سکتے ہیں۔ — Please confirm that you can continue from this point. (barah-e-karam tasdeeq karen keh aap yahan say kaam jari rakh saktay hain)
+
+**Pattern / usage**
+
+Urdu uses ... ke liye tayyar (... کے لیے تیار) for readiness and abhi baqi (ابھی باقی) for remaining work. Zimmedari (ذمہ داری) identifies ownership. Keep the named role explicit and use the same polite aap register throughout the handover.
+
+جائزے کے لیے تیار اور اشاعت کے لیے تیار الگ حالتیں ہیں۔ مکمل کام کا نتیجہ پہلے لکھیں، پھر ابھی باقی یا ابھی حتمی نہیں کے ساتھ نامکمل باتیں بتائیں۔ ذمہ داری میں نام یا کردار واضح کریں؛ مبہم وہ استعمال کر کے ذمہ دار نہ چھپائیں۔
+
+**Reading**
+
+ایک رضاکار تقریب کا فرضی نظام الاوقات تیار کرتا ہے اور جانے سے پہلے اسے ساتھی کے حوالے کرنا ہے۔ حوالگی میں تاریخ والی اصل فائل، تازہ تبدیلیوں کا مختصر بیان اور دو غیر حتمی باتیں شامل ہیں: کمرے کا نمبر اور مہمان کے آنے کا وقت۔ دونوں کی موجودگی میں ساتھی مشترکہ فولڈر کی رسائی چیک کرتا ہے۔ کمرے کی تصدیق رابطہ کار کی ذمہ داری ہے جبکہ استقبالیہ ٹیم آنے کا وقت معلوم کرے گی۔ رضاکار بتاتا ہے کہ نظام الاوقات جائزے کے لیے تیار ہے، اشاعت کے لیے نہیں۔ ساتھی اگلے اقدامات اور وقت اپنی زبان میں دہراتا ہے۔ حوالگی کے نوٹ میں پاس ورڈ نہیں لکھا جاتا۔ کارآمد حوالگی اگلے شخص کو بتاتی ہے کہ وہ کیا کر سکتا ہے اور کس بات کی ابھی تصدیق ضروری ہے۔
+
+**Dialogue**
+
+- A: کیا ہمیں یہی ورژن شائع کرنا چاہیے؟
+- B: یہ جائزے کا ورژن ہے؛ دو تفصیلات ابھی باقی ہیں۔
+- A: کمرے کے نمبر کی تصدیق کون کرے گا؟
+- B: اشاعت سے پہلے رابطہ کار اس کی تصدیق کرے گا۔
+
+**Speaking and writing task**
+
+Prepare a fictional handover with a version/date, two completed results, two open items, a named owner for each and the next review time. Perform a two-minute handover with a partner who repeats the actions. Use dummy file references and no real passwords or private information.
+
+فرضی حوالگی لکھیں جس میں ورژن یا تاریخ، دو مکمل نتائج، دو باقی کام، ہر کام کا ذمہ دار اور اگلے جائزے کا وقت ہو۔ ساتھی کے ساتھ دو منٹ میں حوالگی کریں؛ وہ اقدامات اپنی زبان میں دہرائے۔ فرضی فائل حوالے استعمال کریں؛ اصلی پاس ورڈ یا نجی معلومات نہ لکھیں۔
+
+**Self-review (not automatic grading)**
+
+- Addresses the task and audience
+- Uses today’s target expressions
+- Provides a clear order and reasons
+- Distinguishes facts from assumptions
+- States an actionable next step where relevant
+
+**Assessment and answer key**
+
+1. Which details are not final? / کون سی تفصیلات حتمی نہیں ہیں؟
+   Options: فائل کا مالک اور دستاویز کا عنوان۔ | کمرے کا نمبر اور مہمان کے آنے کا وقت۔ | ہر مکمل تبدیلی۔
+   Answer: کمرے کا نمبر اور مہمان کے آنے کا وقت۔
+2. Why does the colleague check the folder during the handover? / ساتھی حوالگی کے وقت فولڈر کیوں چیک کرتا ہے؟
+   Options: اصل فائل حذف کرنے کے لیے۔ | جائزے کے بغیر شائع کرنے کے لیے۔ | تاکہ فائلوں تک رسائی کی تصدیق ہو۔
+   Answer: تاکہ فائلوں تک رسائی کی تصدیق ہو۔
+3. What is the timetable ready for? / نظام الاوقات کس کام کے لیے تیار ہے؟
+   Options: جائزہ۔ | بلا شرط اشاعت۔ | پاس ورڈ بانٹنا۔
+   Answer: جائزہ۔
+
+### 23. Communicate a disruption responsibly / رکاوٹ کی ذمہ دارانہ اطلاع دیں
+
+Distinguish observed impact from unknown causes and commit to an update time.
+
+معلوم اثر اور نامعلوم وجہ میں فرق کریں اور اگلی اطلاع کا وقت دیں۔
+
+**Plan:** review 5m, words/patterns 8m, reading/listening 7m, speaking/writing 7m, assessment 3m.
+
+**Target phrases**
+
+- ہمیں تاخیر کا علم ہے۔ — We are aware of the delay. (hamen takheer ka ilm hai)
+- وجہ کی ابھی تصدیق نہیں ہوئی۔ — The cause has not been confirmed. (wajah ki abhi tasdeeq nahin hui)
+- فی الحال متبادل داخلی راستہ استعمال کریں۔ — Please use the alternative entrance for now. (filhaal mutabadil dakhli rasta istemal karen)
+- ہم گیارہ بجے دوبارہ اطلاع دیں گے۔ — We will provide another update at eleven. (hum gyarah bajay dobara ittela den gay)
+- ہم ابھی تکمیل کے وقت کی تصدیق نہیں کر سکتے۔ — We cannot confirm a completion time yet. (hum abhi takmeel kay waqt ki tasdeeq nahin kar saktay)
+- آپ کے صبر کا شکریہ۔ — Thank you for your patience. (aap kay sabr ka shukriya)
+
+**Pattern / usage**
+
+Urdu abhi tasdeeq nahin hui (ابھی تصدیق نہیں ہوئی) explicitly marks an unverified fact. Filhaal (فی الحال) limits a temporary instruction. Hum ... den gay (ہم ... دیں گے) commits to an update; it must not be translated into a guarantee that the problem will be solved.
+
+معلوم اثر، نامعلوم وجہ اور عملی ہدایت الگ جملوں میں لکھیں۔ ابھی تصدیق نہیں ہوئی غیر یقینی بات واضح کرتا ہے۔ اگلی اطلاع کا وقت دینا مسئلہ حل ہونے کے وقت کی ضمانت نہیں ہے۔ انگریزی میں has not been confirmed تصدیق نہ ہونے کی حالت بتاتا ہے۔
+
+**Reading**
+
+کمیونٹی کی ایک فرضی تقریب میں مرکزی دروازہ دیر سے کھلتا ہے۔ عملہ باہر قطار دیکھ سکتا ہے لیکن ابھی معلوم نہیں کہ دروازے کا نظام کیوں دستیاب نہیں۔ رابطہ کار مختصر اطلاع میں معلوم تاخیر بتاتا ہے، آنے والوں کو واضح نشان والے متبادل داخلی راستے سے آنے کو کہتا ہے اور گیارہ بجے اگلی اطلاع دینے کا وقت لکھتا ہے۔ نوٹ میں غیر مصدقہ وجہ یا مرمت کا وقت نہیں دیا جاتا۔ بھیجنے سے پہلے ساتھی راستے کی ہدایات موقع پر موجود ٹیم سے چیک کرتا ہے۔ گیارہ بجے وجہ کی تحقیق جاری ہونے کے باوجود رابطہ کار دوبارہ اطلاع دیتا ہے۔ نئے نوٹ میں تبدیلی اور باقی نامعلوم باتیں الگ بتائی جاتی ہیں۔ یہ صرف زبان کی مشق ہے؛ اصلی ہنگامی ہدایات ذمہ دار مقامی ادارے دیں گے۔
+
+**Dialogue**
+
+- A: کیا ہم کہہ سکتے ہیں کہ دروازہ گیارہ بجے دوبارہ کھل جائے گا؟
+- B: نہیں۔ گیارہ بجے اگلی اطلاع دینی ہے؛ مرمت کا وقت طے نہیں ہوا۔
+- A: اس دوران آنے والے کیا کر سکتے ہیں؟
+- B: ٹیم کی تصدیق کے بعد وہ متبادل داخلی راستہ استعمال کر سکتے ہیں۔
+
+**Speaking and writing task**
+
+For a fictional non-emergency delivery delay, write a 90-word initial update with known impact, one uncertainty, a checked temporary action and the next update time. Give a follow-up that changes one fact without inventing a cause. Ask a partner to identify any accidental promise.
+
+غیر ہنگامی فرضی ترسیل کی تاخیر پر تقریباً ۹۰ الفاظ کی پہلی اطلاع لکھیں: معلوم اثر، ایک نامعلوم بات، چیک شدہ عارضی اقدام اور اگلی اطلاع کا وقت دیں۔ پھر ایک حقیقت بدل کر اگلی اطلاع لکھیں، وجہ خود نہ بنائیں۔ ساتھی سے کوئی غیر ارادی وعدہ نشان زد کروائیں۔
+
+**Self-review (not automatic grading)**
+
+- Addresses the task and audience
+- Uses today’s target expressions
+- Provides a clear order and reasons
+- Distinguishes facts from assumptions
+- States an actionable next step where relevant
+
+**Assessment and answer key**
+
+1. What is confirmed at the beginning? / شروع میں کس بات کا علم ہے؟
+   Options: بالکل درست تکنیکی وجہ۔ | مرکزی دروازہ کھلنے میں تاخیر ہے۔ | مرمت مکمل ہونے کا وقت۔
+   Answer: مرکزی دروازہ کھلنے میں تاخیر ہے۔
+2. What does eleven represent? / گیارہ بجے کا وقت کس بات کے لیے ہے؟
+   Options: مرمت کی یقینی آخری مدت۔ | تقریب بند ہونے کا آخری وقت۔ | اگلی اطلاع۔
+   Answer: اگلی اطلاع۔
+3. What should happen before sharing the alternative entrance instruction? / متبادل راستے کی ہدایت بانٹنے سے پہلے کیا ہونا چاہیے؟
+   Options: موقع پر موجود ٹیم سے اسے چیک کریں۔ | تاخیر کی وجہ خود بنائیں۔ | ہر وجہ معلوم ہونے تک انتظار کریں۔
+   Answer: موقع پر موجود ٹیم سے اسے چیک کریں۔
+
+### 24. Deliver an integrated project recommendation / مکمل پروجیکٹ سفارش پیش کریں
+
+Integrate a brief, evidence, a recommendation, a response to challenge and a handover.
+
+کام کا خاکہ، شواہد، سفارش، اعتراض کا جواب اور حوالگی یکجا کریں۔
+
+**Plan:** review 5m, words/patterns 8m, reading/listening 7m, speaking/writing 7m, assessment 3m.
+
+**Target phrases**
+
+- آج ہمیں آزمائش کی منظوری کا فیصلہ درکار ہے۔ — The decision we need today is approval for the pilot. (aaj hamen aazmaish ki manzoori ka faisla darkar hai)
+- یہ اعداد تخمینے ہیں، ناپے ہوئے نتائج نہیں۔ — These figures are estimates, not measured results. (yeh adad takhmeenay hain napay huay nataij nahin)
+- دوسرا انتخاب بیان کردہ بجٹ کی حد میں ہے۔ — Option B meets the stated budget limit. (doosra intikhab bayan kardah budget ki had mein hai)
+- سفارش اس مفروضے پر منحصر ہے۔ — The recommendation depends on this assumption. (sifarish is mafroozay par munhasir hai)
+- کون سا ثبوت آپ کا فیصلہ بدل دے گا؟ — What evidence would change your decision? (kaun sa saboot aap ka faisla badal day ga)
+- ہم فیصلہ اور اگلا ذمہ دار لکھیں گے۔ — We will record the decision and the next owner. (hum faisla aur agla zimmedar likhen gay)
+
+**Pattern / usage**
+
+Urdu andazan (اندازاً) labels an estimate. Sirf is soorat mein keh (صرف اس صورت میں کہ) makes a condition explicit. Is ... par munhasir hai (اس ... پر منحصر ہے) connects a recommendation to an assumption. Preserve these qualifiers when summarising orally.
+
+تخمینے کو اندازاً کہہ کر ناپے ہوئے نتیجے سے الگ کریں۔ سفارش کی شرط واضح لکھیں: صرف اس صورت میں کہ۔ اعتراض کے جواب میں سوال تسلیم کریں، نامعلوم بات بتائیں اور فیصلہ کرنے کے لیے ضروری ثبوت لکھیں۔ زبان کی مشق مکمل کرنا قابلیت کی سند نہیں ہے۔
+
+**Reading**
+
+ایک فرضی مرکز کو رضاکاروں کی چھوٹی تربیتی نشست کی صورت منتخب کرنی ہے۔ کام کے منظور شدہ خاکے میں بجٹ کی حد ایک سو فرضی اکائیاں ہے اور بارہ شرکا کے لیے چھپا ہوا رہنما ضروری ہے۔ پہلے انتخاب کی لاگت ایک سو بیس اکائیاں اور دوسرے کی نوے اکائیاں اندازاً ہیں، مگر دوسرے میں کمرہ چھوٹا ہے۔ پیش کنندہ کمرے کی رسائی اور چھپائی کے تخمینے کی تصدیق کی شرط پر دوسرے انتخاب کی محدود آزمائش تجویز کرتا ہے۔ ساتھی اعتراض کرتا ہے کہ کیا چھوٹا کمرہ کام کے خاکے کے مطابق ہے۔ پیش کنندہ اسے باقی مفروضہ مان کر وہ جانچ بتاتا ہے جس سے سفارش بدل سکتی ہے۔ آخری نوٹ میں مطلوبہ فیصلہ، مفروضے، جائزہ لینے والا اور اگلا اقدام لکھا جاتا ہے۔ یہ زبان کی مشق عملی کام کا ثبوت دیتی ہے؛ پیشہ ورانہ قابلیت کی سند یا آزاد جائزے کا بدل نہیں۔
+
+**Dialogue**
+
+- A: آپ دوسرے انتخاب کی سفارش کیوں کرتے ہیں؟
+- B: اس کا تخمینہ بجٹ کی حد میں ہے، بشرطیکہ کمرے اور چھپائی کی جانچ درست ہو۔
+- A: کس بات سے آپ سفارش بدل دیں گے؟
+- B: یہ ثبوت کہ کمرہ تربیتی نشست کی ضروریات پوری نہیں کر سکتا۔
+
+**Speaking and writing task**
+
+Use the seven-minute production block: draft a 90-120 word recommendation in four minutes, speak for one minute, answer a partner challenge for thirty seconds, then use ninety seconds for a four-line handover naming the decision, open check, owner and deadline. Do not fabricate evidence. Refine the draft after the lesson if needed; qualified teacher feedback is separate.
+
+سات منٹ کی عملی مشق کریں: چار منٹ میں ۹۰ سے ۱۲۰ الفاظ کی سفارش کا مسودہ، ایک منٹ کی پیشکش، تیس سیکنڈ میں ساتھی کے اعتراض کا جواب، اور نوے سیکنڈ میں چار سطروں کی حوالگی لکھیں۔ فیصلہ، باقی جانچ، ذمہ دار اور آخری وقت دیں۔ ثبوت نہ گھڑیں۔ ضرورت ہو تو سبق کے بعد مسودہ بہتر کریں؛ ماہر استاد کی رائے الگ درکار ہے۔
+
+**Self-review (not automatic grading)**
+
+- Addresses the task and audience
+- Uses today’s target expressions
+- Provides a clear order and reasons
+- Distinguishes facts from assumptions
+- States an actionable next step where relevant
+
+**Assessment and answer key**
+
+1. Which option is within the stated budget estimate? / کون سا انتخاب دی گئی بجٹ کی حد کے اندر ہے؟
+   Options: پہلا انتخاب، ایک سو بیس اکائیاں۔ | دوسرا انتخاب، نوے اکائیاں۔ | دونوں، چاہے کچھ بھی لاگت ہو۔
+   Answer: دوسرا انتخاب، نوے اکائیاں۔
+2. Which assumption still needs checking? / کس مفروضے کی جانچ ابھی ضروری ہے؟
+   Options: کیا بجٹ لامحدود ہے۔ | کیا شرکا کو رہنما درکار نہیں۔ | کیا چھوٹا کمرہ ضروریات پوری کرتا ہے۔
+   Answer: کیا چھوٹا کمرہ ضروریات پوری کرتا ہے۔
+3. What does finishing this exercise establish? / یہ مشق مکمل ہونے سے کس بات کا ثبوت ملتا ہے؟
+   Options: زبان کی ایک عملی مشق کی تکمیل۔ | مصدقہ پیشہ ورانہ روانی۔ | ہر دعوے کی آزاد منظوری۔
+   Answer: زبان کی ایک عملی مشق کی تکمیل۔
 

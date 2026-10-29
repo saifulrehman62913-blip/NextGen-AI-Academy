@@ -49,7 +49,7 @@ test('child sync sees only its bound profile and cannot create, promote or alter
  assert.equal(f.calls.mutations.length,0);assert.ok(f.calls.profiles.every(url=>url.includes(`id=eq.${kid}`)));assert.equal(f.calls.parentAuth,0);
 });
 test('child lesson collection is language-scoped; expiry, tampering and parent revocation fail closed',async t=>{
- const f=await fixture(t),response=await f.s.get('/api/member-catalog',{headers:f.auth});assert.equal(response.status,200);const catalog=await response.json();assert.equal(catalog.lessons.length,20);assert.ok(catalog.lessons.every(l=>l.language==='en'));
+ const f=await fixture(t),response=await f.s.get('/api/member-catalog',{headers:f.auth});assert.equal(response.status,200);const catalog=await response.json();assert.equal(catalog.lessons.length,24);assert.ok(catalog.lessons.every(l=>l.language==='en'));
  const bad=newChildToken();assert.equal((await f.s.get('/api/entitlements',{headers:{Authorization:`Bearer ${bad.token}`}})).status,401);
  f.sessions.get(f.token.hash).expires_at=new Date(Date.now()-1000).toISOString();assert.equal((await f.s.get('/api/entitlements',{headers:f.auth})).status,401);
  f.sessions.get(f.token.hash).expires_at=new Date(Date.now()+10000).toISOString();assert.equal((await f.s.post('/api/child-session/revoke',{confirm:true},parent)).status,200);assert.equal((await f.s.get('/api/entitlements',{headers:f.auth})).status,401);

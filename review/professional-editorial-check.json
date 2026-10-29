@@ -1,0 +1,128 @@
+{
+  "reviewType": "AI-assisted internal editorial and technical check; not qualified independent approval",
+  "catalogRevision": 7,
+  "qualifiedReviewer": null,
+  "qualifiedApproval": false,
+  "actualAudioListened": false,
+  "lessons": [
+    {
+      "id": "en-project-brief",
+      "lessonSha256": "2ddf936923dd360ef1406693d922bfacf008e1b39c46b97341fe6d131deb4a00",
+      "draftStatus": "pending",
+      "checksPerformed": [
+        "Original bilingual scenario includes stated answer facts",
+        "Three assessment answers checked against the scenario",
+        "Model tasks distinguish estimates, unknowns and verified facts",
+        "Private details replaced by fictional examples",
+        "Production task remains self-review; no proficiency certificate issued"
+      ],
+      "requiresCompetentLanguageReview": true,
+      "requiresActualVoiceReview": true
+    },
+    {
+      "id": "en-work-handover",
+      "lessonSha256": "cd51eb1194b95af5de0c0ab852041fa37363cdfa53fe2b245a0f9d5f7cdadff7",
+      "draftStatus": "pending",
+      "checksPerformed": [
+        "Original bilingual scenario includes stated answer facts",
+        "Three assessment answers checked against the scenario",
+        "Model tasks distinguish estimates, unknowns and verified facts",
+        "Private details replaced by fictional examples",
+        "Production task remains self-review; no proficiency certificate issued"
+      ],
+      "requiresCompetentLanguageReview": true,
+      "requiresActualVoiceReview": true
+    },
+    {
+      "id": "en-incident-update",
+      "lessonSha256": "c29b1990c137f978edda9a14412e081eab516735f2caee04c294f48167c60acb",
+      "draftStatus": "pending",
+      "checksPerformed": [
+        "Original bilingual scenario includes stated answer facts",
+        "Three assessment answers checked against the scenario",
+        "Model tasks distinguish estimates, unknowns and verified facts",
+        "Private details replaced by fictional examples",
+        "Production task remains self-review; no proficiency certificate issued"
+      ],
+      "requiresCompetentLanguageReview": true,
+      "requiresActualVoiceReview": true
+    },
+    {
+      "id": "en-professional-capstone",
+      "lessonSha256": "379a37e150881a08131a5e4b106eb0c3014cb810a2e5d5e978fef57f03a5d2bf",
+      "draftStatus": "pending",
+      "checksPerformed": [
+        "Original bilingual scenario includes stated answer facts",
+        "Three assessment answers checked against the scenario",
+        "Model tasks distinguish estimates, unknowns and verified facts",
+        "Private details replaced by fictional examples",
+        "Production task remains self-review; no proficiency certificate issued",
+        "Production block allocation totals seven minutes; refinement and qualified feedback are separate"
+      ],
+      "requiresCompetentLanguageReview": true,
+      "requiresActualVoiceReview": true
+    },
+    {
+      "id": "ur-project-brief",
+      "lessonSha256": "5729b748c9706ed225d7ad34ca4cab861ad22c7d64180b42637d798288867c3a",
+      "draftStatus": "pending",
+      "checksPerformed": [
+        "Original bilingual scenario includes stated answer facts",
+        "Three assessment answers checked against the scenario",
+        "Model tasks distinguish estimates, unknowns and verified facts",
+        "Private details replaced by fictional examples",
+        "Production task remains self-review; no proficiency certificate issued"
+      ],
+      "requiresCompetentLanguageReview": true,
+      "requiresActualVoiceReview": true
+    },
+    {
+      "id": "ur-work-handover",
+      "lessonSha256": "e8e85898c196de9ea3031718b8b032c6ac3411ec9990d6aae8a54dfd2fce35c4",
+      "draftStatus": "pending",
+      "checksPerformed": [
+        "Original bilingual scenario includes stated answer facts",
+        "Three assessment answers checked against the scenario",
+        "Model tasks distinguish estimates, unknowns and verified facts",
+        "Private details replaced by fictional examples",
+        "Production task remains self-review; no proficiency certificate issued"
+      ],
+      "requiresCompetentLanguageReview": true,
+      "requiresActualVoiceReview": true
+    },
+    {
+      "id": "ur-incident-update",
+      "lessonSha256": "71937ea51e9f0ff7f7f063fd5d99e4dd1aed0e451a00ab5839963e526559d073",
+      "draftStatus": "pending",
+      "checksPerformed": [
+        "Original bilingual scenario includes stated answer facts",
+        "Three assessment answers checked against the scenario",
+        "Model tasks distinguish estimates, unknowns and verified facts",
+        "Private details replaced by fictional examples",
+        "Production task remains self-review; no proficiency certificate issued"
+      ],
+      "requiresCompetentLanguageReview": true,
+      "requiresActualVoiceReview": true
+    },
+    {
+      "id": "ur-professional-capstone",
+      "lessonSha256": "22e7a80c535b7481237f7c1795a58a7533b324d405248b21e44dde9c0c2f95ce",
+      "draftStatus": "pending",
+      "checksPerformed": [
+        "Original bilingual scenario includes stated answer facts",
+        "Three assessment answers checked against the scenario",
+        "Model tasks distinguish estimates, unknowns and verified facts",
+        "Private details replaced by fictional examples",
+        "Production task remains self-review; no proficiency certificate issued",
+        "Production block allocation totals seven minutes; refinement and qualified feedback are separate"
+      ],
+      "requiresCompetentLanguageReview": true,
+      "requiresActualVoiceReview": true
+    }
+  ],
+  "correctionsApplied": [
+    "Clarified embedded-question word order with an explicit subject and distinguished a subject question.",
+    "Used plain Urdu kaam ka khaaka for the project brief and simplified the clarification dialogue.",
+    "Allocated capstone production to seven minutes; refinement/teacher review remain separate."
+  ]
+}

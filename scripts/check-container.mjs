@@ -8,7 +8,7 @@ for(let i=0;i<40;i++){
 }
 assert.ok(ready,'Container did not become ready');
 const config=await(await fetch(`${origin}/api/config`)).json();assert.equal(config.cloud,false);assert.equal(config.purchases,false);
-const catalog=await(await fetch(`${origin}/api/catalog`)).json();assert.equal(catalog.lessons.length,168);assert.equal(catalog.languages.length,34);
+const catalog=await(await fetch(`${origin}/api/catalog`)).json();assert.equal(catalog.lessons.length,176);assert.equal(catalog.languages.length,34);
 assert.equal((await fetch(origin)).status,200);assert.equal((await fetch(`${origin}/.env`)).status,404);
 assert.equal((await fetch(`${origin}/shared/session.mjs`)).status,200);
-console.log('Built Docker image served the app, session module and 168 lessons; unconfigured purchases stayed disabled.');
+console.log('Built Docker image served the app, session module and 176 lessons; unconfigured purchases stayed disabled.');

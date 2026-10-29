@@ -1,11 +1,11 @@
 # Current course coverage audit — 29 October 2026
 
-Technical audit only; no qualified approval issued. Catalog revision 6: 168 draft lessons.
+Catalog revision 7: 176 drafts; no qualified language/audio approval issued.
 
 | Language | Lessons | Beginner | Elementary | Intermediate | Advanced | Professional |
 |---|---:|---:|---:|---:|---:|---:|
-| Urdu | 20 | 4 | 4 | 4 | 4 | 4 |
-| English | 20 | 4 | 4 | 4 | 4 | 4 |
+| Urdu | 24 | 4 | 4 | 4 | 4 | 8 |
+| English | 24 | 4 | 4 | 4 | 4 | 8 |
 | Punjabi | 4 | 4 | 0 | 0 | 0 | 0 |
 | Sindhi | 4 | 4 | 0 | 0 | 0 | 0 |
 | Saraiki | 4 | 4 | 0 | 0 | 0 | 0 |
@@ -39,4 +39,4 @@ Technical audit only; no qualified approval issued. Catalog revision 6: 168 draf
 | Swahili | 4 | 4 | 0 | 0 | 0 | 0 |
 | Somali | 4 | 4 | 0 | 0 | 0 | 0 |
 
-All 32 starter tracks still lack four higher stages. English/Urdu stage labels also do not establish a full professional course. Qualified review is pending for all tracks. Native device playback, owner account setup and live deployment remain unverified.
+English/Urdu now have eight workplace practice units each. These labels do not establish a full professional course or fluency. All 32 other tracks still lack four higher stages. Qualified review, physical-device acceptance and live backend remain incomplete.

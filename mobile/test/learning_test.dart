@@ -11,6 +11,21 @@ import 'package:ilmigo/parent.dart';
 void main() {
   TestWidgetsFlutterBinding.ensureInitialized();
   setUp(() => SharedPreferences.setMockInitialValues({}));
+  test('appended workplace lessons load and reject incomplete assessments in both languages',() async {
+    final store=LearningStore();await store.load();
+    for(final language in ['en','ur']){
+      store.learner.language=language;store.learner.completed.clear();
+      for(final lesson in store.lessons.take(20)){
+        expect(store.complete(lesson,lessonQuestions(lesson).map((q)=>q['answer']).toList()),true);
+      }
+      expect(store.nextLesson?['id'],'$language-project-brief');
+      for(final lesson in store.lessons.skip(20)){
+        expect(store.complete(lesson,lesson['quiz']['answer']),false);
+        expect(store.complete(lesson,lessonQuestions(lesson).map((q)=>q['answer']).toList()),true);
+      }
+      expect(store.learner.completed.length,24);expect(store.learner.xp,720);
+    }
+  });
   test('recognition language matching never accepts a different prefix language',(){
     expect(speechLanguageMatches('pa_PK','pa'),true);
     expect(speechLanguageMatches('EN-us','en'),true);
@@ -85,8 +100,8 @@ void main() {
     await s.switchAccount('B');expect(s.parentPinConfigured,false);await s.switchAccount('A');expect(s.parentPinConfigured,true);
   });
   test('curriculum covers five stages and professional assessment checks every answer', () async {
-    final s=LearningStore();await s.load();expect(s.lessons.length,20);
-    for(final stage in ['beginner','elementary','intermediate','advanced','professional']){expect(s.lessons.where((l)=>l['level']==stage).length,4);}
+    final s=LearningStore();await s.load();expect(s.lessons.length,24);
+    for(final stage in ['beginner','elementary','intermediate','advanced','professional']){expect(s.lessons.where((l)=>l['level']==stage).length,stage=='professional'?8:4);}
     final l=s.lessons.firstWhere((l)=>l['level']=='professional');expect(s.complete(l,l['quiz']['answer']),false);expect(s.complete(l,lessonQuestions(l).map((q)=>q['answer']).toList()),true);
   });
   testWidgets('dashboard opens with honest guest progress', (tester) async {

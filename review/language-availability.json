@@ -1,6 +1,6 @@
 {
   "catalogLanguages": 34,
-  "authoredLessons": 168,
+  "authoredLessons": 176,
   "allLanguagesHaveDraftLessons": true,
   "allLanguagesProfessionallyReviewed": false,
   "languages": [
@@ -9,14 +9,14 @@
       "name": "Urdu",
       "status": "sample",
       "reviewStatus": "pending",
-      "authoredLessons": 20
+      "authoredLessons": 24
     },
     {
       "id": "en",
       "name": "English",
       "status": "sample",
       "reviewStatus": "pending",
-      "authoredLessons": 20
+      "authoredLessons": 24
     },
     {
       "id": "pa",
